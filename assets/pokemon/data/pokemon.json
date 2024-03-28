@@ -1,0 +1,1361 @@
+[
+    {
+        "id": 1,
+        "name": "Bulbasaur",
+        "category": "Seed",
+        "type1": "Grass",
+        "type2": "Poison",
+        "height": "0.7 m",
+        "weight": "6.9 kg"
+    },
+    {
+        "id": 2,
+        "name": "Ivysaur",
+        "category": "Seed",
+        "type1": "Grass",
+        "type2": "Poison",
+        "height": "1.0 m",
+        "weight": "13.0 kg"
+    },
+    {
+        "id": 3,
+        "name": "Venusaur",
+        "category": "Seed",
+        "type1": "Grass",
+        "type2": "Poison",
+        "height": "2.0 m",
+        "weight": "100.0 kg"
+    },
+    {
+        "id": 4,
+        "name": "Charmander",
+        "category": "Lizard",
+        "type1": "Fire",
+        "type2": "",
+        "height": "0.6 m",
+        "weight": "8.5 kg"
+    },
+    {
+        "id": 5,
+        "name": "Charmeleon",
+        "category": "Flame",
+        "type1": "Fire",
+        "type2": "",
+        "height": "1.1 m",
+        "weight": "19.0 kg"
+    },
+    {
+        "id": 6,
+        "name": "Charizard",
+        "category": "Flame",
+        "type1": "Fire",
+        "type2": "Flying",
+        "height": "1.7 m",
+        "weight": "90.5 kg"
+    },
+    {
+        "id": 7,
+        "name": "Squirtle",
+        "category": "Tiny Turtle",
+        "type1": "Water",
+        "type2": "",
+        "height": "0.5 m",
+        "weight": "9.0 kg"
+    },
+    {
+        "id": 8,
+        "name": "Wartortle",
+        "category": "Turtle",
+        "type1": "Water",
+        "type2": "",
+        "height": "1.0 m",
+        "weight": "22.5 kg"
+    },
+    {
+        "id": 9,
+        "name": "Blastoise",
+        "category": "Shellfish",
+        "type1": "Water",
+        "type2": "",
+        "height": "1.6 m",
+        "weight": "85.5 kg"
+    },
+    {
+        "id": 10,
+        "name": "Caterpie",
+        "category": "Worm",
+        "type1": "Bug",
+        "type2": "",
+        "height": "0.3 m",
+        "weight": "2.9 kg"
+    },
+    {
+        "id": 11,
+        "name": "Metapod",
+        "category": "Cocoon",
+        "type1": "Bug",
+        "type2": "",
+        "height": "0.7 m",
+        "weight": "9.9 kg"
+    },
+    {
+        "id": 12,
+        "name": "Butterfree",
+        "category": "Butterfly",
+        "type1": "Bug",
+        "type2": "Flying",
+        "height": "1.1 m",
+        "weight": "32.0 kg"
+    },
+    {
+        "id": 13,
+        "name": "Weedle",
+        "category": "Hairy Bug",
+        "type1": "Bug",
+        "type2": "Poison",
+        "height": "0.3 m",
+        "weight": "3.2 kg"
+    },
+    {
+        "id": 14,
+        "name": "Kakuna",
+        "category": "Cocoon",
+        "type1": "Bug",
+        "type2": "Poison",
+        "height": "0.6 m",
+        "weight": "10.0 kg"
+    },
+    {
+        "id": 15,
+        "name": "Beedrill",
+        "category": "Poison Bee",
+        "type1": "Bug",
+        "type2": "Poison",
+        "height": "1.0 m",
+        "weight": "29.5 kg"
+    },
+    {
+        "id": 16,
+        "name": "Pidgey",
+        "category": "Tiny Bird",
+        "type1": "Normal",
+        "type2": "Flying",
+        "height": "0.3 m",
+        "weight": "1.8 kg"
+    },
+    {
+        "id": 17,
+        "name": "Pidgeotto",
+        "category": "Bird",
+        "type1": "Normal",
+        "type2": "Flying",
+        "height": "1.1 m",
+        "weight": "30.0 kg"
+    },
+    {
+        "id": 18,
+        "name": "Pidgeot",
+        "category": "Bird",
+        "type1": "Normal",
+        "type2": "Flying",
+        "height": "1.5 m",
+        "weight": "39.5 kg"
+    },
+    {
+        "id": 19,
+        "name": "Rattata",
+        "category": "Mouse",
+        "type1": "Normal",
+        "type2": "",
+        "height": "0.3 m",
+        "weight": "3.5 kg"
+    },
+    {
+        "id": 20,
+        "name": "Raticate",
+        "category": "Mouse",
+        "type1": "Normal",
+        "type2": "",
+        "height": "0.7 m",
+        "weight": "18.5 kg"
+    },
+    {
+        "id": 21,
+        "name": "Spearow",
+        "category": "Tiny Bird",
+        "type1": "Normal",
+        "type2": "Flying",
+        "height": "0.3 m",
+        "weight": "2.0 kg"
+    },
+    {
+        "id": 22,
+        "name": "Fearow",
+        "category": "Beak",
+        "type1": "Normal",
+        "type2": "Flying",
+        "height": "1.2 m",
+        "weight": "38.0 kg"
+    },
+    {
+        "id": 23,
+        "name": "Ekans",
+        "category": "Snake",
+        "type1": "Poison",
+        "type2": "",
+        "height": "2.0 m",
+        "weight": "6.9 kg"
+    },
+    {
+        "id": 24,
+        "name": "Arbok",
+        "category": "Cobra",
+        "type1": "Poison",
+        "type2": "",
+        "height": "3.5 m",
+        "weight": "65.0 kg"
+    },
+    {
+        "id": 25,
+        "name": "Pikachu",
+        "category": "Mouse",
+        "type1": "Electric",
+        "type2": "",
+        "height": "0.4 m",
+        "weight": "6.0 kg"
+    },
+    {
+        "id": 26,
+        "name": "Raichu",
+        "category": "Mouse",
+        "type1": "Electric",
+        "type2": "",
+        "height": "0.8 m",
+        "weight": "30.0 kg"
+    },
+    {
+        "id": 27,
+        "name": "Sandshrew",
+        "category": "Mouse",
+        "type1": "Ground",
+        "type2": "",
+        "height": "0.6 m",
+        "weight": "12.0 kg"
+    },
+    {
+        "id": 28,
+        "name": "Sandslash",
+        "category": "Mouse",
+        "type1": "Ground",
+        "type2": "",
+        "height": "1.0 m",
+        "weight": "29.5 kg"
+    },
+    {
+        "id": 29,
+        "name": "Nidoran♀",
+        "category": "Poison Pin",
+        "type1": "Poison",
+        "type2": "",
+        "height": "0.4 m",
+        "weight": "7.0 kg"
+    },
+    {
+        "id": 30,
+        "name": "Nidorina",
+        "category": "Poison Pin",
+        "type1": "Poison",
+        "type2": "",
+        "height": "0.8 m",
+        "weight": "20.0 kg"
+    },
+    {
+        "id": 31,
+        "name": "Nidoqueen",
+        "category": "Drill",
+        "type1": "Poison",
+        "type2": "Ground",
+        "height": "1.3 m",
+        "weight": "60.0 kg"
+    },
+    {
+        "id": 32,
+        "name": "Nidoran♂",
+        "category": "Poison Pin",
+        "type1": "Poison",
+        "type2": "",
+        "height": "0.5 m",
+        "weight": "9.0 kg"
+    },
+    {
+        "id": 33,
+        "name": "Nidorino",
+        "category": "Poison Pin",
+        "type1": "Poison",
+        "type2": "",
+        "height": "0.9 m",
+        "weight": "19.5 kg"
+    },
+    {
+        "id": 34,
+        "name": "Nidoking",
+        "category": "Drill",
+        "type1": "Poison",
+        "type2": "Ground",
+        "height": "1.4 m",
+        "weight": "62.0 kg"
+    },
+    {
+        "id": 35,
+        "name": "Clefairy",
+        "category": "Fairy",
+        "type1": "Fairy",
+        "type2": "",
+        "height": "0.6 m",
+        "weight": "7.5 kg"
+    },
+    {
+        "id": 36,
+        "name": "Clefable",
+        "category": "Fairy",
+        "type1": "Fairy",
+        "type2": "",
+        "height": "1.3 m",
+        "weight": "40.0 kg"
+    },
+    {
+        "id": 37,
+        "name": "Vulpix",
+        "category": "Fox",
+        "type1": "Fire",
+        "type2": "",
+        "height": "0.6 m",
+        "weight": "9.9 kg"
+    },
+    {
+        "id": 38,
+        "name": "Ninetales",
+        "category": "Fox",
+        "type1": "Fire",
+        "type2": "",
+        "height": "1.1 m",
+        "weight": "19.9 kg"
+    },
+    {
+        "id": 39,
+        "name": "Jigglypuff",
+        "category": "Balloon",
+        "type1": "Normal",
+        "type2": "Fairy",
+        "height": "0.5 m",
+        "weight": "5.5 kg"
+    },
+    {
+        "id": 40,
+        "name": "Wigglytuff",
+        "category": "Balloon",
+        "type1": "Normal",
+        "type2": "Fairy",
+        "height": "1.0 m",
+        "weight": "12.0 kg"
+    },
+    {
+        "id": 41,
+        "name": "Zubat",
+        "category": "Bat",
+        "type1": "Poison",
+        "type2": "Flying",
+        "height": "0.8 m",
+        "weight": "7.5 kg"
+    },
+    {
+        "id": 42,
+        "name": "Golbat",
+        "category": "Bat",
+        "type1": "Poison",
+        "type2": "Flying",
+        "height": "1.6 m",
+        "weight": "55.0 kg"
+    },
+    {
+        "id": 43,
+        "name": "Oddish",
+        "category": "Weed",
+        "type1": "Grass",
+        "type2": "Poison",
+        "height": "0.5 m",
+        "weight": "5.4 kg"
+    },
+    {
+        "id": 44,
+        "name": "Gloom",
+        "category": "Weed",
+        "type1": "Grass",
+        "type2": "Poison",
+        "height": "0.8 m",
+        "weight": "8.6 kg"
+    },
+    {
+        "id": 45,
+        "name": "Vileplume",
+        "category": "Flower",
+        "type1": "Grass",
+        "type2": "Poison",
+        "height": "1.2 m",
+        "weight": "18.6 kg"
+    },
+    {
+        "id": 46,
+        "name": "Paras",
+        "category": "Mushroom",
+        "type1": "Bug",
+        "type2": "Grass",
+        "height": "0.3 m",
+        "weight": "5.4 kg"
+    },
+    {
+        "id": 47,
+        "name": "Parasect",
+        "category": "Mushroom",
+        "type1": "Bug",
+        "type2": "Grass",
+        "height": "1.0 m",
+        "weight": "29.5 kg"
+    },
+    {
+        "id": 48,
+        "name": "Venonat",
+        "category": "Insect",
+        "type1": "Bug",
+        "type2": "Poison",
+        "height": "1.0 m",
+        "weight": "30.0 kg"
+    },
+    {
+        "id": 49,
+        "name": "Venomoth",
+        "category": "Poison Moth",
+        "type1": "Bug",
+        "type2": "Poison",
+        "height": "1.5 m",
+        "weight": "12.5 kg"
+    },
+    {
+        "id": 50,
+        "name": "Diglett",
+        "category": "Mole",
+        "type1": "Ground",
+        "type2": "",
+        "height": "0.2 m",
+        "weight": "0.8 kg"
+    },
+    {
+        "id": 51,
+        "name": "Dugtrio",
+        "category": "Mole",
+        "type1": "Ground",
+        "type2": "",
+        "height": "0.7 m",
+        "weight": "33.3 kg"
+    },
+    {
+        "id": 52,
+        "name": "Meowth",
+        "category": "Scratch Cat",
+        "type1": "Normal",
+        "type2": "",
+        "height": "0.4 m",
+        "weight": "4.2 kg"
+    },
+    {
+        "id": 53,
+        "name": "Persian",
+        "category": "Classy Cat",
+        "type1": "Normal",
+        "type2": "",
+        "height": "1.0 m",
+        "weight": "32.0 kg"
+    },
+    {
+        "id": 54,
+        "name": "Psyduck",
+        "category": "Duck",
+        "type1": "Water",
+        "type2": "",
+        "height": "0.8 m",
+        "weight": "19.6 kg"
+    },
+    {
+        "id": 55,
+        "name": "Golduck",
+        "category": "Duck",
+        "type1": "Water",
+        "type2": "",
+        "height": "1.7 m",
+        "weight": "76.6 kg"
+    },
+    {
+        "id": 56,
+        "name": "Mankey",
+        "category": "Pig Monkey",
+        "type1": "Fighting",
+        "type2": "",
+        "height": "0.5 m",
+        "weight": "28.0 kg"
+    },
+    {
+        "id": 57,
+        "name": "Primeape",
+        "category": "Pig Monkey",
+        "type1": "Fighting",
+        "type2": "",
+        "height": "1.0 m",
+        "weight": "32.0 kg"
+    },
+    {
+        "id": 58,
+        "name": "Growlithe",
+        "category": "Puppy",
+        "type1": "Fire",
+        "type2": "",
+        "height": "0.7 m",
+        "weight": "19.0 kg"
+    },
+    {
+        "id": 59,
+        "name": "Arcanine",
+        "category": "Legendary",
+        "type1": "Fire",
+        "type2": "",
+        "height": "1.9 m",
+        "weight": "155.0 kg"
+    },
+    {
+        "id": 60,
+        "name": "Poliwag",
+        "category": "Tadpole",
+        "type1": "Water",
+        "type2": "",
+        "height": "0.6 m",
+        "weight": "12.4 kg"
+    },
+    {
+        "id": 61,
+        "name": "Poliwhirl",
+        "category": "Tadpole",
+        "type1": "Water",
+        "type2": "",
+        "height": "1.0 m",
+        "weight": "20.0 kg"
+    },
+    {
+        "id": 62,
+        "name": "Poliwrath",
+        "category": "Tadpole",
+        "type1": "Water",
+        "type2": "Fighting",
+        "height": "1.3 m",
+        "weight": "54.0 kg"
+    },
+    {
+        "id": 63,
+        "name": "Abra",
+        "category": "Psi",
+        "type1": "Psychic",
+        "type2": "",
+        "height": "0.9 m",
+        "weight": "19.5 kg"
+    },
+    {
+        "id": 64,
+        "name": "Kadabra",
+        "category": "Psi",
+        "type1": "Psychic",
+        "type2": "",
+        "height": "1.3 m",
+        "weight": "56.5 kg"
+    },
+    {
+        "id": 65,
+        "name": "Alakazam",
+        "category": "Psi",
+        "type1": "Psychic",
+        "type2": "",
+        "height": "1.5 m",
+        "weight": "48.0 kg"
+    },
+    {
+        "id": 66,
+        "name": "Machop",
+        "category": "Superpower",
+        "type1": "Fighting",
+        "type2": "",
+        "height": "0.8 m",
+        "weight": "19.5 kg"
+    },
+    {
+        "id": 67,
+        "name": "Machoke",
+        "category": "Superpower",
+        "type1": "Fighting",
+        "type2": "",
+        "height": "1.5 m",
+        "weight": "70.5 kg"
+    },
+    {
+        "id": 68,
+        "name": "Machamp",
+        "category": "Superpower",
+        "type1": "Fighting",
+        "type2": "",
+        "height": "1.6 m",
+        "weight": "130.0 kg"
+    },
+    {
+        "id": 69,
+        "name": "Bellsprout",
+        "category": "Flower",
+        "type1": "Grass",
+        "type2": "Poison",
+        "height": "0.7 m",
+        "weight": "4.0 kg"
+    },
+    {
+        "id": 70,
+        "name": "Weepinbell",
+        "category": "Flycatcher",
+        "type1": "Grass",
+        "type2": "Poison",
+        "height": "1.0 m",
+        "weight": "6.4 kg"
+    },
+    {
+        "id": 71,
+        "name": "Victreebel",
+        "category": "Flycatcher",
+        "type1": "Grass",
+        "type2": "Poison",
+        "height": "1.7 m",
+        "weight": "15.5 kg"
+    },
+    {
+        "id": 72,
+        "name": "Tentacool",
+        "category": "Jellyfish",
+        "type1": "Water",
+        "type2": "Poison",
+        "height": "0.9 m",
+        "weight": "45.5 kg"
+    },
+    {
+        "id": 73,
+        "name": "Tentacruel",
+        "category": "Jellyfish",
+        "type1": "Water",
+        "type2": "Poison",
+        "height": "1.6 m",
+        "weight": "55.0 kg"
+    },
+    {
+        "id": 74,
+        "name": "Geodude",
+        "category": "Rock",
+        "type1": "Rock",
+        "type2": "Ground",
+        "height": "0.4 m",
+        "weight": "20.0 kg"
+    },
+    {
+        "id": 75,
+        "name": "Graveler",
+        "category": "Rock",
+        "type1": "Rock",
+        "type2": "Ground",
+        "height": "1.0 m",
+        "weight": "105.0 kg"
+    },
+    {
+        "id": 76,
+        "name": "Golem",
+        "category": "Megaton",
+        "type1": "Rock",
+        "type2": "Ground",
+        "height": "1.4 m",
+        "weight": "300.0 kg"
+    },
+    {
+        "id": 77,
+        "name": "Ponyta",
+        "category": "Fire Horse",
+        "type1": "Fire",
+        "type2": "",
+        "height": "1.0 m",
+        "weight": "30.0 kg"
+    },
+    {
+        "id": 78,
+        "name": "Rapidash",
+        "category": "Fire Horse",
+        "type1": "Fire",
+        "type2": "",
+        "height": "1.7 m",
+        "weight": "95.0 kg"
+    },
+    {
+        "id": 79,
+        "name": "Slowpoke",
+        "category": "Dopey",
+        "type1": "Water",
+        "type2": "Psychic",
+        "height": "1.2 m",
+        "weight": "36.0 kg"
+    },
+    {
+        "id": 80,
+        "name": "Slowbro",
+        "category": "Hermit Crab",
+        "type1": "Water",
+        "type2": "Psychic",
+        "height": "1.6 m",
+        "weight": "78.5 kg"
+    },
+    {
+        "id": 81,
+        "name": "Magnemite",
+        "category": "Magnet",
+        "type1": "Electric",
+        "type2": "Steel",
+        "height": "0.3 m",
+        "weight": "6.0 kg"
+    },
+    {
+        "id": 82,
+        "name": "Magneton",
+        "category": "Magnet",
+        "type1": "Electric",
+        "type2": "Steel",
+        "height": "1.0 m",
+        "weight": "60.0 kg"
+    },
+    {
+        "id": 83,
+        "name": "Farfetch'd",
+        "category": "Wild Duck",
+        "type1": "Normal",
+        "type2": "Flying",
+        "height": "0.8 m",
+        "weight": "15.0 kg"
+    },
+    {
+        "id": 84,
+        "name": "Doduo",
+        "category": "Twin Bird",
+        "type1": "Normal",
+        "type2": "Flying",
+        "height": "1.4 m",
+        "weight": "39.2 kg"
+    },
+    {
+        "id": 85,
+        "name": "Dodrio",
+        "category": "Triple Bird",
+        "type1": "Normal",
+        "type2": "Flying",
+        "height": "1.8 m",
+        "weight": "85.2 kg"
+    },
+    {
+        "id": 86,
+        "name": "Seel",
+        "category": "Sea Lion",
+        "type1": "Water",
+        "type2": "",
+        "height": "1.1 m",
+        "weight": "90.0 kg"
+    },
+    {
+        "id": 87,
+        "name": "Dewgong",
+        "category": "Sea Lion",
+        "type1": "Water",
+        "type2": "Ice",
+        "height": "1.7 m",
+        "weight": "120.0 kg"
+    },
+    {
+        "id": 88,
+        "name": "Grimer",
+        "category": "Sludge",
+        "type1": "Poison",
+        "type2": "",
+        "height": "0.9 m",
+        "weight": "30.0 kg"
+    },
+    {
+        "id": 89,
+        "name": "Muk",
+        "category": "Sludge",
+        "type1": "Poison",
+        "type2": "",
+        "height": "1.2 m",
+        "weight": "30.0 kg"
+    },
+    {
+        "id": 90,
+        "name": "Shellder",
+        "category": "Bivalve",
+        "type1": "Water",
+        "type2": "",
+        "height": "0.3 m",
+        "weight": "4.0 kg"
+    },
+    {
+        "id": 91,
+        "name": "Cloyster",
+        "category": "Bivalve",
+        "type1": "Water",
+        "type2": "Ice",
+        "height": "1.5 m",
+        "weight": "132.5 kg"
+    },
+    {
+        "id": 92,
+        "name": "Gastly",
+        "category": "Gas",
+        "type1": "Ghost",
+        "type2": "Poison",
+        "height": "1.3 m",
+        "weight": "0.1 kg"
+    },
+    {
+        "id": 93,
+        "name": "Haunter",
+        "category": "Gas",
+        "type1": "Ghost",
+        "type2": "Poison",
+        "height": "1.6 m",
+        "weight": "0.1 kg"
+    },
+    {
+        "id": 94,
+        "name": "Gengar",
+        "category": "Shadow",
+        "type1": "Ghost",
+        "type2": "Poison",
+        "height": "1.5 m",
+        "weight": "40.5 kg"
+    },
+    {
+        "id": 95,
+        "name": "Onix",
+        "category": "Rock Snake",
+        "type1": "Rock",
+        "type2": "Ground",
+        "height": "8.8 m",
+        "weight": "210.0 kg"
+    },
+    {
+        "id": 96,
+        "name": "Drowzee",
+        "category": "Hypnosis",
+        "type1": "Psychic",
+        "type2": "",
+        "height": "1.0 m",
+        "weight": "32.4 kg"
+    },
+    {
+        "id": 97,
+        "name": "Hypno",
+        "category": "Hypnosis",
+        "type1": "Psychic",
+        "type2": "",
+        "height": "1.6 m",
+        "weight": "75.6 kg"
+    },
+    {
+        "id": 98,
+        "name": "Krabby",
+        "category": "River Crab",
+        "type1": "Water",
+        "type2": "",
+        "height": "0.4 m",
+        "weight": "6.5 kg"
+    },
+    {
+        "id": 99,
+        "name": "Kingler",
+        "category": "Pincer",
+        "type1": "Water",
+        "type2": "",
+        "height": "1.3 m",
+        "weight": "60.0 kg"
+    },
+    {
+        "id": 100,
+        "name": "Voltorb",
+        "category": "Ball",
+        "type1": "Electric",
+        "type2": "",
+        "height": "0.5 m",
+        "weight": "10.4 kg"
+    },
+    {
+        "id": 101,
+        "name": "Electrode",
+        "category": "Ball",
+        "type1": "Electric",
+        "type2": "",
+        "height": "1.2 m",
+        "weight": "66.6 kg"
+    },
+    {
+        "id": 102,
+        "name": "Exeggcute",
+        "category": "Egg",
+        "type1": "Grass",
+        "type2": "Psychic",
+        "height": "0.4 m",
+        "weight": "2.5 kg"
+    },
+    {
+        "id": 103,
+        "name": "Exeggutor",
+        "category": "Coconut",
+        "type1": "Grass",
+        "type2": "Psychic",
+        "height": "2.0 m",
+        "weight": "120.0 kg"
+    },
+    {
+        "id": 104,
+        "name": "Cubone",
+        "category": "Lonely",
+        "type1": "Ground",
+        "type2": "",
+        "height": "0.4 m",
+        "weight": "6.5 kg"
+    },
+    {
+        "id": 105,
+        "name": "Marowak",
+        "category": "Bone Keeper",
+        "type1": "Ground",
+        "type2": "",
+        "height": "1.0 m",
+        "weight": "45.0 kg"
+    },
+    {
+        "id": 106,
+        "name": "Hitmonlee",
+        "category": "Kicking",
+        "type1": "Fighting",
+        "type2": "",
+        "height": "1.5 m",
+        "weight": "49.8 kg"
+    },
+    {
+        "id": 107,
+        "name": "Hitmonchan",
+        "category": "Punching",
+        "type1": "Fighting",
+        "type2": "",
+        "height": "1.4 m",
+        "weight": "50.2 kg"
+    },
+    {
+        "id": 108,
+        "name": "Lickitung",
+        "category": "Licking",
+        "type1": "Normal",
+        "type2": "",
+        "height": "1.2 m",
+        "weight": "65.5 kg"
+    },
+    {
+        "id": 109,
+        "name": "Koffing",
+        "category": "Poison Gas",
+        "type1": "Poison",
+        "type2": "",
+        "height": "0.6 m",
+        "weight": "1.0 kg"
+    },
+    {
+        "id": 110,
+        "name": "Weezing",
+        "category": "Poison Gas",
+        "type1": "Poison",
+        "type2": "",
+        "height": "1.2 m",
+        "weight": "9.5 kg"
+    },
+    {
+        "id": 111,
+        "name": "Rhyhorn",
+        "category": "Spikes",
+        "type1": "Ground",
+        "type2": "Rock",
+        "height": "1.0 m",
+        "weight": "115.0 kg"
+    },
+    {
+        "id": 112,
+        "name": "Rhydon",
+        "category": "Drill",
+        "type1": "Ground",
+        "type2": "Rock",
+        "height": "1.9 m",
+        "weight": "120.0 kg"
+    },
+    {
+        "id": 113,
+        "name": "Chansey",
+        "category": "Egg",
+        "type1": "Normal",
+        "type2": "",
+        "height": "1.1 m",
+        "weight": "34.6 kg"
+    },
+    {
+        "id": 114,
+        "name": "Tangela",
+        "category": "Vine",
+        "type1": "Grass",
+        "type2": "",
+        "height": "1.0 m",
+        "weight": "35.0 kg"
+    },
+    {
+        "id": 115,
+        "name": "Kangaskhan",
+        "category": "Parent",
+        "type1": "Normal",
+        "type2": "",
+        "height": "2.2 m",
+        "weight": "80.0 kg"
+    },
+    {
+        "id": 116,
+        "name": "Horsea",
+        "category": "Dragon",
+        "type1": "Water",
+        "type2": "",
+        "height": "0.4 m",
+        "weight": "8.0 kg"
+    },
+    {
+        "id": 117,
+        "name": "Seadra",
+        "category": "Dragon",
+        "type1": "Water",
+        "type2": "",
+        "height": "1.2 m",
+        "weight": "25.0 kg"
+    },
+    {
+        "id": 118,
+        "name": "Goldeen",
+        "category": "Goldfish",
+        "type1": "Water",
+        "type2": "",
+        "height": "0.6 m",
+        "weight": "15.0 kg"
+    },
+    {
+        "id": 119,
+        "name": "Seaking",
+        "category": "Goldfish",
+        "type1": "Water",
+        "type2": "",
+        "height": "1.3 m",
+        "weight": "39.0 kg"
+    },
+    {
+        "id": 120,
+        "name": "Staryu",
+        "category": "Star Shape",
+        "type1": "Water",
+        "type2": "",
+        "height": "0.8 m",
+        "weight": "34.5 kg"
+    },
+    {
+        "id": 121,
+        "name": "Starmie",
+        "category": "Mysterious",
+        "type1": "Water",
+        "type2": "Psychic",
+        "height": "1.1 m",
+        "weight": "80.0 kg"
+    },
+    {
+        "id": 122,
+        "name": "Mr. Mime",
+        "category": "Barrier",
+        "type1": "Psychic",
+        "type2": "Fairy",
+        "height": "1.3 m",
+        "weight": "54.5 kg"
+    },
+    {
+        "id": 123,
+        "name": "Scyther",
+        "category": "Mantis",
+        "type1": "Bug",
+        "type2": "Flying",
+        "height": "1.5 m",
+        "weight": "56.0 kg"
+    },
+    {
+        "id": 124,
+        "name": "Jynx",
+        "category": "Human Shape",
+        "type1": "Ice",
+        "type2": "Psychic",
+        "height": "1.4 m",
+        "weight": "40.6 kg"
+    },
+    {
+        "id": 125,
+        "name": "Electabuzz",
+        "category": "Electric",
+        "type1": "Electric",
+        "type2": "",
+        "height": "1.1 m",
+        "weight": "30.0 kg"
+    },
+    {
+        "id": 126,
+        "name": "Magmar",
+        "category": "Spitfire",
+        "type1": "Fire",
+        "type2": "",
+        "height": "1.3 m",
+        "weight": "44.5 kg"
+    },
+    {
+        "id": 127,
+        "name": "Pinsir",
+        "category": "Stag Beetle",
+        "type1": "Bug",
+        "type2": "",
+        "height": "1.5 m",
+        "weight": "55.0 kg"
+    },
+    {
+        "id": 128,
+        "name": "Tauros",
+        "category": "Wild Bull",
+        "type1": "Normal",
+        "type2": "",
+        "height": "1.4 m",
+        "weight": "88.4 kg"
+    },
+    {
+        "id": 129,
+        "name": "Magikarp",
+        "category": "Fish",
+        "type1": "Water",
+        "type2": "",
+        "height": "0.9 m",
+        "weight": "10.0 kg"
+    },
+    {
+        "id": 130,
+        "name": "Gyarados",
+        "category": "Atrocious",
+        "type1": "Water",
+        "type2": "Flying",
+        "height": "6.5 m",
+        "weight": "235.0 kg"
+    },
+    {
+        "id": 131,
+        "name": "Lapras",
+        "category": "Transport",
+        "type1": "Water",
+        "type2": "Ice",
+        "height": "2.5 m",
+        "weight": "220.0 kg"
+    },
+    {
+        "id": 132,
+        "name": "Ditto",
+        "category": "Transform",
+        "type1": "Normal",
+        "type2": "",
+        "height": "0.3 m",
+        "weight": "4.0 kg"
+    },
+    {
+        "id": 133,
+        "name": "Eevee",
+        "category": "Evolution",
+        "type1": "Normal",
+        "type2": "",
+        "height": "0.3 m",
+        "weight": "6.5 kg"
+    },
+    {
+        "id": 134,
+        "name": "Vaporeon",
+        "category": "Bubble Jet",
+        "type1": "Water",
+        "type2": "",
+        "height": "1.0 m",
+        "weight": "29.0 kg"
+    },
+    {
+        "id": 135,
+        "name": "Jolteon",
+        "category": "Lightning",
+        "type1": "Electric",
+        "type2": "",
+        "height": "0.8 m",
+        "weight": "24.5 kg"
+    },
+    {
+        "id": 136,
+        "name": "Flareon",
+        "category": "Flame",
+        "type1": "Fire",
+        "type2": "",
+        "height": "0.9 m",
+        "weight": "25.0 kg"
+    },
+    {
+        "id": 137,
+        "name": "Porygon",
+        "category": "Virtual",
+        "type1": "Normal",
+        "type2": "",
+        "height": "0.8 m",
+        "weight": "36.5 kg"
+    },
+    {
+        "id": 138,
+        "name": "Omanyte",
+        "category": "Spiral",
+        "type1": "Rock",
+        "type2": "Water",
+        "height": "0.4 m",
+        "weight": "7.5 kg"
+    },
+    {
+        "id": 139,
+        "name": "Omastar",
+        "category": "Spiral",
+        "type1": "Rock",
+        "type2": "Water",
+        "height": "1.0 m",
+        "weight": "35.0 kg"
+    },
+    {
+        "id": 140,
+        "name": "Kabuto",
+        "category": "Shellfish",
+        "type1": "Rock",
+        "type2": "Water",
+        "height": "0.5 m",
+        "weight": "11.5 kg"
+    },
+    {
+        "id": 141,
+        "name": "Kabutops",
+        "category": "Shellfish",
+        "type1": "Rock",
+        "type2": "Water",
+        "height": "1.3 m",
+        "weight": "40.5 kg"
+    },
+    {
+        "id": 142,
+        "name": "Aerodactyl",
+        "category": "Fossil",
+        "type1": "Rock",
+        "type2": "Flying",
+        "height": "1.8 m",
+        "weight": "59.0 kg"
+    },
+    {
+        "id": 143,
+        "name": "Snorlax",
+        "category": "Sleeping",
+        "type1": "Normal",
+        "type2": "",
+        "height": "2.1 m",
+        "weight": "460.0 kg"
+    },
+    {
+        "id": 144,
+        "name": "Articuno",
+        "category": "Freeze",
+        "type1": "Ice",
+        "type2": "Flying",
+        "height": "1.7 m",
+        "weight": "55.4 kg"
+    },
+    {
+        "id": 145,
+        "name": "Zapdos",
+        "category": "Electric",
+        "type1": "Electric",
+        "type2": "Flying",
+        "height": "1.6 m",
+        "weight": "52.6 kg"
+    },
+    {
+        "id": 146,
+        "name": "Moltres",
+        "category": "Flame",
+        "type1": "Fire",
+        "type2": "Flying",
+        "height": "2.0 m",
+        "weight": "60.0 kg"
+    },
+    {
+        "id": 147,
+        "name": "Dratini",
+        "category": "Dragon",
+        "type1": "Dragon",
+        "type2": "",
+        "height": "1.8 m",
+        "weight": "3.3 kg"
+    },
+    {
+        "id": 148,
+        "name": "Dragonair",
+        "category": "Dragon",
+        "type1": "Dragon",
+        "type2": "",
+        "height": "4.0 m",
+        "weight": "16.5 kg"
+    },
+    {
+        "id": 149,
+        "name": "Dragonite",
+        "category": "Dragon",
+        "type1": "Dragon",
+        "type2": "Flying",
+        "height": "2.2 m",
+        "weight": "210.0 kg"
+    },
+    {
+        "id": 150,
+        "name": "Mewtwo",
+        "category": "Genetic",
+        "type1": "Psychic",
+        "type2": "",
+        "height": "2.0 m",
+        "weight": "122.0 kg"
+    },
+    {
+        "id": 151,
+        "name": "Mew",
+        "category": "New Species",
+        "type1": "Psychic",
+        "type2": "",
+        "height": "0.4 m",
+        "weight": "4.0 kg"
+    }
+]
