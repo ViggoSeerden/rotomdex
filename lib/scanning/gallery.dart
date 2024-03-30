@@ -22,7 +22,7 @@ import 'package:image_picker/image_picker.dart';
 import '../scanning/image_classification_helper.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:flutter/gestures.dart';
-import 'package:rotomdex/dex/pokemon.dart';
+import 'package:rotomdex/detail/pokemon.dart';
 
 class GalleryScreen extends StatefulWidget {
   const GalleryScreen({super.key});
@@ -71,7 +71,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
   Future<void> navigateToPokemon(
       BuildContext context, String pokemonName) async {
     String data = await DefaultAssetBundle.of(context)
-        .loadString('assets/pokemon/data/pokemon_expanded.json');
+        .loadString('assets/pokemon/data/kanto_expanded.json');
 
     List<dynamic> pokemonList = jsonDecode(data);
 

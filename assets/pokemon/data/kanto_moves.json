@@ -1,0 +1,17 @@
+[
+    {
+        "pokemon_id": 1,
+        "level_up": [
+            {
+                "move_id": 1,
+                "level": 1
+            }
+        ],
+        "tm": [
+            "move_id"
+        ],
+        "egg": [
+            "move_id"
+        ]
+    }
+]

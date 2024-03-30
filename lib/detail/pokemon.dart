@@ -38,7 +38,7 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
 
   void navigateToPokemon(BuildContext context, String pokemonName) async {
     String data = await DefaultAssetBundle.of(context)
-        .loadString('assets/pokemon/data/pokemon_expanded.json');
+        .loadString('assets/pokemon/data/kanto_expanded.json');
 
     List<dynamic> pokemonList = jsonDecode(data);
 
@@ -84,6 +84,29 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
             ],
           );
         },
+      );
+    }
+  }
+
+  void navigateToPokemonViaID(BuildContext context, int pokemonId) async {
+    String data = await DefaultAssetBundle.of(context)
+        .loadString('assets/pokemon/data/kanto_expanded.json');
+
+    List<dynamic> pokemonList = jsonDecode(data);
+
+    Map<String, dynamic>? specificPokemon = pokemonList.firstWhere(
+      (pokemon) => pokemon['id'] == pokemonId,
+      orElse: () => null,
+    );
+
+    if (specificPokemon != null) {
+      // ignore: use_build_context_synchronously
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) =>
+              PokemonDetailScreen(pokemonData: specificPokemon),
+        ),
       );
     }
   }
@@ -220,16 +243,33 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(height: 50),
-        Center(
-          child: GestureDetector(
-            onTap: toggleShiny,
-            child: Image.network(
-              imageUrl,
-              height: 200,
-              width: 200,
-              fit: BoxFit.cover,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if (widget.pokemonData['id'] > 1) ...[
+              IconButton(onPressed: () => navigateToPokemonViaID(context, widget.pokemonData["id"] - 1), icon: const Icon(Icons.arrow_left)),
+              const SizedBox(width: 50,)
+            ] else ...[
+              const Icon(Icons.arrow_left, color: Colors.transparent,),
+              const SizedBox(width: 70,)
+            ],
+            GestureDetector(
+              onTap: toggleShiny,
+              child: Image.network(
+                imageUrl,
+                height: 200,
+                width: 200,
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
+            if (widget.pokemonData['id'] < 151) ...[
+              const SizedBox(width: 50,),
+              IconButton(onPressed: () => navigateToPokemonViaID(context, widget.pokemonData["id"] + 1), icon: const Icon(Icons.arrow_right)),
+            ] else ...[
+              const SizedBox(width: 70,),
+              const Icon(Icons.arrow_right, color: Colors.transparent,)  
+            ],
+          ],
         ),
         const SizedBox(height: 50),
         Expanded(
@@ -372,7 +412,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                     ],
                   ),
                   const SizedBox(height: 30),
-                  const Text('Evolution Chain:', style: TextStyle(fontSize: 24)),
+                  const Text('Evolution Chain:',
+                      style: TextStyle(fontSize: 24)),
                   const SizedBox(height: 10),
                   Column(
                     children: [
@@ -422,8 +463,7 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                       evo['method'],
                                       overflow: TextOverflow.visible,
                                       textAlign: TextAlign.center,
-                                      maxLines:
-                                          4,
+                                      maxLines: 4,
                                     ),
                                   ),
                                 ],
@@ -535,67 +575,60 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                       const SizedBox(height: 30),
                       const Text('Weaknesses', style: TextStyle(fontSize: 24)),
                       const SizedBox(height: 10),
-                      Wrap(
-                          alignment: WrapAlignment.center,
-                          children: [
-                            if ((widget.pokemonData['weaknesses'] as List)
-                                .isNotEmpty) ...[
-                              for (var type
-                                  in widget.pokemonData['weaknesses']) ...[
-                                Padding(
-                                  padding: const EdgeInsets.all(4.0),
-                                  child: Image.asset(
-                                      'assets/images/icons/types/$type.png'),
-                                ),
-                              ]
-                            ] else ...[
-                              const Text('This Pokémon has no weaknesses.')
-                            ],
-                          ]),
+                      Wrap(alignment: WrapAlignment.center, children: [
+                        if ((widget.pokemonData['weaknesses'] as List)
+                            .isNotEmpty) ...[
+                          for (var type
+                              in widget.pokemonData['weaknesses']) ...[
+                            Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: Image.asset(
+                                  'assets/images/icons/types/$type.png'),
+                            ),
+                          ]
+                        ] else ...[
+                          const Text('This Pokémon has no weaknesses.')
+                        ],
+                      ]),
                       const SizedBox(height: 30),
                       const Text('Resistances', style: TextStyle(fontSize: 24)),
                       const SizedBox(height: 10),
-                      Wrap(
-                          alignment: WrapAlignment.center,
-                          children: [
-                            if ((widget.pokemonData['resistances'] as List)
-                                .isNotEmpty) ...[
-                              for (var type
-                                  in widget.pokemonData['resistances']) ...[
-                                Padding(
-                                  padding: const EdgeInsets.all(4.0),
-                                  child: Image.asset(
-                                      'assets/images/icons/types/$type.png'),
-                                ),
-                              ]
-                            ] else ...[
-                              const Text('This Pokémon has no resistances.')
-                            ],
-                          ]),
+                      Wrap(alignment: WrapAlignment.center, children: [
+                        if ((widget.pokemonData['resistances'] as List)
+                            .isNotEmpty) ...[
+                          for (var type
+                              in widget.pokemonData['resistances']) ...[
+                            Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: Image.asset(
+                                  'assets/images/icons/types/$type.png'),
+                            ),
+                          ]
+                        ] else ...[
+                          const Text('This Pokémon has no resistances.')
+                        ],
+                      ]),
                       const SizedBox(height: 30),
                       const Text('Immunities', style: TextStyle(fontSize: 24)),
                       const SizedBox(height: 10),
-                      Wrap(
-                          alignment: WrapAlignment.center,
-                          children: [
-                            if ((widget.pokemonData['zero_effect_types']
-                                    as List)
-                                .isNotEmpty) ...[
-                              for (var type in widget
-                                  .pokemonData['zero_effect_types']) ...[
-                                Padding(
-                                  padding: const EdgeInsets.all(4.0),
-                                  child: Image.asset(
-                                      'assets/images/icons/types/$type.png'),
-                                ),
-                              ]
-                            ] else ...[
-                              const Text(
-                                'This Pokémon has no immunities.',
-                                style: TextStyle(fontSize: 20),
-                              )
-                            ],
-                          ]),
+                      Wrap(alignment: WrapAlignment.center, children: [
+                        if ((widget.pokemonData['zero_effect_types'] as List)
+                            .isNotEmpty) ...[
+                          for (var type
+                              in widget.pokemonData['zero_effect_types']) ...[
+                            Padding(
+                              padding: const EdgeInsets.all(4.0),
+                              child: Image.asset(
+                                  'assets/images/icons/types/$type.png'),
+                            ),
+                          ]
+                        ] else ...[
+                          const Text(
+                            'This Pokémon has no immunities.',
+                            style: TextStyle(fontSize: 20),
+                          )
+                        ],
+                      ]),
                       const SizedBox(height: 30),
                       const Text('Breeding', style: TextStyle(fontSize: 24)),
                       const SizedBox(height: 10),
@@ -625,7 +658,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                               'Egg Cycles:',
                               style: TextStyle(fontSize: 18),
                             ),
-                            Text('${widget.pokemonData['egg_cycles'].toString()} cycles',
+                            Text(
+                                '${widget.pokemonData['egg_cycles'].toString()} cycles',
                                 style: const TextStyle(fontSize: 16)),
                             Text(
                                 '${widget.pokemonData['steps_to_hatch'].toString()} steps',

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rotomdex/scanning/gallery.dart';
-import 'dex/pokedex.dart';
+import 'package:rotomdex/screens/abilities.dart';
+import 'package:rotomdex/screens/moves.dart';
+import 'screens/pokedex.dart';
 
 void main() => runApp(const MyApp());
 
@@ -35,14 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     PokedexPage(),
-    Text(
-      'Move Dex',
-      style: optionStyle,
-    ),
-    Text(
-      'Ability Dex',
-      style: optionStyle,
-    ),
+    MoveDexPage(),
+    AbilityDexPage(),
     Text(
       'Item Dex',
       style: optionStyle,
@@ -120,14 +116,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 Navigator.pop(context);
               },
             ),
-            ListTile(
-              title: const Text('Item Dex'),
-              selected: _selectedIndex == 3,
-              onTap: () {
-                _onItemTapped(3, 'Item Dex');
-                Navigator.pop(context);
-              },
-            ),
+            // ListTile(
+            //   title: const Text('Item Dex'),
+            //   selected: _selectedIndex == 3,
+            //   onTap: () {
+            //     _onItemTapped(3, 'Item Dex');
+            //     Navigator.pop(context);
+            //   },
+            // ),
             ListTile(
               title: const Text('Scanner'),
               selected: _selectedIndex == 4,

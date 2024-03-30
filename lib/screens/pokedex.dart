@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:floating_action_bubble/floating_action_bubble.dart';
-import 'pokemon.dart';
+import '../detail/pokemon.dart';
 
 class PokedexPage extends StatefulWidget {
   const PokedexPage({super.key});
@@ -74,7 +74,7 @@ class PokedexPageState extends State<PokedexPage>
 
   Future<void> _loadJsonData() async {
     String data = await DefaultAssetBundle.of(context)
-        .loadString('assets/pokemon/data/pokemon_expanded.json');
+        .loadString('assets/pokemon/data/kanto_expanded.json');
     setState(() {
       _data = json.decode(data);
     });
