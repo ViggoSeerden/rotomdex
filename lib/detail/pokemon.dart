@@ -1,8 +1,12 @@
 import 'dart:convert';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:model_viewer_plus/model_viewer_plus.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'package:rotomdex/detail/ability.dart';
+import 'package:rotomdex/detail/move.dart';
 
 class PokemonDetailScreen extends StatefulWidget {
   final Map pokemonData;
@@ -20,6 +24,11 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
   late String imageUrl;
   late bool shiny;
 
+  List levelUpMoves = [];
+  List levelUpLevels = [];
+  List tmMoves = [];
+  List eggMoves = [];
+
   @override
   void initState() {
     super.initState();
@@ -28,11 +37,60 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
         'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${widget.pokemonData['id']}.png';
     modelPath =
         'assets/pokemon/models/${widget.pokemonData['id'].toString()}.glb';
+    _loadJsonData();
   }
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+    });
+  }
+
+  Future<void> _loadJsonData() async {
+    List<dynamic> data = json.decode(await DefaultAssetBundle.of(context)
+        .loadString('assets/pokemon/data/kanto_moves.json'));
+
+    var moveset =
+        data.firstWhere((set) => set['pokemon_id'] == widget.pokemonData['id']);
+
+    List<dynamic> moveData = json.decode(await DefaultAssetBundle.of(context)
+        .loadString('assets/pokemon/data/moves.json'));
+
+    List<dynamic> levelUp = [];
+    List<dynamic> levelUpLvls = [];
+    for (var move in moveset['level_up'] as List) {
+      var moveId = move['move_name'];
+      var moveDetails = moveData.firstWhere((move) => move['move'] == moveId,
+          orElse: () => null);
+      if (moveDetails != null) {
+        levelUp.add(moveDetails);
+        levelUpLvls.add(move['level']);
+      }
+    }
+
+    List tm = [];
+    for (String moveId in moveset['tm']) {
+      var moveDetails = moveData.firstWhere((move) => move['move'] == moveId,
+          orElse: () => null);
+      if (moveDetails != null) {
+        tm.add(moveDetails);
+      }
+    }
+
+    List egg = [];
+    for (String moveId in moveset['egg']) {
+      var moveDetails = moveData.firstWhere((move) => move['move'] == moveId,
+          orElse: () => null);
+      if (moveDetails != null) {
+        egg.add(moveDetails);
+      }
+    }
+
+    setState(() {
+      levelUpMoves = levelUp;
+      levelUpLevels = levelUpLvls;
+      tmMoves = tm;
+      eggMoves = egg;
     });
   }
 
@@ -106,6 +164,50 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
         MaterialPageRoute(
           builder: (context) =>
               PokemonDetailScreen(pokemonData: specificPokemon),
+        ),
+      );
+    }
+  }
+
+  void navigateToAbility(BuildContext context, String name) async {
+    String data = await DefaultAssetBundle.of(context)
+        .loadString('assets/pokemon/data/abilities.json');
+
+    List<dynamic> abilityList = jsonDecode(data);
+
+    Map<String, dynamic>? ability = abilityList.firstWhere(
+      (ability) => ability['name'] == name,
+      orElse: () => null,
+    );
+
+    if (ability != null) {
+      // ignore: use_build_context_synchronously
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => AbilityPage(abilityData: ability),
+        ),
+      );
+    }
+  }
+
+  void navigateToMove(BuildContext context, String name) async {
+    String data = await DefaultAssetBundle.of(context)
+        .loadString('assets/pokemon/data/moves.json');
+
+    List<dynamic> movesList = jsonDecode(data);
+
+    Map<String, dynamic>? move = movesList.firstWhere(
+      (move) => move['move'] == name,
+      orElse: () => null,
+    );
+
+    if (move != null) {
+      // ignore: use_build_context_synchronously
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => MovePage(moveData: move),
         ),
       );
     }
@@ -247,11 +349,21 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             if (widget.pokemonData['id'] > 1) ...[
-              IconButton(onPressed: () => navigateToPokemonViaID(context, widget.pokemonData["id"] - 1), icon: const Icon(Icons.arrow_left)),
-              const SizedBox(width: 50,)
+              IconButton(
+                  onPressed: () => navigateToPokemonViaID(
+                      context, widget.pokemonData["id"] - 1),
+                  icon: const Icon(Icons.arrow_left)),
+              const SizedBox(
+                width: 50,
+              )
             ] else ...[
-              const Icon(Icons.arrow_left, color: Colors.transparent,),
-              const SizedBox(width: 70,)
+              const Icon(
+                Icons.arrow_left,
+                color: Colors.transparent,
+              ),
+              const SizedBox(
+                width: 70,
+              )
             ],
             GestureDetector(
               onTap: toggleShiny,
@@ -263,11 +375,21 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
               ),
             ),
             if (widget.pokemonData['id'] < 151) ...[
-              const SizedBox(width: 50,),
-              IconButton(onPressed: () => navigateToPokemonViaID(context, widget.pokemonData["id"] + 1), icon: const Icon(Icons.arrow_right)),
+              const SizedBox(
+                width: 50,
+              ),
+              IconButton(
+                  onPressed: () => navigateToPokemonViaID(
+                      context, widget.pokemonData["id"] + 1),
+                  icon: const Icon(Icons.arrow_right)),
             ] else ...[
-              const SizedBox(width: 70,),
-              const Icon(Icons.arrow_right, color: Colors.transparent,)  
+              const SizedBox(
+                width: 70,
+              ),
+              const Icon(
+                Icons.arrow_right,
+                color: Colors.transparent,
+              )
             ],
           ],
         ),
@@ -286,7 +408,7 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                 borderRadius: BorderRadius.only(
                     topRight: Radius.circular(50),
                     topLeft: Radius.circular(50))),
-            width: 10000,
+            width: double.infinity,
             child: SingleChildScrollView(
               child: Column(
                 children: [
@@ -341,7 +463,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                   Column(
                     children: [
                       TextButton(
-                        onPressed: () {},
+                        onPressed: () => navigateToAbility(
+                            context, widget.pokemonData['ability1']),
                         style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all(
                                 const Color(0xffEF866B))),
@@ -354,7 +477,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                       if (widget.pokemonData['ability2'] != null &&
                           widget.pokemonData['ability2'].isNotEmpty) ...[
                         TextButton(
-                            onPressed: () {},
+                            onPressed: () => navigateToAbility(
+                                context, widget.pokemonData['ability2']),
                             style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all(
                                     const Color(0xffEF866B))),
@@ -365,7 +489,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                       if (widget.pokemonData['hidden_ability'] != null &&
                           widget.pokemonData['hidden_ability'].isNotEmpty) ...[
                         TextButton(
-                            onPressed: () {},
+                            onPressed: () => navigateToAbility(
+                                context, widget.pokemonData['hidden_ability']),
                             style: ButtonStyle(
                                 backgroundColor: MaterialStateProperty.all(
                                     const Color(0xffEF866B))),
@@ -440,11 +565,26 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                       child: OverflowBox(
                                         maxWidth: 85,
                                         maxHeight: 85,
-                                        child: Image.network(
-                                          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evo['from_id']}.png',
-                                          height: 100,
+                                        child: CachedNetworkImage(
+                                          imageUrl:
+                                              "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evo['from_id']}.png",
                                           width: 100,
+                                          height: 100,
+                                          placeholder: (context, url) =>
+                                              const CircularProgressIndicator(),
+                                          errorWidget: (context, url, error) =>
+                                              const Icon(Icons.error),
                                           fit: BoxFit.cover,
+                                          fadeInDuration: Durations.short1,
+                                          cacheKey: "pokemon_${evo['from_id']}",
+                                          cacheManager: CacheManager(
+                                            Config(
+                                              "pokemon_images_cache",
+                                              maxNrOfCacheObjects: 500,
+                                              stalePeriod:
+                                                  const Duration(days: 7),
+                                            ),
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -485,11 +625,26 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                       child: OverflowBox(
                                         maxWidth: 85,
                                         maxHeight: 85,
-                                        child: Image.network(
-                                          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evo['to_id']}.png',
-                                          height: 100,
+                                        child: CachedNetworkImage(
+                                          imageUrl:
+                                              "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evo['to_id']}.png",
                                           width: 100,
+                                          height: 100,
+                                          placeholder: (context, url) =>
+                                              const CircularProgressIndicator(),
+                                          errorWidget: (context, url, error) =>
+                                              const Icon(Icons.error),
                                           fit: BoxFit.cover,
+                                          fadeInDuration: Durations.short1,
+                                          cacheKey: "pokemon_${evo['to_id']}",
+                                          cacheManager: CacheManager(
+                                            Config(
+                                              "pokemon_images_cache",
+                                              maxNrOfCacheObjects: 500,
+                                              stalePeriod:
+                                                  const Duration(days: 7),
+                                            ),
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -520,8 +675,332 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
   }
 
   Widget _buildMovesTab() {
-    return const Center(
-      child: Text('Moves Tab'),
+    return Center(
+      child: Column(
+        children: [
+          const SizedBox(height: 30),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(15),
+              child: Container(
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(50)),
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color(0xffFFFFFF),
+                      Color(0xffC6C6C6),
+                    ],
+                  ),
+                ),
+                child: Center(
+                  child: DefaultTabController(
+                    length: 3,
+                    child: Padding(
+                      padding: const EdgeInsets.all(15),
+                      child: Scaffold(
+                        backgroundColor: Colors.transparent,
+                        appBar: AppBar(
+                          automaticallyImplyLeading: false,
+                          centerTitle: true,
+                          title: const Text(
+                            'Learnable Moves',
+                            style: TextStyle(fontSize: 24),
+                          ),
+                          backgroundColor: Colors.transparent,
+                          bottom: const TabBar(
+                              labelColor: Colors.black,
+                              indicatorColor: Color(0xffEF866B),
+                              dividerColor: Color(0xffEF866B),
+                              tabs: [
+                                Tab(text: 'Level Up'),
+                                Tab(text: 'TM Moves'),
+                                Tab(text: 'Egg Moves')
+                              ]),
+                        ),
+                        body: TabBarView(children: [
+                          SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                for (var move in levelUpMoves) ...[
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  GestureDetector(
+                                    onTap: () =>
+                                        navigateToMove(context, move['move']),
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(20)),
+                                        color: Colors.teal,
+                                      ),
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Row(children: [
+                                        Image.asset(
+                                          'assets/images/icons/types/${move['type']}.png',
+                                          width: 35,
+                                          height: 35,
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        SizedBox(
+                                          width: 100,
+                                          child: Text(
+                                            move['move'],
+                                            style: const TextStyle(
+                                                fontSize: 20,
+                                                color: Colors.white),
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          width: 20,
+                                        ),
+                                        Expanded(
+                                            child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'Power: ${move['power']}',
+                                              style: const TextStyle(
+                                                  fontSize: 16,
+                                                  color: Color.fromARGB(
+                                                      170, 255, 255, 255)),
+                                              textAlign: TextAlign.start,
+                                            ),
+                                            Text(
+                                              'Accuracy: ${move['accuracy']}',
+                                              style: const TextStyle(
+                                                  fontSize: 16,
+                                                  color: Color.fromARGB(
+                                                      170, 255, 255, 255)),
+                                              textAlign: TextAlign.start,
+                                            ),
+                                            Text(
+                                              'PP: ${move['pp']}',
+                                              style: const TextStyle(
+                                                  fontSize: 16,
+                                                  color: Color.fromARGB(
+                                                      170, 255, 255, 255)),
+                                              textAlign: TextAlign.start,
+                                            ),
+                                            Text(
+                                              'Level: ${levelUpLevels[levelUpMoves.indexOf(move)]}',
+                                              style: const TextStyle(
+                                                  fontSize: 16,
+                                                  color: Color.fromARGB(
+                                                      170, 255, 255, 255)),
+                                              textAlign: TextAlign.start,
+                                            ),
+                                          ],
+                                        )),
+                                        const SizedBox(
+                                          width: 20,
+                                        ),
+                                        if (move['category'].toString() !=
+                                            '--') ...[
+                                          Image.asset(
+                                            'assets/images/icons/moves/${move['category'].toString().toLowerCase()}.png',
+                                            width: 35,
+                                            height: 35,
+                                          ),
+                                        ]
+                                      ]),
+                                    ),
+                                  ),
+                                ]
+                              ],
+                            ),
+                          ),
+                          SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                for (var move in tmMoves) ...[
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  GestureDetector(
+                                    onTap: () =>
+                                        navigateToMove(context, move['move']),
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(20)),
+                                        color: Colors.teal,
+                                      ),
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Row(children: [
+                                        Image.asset(
+                                          'assets/images/icons/types/${move['type']}.png',
+                                          width: 35,
+                                          height: 35,
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        SizedBox(
+                                          width: 100,
+                                          child: Text(
+                                            move['move'],
+                                            style: const TextStyle(
+                                                fontSize: 20,
+                                                color: Colors.white),
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          width: 20,
+                                        ),
+                                        Expanded(
+                                            child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'Power: ${move['power']}',
+                                              style: const TextStyle(
+                                                  fontSize: 16,
+                                                  color: Color.fromARGB(
+                                                      170, 255, 255, 255)),
+                                              textAlign: TextAlign.start,
+                                            ),
+                                            Text(
+                                              'Accuracy: ${move['accuracy']}',
+                                              style: const TextStyle(
+                                                  fontSize: 16,
+                                                  color: Color.fromARGB(
+                                                      170, 255, 255, 255)),
+                                              textAlign: TextAlign.start,
+                                            ),
+                                            Text(
+                                              'PP: ${move['pp']}',
+                                              style: const TextStyle(
+                                                  fontSize: 16,
+                                                  color: Color.fromARGB(
+                                                      170, 255, 255, 255)),
+                                              textAlign: TextAlign.start,
+                                            ),
+                                          ],
+                                        )),
+                                        const SizedBox(
+                                          width: 20,
+                                        ),
+                                        if (move['category'].toString() !=
+                                            '--') ...[
+                                          Image.asset(
+                                            'assets/images/icons/moves/${move['category'].toString().toLowerCase()}.png',
+                                            width: 35,
+                                            height: 35,
+                                          ),
+                                        ]
+                                      ]),
+                                    ),
+                                  ),
+                                ]
+                              ],
+                            ),
+                          ),
+                          SingleChildScrollView(
+                            child: Column(
+                              children: [
+                                for (var move in eggMoves) ...[
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  GestureDetector(
+                                    onTap: () =>
+                                        navigateToMove(context, move['move']),
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(20)),
+                                        color: Colors.teal,
+                                      ),
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Row(children: [
+                                        Image.asset(
+                                          'assets/images/icons/types/${move['type']}.png',
+                                          width: 35,
+                                          height: 35,
+                                        ),
+                                        const SizedBox(
+                                          width: 10,
+                                        ),
+                                        SizedBox(
+                                          width: 100,
+                                          child: Text(
+                                            move['move'],
+                                            style: const TextStyle(
+                                                fontSize: 20,
+                                                color: Colors.white),
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          width: 20,
+                                        ),
+                                        Expanded(
+                                            child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          children: [
+                                            Text(
+                                              'Power: ${move['power']}',
+                                              style: const TextStyle(
+                                                  fontSize: 16,
+                                                  color: Color.fromARGB(
+                                                      170, 255, 255, 255)),
+                                              textAlign: TextAlign.start,
+                                            ),
+                                            Text(
+                                              'Accuracy: ${move['accuracy']}',
+                                              style: const TextStyle(
+                                                  fontSize: 16,
+                                                  color: Color.fromARGB(
+                                                      170, 255, 255, 255)),
+                                              textAlign: TextAlign.start,
+                                            ),
+                                            Text(
+                                              'PP: ${move['pp']}',
+                                              style: const TextStyle(
+                                                  fontSize: 16,
+                                                  color: Color.fromARGB(
+                                                      170, 255, 255, 255)),
+                                              textAlign: TextAlign.start,
+                                            ),
+                                          ],
+                                        )),
+                                        const SizedBox(
+                                          width: 20,
+                                        ),
+                                        if (move['category'].toString() !=
+                                            '--') ...[
+                                          Image.asset(
+                                            'assets/images/icons/moves/${move['category'].toString().toLowerCase()}.png',
+                                            width: 35,
+                                            height: 35,
+                                          ),
+                                        ]
+                                      ]),
+                                    ),
+                                  ),
+                                ]
+                              ],
+                            ),
+                          ),
+                        ]),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(height: 30)
+        ],
+      ),
     );
   }
 
@@ -556,7 +1035,7 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
             child: Padding(
               padding: const EdgeInsets.all(15),
               child: Container(
-                width: 10000,
+                width: double.infinity,
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(50)),
                   gradient: LinearGradient(

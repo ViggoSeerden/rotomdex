@@ -12,7 +12,12 @@ class MoveDexPage extends StatefulWidget {
 
 class MoveDexPageState extends State<MoveDexPage>
     with SingleTickerProviderStateMixin {
-  List _data = [];
+  List<Map<String, dynamic>> _data = [];
+  List<Map<String, dynamic>> _displayedData = [];
+  int perPage = 20; // Moves per page
+  int currentPage = 0; // Current page
+  bool isLoading = false;
+  int prefetchThreshold = 5;
 
   List<String> types = [
     'Normal',
@@ -38,6 +43,8 @@ class MoveDexPageState extends State<MoveDexPage>
   late AnimationController animationController;
   late Animation<double> animation;
 
+  ScrollController scrollController = ScrollController();
+
   @override
   void initState() {
     animationController = AnimationController(
@@ -52,35 +59,65 @@ class MoveDexPageState extends State<MoveDexPage>
 
     super.initState();
     _loadJsonData();
+    scrollController.addListener(scrollListener);
   }
+
+  void scrollListener() {
+  if (scrollController.position.pixels >=
+          scrollController.position.maxScrollExtent -
+              scrollController.position.viewportDimension &&
+      !isLoading) {
+    loadMoreData();
+  }
+}
 
   Future<void> _loadJsonData() async {
     String data = await DefaultAssetBundle.of(context)
         .loadString('assets/pokemon/data/moves.json');
     setState(() {
-      _data = json.decode(data);
+      _data = List<Map<String, dynamic>>.from(json.decode(data));
+      loadMoreData();
+    });
+    currentPage = 1;
+  }
+
+  Future<void> loadMoreData() async {
+    if (isLoading) return;
+
+    isLoading = true;
+
+    int startIndex = currentPage * perPage;
+    int endIndex = startIndex + perPage + prefetchThreshold;
+    if (endIndex > _data.length) {
+      endIndex = _data.length;
+    }
+
+    setState(() {
+      _displayedData.addAll(_data.getRange(startIndex, endIndex));
+      currentPage++;
+      isLoading = false;
     });
   }
 
   void searchMoves(String input) {
-    List filteredMoves = _data
+    List<Map<String, dynamic>> filteredMoves = _data
         .where((move) =>
             move['move'].toString().toLowerCase().contains(input.toLowerCase()))
         .toList();
     setState(() {
-      _data = filteredMoves;
+      _displayedData = filteredMoves;
     });
   }
 
   void filterMoves(String argument, String input) {
-    List filteredPokemon = _data
+    List<Map<String, dynamic>> filteredPokemon = _data
         .where(
           (pokemon) =>
               pokemon[argument].toString().toLowerCase() == input.toLowerCase(),
         )
         .toList();
     setState(() {
-      _data = filteredPokemon;
+      _displayedData = filteredPokemon;
     });
   }
 
@@ -94,13 +131,13 @@ class MoveDexPageState extends State<MoveDexPage>
     });
 
     setState(() {
-      _data = _data.toList();
+      _displayedData = _data.toList();
     });
   }
 
   void reverseMoves() {
     setState(() {
-      _data = _data.reversed.toList();
+      _displayedData = _data.reversed.toList();
     });
   }
 
@@ -108,16 +145,21 @@ class MoveDexPageState extends State<MoveDexPage>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      body: SingleChildScrollView(
-        child: Column(children: [
-          for (var move in _data) ...[
-            GestureDetector(
+      body: ListView.separated(
+        separatorBuilder: (BuildContext context, int index) {
+          return const SizedBox(height: 10);
+        },
+        controller: scrollController,
+        itemCount: _displayedData.length + (isLoading ? 1 : 0),
+        itemBuilder: (context, index) {
+          if (index < _displayedData.length) {
+            var move = _displayedData[index];
+            return GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) =>
-                        MovePage(moveData: move),
+                    builder: (context) => MovePage(moveData: move),
                   ),
                 );
               },
@@ -185,12 +227,11 @@ class MoveDexPageState extends State<MoveDexPage>
                   ]
                 ]),
               ),
-            ),
-            const SizedBox(
-              height: 10,
-            )
-          ]
-        ]),
+            );
+          } else {
+            return _buildLoader(); // Show loading indicator
+          }
+        },
       ),
       floatingActionButton: FloatingActionBubble(
         onPress: () => {
@@ -385,16 +426,6 @@ class MoveDexPageState extends State<MoveDexPage>
               animationController.reverse();
             },
           ),
-          // Bubble(
-          //   title: "Layout",
-          //   iconColor: Colors.white,
-          //   bubbleColor: const Color(0xffEF866B),
-          //   icon: Icons.grid_3x3,
-          //   titleStyle: const TextStyle(fontSize: 16, color: Colors.white),
-          //   onPress: () {
-          //     animationController.reverse();
-          //   },
-          // ),
           Bubble(
             title: "Reset",
             iconColor: Colors.white,
@@ -402,7 +433,9 @@ class MoveDexPageState extends State<MoveDexPage>
             icon: Icons.backspace,
             titleStyle: const TextStyle(fontSize: 16, color: Colors.white),
             onPress: () {
-              _loadJsonData();
+              setState(() {
+                _displayedData = _data;
+              });
               animationController.reverse();
             },
           ),
@@ -410,4 +443,10 @@ class MoveDexPageState extends State<MoveDexPage>
       ),
     );
   }
+}
+
+Widget _buildLoader() {
+  return const Center(
+    child: CircularProgressIndicator(),
+  );
 }

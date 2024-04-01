@@ -12,10 +12,17 @@ class AbilityDexPage extends StatefulWidget {
 
 class AbilityDexPageState extends State<AbilityDexPage>
     with SingleTickerProviderStateMixin {
-  List _data = [];
+  List<Map<String, dynamic>> _data = [];
+  List<Map<String, dynamic>> _displayedData = [];
+  int perPage = 20;
+  int currentPage = 0;
+  bool isLoading = false;
+  int prefetchThreshold = 5;
 
   late AnimationController animationController;
   late Animation<double> animation;
+
+  ScrollController scrollController = ScrollController();
 
   @override
   void initState() {
@@ -31,31 +38,61 @@ class AbilityDexPageState extends State<AbilityDexPage>
 
     super.initState();
     _loadJsonData();
+    scrollController.addListener(scrollListener);
+  }
+
+  void scrollListener() {
+    if (scrollController.position.pixels >=
+            scrollController.position.maxScrollExtent -
+                scrollController.position.viewportDimension &&
+        !isLoading) {
+      loadMoreData();
+    }
   }
 
   Future<void> _loadJsonData() async {
     String data = await DefaultAssetBundle.of(context)
         .loadString('assets/pokemon/data/abilities.json');
     setState(() {
-      _data = json.decode(data);
+      _data = List<Map<String, dynamic>>.from(json.decode(data));
+      loadMoreData();
+    });
+    currentPage = 1;
+  }
+
+  Future<void> loadMoreData() async {
+    if (isLoading) return;
+
+    isLoading = true;
+
+    int startIndex = currentPage * perPage;
+    int endIndex = startIndex + perPage + prefetchThreshold;
+    if (endIndex > _data.length) {
+      endIndex = _data.length;
+    }
+
+    setState(() {
+      _displayedData.addAll(_data.getRange(startIndex, endIndex));
+      currentPage++;
+      isLoading = false;
     });
   }
 
   void searchAbilities(String input) {
-    List filteredAbilities = _data
-        .where((ability) => ability['abilities']
+    List<Map<String, dynamic>> filteredAbilities = _data
+        .where((ability) => ability['name']
             .toString()
             .toLowerCase()
             .contains(input.toLowerCase()))
         .toList();
     setState(() {
-      _data = filteredAbilities;
+      _displayedData = filteredAbilities;
     });
   }
 
-  void reverseMoves() {
+  void reverseAbilities() {
     setState(() {
-      _data = _data.reversed.toList();
+      _displayedData = _data.reversed.toList();
     });
   }
 
@@ -63,10 +100,16 @@ class AbilityDexPageState extends State<AbilityDexPage>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
-      body: SingleChildScrollView(
-        child: Column(children: [
-          for (var ability in _data) ...[
-            GestureDetector(
+      body: ListView.separated(
+        separatorBuilder: (BuildContext context, int index) {
+          return const SizedBox(height: 10);
+        },
+        controller: scrollController,
+        itemCount: _displayedData.length + (isLoading ? 1 : 0),
+        itemBuilder: (context, index) {
+          if (index < _displayedData.length) {
+            var ability = _displayedData[index];
+            return GestureDetector(
               onTap: () {
                 Navigator.push(
                   context,
@@ -76,7 +119,7 @@ class AbilityDexPageState extends State<AbilityDexPage>
                 );
               },
               child: Container(
-                width: double.infinity,
+                  width: double.infinity,
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(20)),
                     color: Colors.teal,
@@ -98,12 +141,11 @@ class AbilityDexPageState extends State<AbilityDexPage>
                       )
                     ],
                   )),
-            ),
-            const SizedBox(
-              height: 10,
-            )
-          ]
-        ]),
+            );
+          } else {
+            return _buildLoader(); // Show loading indicator
+          }
+        },
       ),
       floatingActionButton: FloatingActionBubble(
         onPress: () => {
@@ -162,7 +204,7 @@ class AbilityDexPageState extends State<AbilityDexPage>
             icon: Icons.sort,
             titleStyle: const TextStyle(fontSize: 16, color: Colors.white),
             onPress: () {
-              reverseMoves();
+              reverseAbilities();
               animationController.reverse();
             },
           ),
@@ -173,7 +215,9 @@ class AbilityDexPageState extends State<AbilityDexPage>
             icon: Icons.backspace,
             titleStyle: const TextStyle(fontSize: 16, color: Colors.white),
             onPress: () {
-              _loadJsonData();
+              setState(() {
+                _displayedData = _data;
+              });
               animationController.reverse();
             },
           ),
@@ -181,4 +225,10 @@ class AbilityDexPageState extends State<AbilityDexPage>
       ),
     );
   }
+}
+
+Widget _buildLoader() {
+  return const Center(
+    child: CircularProgressIndicator(),
+  );
 }

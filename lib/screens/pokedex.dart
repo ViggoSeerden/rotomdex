@@ -1,6 +1,8 @@
 import 'dart:convert';
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:floating_action_bubble/floating_action_bubble.dart';
+import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import '../detail/pokemon.dart';
 
 class PokedexPage extends StatefulWidget {
@@ -12,7 +14,13 @@ class PokedexPage extends StatefulWidget {
 
 class PokedexPageState extends State<PokedexPage>
     with SingleTickerProviderStateMixin {
-  List _data = [];
+  List<Map<String, dynamic>> _data = [];
+  List<Map<String, dynamic>> _displayedData = [];
+
+  int perPage = 24;
+  int currentPage = 0;
+  int prefetchThreshold = 6;
+  bool isLoading = false;
 
   List<String> types = [
     'Normal',
@@ -56,6 +64,8 @@ class PokedexPageState extends State<PokedexPage>
   late AnimationController animationController;
   late Animation<double> animation;
 
+  ScrollController scrollController = ScrollController();
+
   @override
   void initState() {
     animationController = AnimationController(
@@ -70,31 +80,74 @@ class PokedexPageState extends State<PokedexPage>
 
     super.initState();
     _loadJsonData();
+    scrollController.addListener(scrollListener);
+  }
+
+  void scrollListener() {
+    if (scrollController.position.pixels >=
+            scrollController.position.maxScrollExtent -
+                scrollController.position.viewportDimension &&
+        !isLoading) {
+      _loadMoreData();
+    }
   }
 
   Future<void> _loadJsonData() async {
     String data = await DefaultAssetBundle.of(context)
         .loadString('assets/pokemon/data/kanto_expanded.json');
     setState(() {
-      _data = json.decode(data);
+      _data = List<Map<String, dynamic>>.from(json.decode(data));
+      _loadMoreData();
     });
   }
 
+  Future<void> _loadMoreData() async {
+    if (isLoading) return;
+
+    isLoading = true;
+
+    // Calculate the index range for the next page
+    int startIndex = currentPage * perPage;
+    int endIndex =
+        startIndex + perPage + prefetchThreshold; // Preload additional items
+
+    // Ensure endIndex does not exceed total Pokemon count
+    if (endIndex > _data.length) {
+      endIndex = _data.length;
+    }
+
+    List<Map<String, dynamic>> newPokemon =
+        _data.getRange(startIndex, endIndex).toList();
+
+    // Check for duplicates before adding
+    for (var pokemon in newPokemon) {
+      if (!_displayedData.contains(pokemon)) {
+        _displayedData.add(pokemon);
+      }
+    }
+
+    currentPage++;
+    isLoading = false;
+
+    setState(() {});
+  }
+
   void searchPokemon(String input) {
-    List filteredPokemon = _data
+    List<Map<String, dynamic>> filteredPokemon = _data
         .where((pokemon) => pokemon['name']
             .toString()
             .toLowerCase()
             .contains(input.toLowerCase()))
         .toList();
+
     setState(() {
-      _data = filteredPokemon;
+      _displayedData = filteredPokemon;
     });
   }
 
   void filterPokemon(String argument, String input) {
     if (argument == 'type') {
-      List filteredPokemon = _data
+      List<Map<String, dynamic>> filteredPokemon = _data
           .where(
             (pokemon) =>
                 pokemon['type1'].toLowerCase() == input.toLowerCase() ||
@@ -102,10 +155,10 @@ class PokedexPageState extends State<PokedexPage>
           )
           .toList();
       setState(() {
-        _data = filteredPokemon;
+        _displayedData = filteredPokemon;
       });
     } else if (argument == 'egg_group') {
-      List filteredPokemon = _data
+      List<Map<String, dynamic>> filteredPokemon = _data
           .where(
             (pokemon) =>
                 pokemon['egg_group1'].toLowerCase() == input.toLowerCase() ||
@@ -113,10 +166,10 @@ class PokedexPageState extends State<PokedexPage>
           )
           .toList();
       setState(() {
-        _data = filteredPokemon;
+        _displayedData = filteredPokemon;
       });
     } else {
-      List filteredPokemon = _data
+      List<Map<String, dynamic>> filteredPokemon = _data
           .where(
             (pokemon) =>
                 pokemon[argument].toString().toLowerCase() ==
@@ -124,7 +177,7 @@ class PokedexPageState extends State<PokedexPage>
           )
           .toList();
       setState(() {
-        _data = filteredPokemon;
+        _displayedData = filteredPokemon;
       });
     }
   }
@@ -139,13 +192,13 @@ class PokedexPageState extends State<PokedexPage>
     });
 
     setState(() {
-      _data = _data.toList();
+      _displayedData = _data.toList();
     });
   }
 
   void reversePokemon() {
     setState(() {
-      _data = _data.reversed.toList();
+      _displayedData = _data.reversed.toList();
     });
   }
 
@@ -154,14 +207,15 @@ class PokedexPageState extends State<PokedexPage>
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: GridView.builder(
-        itemCount: _data.length,
+        itemCount: _displayedData.length,
+        controller: scrollController,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,
           crossAxisSpacing: 12,
           mainAxisSpacing: 20,
         ),
         itemBuilder: (context, index) {
-          final item = _data[index];
+          final item = _displayedData[index];
           return GestureDetector(
             onTap: () {
               Navigator.push(
@@ -185,9 +239,23 @@ class PokedexPageState extends State<PokedexPage>
                       child: OverflowBox(
                         maxWidth: 90,
                         maxHeight: 90,
-                        child: Image.network(
-                          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item['id']}.png',
+                        child: CachedNetworkImage(
+                          imageUrl:
+                              "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item['id']}.png",
+                          placeholder: (context, url) =>
+                              const CircularProgressIndicator(),
+                          errorWidget: (context, url, error) =>
+                              const Icon(Icons.error),
                           fit: BoxFit.cover,
+                          fadeInDuration: Durations.short1,
+                          cacheKey: "pokemon_${item['id']}",
+                          cacheManager: CacheManager(
+                            Config(
+                              "pokemon_images_cache",
+                              maxNrOfCacheObjects: 500,
+                              stalePeriod: const Duration(days: 7),
+                            ),
+                          ),
                         ),
                       ),
                     ),
@@ -287,8 +355,8 @@ class PokedexPageState extends State<PokedexPage>
                             children: [
                               const Text(
                                 'Type',
-                                style:
-                                    TextStyle(fontSize: 20, color: Colors.white),
+                                style: TextStyle(
+                                    fontSize: 20, color: Colors.white),
                               ),
                               const SizedBox(width: 10),
                               DropdownButton<String>(
@@ -313,8 +381,8 @@ class PokedexPageState extends State<PokedexPage>
                             children: [
                               const Text(
                                 'Egg Group',
-                                style:
-                                    TextStyle(fontSize: 20, color: Colors.white),
+                                style: TextStyle(
+                                    fontSize: 20, color: Colors.white),
                               ),
                               const SizedBox(width: 10),
                               DropdownButton<String>(
@@ -448,7 +516,9 @@ class PokedexPageState extends State<PokedexPage>
             icon: Icons.backspace,
             titleStyle: const TextStyle(fontSize: 16, color: Colors.white),
             onPress: () {
-              _loadJsonData();
+              setState(() {
+                _displayedData = _data;
+              });
               animationController.reverse();
             },
           ),

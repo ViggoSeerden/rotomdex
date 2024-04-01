@@ -45,6 +45,16 @@
         "description": "Protects allies from attacks that limit their move choices."
     },
     {
+        "id": 266,
+        "name": "As One",
+        "description": "This Ability combines the effects of both Calyrex's Unnerve Ability and Glastrier's Chilling Neigh Ability."
+    },
+    {
+        "id": 267,
+        "name": "As One",
+        "description": "This Ability combines the effects of both Calyrex's Unnerve Ability and Spectrier's Grim Neigh Ability."
+    },
+    {
         "id": 10,
         "name": "Aura Break",
         "description": "The effects of Aura Abilities are reversed."
@@ -72,7 +82,7 @@
     {
         "id": 15,
         "name": "Battle Bond",
-        "description": "Defeating an opposing Pokémon strengthens the Pokémon's bond with its Trainer, and it becomes Ash-Greninja. Water Shuriken gets more powerful."
+        "description": "When the Pokémon knocks out a target, its bond with its Trainer is strengthened, and its Attack, Sp. Atk, and Speed stats are boosted."
     },
     {
         "id": 16,
@@ -103,6 +113,11 @@
         "id": 21,
         "name": "Cheek Pouch",
         "description": "Restores HP as well when the Pokémon eats a Berry."
+    },
+    {
+        "id": 264,
+        "name": "Chilling Neigh",
+        "description": "When the Pokémon knocks out a target, it utters a chilling neigh, which boosts its Attack stat."
     },
     {
         "id": 22,
@@ -153,6 +168,11 @@
         "id": 31,
         "name": "Cotton Down",
         "description": "Lowers the Speed stat of Pokémon that hit the user with a physical move."
+    },
+    {
+        "id": 260,
+        "name": "Curious Medicine",
+        "description": "When the Pokémon enters a battle, it scatters medicine from its shell, which removes all stat changes from allies."
     },
     {
         "id": 32,
@@ -365,6 +385,16 @@
         "description": "Turns the ground into Grassy Terrain when the Pokémon enters a battle."
     },
     {
+        "id": 265,
+        "name": "Grim Neigh",
+        "description": "When the Pokémon knocks out a target, it utters a terrifying neigh, which boosts its Sp. Atk stat"
+    },
+    {
+        "id": 263,
+        "name": "Gulp Missile",
+        "description": "When the Pokémon uses Surf or Dive, it will come back with prey. When it takes damage, it will spit out the prey to attack."
+    },
+    {
         "id": 74,
         "name": "Guts",
         "description": "Boosts Attack if there is a status problem."
@@ -538,6 +568,11 @@
         "id": 108,
         "name": "Limber",
         "description": "The Pokémon is protected from paralysis."
+    },
+    {
+        "id": 261,
+        "name": "Liquid Ooze",
+        "description": "The strong stench of the Pokémon's oozed liquid damages attackers that use HP-draining moves."
     },
     {
         "id": 109,
@@ -968,6 +1003,11 @@
         "id": 194,
         "name": "Skill Link",
         "description": "Increases the frequency of multi-strike moves."
+    },
+    {
+        "id": 262,
+        "name": "Slow Start",
+        "description": "For five turns, the Pokémon's Attack and Speed stats are halved."
     },
     {
         "id": 195,

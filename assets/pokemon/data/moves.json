@@ -8221,26 +8221,16 @@
     },
     {
         "id": 823,
-        "move": "Freezing Glare",
-        "category": "Special",
+        "move": "Thunderous Kick",
+        "category": "Physical",
         "power": "90",
         "accuracy": "100",
         "pp": 10,
-        "type": "Psychic",
-        "description": "The user attacks by glaring at the target in a freezing-cold way. This may also leave the target frozen."
+        "type": "Fighting",
+        "description": "The user overwhelms the target with lightning-like movement before delivering a kick. This also lowers the target's Defense stat."
     },
     {
         "id": 824,
-        "move": "Fiery Wrath",
-        "category": "Special",
-        "power": "90",
-        "accuracy": "100",
-        "pp": 10,
-        "type": "Dark",
-        "description": "The user whips up a vicious tornado to tear at the opposing Pokémon. This may also make them flinch."
-    },
-    {
-        "id": 825,
         "move": "Glacial Lance",
         "category": "Physical",
         "power": "130",
@@ -8250,14 +8240,274 @@
         "description": "The user attacks by hurling a blizzard-cloaked icicle lance at the target. This move always goes first on Hail."
     },
     {
-        "id": 826,
-        "move": "Lash Out",
-        "category": "Physical",
-        "power": "75",
+        "id": 825,
+        "move": "Astral Barrage",
+        "category": "Special",
+        "power": "120",
         "accuracy": "100",
         "pp": 5,
+        "type": "Ghost",
+        "description": "The user attacks by sending a frightful amount of small ghosts at opposing Pokémon."
+    },
+    {
+        "id": 826,
+        "move": "Eerie Spell",
+        "category": "Special",
+        "power": "80",
+        "accuracy": "100",
+        "pp": 5,
+        "type": "Psychic",
+        "description": "The user attacks with its tremendous psychic power. This also drains 3 PP from the move last used by the target."
+    },
+    {
+        "id": 827,
+        "move": "Dire Claw",
+        "category": "Physical",
+        "power": "80",
+        "accuracy": "100",
+        "pp": 15,
+        "type": "Poison",
+        "description": "The user lashes out at the target with ruinous claws. This may also leave the target poisoned, paralyzed, or asleep."
+    },
+    {
+        "id": 828,
+        "move": "Psychield Bash",
+        "category": "Physical",
+        "power": "70",
+        "accuracy": "90",
+        "pp": 10,
+        "type": "Psychic",
+        "description": "Cloaking itself in psychic energy, the user slams into the target. This also boosts the user's Defense stat."
+    },
+    {
+        "id": 829,
+        "move": "Power Shift",
+        "category": "Status",
+        "power": "--",
+        "accuracy": "--",
+        "pp": 10,
+        "type": "Normal",
+        "description": "The user swaps its Attack and Defense stats."
+    },
+    {
+        "id": 830,
+        "move": "Stone Axe",
+        "category": "Physical",
+        "power": "70",
+        "accuracy": "90",
+        "pp": 15,
+        "type": "Rock",
+        "description": "The user swings its stone axes at the target. Stone splinters left behind by this attack float around the target."
+    },
+    {
+        "id": 831,
+        "move": "Springtide Storm",
+        "category": "Special",
+        "power": "100",
+        "accuracy": "80",
+        "pp": 10,
+        "type": "Fairy",
+        "description": "The user attacks by wrapping opposing Pokémon in fierce winds brimming with love and hate. This may also lower their Attack stats."
+    },
+    {
+        "id": 832,
+        "move": "Mystical Power",
+        "category": "Special",
+        "power": "70",
+        "accuracy": "90",
+        "pp": 10,
+        "type": "Psychic",
+        "description": "The user attacks by emitting a mysterious power. This also boosts the user's Sp. Atk stat."
+    },
+    {
+        "id": 833,
+        "move": "Raging Fury",
+        "category": "Physical",
+        "power": "120",
+        "accuracy": "100",
+        "pp": 10,
+        "type": "Fire",
+        "description": "The user rampages around spewing flames for two to three turns. The user then becomes confused."
+    },
+    {
+        "id": 834,
+        "move": "Wave Crash",
+        "category": "Physical",
+        "power": "120",
+        "accuracy": "100",
+        "pp": 10,
+        "type": "Water",
+        "description": "The user shrouds itself in water and slams into the target with its whole body to inflict damage. This also damages the user quite a lot."
+    },
+    {
+        "id": 835,
+        "move": "Chloroblast",
+        "category": "Special",
+        "power": "150",
+        "accuracy": "95",
+        "pp": 5,
+        "type": "Grass",
+        "description": "The user launches its amassed chlorophyll to inflict damage on the target. This also damages the user."
+    },
+    {
+        "id": 836,
+        "move": "Mountain Gale",
+        "category": "Physical",
+        "power": "100",
+        "accuracy": "85",
+        "pp": 10,
+        "type": "Ice",
+        "description": "The user hurls giant chunks of ice at the target to inflict damage. This may also make the target flinch."
+    },
+    {
+        "id": 837,
+        "move": "Victory Dance",
+        "category": "Status",
+        "power": "--",
+        "accuracy": "--",
+        "pp": 10,
+        "type": "Fighting",
+        "description": "The user performs an intense dance to usher in victory, boosting its Attack, Defense, and Speed stats."
+    },
+    {
+        "id": 838,
+        "move": "Headlong Rush",
+        "category": "Physical",
+        "power": "120",
+        "accuracy": "100",
+        "pp": 5,
+        "type": "Ground",
+        "description": "The user smashes into the target in a full-body tackle. This also lowers the user's Defense and Sp. Def stats."
+    },
+    {
+        "id": 839,
+        "move": "Barb Barrage",
+        "category": "Physical",
+        "power": "60",
+        "accuracy": "100",
+        "pp": 10,
+        "type": "Poison",
+        "description": "The user launches countless toxic barbs to inflict damage. This may also poison the target. This move's power is doubled if the target is already poisoned."
+    },
+    {
+        "id": 840,
+        "move": "Esper Wing",
+        "category": "Special",
+        "power": "80",
+        "accuracy": "100",
+        "pp": 10,
+        "type": "Psychic",
+        "description": "The user slashes the target with aura-enriched wings. This also boosts the user's Speed stat. This move has a heightened chance of landing a critical hit."
+    },
+    {
+        "id": 841,
+        "move": "Bitter Malice",
+        "category": "Special",
+        "power": "75",
+        "accuracy": "100",
+        "pp": 10,
+        "type": "Ghost",
+        "description": "The user attacks the target with spine-chilling resentment. This also lowers the target's Attack stat."
+    },
+    {
+        "id": 842,
+        "move": "Shelter",
+        "category": "Status",
+        "power": "--",
+        "accuracy": "--",
+        "pp": 10,
+        "type": "Steel",
+        "description": "The user makes its skin as hard as an iron shield, sharply boosting its Defense stat."
+    },
+    {
+        "id": 843,
+        "move": "Triple Arrows",
+        "category": "Physical",
+        "power": "90",
+        "accuracy": "100",
+        "pp": 10,
+        "type": "Fighting",
+        "description": "The user kicks, then fires three arrows. This move has a heightened chance of landing a critical hit and may also lower the target's Defense stat or make it flinch."
+    },
+    {
+        "id": 844,
+        "move": "Infernal Parade",
+        "category": "Special",
+        "power": "60",
+        "accuracy": "100",
+        "pp": 15,
+        "type": "Ghost",
+        "description": "The user attacks with myriad fireballs. This may also leave the target with a burn. This move's power is doubled if the target has a status condition."
+    },
+    {
+        "id": 845,
+        "move": "Ceaseless Edge",
+        "category": "Physical",
+        "power": "65",
+        "accuracy": "90",
+        "pp": 15,
         "type": "Dark",
-        "description": "The user lashes out to vent its frustration toward the target. If its stats were lowered during the turn, the power of this move is doubled."
+        "description": "The user slashes its shell blade at the target. Shell splinters left behind by this attack remain scattered under the target as spikes."
+    },
+    {
+        "id": 846,
+        "move": "Bleakwind Storm",
+        "category": "Special",
+        "power": "100",
+        "accuracy": "80",
+        "pp": 10,
+        "type": "Flying",
+        "description": "The user attacks with savagely cold winds that cause both body and spirit to tremble. This may also lower the Speed stats of opposing Pokémon."
+    },
+    {
+        "id": 847,
+        "move": "Wildbolt Storm",
+        "category": "Special",
+        "power": "100",
+        "accuracy": "80",
+        "pp": 10,
+        "type": "Electric",
+        "description": "The user summons a thunderous tempest and savagely attacks with lightning and wind. This may also leave opposing Pokémon with paralysis."
+    },
+    {
+        "id": 848,
+        "move": "Sandsear Storm",
+        "category": "Special",
+        "power": "100",
+        "accuracy": "80",
+        "pp": 10,
+        "type": "Ground",
+        "description": "The user attacks by wrapping opposing Pokémon in fierce winds and searingly hot sand. This may also leave them with a burn."
+    },
+    {
+        "id": 849,
+        "move": "Lunar Blessing",
+        "category": "Status",
+        "power": "--",
+        "accuracy": "--",
+        "pp": 5,
+        "type": "Psychic",
+        "description": "The user receives a blessing from the crescent moon, restoring HP and curing status conditions for itself and its ally Pokémon currently in the battle."
+    },
+    {
+        "id": 850,
+        "move": "Take Heart",
+        "category": "Status",
+        "power": "--",
+        "accuracy": "--",
+        "pp": 10,
+        "type": "Psychic",
+        "description": "The user lifts its spirits, curing its own status conditions and boosting its Sp. Atk and Sp. Def stats."
+    },
+    {
+        "id": 851,
+        "move": "Tera Blast",
+        "category": "Special",
+        "power": "80",
+        "accuracy": "100",
+        "pp": 10,
+        "type": "Normal",
+        "description": "If the user has Terastallized, it unleashes energy of its Tera Type. This move inflicts damage using the Attack or Sp. Atk stat—whichever is higher for the user."
     },
 
 

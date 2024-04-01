@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:rotomdex/scanning/gallery.dart';
 import 'package:rotomdex/screens/abilities.dart';
 import 'package:rotomdex/screens/moves.dart';
+import 'package:rotomdex/screens/settings.dart';
 import 'screens/pokedex.dart';
 
 void main() => runApp(const MyApp());
@@ -44,10 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
       style: optionStyle,
     ),
     GalleryScreen(),
-    Text(
-      'Settings',
-      style: optionStyle,
-    ),
+    SettingsPage()
   ];
 
   void _onItemTapped(int index, String name) {
