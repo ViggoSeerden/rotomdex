@@ -3,6 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:floating_action_bubble/floating_action_bubble.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
+import 'package:rotomdex/themes/themes.dart';
 import '../detail/pokemon.dart';
 
 class PokedexPage extends StatefulWidget {
@@ -225,57 +226,75 @@ class PokedexPageState extends State<PokedexPage>
                 ),
               );
             },
-            child: Column(
-              children: [
-                Expanded(
-                  child: Align(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(360),
-                        color: Colors.teal,
-                      ),
-                      width: 75,
-                      height: 75,
-                      child: OverflowBox(
-                        maxWidth: 90,
-                        maxHeight: 90,
-                        child: CachedNetworkImage(
-                          imageUrl:
-                              "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item['id']}.png",
-                          placeholder: (context, url) =>
-                              const CircularProgressIndicator(),
-                          errorWidget: (context, url, error) =>
-                              const Icon(Icons.error),
-                          fit: BoxFit.cover,
-                          fadeInDuration: Durations.short1,
-                          cacheKey: "pokemon_${item['id']}",
-                          cacheManager: CacheManager(
-                            Config(
-                              "pokemon_images_cache",
-                              maxNrOfCacheObjects: 500,
-                              stalePeriod: const Duration(days: 7),
+            child: Tooltip(
+              richMessage: TextSpan(text: item['height']['meters'], children: [
+                TextSpan(text: '\n${item['weight']['kilograms']}'),
+                const TextSpan(text: '\nAbilities:'),
+                TextSpan(text: '\n  ${item['ability1']}'),
+                if (item['ability2'].isNotEmpty) ...[
+                  TextSpan(text: '\n  ${item['ability2']}'),
+                ],
+                if (item['hidden_ability'].isNotEmpty) ...[
+                  TextSpan(text: '\n  ${item['hidden_ability']}'),
+                ],
+                TextSpan(
+                    text:
+                        '\nBST: ${(item['base_stats']['HP'] + item['base_stats']['Attack'] + item['base_stats']['Defense'] + item['base_stats']['Speed'] + item['base_stats']['SpAttack'] + item['base_stats']['SpDefense']).toString()}'),
+              ]),
+              child: Column(
+                children: [
+                  Expanded(
+                    child: Align(
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(360),
+                          color: BaseThemeColors.dexItemBG,
+                        ),
+                        width: 75,
+                        height: 75,
+                        child: OverflowBox(
+                          maxWidth: 90,
+                          maxHeight: 90,
+                          child: CachedNetworkImage(
+                            imageUrl:
+                                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item['id']}.png",
+                            placeholder: (context, url) =>
+                                const CircularProgressIndicator(),
+                            errorWidget: (context, url, error) =>
+                                const Icon(Icons.error),
+                            fit: BoxFit.cover,
+                            fadeInDuration: Durations.short1,
+                            cacheKey: "pokemon_${item['id']}",
+                            cacheManager: CacheManager(
+                              Config(
+                                "pokemon_images_cache",
+                                maxNrOfCacheObjects: 500,
+                                stalePeriod: const Duration(days: 7),
+                              ),
                             ),
                           ),
                         ),
                       ),
                     ),
                   ),
-                ),
-                Text('#${item['id']} ${item['name']}',
-                    style: const TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.bold)),
-                Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  Image.asset('assets/images/icons/types/${item['type1']}.png',
-                      width: 25, height: 25),
-                  if (item['type2'] != null && item['type2'].isNotEmpty) ...[
-                    const SizedBox(width: 5),
+                  Text('#${item['id']} ${item['name']}',
+                      style: const TextStyle(
+                          color: BaseThemeColors.dexItemText, fontWeight: FontWeight.bold)),
+                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                     Image.asset(
-                        'assets/images/icons/types/${item['type2']}.png',
+                        'assets/images/icons/types/${item['type1']}.png',
                         width: 25,
                         height: 25),
-                  ],
-                ]),
-              ],
+                    if (item['type2'] != null && item['type2'].isNotEmpty) ...[
+                      const SizedBox(width: 5),
+                      Image.asset(
+                          'assets/images/icons/types/${item['type2']}.png',
+                          width: 25,
+                          height: 25),
+                    ],
+                  ]),
+                ],
+              ),
             ),
           );
         },
@@ -305,12 +324,12 @@ class PokedexPageState extends State<PokedexPage>
                     title: const Text(
                       'Enter Name:',
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: BaseThemeColors.fabPopupText),
                     ),
                     content: SearchBar(
                       onChanged: (value) => searchPokemon(value),
                     ),
-                    backgroundColor: const Color(0xffEF866B),
+                    backgroundColor: BaseThemeColors.fabPopupBG,
                     actions: <Widget>[
                       Center(
                         child: TextButton(
@@ -319,7 +338,7 @@ class PokedexPageState extends State<PokedexPage>
                           },
                           child: const Text(
                             'Close',
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
                           ),
                         ),
                       )
@@ -341,11 +360,11 @@ class PokedexPageState extends State<PokedexPage>
                 context: context,
                 builder: (BuildContext context) {
                   return AlertDialog(
-                    backgroundColor: const Color(0xffEF866B),
+                    backgroundColor: BaseThemeColors.fabPopupBG,
                     title: const Text(
                       'Filter By:',
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: BaseThemeColors.fabPopupText),
                     ),
                     content: SizedBox(
                       height: 100,
@@ -356,18 +375,18 @@ class PokedexPageState extends State<PokedexPage>
                               const Text(
                                 'Type',
                                 style: TextStyle(
-                                    fontSize: 20, color: Colors.white),
+                                    fontSize: 20, color: BaseThemeColors.fabPopupText),
                               ),
                               const SizedBox(width: 10),
                               DropdownButton<String>(
-                                dropdownColor: Colors.white,
-                                focusColor: Colors.white,
+                                dropdownColor: Colors.grey,
+                                focusColor: Colors.grey,
                                 value: types.first,
                                 items: types.map<DropdownMenuItem<String>>(
                                     (String value) {
                                   return DropdownMenuItem<String>(
                                     value: value,
-                                    child: Text(value),
+                                    child: Text(value, style: const TextStyle(color: BaseThemeColors.detailContainerText)),
                                   );
                                 }).toList(),
                                 onChanged: (String? value) => {
@@ -382,18 +401,18 @@ class PokedexPageState extends State<PokedexPage>
                               const Text(
                                 'Egg Group',
                                 style: TextStyle(
-                                    fontSize: 20, color: Colors.white),
+                                    fontSize: 20, color: BaseThemeColors.fabPopupText),
                               ),
                               const SizedBox(width: 10),
                               DropdownButton<String>(
-                                dropdownColor: Colors.white,
-                                focusColor: Colors.white,
+                                dropdownColor: Colors.grey,
+                                focusColor: Colors.grey,
                                 value: egggroups.first,
                                 items: egggroups.map<DropdownMenuItem<String>>(
                                     (String value) {
                                   return DropdownMenuItem<String>(
                                     value: value,
-                                    child: Text(value),
+                                    child: Text(value, style: const TextStyle(color: BaseThemeColors.detailContainerText)),
                                   );
                                 }).toList(),
                                 onChanged: (String? value) => {
@@ -414,7 +433,7 @@ class PokedexPageState extends State<PokedexPage>
                           },
                           child: const Text(
                             'Cancel',
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
                           ),
                         ),
                       )
@@ -436,11 +455,11 @@ class PokedexPageState extends State<PokedexPage>
                 context: context,
                 builder: (BuildContext context) {
                   return AlertDialog(
-                    backgroundColor: const Color(0xffEF866B),
+                    backgroundColor: BaseThemeColors.fabPopupBG,
                     title: const Text(
                       'Sort By:',
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: BaseThemeColors.fabPopupText),
                     ),
                     content: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -452,7 +471,7 @@ class PokedexPageState extends State<PokedexPage>
                           },
                           child: const Text(
                             'Number',
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
                           ),
                         ),
                         TextButton(
@@ -462,7 +481,7 @@ class PokedexPageState extends State<PokedexPage>
                           },
                           child: const Text(
                             'Name',
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
                           ),
                         ),
                       ],
@@ -478,7 +497,7 @@ class PokedexPageState extends State<PokedexPage>
                             },
                             child: const Text(
                               'Reverse',
-                              style: TextStyle(fontSize: 20),
+                              style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
                             ),
                           ),
                           TextButton(
@@ -487,7 +506,7 @@ class PokedexPageState extends State<PokedexPage>
                             },
                             child: const Text(
                               'Cancel',
-                              style: TextStyle(fontSize: 20),
+                              style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
                             ),
                           ),
                         ],

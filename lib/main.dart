@@ -3,6 +3,8 @@ import 'package:rotomdex/scanning/gallery.dart';
 import 'package:rotomdex/screens/abilities.dart';
 import 'package:rotomdex/screens/moves.dart';
 import 'package:rotomdex/screens/settings.dart';
+import 'package:rotomdex/themes/themes.dart';
+import 'package:themed/themed.dart';
 import 'screens/pokedex.dart';
 
 void main() => runApp(const MyApp());
@@ -14,10 +16,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: appTitle,
-      debugShowCheckedModeBanner: false,
-      home: MyHomePage(title: appTitle),
+    return Themed(
+      defaultTheme: BaseThemeColors.rotomTheme,
+      child: const MaterialApp(
+        title: appTitle,
+        debugShowCheckedModeBanner: false,
+        home: MyHomePage(title: appTitle),
+      ),
     );
   }
 }
@@ -34,16 +39,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
   String _pageName = 'Pokédex';
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     PokedexPage(),
     MoveDexPage(),
     AbilityDexPage(),
-    Text(
-      'Item Dex',
-      style: optionStyle,
-    ),
     GalleryScreen(),
     SettingsPage()
   ];
@@ -59,8 +58,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(_pageName),
-        backgroundColor: const Color(0xff6ae2f2),
+        title: Text(_pageName, style: const TextStyle(color: BaseThemeColors.mainAppBarText),),
+        backgroundColor: BaseThemeColors.mainAppBarBG,
+        iconTheme: const IconThemeData(color: BaseThemeColors.mainAppBarText),
       ),
       body: Container(
         decoration: const BoxDecoration(
@@ -68,8 +68,8 @@ class _MyHomePageState extends State<MyHomePage> {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            Color(0xff32A6B0),
-            Color(0xff3DC8B6),
+            BaseThemeColors.dexBGGradientTop,
+            BaseThemeColors.dexBGGradientBottom,
           ],
         )),
         child: Padding(
@@ -80,18 +80,18 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       drawer: Drawer(
-        backgroundColor: const Color(0xff6ae2f2),
+        backgroundColor: BaseThemeColors.mainMenuListBG,
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
             const DrawerHeader(
               decoration: BoxDecoration(
-                color: Color(0xffEF866B),
+                color: BaseThemeColors.mainMenuLogoBG,
               ),
               child: Image(image: AssetImage('assets/images/rotomHQNoBG.png')),
             ),
             ListTile(
-              title: const Text('Pokédex'),
+              title: const Text('Pokédex', style: TextStyle(color: BaseThemeColors.mainMenuListText),),
               selected: _selectedIndex == 0,
               onTap: () {
                 _onItemTapped(0, 'Pokédex');
@@ -99,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              title: const Text('Move Dex'),
+              title: const Text('Move Dex', style: TextStyle(color: BaseThemeColors.mainMenuListText),),
               selected: _selectedIndex == 1,
               onTap: () {
                 _onItemTapped(1, 'Move Dex');
@@ -107,34 +107,26 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              title: const Text('Ability Dex'),
+              title: const Text('Ability Dex', style: TextStyle(color: BaseThemeColors.mainMenuListText),),
               selected: _selectedIndex == 2,
               onTap: () {
                 _onItemTapped(2, 'Ability Dex');
                 Navigator.pop(context);
               },
             ),
-            // ListTile(
-            //   title: const Text('Item Dex'),
-            //   selected: _selectedIndex == 3,
-            //   onTap: () {
-            //     _onItemTapped(3, 'Item Dex');
-            //     Navigator.pop(context);
-            //   },
-            // ),
             ListTile(
-              title: const Text('Scanner'),
-              selected: _selectedIndex == 4,
+              title: const Text('Scanner', style: TextStyle(color: BaseThemeColors.mainMenuListText),),
+              selected: _selectedIndex == 3,
               onTap: () {
-                _onItemTapped(4, 'Scanner');
+                _onItemTapped(3, 'Scanner');
                 Navigator.pop(context);
               },
             ),
             ListTile(
-              title: const Text('Settings'),
+              title: const Text('Settings', style: TextStyle(color: BaseThemeColors.mainMenuListText),),
               selected: _selectedIndex == 4,
               onTap: () {
-                _onItemTapped(5, 'Settings');
+                _onItemTapped(4, 'Settings');
                 Navigator.pop(context);
               },
             ),

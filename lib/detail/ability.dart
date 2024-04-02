@@ -3,6 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:rotomdex/detail/pokemon.dart';
+import 'package:rotomdex/themes/themes.dart';
 
 class AbilityPage extends StatefulWidget {
   final Map abilityData;
@@ -71,9 +72,10 @@ class AbilityPageState extends State<AbilityPage> {
           widget.abilityData['name'],
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
+        iconTheme: const IconThemeData(color: BaseThemeColors.detailAppBarText),
         centerTitle: true,
-        foregroundColor: Colors.white,
-        backgroundColor: const Color(0xff878787),
+        foregroundColor: BaseThemeColors.detailAppBarText,
+        backgroundColor: BaseThemeColors.detailAppBarBG,
       ),
       backgroundColor: Colors.transparent,
       body: Container(
@@ -82,8 +84,8 @@ class AbilityPageState extends State<AbilityPage> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Color(0xff64B6ED),
-              Color(0xffB7FCFB),
+              BaseThemeColors.detailBGGradientTop,
+              BaseThemeColors.detailBGGradientBottom,
             ],
           ),
         ),
@@ -105,8 +107,8 @@ class AbilityPageState extends State<AbilityPage> {
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         colors: [
-                          Color(0xffFFFFFF),
-                          Color(0xffC6C6C6),
+                          BaseThemeColors.detailContainerGradientTop,
+                          BaseThemeColors.detailContainerGradientBottom,
                         ],
                       ),
                     ),
@@ -118,14 +120,14 @@ class AbilityPageState extends State<AbilityPage> {
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
                               widget.abilityData['description'],
-                              style: const TextStyle(fontSize: 24),
+                              style: const TextStyle(fontSize: 24, color: BaseThemeColors.detailContainerText),
                               textAlign: TextAlign.center,
                             ),
                           ),
                           const SizedBox(height: 30),
                           const Text(
                             'Pokémon that can have this ability:',
-                            style: TextStyle(fontSize: 24),
+                            style: TextStyle(fontSize: 24, color: BaseThemeColors.detailContainerText),
                             textAlign: TextAlign.center,
                           ),
                           const SizedBox(height: 10),
@@ -186,7 +188,7 @@ class AbilityPageState extends State<AbilityPage> {
                                       ),
                                       Text('#${item['id']} ${item['name']}',
                                           style: const TextStyle(
-                                              color: Colors.black,
+                                              color: BaseThemeColors.detailContainerText,
                                               fontWeight: FontWeight.bold)),
                                       Row(
                                         mainAxisAlignment:

@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:floating_action_bubble/floating_action_bubble.dart';
 import 'package:rotomdex/detail/ability.dart';
+import 'package:rotomdex/themes/themes.dart';
 
 class AbilityDexPage extends StatefulWidget {
   const AbilityDexPage({super.key});
@@ -122,7 +123,7 @@ class AbilityDexPageState extends State<AbilityDexPage>
                   width: double.infinity,
                   decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(20)),
-                    color: Colors.teal,
+                    color: BaseThemeColors.dexItemBG,
                   ),
                   padding: const EdgeInsets.all(12),
                   child: Column(
@@ -131,13 +132,13 @@ class AbilityDexPageState extends State<AbilityDexPage>
                       Text(
                         ability['name'],
                         style:
-                            const TextStyle(fontSize: 20, color: Colors.white),
+                            const TextStyle(fontSize: 20, color: BaseThemeColors.dexItemText),
                       ),
                       Text(
                         ability['description'],
                         style: const TextStyle(
                             fontSize: 16,
-                            color: Color.fromARGB(170, 255, 255, 255)),
+                            color: BaseThemeColors.dexItemAccentText),
                       )
                     ],
                   )),
@@ -172,12 +173,12 @@ class AbilityDexPageState extends State<AbilityDexPage>
                     title: const Text(
                       'Enter Name:',
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: BaseThemeColors.fabPopupText),
                     ),
                     content: SearchBar(
                       onChanged: (value) => searchAbilities(value),
                     ),
-                    backgroundColor: const Color(0xffEF866B),
+                    backgroundColor: BaseThemeColors.fabPopupBG,
                     actions: <Widget>[
                       Center(
                         child: TextButton(

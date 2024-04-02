@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:floating_action_bubble/floating_action_bubble.dart';
 import 'package:rotomdex/detail/move.dart';
+import 'package:rotomdex/themes/themes.dart';
 
 class MoveDexPage extends StatefulWidget {
   const MoveDexPage({super.key});
@@ -166,7 +167,7 @@ class MoveDexPageState extends State<MoveDexPage>
               child: Container(
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(20)),
-                  color: Colors.teal,
+                  color: BaseThemeColors.dexItemBG,
                 ),
                 padding: const EdgeInsets.all(8.0),
                 child: Row(children: [
@@ -182,7 +183,7 @@ class MoveDexPageState extends State<MoveDexPage>
                     width: 150,
                     child: Text(
                       move['move'],
-                      style: const TextStyle(fontSize: 20, color: Colors.white),
+                      style: const TextStyle(fontSize: 20, color: BaseThemeColors.dexItemText),
                     ),
                   ),
                   const SizedBox(
@@ -196,21 +197,21 @@ class MoveDexPageState extends State<MoveDexPage>
                         'Power: ${move['power']}',
                         style: const TextStyle(
                             fontSize: 16,
-                            color: Color.fromARGB(170, 255, 255, 255)),
+                            color: BaseThemeColors.dexItemAccentText),
                         textAlign: TextAlign.start,
                       ),
                       Text(
                         'Accuracy: ${move['accuracy']}',
                         style: const TextStyle(
                             fontSize: 16,
-                            color: Color.fromARGB(170, 255, 255, 255)),
+                            color: BaseThemeColors.dexItemAccentText),
                         textAlign: TextAlign.start,
                       ),
                       Text(
                         'PP: ${move['pp']}',
                         style: const TextStyle(
                             fontSize: 16,
-                            color: Color.fromARGB(170, 255, 255, 255)),
+                            color: BaseThemeColors.dexItemAccentText),
                         textAlign: TextAlign.start,
                       ),
                     ],
@@ -220,7 +221,7 @@ class MoveDexPageState extends State<MoveDexPage>
                   ),
                   if (move['category'].toString() != '--') ...[
                     Image.asset(
-                      'assets/images/icons/moves/${move['category'].toString().toLowerCase()}.png',
+                      'assets/images/icons/moves/${move['category'].toString().toLowerCase()}_color.png',
                       width: 35,
                       height: 35,
                     ),
@@ -258,12 +259,12 @@ class MoveDexPageState extends State<MoveDexPage>
                     title: const Text(
                       'Enter Name:',
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: BaseThemeColors.fabPopupText),
                     ),
                     content: SearchBar(
                       onChanged: (value) => searchMoves(value),
                     ),
-                    backgroundColor: const Color(0xffEF866B),
+                    backgroundColor: BaseThemeColors.fabPopupBG,
                     actions: <Widget>[
                       Center(
                         child: TextButton(
@@ -272,7 +273,7 @@ class MoveDexPageState extends State<MoveDexPage>
                           },
                           child: const Text(
                             'Close',
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
                           ),
                         ),
                       )
@@ -294,11 +295,11 @@ class MoveDexPageState extends State<MoveDexPage>
                 context: context,
                 builder: (BuildContext context) {
                   return AlertDialog(
-                    backgroundColor: const Color(0xffEF866B),
+                    backgroundColor: BaseThemeColors.fabPopupBG,
                     title: const Text(
                       'Filter By:',
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: BaseThemeColors.fabPopupText),
                     ),
                     content: SizedBox(
                       height: 100,
@@ -309,18 +310,18 @@ class MoveDexPageState extends State<MoveDexPage>
                               const Text(
                                 'Type',
                                 style: TextStyle(
-                                    fontSize: 20, color: Colors.white),
+                                    fontSize: 20, color: BaseThemeColors.fabPopupText),
                               ),
                               const SizedBox(width: 10),
                               DropdownButton<String>(
-                                dropdownColor: Colors.white,
-                                focusColor: Colors.white,
+                                dropdownColor: Colors.grey,
+                                focusColor: Colors.grey,
                                 value: types.first,
                                 items: types.map<DropdownMenuItem<String>>(
                                     (String value) {
                                   return DropdownMenuItem<String>(
                                     value: value,
-                                    child: Text(value),
+                                    child: Text(value, style: const TextStyle(color: BaseThemeColors.detailContainerText)),
                                   );
                                 }).toList(),
                                 onChanged: (String? value) => {
@@ -341,7 +342,7 @@ class MoveDexPageState extends State<MoveDexPage>
                           },
                           child: const Text(
                             'Cancel',
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
                           ),
                         ),
                       )
@@ -363,11 +364,11 @@ class MoveDexPageState extends State<MoveDexPage>
                 context: context,
                 builder: (BuildContext context) {
                   return AlertDialog(
-                    backgroundColor: const Color(0xffEF866B),
+                    backgroundColor: BaseThemeColors.fabPopupBG,
                     title: const Text(
                       'Sort By:',
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: BaseThemeColors.fabPopupText),
                     ),
                     content: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -379,7 +380,7 @@ class MoveDexPageState extends State<MoveDexPage>
                           },
                           child: const Text(
                             'Generation',
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
                           ),
                         ),
                         TextButton(
@@ -389,7 +390,7 @@ class MoveDexPageState extends State<MoveDexPage>
                           },
                           child: const Text(
                             'Name',
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
                           ),
                         ),
                       ],
@@ -405,7 +406,7 @@ class MoveDexPageState extends State<MoveDexPage>
                             },
                             child: const Text(
                               'Reverse',
-                              style: TextStyle(fontSize: 20),
+                              style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
                             ),
                           ),
                           TextButton(
@@ -414,7 +415,7 @@ class MoveDexPageState extends State<MoveDexPage>
                             },
                             child: const Text(
                               'Cancel',
-                              style: TextStyle(fontSize: 20),
+                              style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
                             ),
                           ),
                         ],

@@ -1,12 +1,15 @@
 import 'dart:convert';
 
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter_radar_chart/flutter_radar_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:model_viewer_plus/model_viewer_plus.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:rotomdex/detail/ability.dart';
 import 'package:rotomdex/detail/move.dart';
+import 'package:rotomdex/themes/themes.dart';
+import 'package:themed/themed.dart';
 
 class PokemonDetailScreen extends StatefulWidget {
   final Map pokemonData;
@@ -227,9 +230,10 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
           '#${widget.pokemonData['id'].toString()} ${widget.pokemonData['name']}',
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
+        iconTheme: const IconThemeData(color: BaseThemeColors.detailAppBarText),
         centerTitle: true,
-        foregroundColor: Colors.white,
-        backgroundColor: const Color(0xff878787),
+        foregroundColor: BaseThemeColors.detailAppBarText,
+        backgroundColor: BaseThemeColors.detailAppBarBG,
         actions: [
           IconButton(onPressed: playSound, icon: const Icon(Icons.volume_up))
         ],
@@ -240,8 +244,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [
-            Color(0xff64B6ED),
-            Color(0xffB7FCFB),
+            BaseThemeColors.detailBGGradientTop,
+            BaseThemeColors.detailBGGradientBottom,
           ],
         )),
         padding: EdgeInsets.zero,
@@ -291,42 +295,33 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
   }
 
   Widget _buildInfoTab() {
-    List<Widget> statWidgets = [];
     int bst = 0;
 
     for (var entry in widget.pokemonData['base_stats'].entries) {
-      String statName = entry.key;
       int statValue = entry.value;
 
       bst += statValue;
-
-      Widget statRow = Padding(
-        padding: const EdgeInsets.fromLTRB(100, 0, 100, 0),
-        child: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Expanded(
-                child: Text(
-                  statName,
-                  style: const TextStyle(fontSize: 20),
-                  textAlign: TextAlign.start,
-                ),
-              ),
-              Expanded(
-                child: Text(
-                  statValue.toString(),
-                  style: const TextStyle(fontSize: 20),
-                  textAlign: TextAlign.end,
-                ),
-              ),
-            ],
-          ),
-        ),
-      );
-
-      statWidgets.add(statRow);
     }
+
+    const ticks = [50, 100, 150, 200];
+    var features = [
+      "HP: ${widget.pokemonData['base_stats']['HP']}",
+      "  Attack: ${widget.pokemonData['base_stats']['Attack']}",
+      "  Defense: ${widget.pokemonData['base_stats']['Defense']}",
+      "Speed: ${widget.pokemonData['base_stats']['Speed']}",
+      "SpDefense: ${widget.pokemonData['base_stats']['SpDefense']}",
+      "SpAttack: ${widget.pokemonData['base_stats']['SpAttack']}"
+    ];
+    var data = [
+      [
+        widget.pokemonData['base_stats']['HP'] as num,
+        widget.pokemonData['base_stats']['Attack'] as num,
+        widget.pokemonData['base_stats']['Defense'] as num,
+        widget.pokemonData['base_stats']['Speed'] as num,
+        widget.pokemonData['base_stats']['SpDefense'] as num,
+        widget.pokemonData['base_stats']['SpAttack'] as num,
+      ],
+    ];
 
     void toggleShiny() {
       setState(() {
@@ -352,7 +347,10 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
               IconButton(
                   onPressed: () => navigateToPokemonViaID(
                       context, widget.pokemonData["id"] - 1),
-                  icon: const Icon(Icons.arrow_left)),
+                  icon: const Icon(
+                    Icons.arrow_left,
+                    color: BaseThemeColors.detailContainerText,
+                  )),
               const SizedBox(
                 width: 50,
               )
@@ -381,7 +379,10 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
               IconButton(
                   onPressed: () => navigateToPokemonViaID(
                       context, widget.pokemonData["id"] + 1),
-                  icon: const Icon(Icons.arrow_right)),
+                  icon: const Icon(
+                    Icons.arrow_right,
+                    color: BaseThemeColors.detailContainerText,
+                  )),
             ] else ...[
               const SizedBox(
                 width: 70,
@@ -401,8 +402,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    Color(0xffFFFFFF),
-                    Color(0xffC6C6C6),
+                    BaseThemeColors.detailContainerGradientTop,
+                    BaseThemeColors.detailContainerGradientBottom,
                   ],
                 ),
                 borderRadius: BorderRadius.only(
@@ -416,8 +417,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                   Text(
                     '${widget.pokemonData['category']} Pokémon',
                     style: const TextStyle(
-                      fontSize: 30,
-                    ),
+                        fontSize: 30,
+                        color: BaseThemeColors.detailContainerText),
                     textAlign: TextAlign.start,
                   ),
                   const SizedBox(height: 10),
@@ -426,8 +427,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                     child: Text(
                       '${widget.pokemonData['pokedex_entry']}',
                       style: const TextStyle(
-                        fontSize: 20,
-                      ),
+                          fontSize: 20,
+                          color: BaseThemeColors.detailContainerText),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -448,17 +449,24 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                     children: [
                       Text(
                         '${widget.pokemonData['height']['meters']}',
-                        style: const TextStyle(fontSize: 24),
+                        style: const TextStyle(
+                            fontSize: 24,
+                            color: BaseThemeColors.detailContainerText),
                       ),
                       const SizedBox(width: 20),
                       Text(
                         '${widget.pokemonData['weight']['kilograms']}',
-                        style: const TextStyle(fontSize: 24),
+                        style: const TextStyle(
+                            fontSize: 24,
+                            color: BaseThemeColors.detailContainerText),
                       ),
                     ],
                   ),
                   const SizedBox(height: 30),
-                  const Text('Abilities', style: TextStyle(fontSize: 24)),
+                  const Text('Abilities',
+                      style: TextStyle(
+                          fontSize: 24,
+                          color: BaseThemeColors.detailContainerText)),
                   const SizedBox(height: 10),
                   Column(
                     children: [
@@ -502,43 +510,41 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                     ],
                   ),
                   const SizedBox(height: 30),
-                  const Text('Base Stats', style: TextStyle(fontSize: 24)),
-                  const SizedBox(height: 10),
-                  Column(children: statWidgets),
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(100, 0, 100, 0),
-                        child: Column(
-                          children: [
-                            const Divider(
-                              color: Colors.black,
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Expanded(
-                                    child: Text(
-                                  'Total',
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(fontSize: 20),
-                                )),
-                                Expanded(
-                                    child: Text(
-                                  bst.toString(),
-                                  textAlign: TextAlign.end,
-                                  style: const TextStyle(fontSize: 20),
-                                ))
-                              ],
-                            ),
-                          ],
-                        ),
+                  const Text('Base Stats',
+                      style: TextStyle(
+                          fontSize: 24,
+                          color: BaseThemeColors.detailContainerText)),
+                  if (Themed.ifCurrentThemeIs(BaseThemeColors.darkTheme)) ...[
+                    SizedBox(
+                      height: 240,
+                      child: RadarChart.dark(
+                        ticks: ticks,
+                        features: features,
+                        data: data,
+                        useSides: true,
                       ),
-                    ],
-                  ),
+                    ),
+                  ] else ...[
+                    SizedBox(
+                      height: 240,
+                      child: RadarChart.light(
+                        ticks: ticks,
+                        features: features,
+                        data: data,
+                        useSides: true,
+                      ),
+                    ),
+                  ],
+                  const SizedBox(height: 10),
+                  Text('Base Stat Total: $bst',
+                      style: const TextStyle(
+                          fontSize: 20,
+                          color: BaseThemeColors.detailContainerText)),
                   const SizedBox(height: 30),
-                  const Text('Evolution Chain:',
-                      style: TextStyle(fontSize: 24)),
+                  const Text('Evolution Family:',
+                      style: TextStyle(
+                          fontSize: 24,
+                          color: BaseThemeColors.detailContainerText)),
                   const SizedBox(height: 10),
                   Column(
                     children: [
@@ -589,18 +595,28 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                       ),
                                     ),
                                     Text(
-                                        '#${evo['from_id']} ${evo['from_name']}')
+                                      '#${evo['from_id']} ${evo['from_name']}',
+                                      style: const TextStyle(
+                                          color: BaseThemeColors
+                                              .detailContainerText),
+                                    )
                                   ],
                                 ),
                               ),
                               const SizedBox(width: 20),
                               Column(
                                 children: [
-                                  const Icon(Icons.arrow_right_alt),
+                                  const Icon(
+                                    Icons.arrow_right_alt,
+                                    color: BaseThemeColors.detailContainerText,
+                                  ),
                                   SizedBox(
                                     width: 100,
                                     child: Text(
                                       evo['method'],
+                                      style: const TextStyle(
+                                          color: BaseThemeColors
+                                              .detailContainerText),
                                       overflow: TextOverflow.visible,
                                       textAlign: TextAlign.center,
                                       maxLines: 4,
@@ -648,7 +664,10 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                         ),
                                       ),
                                     ),
-                                    Text('#${evo['to_id']} ${evo['to_name']}')
+                                    Text('#${evo['to_id']} ${evo['to_name']}',
+                                        style: const TextStyle(
+                                            color: BaseThemeColors
+                                                .detailContainerText))
                                   ],
                                 ),
                               ),
@@ -659,7 +678,9 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                       ] else ...[
                         const Text(
                           'This Pokémon has no evolution chain.',
-                          style: TextStyle(fontSize: 18),
+                          style: TextStyle(
+                              fontSize: 18,
+                              color: BaseThemeColors.detailContainerText),
                         )
                       ]
                     ],
@@ -690,8 +711,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      Color(0xffFFFFFF),
-                      Color(0xffC6C6C6),
+                      BaseThemeColors.detailContainerGradientTop,
+                      BaseThemeColors.detailContainerGradientBottom,
                     ],
                   ),
                 ),
@@ -707,15 +728,19 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                           centerTitle: true,
                           title: const Text(
                             'Learnable Moves',
-                            style: TextStyle(fontSize: 24),
+                            style: TextStyle(
+                                fontSize: 24,
+                                color: BaseThemeColors.detailContainerText),
                           ),
                           backgroundColor: Colors.transparent,
                           bottom: const TabBar(
-                              labelColor: Colors.black,
+                              labelColor: BaseThemeColors.detailContainerText,
                               indicatorColor: Color(0xffEF866B),
                               dividerColor: Color(0xffEF866B),
                               tabs: [
-                                Tab(text: 'Level Up'),
+                                Tab(
+                                  text: 'Level Up',
+                                ),
                                 Tab(text: 'TM Moves'),
                                 Tab(text: 'Egg Moves')
                               ]),
@@ -735,7 +760,7 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                       decoration: const BoxDecoration(
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(20)),
-                                        color: Colors.teal,
+                                        color: BaseThemeColors.dexItemBG,
                                       ),
                                       padding: const EdgeInsets.all(8.0),
                                       child: Row(children: [
@@ -753,7 +778,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                             move['move'],
                                             style: const TextStyle(
                                                 fontSize: 20,
-                                                color: Colors.white),
+                                                color: BaseThemeColors
+                                                    .dexItemText),
                                           ),
                                         ),
                                         const SizedBox(
@@ -768,32 +794,32 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                               'Power: ${move['power']}',
                                               style: const TextStyle(
                                                   fontSize: 16,
-                                                  color: Color.fromARGB(
-                                                      170, 255, 255, 255)),
+                                                  color: BaseThemeColors
+                                                      .dexItemAccentText),
                                               textAlign: TextAlign.start,
                                             ),
                                             Text(
                                               'Accuracy: ${move['accuracy']}',
                                               style: const TextStyle(
                                                   fontSize: 16,
-                                                  color: Color.fromARGB(
-                                                      170, 255, 255, 255)),
+                                                  color: BaseThemeColors
+                                                      .dexItemAccentText),
                                               textAlign: TextAlign.start,
                                             ),
                                             Text(
                                               'PP: ${move['pp']}',
                                               style: const TextStyle(
                                                   fontSize: 16,
-                                                  color: Color.fromARGB(
-                                                      170, 255, 255, 255)),
+                                                  color: BaseThemeColors
+                                                      .dexItemAccentText),
                                               textAlign: TextAlign.start,
                                             ),
                                             Text(
                                               'Level: ${levelUpLevels[levelUpMoves.indexOf(move)]}',
                                               style: const TextStyle(
                                                   fontSize: 16,
-                                                  color: Color.fromARGB(
-                                                      170, 255, 255, 255)),
+                                                  color: BaseThemeColors
+                                                      .dexItemAccentText),
                                               textAlign: TextAlign.start,
                                             ),
                                           ],
@@ -804,7 +830,7 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                         if (move['category'].toString() !=
                                             '--') ...[
                                           Image.asset(
-                                            'assets/images/icons/moves/${move['category'].toString().toLowerCase()}.png',
+                                            'assets/images/icons/moves/${move['category'].toString().toLowerCase()}_color.png',
                                             width: 35,
                                             height: 35,
                                           ),
@@ -830,7 +856,7 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                       decoration: const BoxDecoration(
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(20)),
-                                        color: Colors.teal,
+                                        color: BaseThemeColors.dexItemBG,
                                       ),
                                       padding: const EdgeInsets.all(8.0),
                                       child: Row(children: [
@@ -848,7 +874,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                             move['move'],
                                             style: const TextStyle(
                                                 fontSize: 20,
-                                                color: Colors.white),
+                                                color: BaseThemeColors
+                                                    .dexItemText),
                                           ),
                                         ),
                                         const SizedBox(
@@ -863,24 +890,24 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                               'Power: ${move['power']}',
                                               style: const TextStyle(
                                                   fontSize: 16,
-                                                  color: Color.fromARGB(
-                                                      170, 255, 255, 255)),
+                                                  color: BaseThemeColors
+                                                      .dexItemAccentText),
                                               textAlign: TextAlign.start,
                                             ),
                                             Text(
                                               'Accuracy: ${move['accuracy']}',
                                               style: const TextStyle(
                                                   fontSize: 16,
-                                                  color: Color.fromARGB(
-                                                      170, 255, 255, 255)),
+                                                  color: BaseThemeColors
+                                                      .dexItemAccentText),
                                               textAlign: TextAlign.start,
                                             ),
                                             Text(
                                               'PP: ${move['pp']}',
                                               style: const TextStyle(
                                                   fontSize: 16,
-                                                  color: Color.fromARGB(
-                                                      170, 255, 255, 255)),
+                                                  color: BaseThemeColors
+                                                      .dexItemAccentText),
                                               textAlign: TextAlign.start,
                                             ),
                                           ],
@@ -891,7 +918,7 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                         if (move['category'].toString() !=
                                             '--') ...[
                                           Image.asset(
-                                            'assets/images/icons/moves/${move['category'].toString().toLowerCase()}.png',
+                                            'assets/images/icons/moves/${move['category'].toString().toLowerCase()}_color.png',
                                             width: 35,
                                             height: 35,
                                           ),
@@ -917,7 +944,7 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                       decoration: const BoxDecoration(
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(20)),
-                                        color: Colors.teal,
+                                        color: BaseThemeColors.dexItemBG,
                                       ),
                                       padding: const EdgeInsets.all(8.0),
                                       child: Row(children: [
@@ -935,7 +962,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                             move['move'],
                                             style: const TextStyle(
                                                 fontSize: 20,
-                                                color: Colors.white),
+                                                color: BaseThemeColors
+                                                    .dexItemText),
                                           ),
                                         ),
                                         const SizedBox(
@@ -950,24 +978,24 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                               'Power: ${move['power']}',
                                               style: const TextStyle(
                                                   fontSize: 16,
-                                                  color: Color.fromARGB(
-                                                      170, 255, 255, 255)),
+                                                  color: BaseThemeColors
+                                                      .dexItemAccentText),
                                               textAlign: TextAlign.start,
                                             ),
                                             Text(
                                               'Accuracy: ${move['accuracy']}',
                                               style: const TextStyle(
                                                   fontSize: 16,
-                                                  color: Color.fromARGB(
-                                                      170, 255, 255, 255)),
+                                                  color: BaseThemeColors
+                                                      .dexItemAccentText),
                                               textAlign: TextAlign.start,
                                             ),
                                             Text(
                                               'PP: ${move['pp']}',
                                               style: const TextStyle(
                                                   fontSize: 16,
-                                                  color: Color.fromARGB(
-                                                      170, 255, 255, 255)),
+                                                  color: BaseThemeColors
+                                                      .dexItemAccentText),
                                               textAlign: TextAlign.start,
                                             ),
                                           ],
@@ -1017,7 +1045,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
           children: [
             Text(
               '${statValue.toString()} $statName',
-              style: const TextStyle(fontSize: 16),
+              style: const TextStyle(
+                  fontSize: 16, color: BaseThemeColors.detailContainerText),
               textAlign: TextAlign.start,
             ),
           ],
@@ -1042,8 +1071,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      Color(0xffFFFFFF),
-                      Color(0xffC6C6C6),
+                      BaseThemeColors.detailContainerGradientTop,
+                      BaseThemeColors.detailContainerGradientBottom,
                     ],
                   ),
                 ),
@@ -1052,7 +1081,10 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                   child: Column(
                     children: [
                       const SizedBox(height: 30),
-                      const Text('Weaknesses', style: TextStyle(fontSize: 24)),
+                      const Text('Weaknesses',
+                          style: TextStyle(
+                              fontSize: 24,
+                              color: BaseThemeColors.detailContainerText)),
                       const SizedBox(height: 10),
                       Wrap(alignment: WrapAlignment.center, children: [
                         if ((widget.pokemonData['weaknesses'] as List)
@@ -1066,11 +1098,19 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                             ),
                           ]
                         ] else ...[
-                          const Text('This Pokémon has no weaknesses.')
+                          const Text(
+                            'This Pokémon has no weaknesses.',
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: BaseThemeColors.detailContainerText),
+                          )
                         ],
                       ]),
                       const SizedBox(height: 30),
-                      const Text('Resistances', style: TextStyle(fontSize: 24)),
+                      const Text('Resistances',
+                          style: TextStyle(
+                              fontSize: 24,
+                              color: BaseThemeColors.detailContainerText)),
                       const SizedBox(height: 10),
                       Wrap(alignment: WrapAlignment.center, children: [
                         if ((widget.pokemonData['resistances'] as List)
@@ -1084,11 +1124,19 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                             ),
                           ]
                         ] else ...[
-                          const Text('This Pokémon has no resistances.')
+                          const Text(
+                            'This Pokémon has no resistances.',
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: BaseThemeColors.detailContainerText),
+                          )
                         ],
                       ]),
                       const SizedBox(height: 30),
-                      const Text('Immunities', style: TextStyle(fontSize: 24)),
+                      const Text('Immunities',
+                          style: TextStyle(
+                              fontSize: 24,
+                              color: BaseThemeColors.detailContainerText)),
                       const SizedBox(height: 10),
                       Wrap(alignment: WrapAlignment.center, children: [
                         if ((widget.pokemonData['zero_effect_types'] as List)
@@ -1104,12 +1152,17 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                         ] else ...[
                           const Text(
                             'This Pokémon has no immunities.',
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: BaseThemeColors.detailContainerText),
                           )
                         ],
                       ]),
                       const SizedBox(height: 30),
-                      const Text('Breeding', style: TextStyle(fontSize: 24)),
+                      const Text('Breeding',
+                          style: TextStyle(
+                              fontSize: 24,
+                              color: BaseThemeColors.detailContainerText)),
                       const SizedBox(height: 10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -1118,15 +1171,23 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                           Column(children: [
                             const Text(
                               'Egg Group(s):',
-                              style: TextStyle(fontSize: 18),
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: BaseThemeColors.detailContainerText),
                             ),
                             Text(widget.pokemonData['egg_group1'],
-                                style: const TextStyle(fontSize: 16)),
+                                style: const TextStyle(
+                                    fontSize: 16,
+                                    color:
+                                        BaseThemeColors.detailContainerText)),
                             if (widget.pokemonData['egg_group2'] != null &&
                                 widget
                                     .pokemonData['egg_group2'].isNotEmpty) ...[
                               Text(widget.pokemonData['egg_group2'],
-                                  style: const TextStyle(fontSize: 16)),
+                                  style: const TextStyle(
+                                      fontSize: 16,
+                                      color:
+                                          BaseThemeColors.detailContainerText)),
                             ],
                           ]),
                           const SizedBox(
@@ -1135,14 +1196,22 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                           Column(children: [
                             const Text(
                               'Egg Cycles:',
-                              style: TextStyle(fontSize: 18),
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: BaseThemeColors.detailContainerText),
                             ),
                             Text(
                                 '${widget.pokemonData['egg_cycles'].toString()} cycles',
-                                style: const TextStyle(fontSize: 16)),
+                                style: const TextStyle(
+                                    fontSize: 16,
+                                    color:
+                                        BaseThemeColors.detailContainerText)),
                             Text(
                                 '${widget.pokemonData['steps_to_hatch'].toString()} steps',
-                                style: const TextStyle(fontSize: 16)),
+                                style: const TextStyle(
+                                    fontSize: 16,
+                                    color:
+                                        BaseThemeColors.detailContainerText)),
                           ]),
                           const SizedBox(
                             width: 30,
@@ -1150,19 +1219,30 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                           Column(children: [
                             const Text(
                               'Gender Ratio:',
-                              style: TextStyle(fontSize: 18),
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: BaseThemeColors.detailContainerText),
                             ),
                             Text(
                                 '${widget.pokemonData['gender_ratio']['male']} male',
-                                style: const TextStyle(fontSize: 16)),
+                                style: const TextStyle(
+                                    fontSize: 16,
+                                    color:
+                                        BaseThemeColors.detailContainerText)),
                             Text(
                                 '${widget.pokemonData['gender_ratio']['male']} female',
-                                style: const TextStyle(fontSize: 16)),
+                                style: const TextStyle(
+                                    fontSize: 16,
+                                    color:
+                                        BaseThemeColors.detailContainerText)),
                           ]),
                         ],
                       ),
                       const SizedBox(height: 30),
-                      const Text('Experience', style: TextStyle(fontSize: 24)),
+                      const Text('Experience',
+                          style: TextStyle(
+                              fontSize: 24,
+                              color: BaseThemeColors.detailContainerText)),
                       const SizedBox(height: 10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -1170,11 +1250,16 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                           Column(children: [
                             const Text(
                               'Base EXP Yield:',
-                              style: TextStyle(fontSize: 18),
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: BaseThemeColors.detailContainerText),
                             ),
                             Text(
                                 '${widget.pokemonData['base_experience_yield']} EXP',
-                                style: const TextStyle(fontSize: 16)),
+                                style: const TextStyle(
+                                    fontSize: 16,
+                                    color:
+                                        BaseThemeColors.detailContainerText)),
                           ]),
                           const SizedBox(
                             width: 30,
@@ -1182,18 +1267,25 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                           Column(children: [
                             const Text(
                               'EXP Growth Rate:',
-                              style: TextStyle(fontSize: 18),
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: BaseThemeColors.detailContainerText),
                             ),
                             Text(
                                 widget.pokemonData['exp_growth_rate']
                                     .toString(),
-                                style: const TextStyle(fontSize: 16)),
+                                style: const TextStyle(
+                                    fontSize: 16,
+                                    color:
+                                        BaseThemeColors.detailContainerText)),
                           ]),
                         ],
                       ),
                       const SizedBox(height: 30),
                       const Text('Miscellaneous',
-                          style: TextStyle(fontSize: 24)),
+                          style: TextStyle(
+                              fontSize: 24,
+                              color: BaseThemeColors.detailContainerText)),
                       const SizedBox(height: 10),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -1201,10 +1293,15 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                           Column(children: [
                             const Text(
                               'Catch Rate:',
-                              style: TextStyle(fontSize: 18),
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: BaseThemeColors.detailContainerText),
                             ),
                             Text(widget.pokemonData['catch_rate'].toString(),
-                                style: const TextStyle(fontSize: 16)),
+                                style: const TextStyle(
+                                    fontSize: 16,
+                                    color:
+                                        BaseThemeColors.detailContainerText)),
                           ]),
                           const SizedBox(
                             width: 30,
@@ -1212,11 +1309,16 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                           Column(children: [
                             const Text(
                               'Base Happiness:',
-                              style: TextStyle(fontSize: 18),
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: BaseThemeColors.detailContainerText),
                             ),
                             Text(
                                 widget.pokemonData['base_happiness'].toString(),
-                                style: const TextStyle(fontSize: 16)),
+                                style: const TextStyle(
+                                    fontSize: 16,
+                                    color:
+                                        BaseThemeColors.detailContainerText)),
                           ]),
                         ],
                       ),
@@ -1224,7 +1326,9 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                       Column(
                         children: [
                           const Text('EV Yield:',
-                              style: TextStyle(fontSize: 18)),
+                              style: TextStyle(
+                                  fontSize: 18,
+                                  color: BaseThemeColors.detailContainerText)),
                           Column(children: statWidgets)
                         ],
                       ),

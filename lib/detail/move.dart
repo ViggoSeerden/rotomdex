@@ -3,6 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:rotomdex/detail/pokemon.dart';
+import 'package:rotomdex/themes/themes.dart';
 
 class MovePage extends StatefulWidget {
   final Map moveData;
@@ -117,9 +118,10 @@ class MovePageState extends State<MovePage> {
           widget.moveData['move'],
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
+        iconTheme: const IconThemeData(color: BaseThemeColors.detailAppBarText),
         centerTitle: true,
-        foregroundColor: Colors.white,
-        backgroundColor: const Color(0xff878787),
+        foregroundColor: BaseThemeColors.detailAppBarText,
+        backgroundColor: BaseThemeColors.detailAppBarBG,
       ),
       backgroundColor: Colors.transparent,
       body: Container(
@@ -128,8 +130,8 @@ class MovePageState extends State<MovePage> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              Color(0xff64B6ED),
-              Color(0xffB7FCFB),
+              BaseThemeColors.detailBGGradientTop,
+              BaseThemeColors.detailBGGradientBottom,
             ],
           ),
         ),
@@ -150,8 +152,8 @@ class MovePageState extends State<MovePage> {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                     colors: [
-                      Color(0xffFFFFFF),
-                      Color(0xffC6C6C6),
+                      BaseThemeColors.detailContainerGradientTop,
+                      BaseThemeColors.detailContainerGradientBottom,
                     ],
                   ),
                 ),
@@ -164,7 +166,7 @@ class MovePageState extends State<MovePage> {
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
                             widget.moveData['description'],
-                            style: const TextStyle(fontSize: 24),
+                            style: const TextStyle(fontSize: 24, color: BaseThemeColors.detailContainerText),
                             textAlign: TextAlign.center,
                           ),
                         ),
@@ -179,7 +181,7 @@ class MovePageState extends State<MovePage> {
                               children: [
                                 const Text(
                                   'Type',
-                                  style: TextStyle(fontSize: 20),
+                                  style: TextStyle(fontSize: 20, color: BaseThemeColors.detailContainerText),
                                   textAlign: TextAlign.center,
                                 ),
                                 Image.asset(
@@ -193,7 +195,7 @@ class MovePageState extends State<MovePage> {
                               children: [
                                 const Text(
                                   'Category',
-                                  style: TextStyle(fontSize: 20),
+                                  style: TextStyle(fontSize: 20, color: BaseThemeColors.detailContainerText),
                                   textAlign: TextAlign.center,
                                 ),
                                 if (widget.moveData['category'].toString() !=
@@ -203,7 +205,7 @@ class MovePageState extends State<MovePage> {
                                 ] else ...[
                                   const Text(
                                     'Varies',
-                                    style: TextStyle(fontSize: 20),
+                                    style: TextStyle(fontSize: 20, color: BaseThemeColors.detailContainerText),
                                     textAlign: TextAlign.center,
                                   ),
                                 ],
@@ -221,12 +223,12 @@ class MovePageState extends State<MovePage> {
                               children: [
                                 const Text(
                                   'Power',
-                                  style: TextStyle(fontSize: 20),
+                                  style: TextStyle(fontSize: 20, color: BaseThemeColors.detailContainerText),
                                   textAlign: TextAlign.center,
                                 ),
                                 Text(
                                   widget.moveData['power'],
-                                  style: const TextStyle(fontSize: 20),
+                                  style: const TextStyle(fontSize: 20, color: BaseThemeColors.detailContainerText),
                                   textAlign: TextAlign.center,
                                 ),
                               ],
@@ -238,12 +240,12 @@ class MovePageState extends State<MovePage> {
                               children: [
                                 const Text(
                                   'Accuracy',
-                                  style: TextStyle(fontSize: 20),
+                                  style: TextStyle(fontSize: 20, color: BaseThemeColors.detailContainerText),
                                   textAlign: TextAlign.center,
                                 ),
                                 Text(
                                   widget.moveData['accuracy'],
-                                  style: const TextStyle(fontSize: 20),
+                                  style: const TextStyle(fontSize: 20, color: BaseThemeColors.detailContainerText),
                                   textAlign: TextAlign.center,
                                 ),
                               ],
@@ -255,12 +257,12 @@ class MovePageState extends State<MovePage> {
                               children: [
                                 const Text(
                                   'PP',
-                                  style: TextStyle(fontSize: 20),
+                                  style: TextStyle(fontSize: 20, color: BaseThemeColors.detailContainerText),
                                   textAlign: TextAlign.center,
                                 ),
                                 Text(
                                   widget.moveData['pp'].toString(),
-                                  style: const TextStyle(fontSize: 20),
+                                  style: const TextStyle(fontSize: 20, color: BaseThemeColors.detailContainerText),
                                   textAlign: TextAlign.center,
                                 ),
                               ],
@@ -280,11 +282,11 @@ class MovePageState extends State<MovePage> {
                                   centerTitle: true,
                                   title: const Text(
                                     'Pokémon that can learn this move:',
-                                    style: TextStyle(fontSize: 20),
+                                    style: TextStyle(fontSize: 20, color: BaseThemeColors.detailContainerText),
                                   ),
                                   backgroundColor: Colors.transparent,
                                   bottom: const TabBar(
-                                      labelColor: Colors.black,
+                                      labelColor: BaseThemeColors.detailContainerText,
                                       indicatorColor: Color(0xffEF866B),
                                       dividerColor: Color(0xffEF866B),
                                       tabs: [
@@ -360,7 +362,7 @@ class MovePageState extends State<MovePage> {
                                               Text(
                                                   '#${item['id']} ${item['name']}',
                                                   style: const TextStyle(
-                                                      color: Colors.black,
+                                                      color: BaseThemeColors.detailContainerText,
                                                       fontWeight:
                                                           FontWeight.bold)),
                                               Row(
@@ -454,7 +456,7 @@ class MovePageState extends State<MovePage> {
                                               Text(
                                                   '#${item['id']} ${item['name']}',
                                                   style: const TextStyle(
-                                                      color: Colors.black,
+                                                      color: BaseThemeColors.detailContainerText,
                                                       fontWeight:
                                                           FontWeight.bold)),
                                               Row(
@@ -548,7 +550,7 @@ class MovePageState extends State<MovePage> {
                                               Text(
                                                   '#${item['id']} ${item['name']}',
                                                   style: const TextStyle(
-                                                      color: Colors.black,
+                                                      color: BaseThemeColors.detailContainerText,
                                                       fontWeight:
                                                           FontWeight.bold)),
                                               Row(
