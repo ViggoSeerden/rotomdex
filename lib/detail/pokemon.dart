@@ -9,6 +9,7 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:rotomdex/detail/ability.dart';
 import 'package:rotomdex/detail/move.dart';
 import 'package:rotomdex/themes/themes.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:themed/themed.dart';
 
 class PokemonDetailScreen extends StatefulWidget {
@@ -26,6 +27,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
   late String modelPath;
   late String imageUrl;
   late bool shiny;
+  String? heightUnits = 'Meters';
+  String? weightUnits = 'Kilograms';
 
   List levelUpMoves = [];
   List levelUpLevels = [];
@@ -40,12 +43,68 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
         'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${widget.pokemonData['id']}.png';
     modelPath =
         'assets/pokemon/models/${widget.pokemonData['id'].toString()}.glb';
+    _loadPreferences();
     _loadJsonData();
+    setLastItem();
   }
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
+    });
+  }
+
+  void setLastItem() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setStringList('lastItem', ['Pokémon', widget.pokemonData['name']]);
+  }
+
+  void showMessage(String message) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(
+            message,
+            textAlign: TextAlign.center,
+          ),
+          actions: <Widget>[
+            Center(
+              child: TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: const Text(
+                  'Close',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+            )
+          ],
+        );
+      },
+    );
+  }
+
+  Future<void> saveBookmark(context) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String>? bookmarks = prefs.getStringList('pokemon_bookmarks') ?? [];
+    if (bookmarks.length >= 15) {
+      showMessage('You have reached the maximum amount of Pokémon bookmarks.');
+    } else if (!bookmarks.contains(widget.pokemonData['name'])) {
+      bookmarks.add('${widget.pokemonData['name']}');
+      await prefs.setStringList('pokemon_bookmarks', bookmarks);
+      showMessage('${widget.pokemonData['name']} was added to your bookmarks');
+    } else {
+      showMessage('${widget.pokemonData['name']} is already bookmarked.');
+    }
+  }
+
+  Future<void> _loadPreferences() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      heightUnits = prefs.getString('heightunit');
+      weightUnits = prefs.getString('weightunit');
     });
   }
 
@@ -56,6 +115,7 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
     var moveset =
         data.firstWhere((set) => set['pokemon_id'] == widget.pokemonData['id']);
 
+    // ignore: use_build_context_synchronously
     List<dynamic> moveData = json.decode(await DefaultAssetBundle.of(context)
         .loadString('assets/pokemon/data/moves.json'));
 
@@ -122,30 +182,7 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
       }
     } else {
       // ignore: use_build_context_synchronously
-      showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: Text(
-              'There is no data on $pokemonName in this app.',
-              textAlign: TextAlign.center,
-            ),
-            actions: <Widget>[
-              Center(
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                  child: const Text(
-                    'Close',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ),
-              )
-            ],
-          );
-        },
-      );
+      showMessage('There is no data on $pokemonName in this app.');
     }
   }
 
@@ -235,7 +272,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
         foregroundColor: BaseThemeColors.detailAppBarText,
         backgroundColor: BaseThemeColors.detailAppBarBG,
         actions: [
-          IconButton(onPressed: playSound, icon: const Icon(Icons.volume_up))
+          IconButton(onPressed: playSound, icon: const Icon(Icons.volume_up)),
+          IconButton(onPressed: () => saveBookmark(context), icon: const Icon(Icons.save)),
         ],
       ),
       body: Container(
@@ -448,14 +486,18 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        '${widget.pokemonData['height']['meters']}',
+                        heightUnits == 'Meters'
+                            ? widget.pokemonData['height']['meters']
+                            : widget.pokemonData['height']['feet_inches'],
                         style: const TextStyle(
                             fontSize: 24,
                             color: BaseThemeColors.detailContainerText),
                       ),
                       const SizedBox(width: 20),
                       Text(
-                        '${widget.pokemonData['weight']['kilograms']}',
+                        weightUnits == 'Kilograms'
+                            ? widget.pokemonData['weight']['kilograms']
+                            : widget.pokemonData['weight']['lbs'],
                         style: const TextStyle(
                             fontSize: 24,
                             color: BaseThemeColors.detailContainerText),
@@ -773,7 +815,7 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                           width: 10,
                                         ),
                                         SizedBox(
-                                          width: 100,
+                                          width: 110,
                                           child: Text(
                                             move['move'],
                                             style: const TextStyle(
@@ -869,7 +911,7 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                           width: 10,
                                         ),
                                         SizedBox(
-                                          width: 100,
+                                          width: 110,
                                           child: Text(
                                             move['move'],
                                             style: const TextStyle(
@@ -957,7 +999,7 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                                           width: 10,
                                         ),
                                         SizedBox(
-                                          width: 100,
+                                          width: 110,
                                           child: Text(
                                             move['move'],
                                             style: const TextStyle(

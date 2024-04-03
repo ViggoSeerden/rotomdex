@@ -1191,14 +1191,14 @@
                 "from_id": 16,
                 "from_name": "Pidgey",
                 "to_id": 17,
-                "to_name": "Pigdeotto",
+                "to_name": "Pidgeotto",
                 "method": "Level 18"
             },
             {
                 "from_id": 17,
                 "from_name": "Pidgeotto",
                 "to_id": 18,
-                "to_name": "Pigdeot",
+                "to_name": "Pidgeot",
                 "method": "Level 36"
             }
         ],
@@ -1268,14 +1268,14 @@
                 "from_id": 16,
                 "from_name": "Pidgey",
                 "to_id": 17,
-                "to_name": "Pigdeotto",
+                "to_name": "Pidgeotto",
                 "method": "Level 18"
             },
             {
                 "from_id": 17,
                 "from_name": "Pidgeotto",
                 "to_id": 18,
-                "to_name": "Pigdeot",
+                "to_name": "Pidgeot",
                 "method": "Level 36"
             }
         ],

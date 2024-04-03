@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:rotomdex/detail/pokemon.dart';
 import 'package:rotomdex/themes/themes.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AbilityPage extends StatefulWidget {
   final Map abilityData;
@@ -21,6 +22,11 @@ class AbilityPageState extends State<AbilityPage> {
   void initState() {
     super.initState();
     _loadJsonData();
+  }
+
+  void setLastItem() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setStringList('lastItem', ['Ability', widget.abilityData['name']]);
   }
 
   Future<void> _loadJsonData() async {
@@ -64,6 +70,47 @@ class AbilityPageState extends State<AbilityPage> {
     }
   }
 
+  Future<void> saveBookmark() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    List<String>? bookmarks = prefs.getStringList('ability_bookmarks') ?? [];
+    if (bookmarks.length >= 15) {
+      showMessage('You have reached the maximum amount of ability bookmarks.');
+    } else if (!bookmarks.contains(widget.abilityData['name'])) {
+      bookmarks.add('${widget.abilityData['name']}');
+      await prefs.setStringList('ability_bookmarks', bookmarks);
+      showMessage('${widget.abilityData['name']} was added to your bookmarks.');
+    } else {
+      showMessage('${widget.abilityData['name']} is already bookmarked.');
+    }
+  }
+
+  void showMessage(String message) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(
+            message,
+            textAlign: TextAlign.center,
+          ),
+          actions: <Widget>[
+            Center(
+              child: TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                child: const Text(
+                  'Close',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+            )
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,6 +123,9 @@ class AbilityPageState extends State<AbilityPage> {
         centerTitle: true,
         foregroundColor: BaseThemeColors.detailAppBarText,
         backgroundColor: BaseThemeColors.detailAppBarBG,
+        actions: [
+          IconButton(onPressed: saveBookmark, icon: const Icon(Icons.save)),
+        ],
       ),
       backgroundColor: Colors.transparent,
       body: Container(
@@ -120,14 +170,18 @@ class AbilityPageState extends State<AbilityPage> {
                             padding: const EdgeInsets.all(8.0),
                             child: Text(
                               widget.abilityData['description'],
-                              style: const TextStyle(fontSize: 24, color: BaseThemeColors.detailContainerText),
+                              style: const TextStyle(
+                                  fontSize: 24,
+                                  color: BaseThemeColors.detailContainerText),
                               textAlign: TextAlign.center,
                             ),
                           ),
                           const SizedBox(height: 30),
                           const Text(
                             'Pokémon that can have this ability:',
-                            style: TextStyle(fontSize: 24, color: BaseThemeColors.detailContainerText),
+                            style: TextStyle(
+                                fontSize: 24,
+                                color: BaseThemeColors.detailContainerText),
                             textAlign: TextAlign.center,
                           ),
                           const SizedBox(height: 10),
@@ -145,8 +199,8 @@ class AbilityPageState extends State<AbilityPage> {
                               itemBuilder: (context, index) {
                                 final item = pokemon[index];
                                 return GestureDetector(
-                                  onTap: () =>
-                                      navigateToPokemonViaID(context, item['id']),
+                                  onTap: () => navigateToPokemonViaID(
+                                      context, item['id']),
                                   child: Column(
                                     children: [
                                       Expanded(
@@ -171,8 +225,10 @@ class AbilityPageState extends State<AbilityPage> {
                                                     (context, url, error) =>
                                                         const Icon(Icons.error),
                                                 fit: BoxFit.cover,
-                                                fadeInDuration: Durations.short1,
-                                                cacheKey: "pokemon_${item['id']}",
+                                                fadeInDuration:
+                                                    Durations.short1,
+                                                cacheKey:
+                                                    "pokemon_${item['id']}",
                                                 cacheManager: CacheManager(
                                                   Config(
                                                     "pokemon_images_cache",
@@ -188,7 +244,8 @@ class AbilityPageState extends State<AbilityPage> {
                                       ),
                                       Text('#${item['id']} ${item['name']}',
                                           style: const TextStyle(
-                                              color: BaseThemeColors.detailContainerText,
+                                              color: BaseThemeColors
+                                                  .detailContainerText,
                                               fontWeight: FontWeight.bold)),
                                       Row(
                                         mainAxisAlignment:
