@@ -1,9 +1,4 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:rotomdex/detail/ability.dart';
-import 'package:rotomdex/detail/move.dart';
-import 'package:rotomdex/detail/pokemon.dart';
 import 'package:rotomdex/scanning/gallery.dart';
 import 'package:rotomdex/screens/abilities.dart';
 import 'package:rotomdex/screens/bookmarks.dart';
@@ -67,10 +62,11 @@ class MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return Themed(
       defaultTheme: _savedTheme,
-      child: const MaterialApp(
+      child: MaterialApp(
         title: MyApp.appTitle,
         debugShowCheckedModeBanner: false,
-        home: MyHomePage(title: MyApp.appTitle),
+        theme: ThemeData(fontFamily: 'Raleway'),
+        home: const MyHomePage(title: MyApp.appTitle),
       ),
     );
   }
@@ -97,8 +93,6 @@ class _MyHomePageState extends State<MyHomePage> {
     SettingsPage()
   ];
 
-  List<String>? lastItem = [];
-
   void _onItemTapped(int index, String name) {
     setState(() {
       _selectedIndex = index;
@@ -109,88 +103,6 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    loadLastItem();
-  }
-
-  void loadLastItem() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    setState(() {
-      lastItem = prefs.getStringList('lastItem');
-    });
-  }
-
-  void navigateToLastItem(
-      BuildContext context, String itemName, String type) async {
-    switch (type) {
-      case 'Pokémon':
-        String data = await DefaultAssetBundle.of(context)
-            .loadString('assets/pokemon/data/kanto_expanded.json');
-
-        List<dynamic> pokemonList = json.decode(data);
-
-        Map<String, dynamic>? specificPokemon = pokemonList.firstWhere(
-          (pokemon) =>
-              pokemon['name'].toString().toLowerCase() ==
-              itemName.toLowerCase(),
-          orElse: () => null,
-        );
-
-        if (specificPokemon != null) {
-          // ignore: use_build_context_synchronously
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) =>
-                  PokemonDetailScreen(pokemonData: specificPokemon),
-            ),
-          );
-        }
-        break;
-      case 'Move':
-        String data = await DefaultAssetBundle.of(context)
-            .loadString('assets/pokemon/data/moves.json');
-
-        List<dynamic> movesList = jsonDecode(data);
-
-        Map<String, dynamic>? move = movesList.firstWhere(
-          (move) => move['move'] == itemName,
-          orElse: () => null,
-        );
-
-        if (move != null) {
-          // ignore: use_build_context_synchronously
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => MovePage(moveData: move),
-            ),
-          );
-        }
-        break;
-      case 'Ability':
-        String data = await DefaultAssetBundle.of(context)
-            .loadString('assets/pokemon/data/abilities.json');
-
-        List<dynamic> abilityList = jsonDecode(data);
-
-        Map<String, dynamic>? ability = abilityList.firstWhere(
-          (ability) => ability['name'] == itemName,
-          orElse: () => null,
-        );
-
-        if (ability != null) {
-          // ignore: use_build_context_synchronously
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => AbilityPage(abilityData: ability),
-            ),
-          );
-        }
-        break;
-      default:
-        break;
-    }
   }
 
   @override
@@ -199,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(
           _pageName,
-          style: const TextStyle(color: BaseThemeColors.mainAppBarText),
+          style: const TextStyle(color: BaseThemeColors.mainAppBarText, fontFamily: 'Zekton', fontSize: 28),
         ),
         backgroundColor: BaseThemeColors.mainAppBarBG,
         iconTheme: const IconThemeData(color: BaseThemeColors.mainAppBarText),
@@ -240,7 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ListTile(
                     title: const Text(
                       'Pokédex',
-                      style: TextStyle(color: BaseThemeColors.mainMenuListText),
+                      style: TextStyle(color: BaseThemeColors.mainMenuListText, fontSize: 20),
                     ),
                     selected: _selectedIndex == 0,
                     onTap: () {
@@ -251,7 +163,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ListTile(
                     title: const Text(
                       'Move Dex',
-                      style: TextStyle(color: BaseThemeColors.mainMenuListText),
+                      style: TextStyle(color: BaseThemeColors.mainMenuListText, fontSize: 20),
                     ),
                     selected: _selectedIndex == 1,
                     onTap: () {
@@ -262,7 +174,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ListTile(
                     title: const Text(
                       'Ability Dex',
-                      style: TextStyle(color: BaseThemeColors.mainMenuListText),
+                      style: TextStyle(color: BaseThemeColors.mainMenuListText, fontSize: 20),
                     ),
                     selected: _selectedIndex == 2,
                     onTap: () {
@@ -273,7 +185,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ListTile(
                     title: const Text(
                       'Bookmarks',
-                      style: TextStyle(color: BaseThemeColors.mainMenuListText),
+                      style: TextStyle(color: BaseThemeColors.mainMenuListText, fontSize: 20),
                     ),
                     selected: _selectedIndex == 3,
                     onTap: () {
@@ -284,7 +196,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ListTile(
                     title: const Text(
                       'Scanner',
-                      style: TextStyle(color: BaseThemeColors.mainMenuListText),
+                      style: TextStyle(color: BaseThemeColors.mainMenuListText, fontSize: 20),
                     ),
                     selected: _selectedIndex == 4,
                     onTap: () {
@@ -295,7 +207,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ListTile(
                     title: const Text(
                       'Settings',
-                      style: TextStyle(color: BaseThemeColors.mainMenuListText),
+                      style: TextStyle(color: BaseThemeColors.mainMenuListText, fontSize: 20),
                     ),
                     selected: _selectedIndex == 5,
                     onTap: () {
@@ -306,45 +218,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
-            // if (lastItem!.isNotEmpty) ...[
-            //   Row(
-            //     mainAxisAlignment: MainAxisAlignment.start,
-            //     crossAxisAlignment: CrossAxisAlignment.start,
-            //     children: [
-            //       Column(
-            //         children: [
-            //           const Text(
-            //             'Last Viewed:',
-            //             style: TextStyle(
-            //                 fontSize: 20,
-            //                 color: BaseThemeColors.mainMenuListText),
-            //             textAlign: TextAlign.left,
-            //           ),
-            //           Padding(
-            //             padding: const EdgeInsets.all(8.0),
-            //             child: GestureDetector(
-            //               onTap: () => navigateToLastItem(context, lastItem![1], lastItem![0]),
-            //               child: Container(
-            //                 decoration: const BoxDecoration(
-            //                     borderRadius: BorderRadius.all(Radius.circular(20)),
-            //                     color: BaseThemeColors.dexItemBG),
-            //                 child: Padding(
-            //                   padding: const EdgeInsets.all(8),
-            //                   child: Text(
-            //                     '${lastItem![0]}: ${lastItem![1]}',
-            //                     style: const TextStyle(
-            //                         fontSize: 16,
-            //                         color: BaseThemeColors.dexItemText),
-            //                   ),
-            //                 ),
-            //               ),
-            //             ),
-            //           ),
-            //         ],
-            //       ),
-            //     ],
-            //   ),
-            // ]
           ],
         ),
       ),

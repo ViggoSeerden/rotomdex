@@ -45,18 +45,12 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
         'assets/pokemon/models/${widget.pokemonData['id'].toString()}.glb';
     _loadPreferences();
     _loadJsonData();
-    setLastItem();
   }
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
-  }
-
-  void setLastItem() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setStringList('lastItem', ['Pokémon', widget.pokemonData['name']]);
   }
 
   void showMessage(String message) {
@@ -94,7 +88,7 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
     } else if (!bookmarks.contains(widget.pokemonData['name'])) {
       bookmarks.add('${widget.pokemonData['name']}');
       await prefs.setStringList('pokemon_bookmarks', bookmarks);
-      showMessage('${widget.pokemonData['name']} was added to your bookmarks');
+      showMessage('${widget.pokemonData['name']} was added to your bookmarks.');
     } else {
       showMessage('${widget.pokemonData['name']} is already bookmarked.');
     }
@@ -273,7 +267,9 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
         backgroundColor: BaseThemeColors.detailAppBarBG,
         actions: [
           IconButton(onPressed: playSound, icon: const Icon(Icons.volume_up)),
-          IconButton(onPressed: () => saveBookmark(context), icon: const Icon(Icons.save)),
+          IconButton(
+              onPressed: () => saveBookmark(context),
+              icon: const Icon(Icons.bookmark)),
         ],
       ),
       body: Container(
@@ -386,7 +382,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                   onPressed: () => navigateToPokemonViaID(
                       context, widget.pokemonData["id"] - 1),
                   icon: const Icon(
-                    Icons.arrow_left,
+                    Icons.arrow_left_rounded,
+                    size: 40,
                     color: BaseThemeColors.detailContainerText,
                   )),
               const SizedBox(
@@ -418,7 +415,8 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
                   onPressed: () => navigateToPokemonViaID(
                       context, widget.pokemonData["id"] + 1),
                   icon: const Icon(
-                    Icons.arrow_right,
+                    Icons.arrow_right_rounded,
+                    size: 40,
                     color: BaseThemeColors.detailContainerText,
                   )),
             ] else ...[

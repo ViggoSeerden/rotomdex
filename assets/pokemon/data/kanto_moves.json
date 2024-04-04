@@ -2123,5 +2123,1769 @@
         "egg": [
             "Counter", "Disable", "Poison Fang", "Poison Tail", "Skull Bash", "Supersonic", "Take Down"
         ]
+    },
+    {
+        "pokemon_id": 32,
+        "data": "SwSh",
+        "level_up": [
+            {
+                "move_name": "Leer",
+                "level": 1
+            },
+            {
+                "move_name": "Poison Sting",
+                "level": 1
+            },
+            {
+                "move_name": "Peck",
+                "level": 5
+            },
+            {
+                "move_name": "Focus Energy",
+                "level": 10
+            },
+            {
+                "move_name": "Fury Attack",
+                "level": 15
+            },
+            {
+                "move_name": "Toxic Spikes",
+                "level": 20
+            },
+            {
+                "move_name": "Double Kick",
+                "level": 25
+            },
+            {
+                "move_name": "Horn Attack",
+                "level": 30
+            },
+            {
+                "move_name": "Helping Hand",
+                "level": 35
+            },
+            {
+                "move_name": "Toxic",
+                "level": 40
+            },
+            {
+                "move_name": "Flatter",
+                "level": 45
+            },
+            {
+                "move_name": "Poison Jab",
+                "level": 50
+            },
+            {
+                "move_name": "Earth Power",
+                "level": 55
+            }
+        ],
+        "tm": [
+            "Dig", "Rest", "Thief", "Snore", "Protect", "Attract", "Rain Dance", "Sunny Day", "Beat Up", "Facade", "Helping Hand", "Shadow Claw", "Venoshock", "Round", "Smart Strike", "Body Slam", "Ice Beam", "Blizzard", "Thunderbolt", "Thunder", "Focus Energy", "Amnesia", "Substitute", "Sludge Bomb", "Endure", "Sleep Talk", "Iron Tail", "Toxic Spikes", "Poison Jab", "Earth Power", "Drill Run", "Venom Drench"
+        ],
+        "egg": [
+            "Confusion", "Counter", "Disable", "Head Smash", "Horn Drill", "Poison Tail", "Sucker Punch", "Supersonic", "Take Down", "Thrash"
+        ]
+    },
+    {
+        "pokemon_id": 33,
+        "data": "SwSh",
+        "level_up": [
+            {
+                "move_name": "Leer",
+                "level": 1
+            },
+            {
+                "move_name": "Poison Sting",
+                "level": 1
+            },
+            {
+                "move_name": "Peck",
+                "level": 1
+            },
+            {
+                "move_name": "Focus Energy",
+                "level": 1
+            },
+            {
+                "move_name": "Fury Attack",
+                "level": 15
+            },
+            {
+                "move_name": "Toxic Spikes",
+                "level": 22
+            },
+            {
+                "move_name": "Double Kick",
+                "level": 29
+            },
+            {
+                "move_name": "Horn Attack",
+                "level": 36
+            },
+            {
+                "move_name": "Helping Hand",
+                "level": 43
+            },
+            {
+                "move_name": "Toxic",
+                "level": 50
+            },
+            {
+                "move_name": "Flatter",
+                "level": 57
+            },
+            {
+                "move_name": "Poison Jab",
+                "level": 64
+            },
+            {
+                "move_name": "Earth Power",
+                "level": 71
+            }
+        ],
+        "tm": [
+            "Dig", "Rest", "Thief", "Snore", "Protect", "Attract", "Rain Dance", "Sunny Day", "Beat Up", "Facade", "Helping Hand", "Shadow Claw", "Venoshock", "Round", "Smart Strike", "Stomping Tantrum", "Body Slam", "Ice Beam", "Blizzard", "Thunderbolt", "Thunder", "Focus Energy", "Amnesia", "Substitute", "Sludge Bomb", "Endure", "Sleep Talk", "Iron Tail", "Toxic Spikes", "Poison Jab", "Earth Power", "Drill Run", "Venom Drench"
+        ],
+        "egg": [
+            "Confusion", "Counter", "Disable", "Head Smash", "Horn Drill", "Poison Tail", "Sucker Punch", "Supersonic", "Take Down", "Thrash"
+        ]
+    },
+    {
+        "pokemon_id": 34,
+        "data": "SwSh",
+        "level_up": [
+            {
+                "move_name": "Megahorn",
+                "level": 1
+            },
+            {
+                "move_name": "Sludge Wave",
+                "level": 1
+            },
+            {
+                "move_name": "Leer",
+                "level": 1
+            },
+            {
+                "move_name": "Poison Sting",
+                "level": 1
+            },
+            {
+                "move_name": "Peck",
+                "level": 1
+            },
+            {
+                "move_name": "Focus Energy",
+                "level": 1
+            },
+            {
+                "move_name": "Fury Attack",
+                "level": 1
+            },
+            {
+                "move_name": "Toxic Spikes",
+                "level": 1
+            },
+            {
+                "move_name": "Double Kick",
+                "level": 1
+            },
+            {
+                "move_name": "Horn Attack",
+                "level": 1
+            },
+            {
+                "move_name": "Helping Hand",
+                "level": 1
+            },
+            {
+                "move_name": "Toxic",
+                "level": 1
+            },
+            {
+                "move_name": "Flatter",
+                "level": 1
+            },
+            {
+                "move_name": "Poison Jab",
+                "level": 1
+            },
+            {
+                "move_name": "Earth Power",
+                "level": 1
+            },
+            {
+                "move_name": "Megahorn",
+                "level": "Evo"
+            }
+        ],
+        "tm": [
+            "Mega Punch", "Mega Kick", "Pay Day", "Fire Punch", "Ice Punch", "Thunder Punch", "Hyper Beam", "Giga Impact", "Dig", "Rest", "Rock Slide", "Thief", "Snore", "Protect", "Icy Wind", "Attract", "Sandstorm", "Rain Dance", "Sunny Day", "Whirlpool", "Beat Up", "Facade", "Helping Hand", "Brick Break", "Rock Tomb", "Sand Tomb", "Mud Shot", "Rock Blast", "Fling", "Avalanche", "Shadow Claw", "Venoshock", "Round", "Hex", "Bulldoze", "Smart Strike", "Stomping Tantrum", "Body Slam", "Flamethrower", "Surf", "Ice Beam", "Blizzard", "Thunderbolt", "Thunder", "Earthquake", "Focus Energy", "Fire Blast", "Amnesia", "Substitute", "Sludge Bomb", "Outrage", "Endure", "Sleep Talk", "Megahorn", "Iron Tail", "Shadow Ball", "Uproar", "Taunt", "Superpower", "Toxic Spikes", "Poison Jab", "Dragon Pulse", "Focus Blast", "Earth Power", "Stone Edge", "Stealth Rock", "Sludge Wave", "Drill Run", "Venom Drench", "High Horsepower", "Throat Chop", "Body Press"
+        ],
+        "egg": [
+            "Confusion", "Counter", "Disable", "Head Smash", "Horn Drill", "Poison Tail", "Sucker Punch", "Supersonic", "Take Down", "Thrash"
+        ]
+    },
+    {
+        "pokemon_id": 35,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Sing",
+                "level": 1
+            },
+            {
+                "move_name": "Sweet Kiss",
+                "level": 1
+            },
+            {
+                "move_name": "Disarming Voice",
+                "level": 1
+            },
+            {
+                "move_name": "Charm",
+                "level": 1
+            },
+            {
+                "move_name": "Splash",
+                "level": 1
+            },
+            {
+                "move_name": "Pound",
+                "level": 1
+            },
+            {
+                "move_name": "Copycat",
+                "level": 1
+            },
+            {
+                "move_name": "Growl",
+                "level": 1
+            },
+            {
+                "move_name": "Defense Curl",
+                "level": 1
+            },
+            {
+                "move_name": "Stored Power",
+                "level": 4
+            },
+            {
+                "move_name": "Encore",
+                "level": 8
+            },
+            {
+                "move_name": "After You",
+                "level": 12
+            },
+            {
+                "move_name": "Life Dew",
+                "level": 16
+            },
+            {
+                "move_name": "Metronome",
+                "level": 20
+            },
+            {
+                "move_name": "Moonlight",
+                "level": 24
+            },
+            {
+                "move_name": "Gravity",
+                "level": 28
+            },
+            {
+                "move_name": "Meteor Mash",
+                "level": 32
+            },
+            {
+                "move_name": "Follow Me",
+                "level": 36
+            },
+            {
+                "move_name": "Cosmic Power",
+                "level": 40
+            },
+            {
+                "move_name": "Moonblast",
+                "level": 44
+            },
+            {
+                "move_name": "Healing Wish",
+                "level": 48
+            }
+        ],
+        "tm": [
+            "Take Down", "Charm", "Fake Tears", "Protect", "Water Pulse", "Psybeam", "Thief", "Disarming Voice", "Chilling Water", "Charge Beam", "Facade", "Swift", "Magical Leaf", "Icy Wind", "Draining Kiss", "Stored Power", "Night Shade", "Fling", "Endure", "Sunny Day", "Rain Dance", "Psyshock", "Dig", "Brick Break", "Zen Headbutt", "Body Slam", "Fire Punch", "Thunder Punch", "Ice Punch", "Sleep Talk", "Drain Punch", "Reflect", "Light Screen", "Dazzling Gleam", "Metronome", "Grass Knot", "Thunder Wave", "Rest", "Imprison", "Skill Swap", "Substitute", "Trick", "Shadow Ball", "Stealth Rock", "Hyper Voice", "Psychic", "Encore", "Flamethrower", "Thunderbolt", "Play Rough", "Amnesia", "Calm Mind", "Helping Hand", "Baton Pass", "Ice Beam", "Misty Terrain", "Fire Blast", "Blizzard", "Thunder", "Solar Beam", "Tera Blast", "Gravity", "Knock Off", "Uproar", "Focus Punch", "Dual Wingbeat", "Misty Explosion", "Psych Up", "Double-Edge", "Endeavor", "Meteor Beam", "Alluring Voice"
+        ],
+        "egg": [
+            "Heal Pulse", "Present", "Tickle", "Wish"
+        ]
+    },
+    {
+        "pokemon_id": 36,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Sing",
+                "level": 1
+            },
+            {
+                "move_name": "Sweet Kiss",
+                "level": 1
+            },
+            {
+                "move_name": "Disarming Voice",
+                "level": 1
+            },
+            {
+                "move_name": "Charm",
+                "level": 1
+            },
+            {
+                "move_name": "Splash",
+                "level": 1
+            },
+            {
+                "move_name": "Pound",
+                "level": 1
+            },
+            {
+                "move_name": "Copycat",
+                "level": 1
+            },
+            {
+                "move_name": "Growl",
+                "level": 1
+            },
+            {
+                "move_name": "Defense Curl",
+                "level": 1
+            },
+            {
+                "move_name": "Stored Power",
+                "level": 1
+            },
+            {
+                "move_name": "Encore",
+                "level": 1
+            },
+            {
+                "move_name": "After You",
+                "level": 1
+            },
+            {
+                "move_name": "Life Dew",
+                "level": 1
+            },
+            {
+                "move_name": "Metronome",
+                "level": 1
+            },
+            {
+                "move_name": "Moonlight",
+                "level": 1
+            },
+            {
+                "move_name": "Gravity",
+                "level": 1
+            },
+            {
+                "move_name": "Meteor Mash",
+                "level": 1
+            },
+            {
+                "move_name": "Follow Me",
+                "level": 1
+            },
+            {
+                "move_name": "Cosmic Power",
+                "level": 1
+            },
+            {
+                "move_name": "Moonblast",
+                "level": 1
+            },
+            {
+                "move_name": "Healing Wish",
+                "level": 1
+            }
+        ],
+        "tm": [
+            "Take Down", "Charm", "Fake Tears", "Protect", "Water Pulse", "Psybeam", "Thief", "Disarming Voice", "Chilling Water", "Charge Beam", "Facade", "Swift", "Magical Leaf", "Icy Wind", "Draining Kiss", "Stored Power", "Night Shade", "Fling", "Endure", "Sunny Day", "Rain Dance", "Psyshock", "Dig", "Brick Break", "Zen Headbutt", "Body Slam", "Fire Punch", "Thunder Punch", "Ice Punch", "Sleep Talk", "Drain Punch", "Reflect", "Light Screen", "Dazzling Gleam", "Metronome", "Grass Knot", "Thunder Wave", "Rest", "Imprison", "Skill Swap", "Substitute", "Trick", "Shadow Ball", "Stealth Rock", "Hyper Voice", "Psychic", "Encore", "Flamethrower", "Thunderbolt", "Play Rough", "Amnesia", "Calm Mind", "Helping Hand", "Baton Pass", "Ice Beam", "Misty Terrain", "Fire Blast", "Blizzard", "Giga Impact", "Focus Blast", "Hyper Beam", "Thunder", "Solar Beam", "Tera Blast", "Gravity", "Knock Off", "Uproar", "Focus Punch", "Dual Wingbeat", "Misty Explosion", "Psych Up", "Double-Edge", "Endeavor", "Future Sight", "Meteor Beam", "Alluring Voice"
+        ],
+        "egg": [
+            "Heal Pulse", "Present", "Tickle", "Wish"
+        ]
+    },
+    {
+        "pokemon_id": 37,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Ember",
+                "level": 1
+            },
+            {
+                "move_name": "Tail Whip",
+                "level": 1
+            },
+            {
+                "move_name": "Disable",
+                "level": 4
+            },
+            {
+                "move_name": "Quick Attack",
+                "level": 8
+            },
+            {
+                "move_name": "Spite",
+                "level": 12
+            },
+            {
+                "move_name": "Incinerate",
+                "level": 16
+            },
+            {
+                "move_name": "Confuse Ray",
+                "level": 20
+            },
+            {
+                "move_name": "Will-O-Wisp",
+                "level": 24
+            },
+            {
+                "move_name": "Extrasensory",
+                "level": 28
+            },
+            {
+                "move_name": "Flamethrower",
+                "level": 32
+            },
+            {
+                "move_name": "Imprison",
+                "level": 36
+            },
+            {
+                "move_name": "Fire Spin",
+                "level": 40
+            },
+            {
+                "move_name": "Safeguard",
+                "level": 44
+            },
+            {
+                "move_name": "Inferno",
+                "level": 48
+            },
+            {
+                "move_name": "Fire Blast",
+                "level": 52
+            }
+        ],
+        "tm": [
+            "Take Down", "Charm", "Agility", "Protect", "Confuse Ray", "Fire Spin", "Facade", "Hex", "Snarl", "Swift", "Flame Charge", "Endure", "Sunny Day", "Dig", "Zen Headbutt", "Foul Play", "Body Slam", "Sleep Talk", "Rest", "Imprison", "Dark Pulse", "Substitute", "Will-O-Wisp", "Heat Wave", "Energy Ball", "Encore", "Flamethrower", "Helping Hand", "Baton Pass", "Nasty Plot", "Fire Blast", "Overheat", "Flare Blitz", "Tera Blast", "Roar", "Spite", "Weather Ball", "Burning Jealousy", "Pain Split", "Psych Up", "Double-Edge"
+        ],
+        "egg": [
+            "Baby-Doll Eyes", "Flail", "Flame Charge", "Healing Wish", "Howl", "Hypnosis", "Memento", "Roar"
+        ]
+    },
+    {
+        "pokemon_id": 38,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Ember",
+                "level": 1
+            },
+            {
+                "move_name": "Tail Whip",
+                "level": 1
+            },
+            {
+                "move_name": "Disable",
+                "level": 1
+            },
+            {
+                "move_name": "Quick Attack",
+                "level": 1
+            },
+            {
+                "move_name": "Spite",
+                "level": 1
+            },
+            {
+                "move_name": "Incinerate",
+                "level": 1
+            },
+            {
+                "move_name": "Confuse Ray",
+                "level": 1
+            },
+            {
+                "move_name": "Will-O-Wisp",
+                "level": 1
+            },
+            {
+                "move_name": "Extrasensory",
+                "level": 1
+            },
+            {
+                "move_name": "Flamethrower",
+                "level": 1
+            },
+            {
+                "move_name": "Imprison",
+                "level": 1
+            },
+            {
+                "move_name": "Fire Spin",
+                "level": 1
+            },
+            {
+                "move_name": "Safeguard",
+                "level": 1
+            },
+            {
+                "move_name": "Inferno",
+                "level": 1
+            },
+            {
+                "move_name": "Fire Blast",
+                "level": 1
+            },
+            {
+                "move_name": "Nasty Plot",
+                "level": 1
+            }
+        ],
+        "tm": [
+            "Take Down", "Charm", "Fake Tears", "Agility", "Protect", "Confuse Ray", "Fire Spin", "Facade", "Hex", "Snarl", "Swift", "Flame Charge", "Stored Power", "Endure", "Sunny Day", "Psyshock", "Dig", "Zen Headbutt", "Foul Play", "Body Slam", "Sleep Talk", "Rest", "Imprison", "Dark Pulse", "Substitute", "Will-O-Wisp", "Shadow Ball", "Heat Wave", "Energy Ball", "Encore", "Flamethrower", "Calm Mind", "Helping Hand", "Baton Pass", "Nasty Plot", "Fire Blast", "Giga Impact", "Overheat", "Hyper Beam", "Flare Blitz", "Solar Beam", "Tera Blast", "Roar", "Spite", "Weather Ball", "Burning Jealousy", "Pain Split", "Psych Up", "Double-Edge", "Scorching Sands"
+        ],
+        "egg": [
+            "Baby-Doll Eyes", "Flail", "Flame Charge", "Healing Wish", "Howl", "Hypnosis", "Memento", "Roar"
+        ]
+    },
+    {
+        "pokemon_id": 39,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Sweet Kiss",
+                "level": 1
+            },
+            {
+                "move_name": "Disarming Voice",
+                "level": 1
+            },
+            {
+                "move_name": "Disable",
+                "level": 1
+            },
+            {
+                "move_name": "Charm",
+                "level": 1
+            },
+            {
+                "move_name": "Sing",
+                "level": 1
+            },
+            {
+                "move_name": "Pound",
+                "level": 1
+            },
+            {
+                "move_name": "Copycat",
+                "level": 1
+            },
+            {
+                "move_name": "Defense Curl",
+                "level": 1
+            },
+            {
+                "move_name": "Echoed Voice",
+                "level": 4
+            },
+            {
+                "move_name": "Covet",
+                "level": 8
+            },
+            {
+                "move_name": "Stockpile",
+                "level": 12
+            },
+            {
+                "move_name": "Spit Up",
+                "level": 12
+            },
+            {
+                "move_name": "Swallow",
+                "level": 12
+            },
+            {
+                "move_name": "Round",
+                "level": 16
+            },
+            {
+                "move_name": "Rest",
+                "level": 20
+            },
+            {
+                "move_name": "Body Slam",
+                "level": 24
+            },
+            {
+                "move_name": "Mimic",
+                "level": 28
+            },
+            {
+                "move_name": "Gyro Ball",
+                "level": 32
+            },
+            {
+                "move_name": "Hyper Voice",
+                "level": 36
+            },
+            {
+                "move_name": "Double-Edge",
+                "level": 44
+            }
+        ],
+        "tm": [
+            "Take Down", "Charm", "Fake Tears", "Protect", "Water Pulse", "Thief", "Disarming Voice", "Trailblaze", "Chilling Water", "Facade", "Swift", "Magical Leaf", "Icy Wind", "Draining Kiss", "Stored Power", "Fling", "Endure", "Sunny Day", "Rain Dance", "Sandstorm", "Psyshock", "Dig", "Brick Break", "Zen Headbutt", "Body Slam", "Fire Punch", "Thunder Punch", "Ice Punch", "Sleep Talk", "Drain Punch", "Reflect", "Light Screen", "Dazzling Gleam", "Metronome", "Grass Knot", "Thunder Wave", "Rest", "Taunt", "Body Press", "Dark Pulse", "Skill Swap", "Substitute", "Shadow Ball", "Stealth Rock", "Hyper Voice", "Energy Ball", "Psychic", "Encore", "Ice Spinner", "Flamethrower", "Thunderbolt", "Play Rough", "Amnesia", "Calm Mind", "Helping Hand", "Baton Pass", "Ice Beam", "Misty Terrain", "Nasty Plot", "Fire Blast", "Blizzard", "Wild Charge", "Thunder", "Solar Beam", "Tera Blast", "Gravity", "Gyro Ball", "Knock Off", "Uproar", "Focus Punch", "Misty Explosion", "Pain Split", "Psych Up", "Double-Edge", "Endeavor", "Alluring Voice", "Psychic Noise"
+        ],
+        "egg": [
+            "Covet", "Gravity", "Heal Pulse", "Last Resort", "Perish Song", "Present", "Rollout", "Wish"
+        ]
+    },
+    {
+        "pokemon_id": 40,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Sweet Kiss",
+                "level": 1
+            },
+            {
+                "move_name": "Disarming Voice",
+                "level": 1
+            },
+            {
+                "move_name": "Disable",
+                "level": 1
+            },
+            {
+                "move_name": "Charm",
+                "level": 1
+            },
+            {
+                "move_name": "Sing",
+                "level": 1
+            },
+            {
+                "move_name": "Pound",
+                "level": 1
+            },
+            {
+                "move_name": "Copycat",
+                "level": 1
+            },
+            {
+                "move_name": "Defense Curl",
+                "level": 1
+            },
+            {
+                "move_name": "Echoed Voice",
+                "level": 1
+            },
+            {
+                "move_name": "Covet",
+                "level": 1
+            },
+            {
+                "move_name": "Stockpile",
+                "level": 1
+            },
+            {
+                "move_name": "Spit Up",
+                "level": 1
+            },
+            {
+                "move_name": "Swallow",
+                "level": 1
+            },
+            {
+                "move_name": "Round",
+                "level": 1
+            },
+            {
+                "move_name": "Rest",
+                "level": 1
+            },
+            {
+                "move_name": "Body Slam",
+                "level": 1
+            },
+            {
+                "move_name": "Mimic",
+                "level": 1
+            },
+            {
+                "move_name": "Gyro Ball",
+                "level": 1
+            },
+            {
+                "move_name": "Hyper Voice",
+                "level": 1
+            },
+            {
+                "move_name": "Double-Edge",
+                "level": 1
+            },
+            {
+                "move_name": "Play Rough",
+                "level": 5
+            }
+        ],
+        "tm": [
+            "Take Down", "Charm", "Fake Tears", "Protect", "Water Pulse", "Thief", "Disarming Voice", "Trailblaze", "Chilling Water", "Facade", "Swift", "Magical Leaf", "Icy Wind", "Draining Kiss", "Stored Power", "Fling", "Endure", "Sunny Day", "Rain Dance", "Sandstorm", "Psyshock", "Dig", "Brick Break", "Zen Headbutt", "Body Slam", "Fire Punch", "Thunder Punch", "Ice Punch", "Sleep Talk", "Drain Punch", "Reflect", "Light Screen", "Dazzling Gleam", "Metronome", "Grass Knot", "Thunder Wave", "Rest", "Taunt", "Body Press", "Dark Pulse", "Skill Swap", "Substitute", "Shadow Ball", "Stealth Rock", "Hyper Voice", "Energy Ball", "Psychic", "Encore", "Ice Spinner", "Flamethrower", "Thunderbolt", "Play Rough", "Amnesia", "Calm Mind", "Helping Hand", "Baton Pass", "Ice Beam", "Misty Terrain", "Nasty Plot", "Fire Blast", "Blizzard", "Wild Charge", "Giga Impact", "Focus Blast", "Hyper Beam", "Thunder", "Solar Beam", "Tera Blast", "Gravity", "Gyro Ball", "Knock Off", "Uproar", "Focus Punch", "Misty Explosion", "Pain Split", "Psych Up", "Double-Edge", "Endeavor", "Expanding Force", "Alluring Voice", "Psychic Noise"
+        ],
+        "egg": [
+            "Covet", "Gravity", "Heal Pulse", "Last Resort", "Perish Song", "Present", "Rollout", "Wish"
+        ]
+    },
+    {
+        "pokemon_id": 41,
+        "data": "SwSh",
+        "level_up": [
+            {
+                "move_name": "Absorb",
+                "level": 1
+            },
+            {
+                "move_name": "Supersonic",
+                "level": 1
+            },
+            {
+                "move_name": "Astonish",
+                "level": 5
+            },
+            {
+                "move_name": "Mean Look",
+                "level": 10
+            },
+            {
+                "move_name": "Poison Fang",
+                "level": 15
+            },
+            {
+                "move_name": "Quick Guard",
+                "level": 20
+            },
+            {
+                "move_name": "Air Cutter",
+                "level": 25
+            },
+            {
+                "move_name": "Bite",
+                "level": 30
+            },
+            {
+                "move_name": "Haze",
+                "level": 35
+            },
+            {
+                "move_name": "Venoshock",
+                "level": 40
+            },
+            {
+                "move_name": "Confuse Ray",
+                "level": 45
+            },
+            {
+                "move_name": "Air Slash",
+                "level": 50
+            },
+            {
+                "move_name": "Leech Life",
+                "level": 55
+            }
+        ],
+        "tm": [
+            "Fly", "Rest", "Thief", "Snore", "Protect", "Giga Drain", "Steel Wing", "Attract", "Rain Dance", "Sunny Day", "Facade", "Swift", "U-turn", "Payback", "Assurance", "Venoshock", "Round", "Acrobatics", "Air Slash", "Agility", "Leech Life", "Substitute", "Sludge Bomb", "Endure", "Sleep Talk", "Crunch", "Shadow Ball", "Uproar", "Heat Wave", "Taunt", "Brave Bird", "Nasty Plot", "Zen Headbutt", "Venom Drench"
+        ],
+        "egg": [
+            "Curse", "Defog", "Gust", "Hypnosis", "Quick Attack", "Whirlwind", "Wing Attack"
+        ]
+    },
+    {
+        "pokemon_id": 42,
+        "data": "SwSh",
+        "level_up": [
+            {
+                "move_name": "Screech",
+                "level": 1
+            },
+            {
+                "move_name": "Absorb",
+                "level": 1
+            },
+            {
+                "move_name": "Supersonic",
+                "level": 1
+            },
+            {
+                "move_name": "Astonish",
+                "level": 1
+            },
+            {
+                "move_name": "Mean Look",
+                "level": 1
+            },
+            {
+                "move_name": "Poison Fang",
+                "level": 15
+            },
+            {
+                "move_name": "Quick Guard",
+                "level": 20
+            },
+            {
+                "move_name": "Air Cutter",
+                "level": 27
+            },
+            {
+                "move_name": "Bite",
+                "level": 34
+            },
+            {
+                "move_name": "Haze",
+                "level": 41
+            },
+            {
+                "move_name": "Venoshock",
+                "level": 48
+            },
+            {
+                "move_name": "Confuse Ray",
+                "level": 55
+            },
+            {
+                "move_name": "Air Slash",
+                "level": 62
+            },
+            {
+                "move_name": "Leech Life",
+                "level": 69
+            }
+        ],
+        "tm": [
+            "Fly", "Hyper Beam", "Giga Impact", "Screech", "Rest", "Thief", "Snore", "Protect", "Giga Drain", "Steel Wing", "Attract", "Rain Dance", "Sunny Day", "Facade", "Swift", "U-turn", "Payback", "Assurance", "Venoshock", "Round", "Acrobatics", "Air Slash", "Agility", "Leech Life", "Substitute", "Sludge Bomb", "Endure", "Sleep Talk", "Crunch", "Shadow Ball", "Uproar", "Heat Wave", "Taunt", "Brave Bird", "Nasty Plot", "Zen Headbutt", "Venom Drench"
+        ],
+        "egg": [
+            "Curse", "Defog", "Gust", "Hypnosis", "Quick Attack", "Whirlwind", "Wing Attack"
+        ]
+    },
+    {
+        "pokemon_id": 43,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Absorb",
+                "level": 1
+            },
+            {
+                "move_name": "Growth",
+                "level": 1
+            },
+            {
+                "move_name": "Acid",
+                "level": 4
+            },
+            {
+                "move_name": "Sweet Scent",
+                "level": 8
+            },
+            {
+                "move_name": "Mega Drain",
+                "level": 12
+            },
+            {
+                "move_name": "Poison Powder",
+                "level": 14
+            },
+            {
+                "move_name": "Stun Spore",
+                "level": 16
+            },
+            {
+                "move_name": "Sleep Powder",
+                "level": 18
+            },
+            {
+                "move_name": "Giga Drain",
+                "level": 20
+            },
+            {
+                "move_name": "Toxic",
+                "level": 24
+            },
+            {
+                "move_name": "Moonblast",
+                "level": 28
+            },
+            {
+                "move_name": "Grassy Terrain",
+                "level": 32
+            },
+            {
+                "move_name": "Moonlight",
+                "level": 36
+            },
+            {
+                "move_name": "Petal Dance",
+                "level": 40
+            }
+        ],
+        "tm": [
+            "Charm", "Protect", "Acid Spray", "Trailblaze", "Facade", "Magical Leaf", "Venoshock", "Endure", "Sunny Day", "Bullet Seed", "Sleep Talk", "Seed Bomb", "Grass Knot", "Rest", "Swords Dance", "Substitute", "Giga Drain", "Energy Ball", "Helping Hand", "Grassy Terrain", "Sludge Bomb", "Leaf Storm", "Solar Beam", "Tera Blast", "Toxic", "Grassy Glide"
+        ],
+        "egg": [
+            "After You", "Flail", "Ingrain", "Leech Seed", "Razor Leaf", "Strength Sap", "Synthesis", "Teeter Dance", "Tickle"
+        ]
+    },
+    {
+        "pokemon_id": 44,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Absorb",
+                "level": 1
+            },
+            {
+                "move_name": "Growth",
+                "level": 1
+            },
+            {
+                "move_name": "Acid",
+                "level": 1
+            },
+            {
+                "move_name": "Sweet Scent",
+                "level": 1
+            },
+            {
+                "move_name": "Mega Drain",
+                "level": 12
+            },
+            {
+                "move_name": "Poison Powder",
+                "level": 14
+            },
+            {
+                "move_name": "Stun Spore",
+                "level": 16
+            },
+            {
+                "move_name": "Sleep Powder",
+                "level": 18
+            },
+            {
+                "move_name": "Giga Drain",
+                "level": 20
+            },
+            {
+                "move_name": "Toxic",
+                "level": 26
+            },
+            {
+                "move_name": "Moonblast",
+                "level": 32
+            },
+            {
+                "move_name": "Grassy Terrain",
+                "level": 38
+            },
+            {
+                "move_name": "Moonlight",
+                "level": 44
+            },
+            {
+                "move_name": "Petal Dance",
+                "level": 50
+            }
+        ],
+        "tm": [
+            "Charm", "Protect", "Acid Spray", "Trailblaze", "Facade", "Magical Leaf", "Venoshock", "Endure", "Sunny Day", "Bullet Seed", "Sleep Talk", "Seed Bomb", "Grass Knot", "Rest", "Swords Dance", "Substitute", "Giga Drain", "Energy Ball", "Helping Hand", "Pollen Puff", "Grassy Terrain", "Sludge Bomb", "Leaf Storm", "Solar Beam", "Tera Blast", "Toxic", "Grassy Glide", "Petal Blizzard"
+        ],
+        "egg": [
+            "After You", "Flail", "Ingrain", "Leech Seed", "Razor Leaf", "Strength Sap", "Synthesis", "Teeter Dance", "Tickle"
+        ]
+    },
+    {
+        "pokemon_id": 45,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Absorb",
+                "level": 1
+            },
+            {
+                "move_name": "Growth",
+                "level": 1
+            },
+            {
+                "move_name": "Acid",
+                "level": 1
+            },
+            {
+                "move_name": "Sweet Scent",
+                "level": 1
+            },
+            {
+                "move_name": "Mega Drain",
+                "level": 1
+            },
+            {
+                "move_name": "Poison Powder",
+                "level": 1
+            },
+            {
+                "move_name": "Stun Spore",
+                "level": 1
+            },
+            {
+                "move_name": "Sleep Powder",
+                "level": 1
+            },
+            {
+                "move_name": "Giga Drain",
+                "level": 1
+            },
+            {
+                "move_name": "Toxic",
+                "level": 1
+            },
+            {
+                "move_name": "Moonblast",
+                "level": 1
+            },
+            {
+                "move_name": "Grassy Terrain",
+                "level": 1
+            },
+            {
+                "move_name": "Moonlight",
+                "level": 1
+            },
+            {
+                "move_name": "Petal Dance",
+                "level": 1
+            },
+            {
+                "move_name": "Petal Blizzard",
+                "level": "Evo"
+            }
+        ],
+        "tm": [
+            "Charm", "Protect", "Acid Spray", "Trailblaze", "Facade", "Magical Leaf", "Fling", "Venoshock", "Endure", "Sunny Day", "Bullet Seed", "Body Slam", "Sleep Talk", "Seed Bomb", "Dazzling Gleam", "Grass Knot", "Rest", "Swords Dance", "Substitute", "Giga Drain", "Energy Ball", "Helping Hand", "Pollen Puff", "Grassy Terrain", "Sludge Bomb", "Giga Impact", "Leaf Storm", "Hyper Beam", "Solar Beam", "Tera Blast", "Toxic", "Solar Blade", "Grassy Glide", "Petal Blizzard", "Sludge Wave"
+        ],
+        "egg": [
+            "After You", "Flail", "Ingrain", "Leech Seed", "Razor Leaf", "Strength Sap", "Synthesis", "Teeter Dance", "Tickle"
+        ]
+    },
+    {
+        "pokemon_id": 46,
+        "data": "BDSP",
+        "level_up": [
+            {
+                "move_name": "Scratch",
+                "level": 1
+            },
+            {
+                "move_name": "Stun Spore",
+                "level": 6
+            },
+            {
+                "move_name": "Poison Powder",
+                "level": 6
+            },
+            {
+                "move_name": "Absorb",
+                "level": 11
+            },
+            {
+                "move_name": "Fury Cutter",
+                "level": 17
+            },
+            {
+                "move_name": "Spore",
+                "level": 22
+            },
+            {
+                "move_name": "Slash",
+                "level": 27
+            },
+            {
+                "move_name": "Growth",
+                "level": 33
+            },
+            {
+                "move_name": "Giga Drain",
+                "level": 38
+            },
+            {
+                "move_name": "Aromatherapy",
+                "level": 43
+            },
+            {
+                "move_name": "Rage Powder",
+                "level": 49
+            },
+            {
+                "move_name": "X-Scissor",
+                "level": 54
+            }
+        ],
+        "tm": [
+            "Bullet Seed", "Sunny Day", "Light Screen", "Protect", "Giga Drain", "Solar Beam", "Dig", "Brick Break", "Double Team", "Sludge Bomb", "Aerial Ace", "Facade", "Rest", "Attract", "Thief", "False Swipe", "Endure", "Flash", "Swords Dance", "X-Scissor", "Sleep Talk", "Grass Knot", "Swagger", "Substitute", "Cut", "Rock Smash"
+        ],
+        "egg": [
+            "Agility", "Bug Bite", "Counter", "Cross Poison", "Fell Stinger", "Flail", "Grassy Terrain", "Leech Seed", "Metal Claw", "Psybeam", "Screech", "Sweet Scent", "Wide Guard"
+        ]
+    },
+    {
+        "pokemon_id": 47,
+        "data": "BDSP",
+        "level_up": [
+            {
+                "move_name": "Cross Poison",
+                "level": 1
+            },
+            {
+                "move_name": "Scratch",
+                "level": 1
+            },
+            {
+                "move_name": "Stun Spore",
+                "level": 1
+            },
+            {
+                "move_name": "Poison Powder",
+                "level": 1
+            },
+            {
+                "move_name": "Absorb",
+                "level": 1
+            },
+            {
+                "move_name": "Stun Spore",
+                "level": 6
+            },
+            {
+                "move_name": "Poison Powder",
+                "level": 6
+            },
+            {
+                "move_name": "Absorb",
+                "level": 11
+            },
+            {
+                "move_name": "Fury Cutter",
+                "level": 17
+            },
+            {
+                "move_name": "Spore",
+                "level": 22
+            },
+            {
+                "move_name": "Slash",
+                "level": 29
+            },
+            {
+                "move_name": "Growth",
+                "level": 37
+            },
+            {
+                "move_name": "Giga Drain",
+                "level": 44
+            },
+            {
+                "move_name": "Aromatherapy",
+                "level": 51
+            },
+            {
+                "move_name": "Rage Powder",
+                "level": 59
+            },
+            {
+                "move_name": "X-Scissor",
+                "level": 66
+            }
+        ],
+        "tm": [
+            "Bullet Seed", "Sunny Day", "Hyper Beam", "Light Screen", "Protect", "Giga Drain", "Solar Beam", "Dig", "Brick Break", "Double Team", "Sludge Bomb", "Aerial Ace", "Facade", "Rest", "Attract", "Thief", "Energy Ball", "False Swipe", "Endure", "Giga Impact", "Flash", "Swords Dance", "X-Scissor", "Sleep Talk", "Grass Knot", "Swagger", "Substitute", "Cut", "Rock Smash"
+        ],
+        "egg": [
+            "Agility", "Bug Bite", "Counter", "Cross Poison", "Fell Stinger", "Flail", "Grassy Terrain", "Leech Seed", "Metal Claw", "Psybeam", "Screech", "Sweet Scent", "Wide Guard"
+        ]
+    },
+    {
+        "pokemon_id": 48,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Tackle",
+                "level": 1
+            },
+            {
+                "move_name": "Disable",
+                "level": 1
+            },
+            {
+                "move_name": "Supersonic",
+                "level": 5
+            },
+            {
+                "move_name": "Confusion",
+                "level": 11
+            },
+            {
+                "move_name": "Poison Powder",
+                "level": 13
+            },
+            {
+                "move_name": "Psybeam",
+                "level": 17
+            },
+            {
+                "move_name": "Stun Spore",
+                "level": 23
+            },
+            {
+                "move_name": "Bug Buzz",
+                "level": 25
+            },
+            {
+                "move_name": "Sleep Powder",
+                "level": 29
+            },
+            {
+                "move_name": "Leech Life",
+                "level": 35
+            },
+            {
+                "move_name": "Zen Headbutt",
+                "level": 37
+            },
+            {
+                "move_name": "Poison Fang",
+                "level": 41
+            },
+            {
+                "move_name": "Psychic",
+                "level": 47
+            }
+        ],
+        "tm": [
+            "Take Down", "Agility", "Protect", "Acid Spray", "Struggle Bug", "Psybeam", "Confuse Ray", "Thief", "Pounce", "Facade", "Swift", "Night Shade", "Venoshock", "Endure", "Sunny Day", "Zen Headbutt", "Sleep Talk", "Rest", "Toxic Spikes", "Leech Life", "Skill Swap", "Substitute", "Giga Drain", "Energy Ball", "Psychic", "Baton Pass", "Sludge Bomb", "Bug Buzz", "Solar Beam", "Tera Blast", "Toxic", "Bug Bite", "Lunge", "Endeavor", "Skitter Smack", "Psychic Noise"
+        ],
+        "egg": [
+            "Agility", "Baton Pass", "Bug Bite", "Morning Sun", "Rage Powder", "Screech", "Toxic Spikes", "Venoshock"
+        ]
+    },
+    {
+        "pokemon_id": 49,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Quiver Dance",
+                "level": 1
+            },
+            {
+                "move_name": "Tackle",
+                "level": 1
+            },
+            {
+                "move_name": "Disable",
+                "level": 1
+            },
+            {
+                "move_name": "Supersonic",
+                "level": 1
+            },
+            {
+                "move_name": "Confusion",
+                "level": 11
+            },
+            {
+                "move_name": "Poison Powder",
+                "level": 13
+            },
+            {
+                "move_name": "Psybeam",
+                "level": 17
+            },
+            {
+                "move_name": "Stun Spore",
+                "level": 23
+            },
+            {
+                "move_name": "Bug Buzz",
+                "level": 25
+            },
+            {
+                "move_name": "Sleep Powder",
+                "level": 29
+            },
+            {
+                "move_name": "Air Slash",
+                "level": "31 (Evo)"
+            },
+            {
+                "move_name": "Leech Life",
+                "level": 37
+            },
+            {
+                "move_name": "Zen Headbutt",
+                "level": 41
+            },
+            {
+                "move_name": "Poison Fang",
+                "level": 47
+            },
+            {
+                "move_name": "Psychic",
+                "level": 55
+            }
+        ],
+        "tm": [
+            "Take Down", "Agility", "Protect", "Acid Spray", "Acrobatics", "Struggle Bug", "Psybeam", "Confuse Ray", "Thief", "Pounce", "Facade", "Swift", "Air Cutter", "Night Shade", "Venoshock", "Endure", "Sunny Day", "Zen Headbutt", "U-turn", "Air Slash", "Sleep Talk", "Rest", "Toxic Spikes", "Leech Life", "Skill Swap", "Substitute", "Giga Drain", "Energy Ball", "Psychic", "Baton Pass", "Sludge Bomb", "Giga Impact", "Bug Buzz", "Hyper Beam", "Solar Beam", "Tera Blast", "Toxic", "Bug Bite", "Lunge", "Endeavor", "Sludge Wave", "Skitter Smack", "Psychic Noise"
+        ],
+        "egg": [
+            "Agility", "Baton Pass", "Bug Bite", "Morning Sun", "Rage Powder", "Screech", "Toxic Spikes", "Venoshock"
+        ]
+    },
+    {
+        "pokemon_id": 50,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Sand Attack",
+                "level": 1
+            },
+            {
+                "move_name": "Scratch",
+                "level": 1
+            },
+            {
+                "move_name": "Growl",
+                "level": 4
+            },
+            {
+                "move_name": "Astonish",
+                "level": 8
+            },
+            {
+                "move_name": "Mud-Slap",
+                "level": 12
+            },
+            {
+                "move_name": "Bulldoze",
+                "level": 16
+            },
+            {
+                "move_name": "Sucker Punch",
+                "level": 20
+            },
+            {
+                "move_name": "Slash",
+                "level": 24
+            },
+            {
+                "move_name": "Sandstorm",
+                "level": 28
+            },
+            {
+                "move_name": "Dig",
+                "level": 32
+            },
+            {
+                "move_name": "Earth Power",
+                "level": 36
+            },
+            {
+                "move_name": "Earthquake",
+                "level": 40
+            },
+            {
+                "move_name": "Fissure",
+                "level": 44
+            }
+        ],
+        "tm": [
+            "Take Down", "Charm", "Agility", "Mud-Slap", "Protect", "Thief", "Facade", "Bulldoze", "Mud Shot", "Rock Tomb", "Endure", "Sunny Day", "Sandstorm", "Dig", "Shadow Claw", "Foul Play", "Body Slam", "Sleep Talk", "Rock Blast", "Stomping Tantrum", "Rest", "Rock Slide", "Swords Dance", "Substitute", "Stealth Rock", "Helping Hand", "Earth Power", "Reversal", "Sludge Bomb", "Earthquake", "Stone Edge", "Tera Blast", "Sand Tomb", "Smack Down", "Uproar", "Double-Edge", "Endeavor", "Scorching Sands", "Throat Chop", "Curse"
+        ],
+        "egg": [
+            "Ancient Power", "Final Gambit", "Headbutt", "Hone Claws", "Memento"
+        ]
+    },
+    {
+        "pokemon_id": 51,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Night Slash",
+                "level": 1
+            },
+            {
+                "move_name": "Tri Attack",
+                "level": 1
+            },
+            {
+                "move_name": "Sand Attack",
+                "level": 1
+            },
+            {
+                "move_name": "Scratch",
+                "level": 1
+            },
+            {
+                "move_name": "Growl",
+                "level": 1
+            },
+            {
+                "move_name": "Astonish",
+                "level": 1
+            },
+            {
+                "move_name": "Mud-Slap",
+                "level": 12
+            },
+            {
+                "move_name": "Bulldoze",
+                "level": 16
+            },
+            {
+                "move_name": "Sucker Punch",
+                "level": 20
+            },
+            {
+                "move_name": "Slash",
+                "level": 24
+            },
+            {
+                "move_name": "Sand Tomb",
+                "level": "26 (Evo)"
+            },
+            {
+                "move_name": "Sandstorm",
+                "level": 30
+            },
+            {
+                "move_name": "Dig",
+                "level": 36
+            },
+            {
+                "move_name": "Earth Power",
+                "level": 42
+            },
+            {
+                "move_name": "Earthquake",
+                "level": 48
+            },
+            {
+                "move_name": "Fissure",
+                "level": 54
+            }
+        ],
+        "tm": [
+            "Take Down", "Charm", "Agility", "Mud-Slap", "Protect", "Thief", "Facade", "Bulldoze", "Mud Shot", "Rock Tomb", "Endure", "Sunny Day", "Sandstorm", "Dig", "Shadow Claw", "Foul Play", "Body Slam", "Sleep Talk", "Rock Blast", "Stomping Tantrum", "Rest", "Rock Slide", "Swords Dance", "Substitute", "Stealth Rock", "Helping Hand", "Earth Power", "Reversal", "Sludge Bomb", "Earthquake", "Stone Edge", "Giga Impact", "Hyper Beam", "Tera Blast", "Sand Tomb", "Smack Down", "Uproar", "Double-Edge", "Endeavor", "Sludge Wave", "Scorching Sands", "Throat Chop", "Curse"
+        ],
+        "egg": [
+            "Ancient Power", "Final Gambit", "Headbutt", "Hone Claws", "Memento"
+        ]
+    },
+    {
+        "pokemon_id": 52,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Fake Out",
+                "level": 1
+            },
+            {
+                "move_name": "Growl",
+                "level": 1
+            },
+            {
+                "move_name": "Feint",
+                "level": 4
+            },
+            {
+                "move_name": "Scratch",
+                "level": 8
+            },
+            {
+                "move_name": "Pay Day",
+                "level": 12
+            },
+            {
+                "move_name": "Bite",
+                "level": 16
+            },
+            {
+                "move_name": "Taunt",
+                "level": 20
+            },
+            {
+                "move_name": "Assurance",
+                "level": 24
+            },
+            {
+                "move_name": "Fury Swipes",
+                "level": 29
+            },
+            {
+                "move_name": "Screech",
+                "level": 32
+            },
+            {
+                "move_name": "Slash",
+                "level": 36
+            },
+            {
+                "move_name": "Nasty Plot",
+                "level": 40
+            },
+            {
+                "move_name": "Play Rough",
+                "level": 44
+            }
+        ],
+        "tm": [
+            "Take Down", "Charm", "Fake Tears", "Agility", "Protect", "Thief", "Trailblaze", "Chilling Water", "Facade", "Aerial Ace", "Snarl", "Metal Claw", "Swift", "Icy Wind", "Endure", "Sunny Day", "Rain Dance", "Dig", "False Swipe", "U-turn", "Shadow Claw", "Foul Play", "Body Slam", "Sleep Talk", "Seed Bomb", "Thunder Wave", "Rest", "Taunt", "Dark Pulse", "Power Gem", "Gunk Shot", "Substitute", "Shadow Ball", "Hyper Voice", "Thunderbolt", "Play Rough", "Amnesia", "Helping Hand", "Nasty Plot", "Thunder", "Tera Blast", "Spite", "Knock Off", "Lash Out", "Pain Split", "Psych Up", "Double-Edge", "Endeavor", "Throat Chop"
+        ],
+        "egg": [
+            "Covet", "Flail", "Hypnosis", "Last Resort", "Spite", "Tail Whip"
+        ]
+    },
+    {
+        "pokemon_id": 53,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Switcheroo",
+                "level": 1
+            },
+            {
+                "move_name": "Fake Out",
+                "level": 1
+            },
+            {
+                "move_name": "Growl",
+                "level": 1
+            },
+            {
+                "move_name": "Feint",
+                "level": 1
+            },
+            {
+                "move_name": "Scratch",
+                "level": 1
+            },
+            {
+                "move_name": "Pay Day",
+                "level": 12
+            },
+            {
+                "move_name": "Bite",
+                "level": 16
+            },
+            {
+                "move_name": "Taunt",
+                "level": 20
+            },
+            {
+                "move_name": "Assurance",
+                "level": 24
+            },
+            {
+                "move_name": "Power Gem",
+                "level": "28 (Evo)"
+            },
+            {
+                "move_name": "Fury Swipes",
+                "level": 29
+            },
+            {
+                "move_name": "Screech",
+                "level": 32
+            },
+            {
+                "move_name": "Slash",
+                "level": 36
+            },
+            {
+                "move_name": "Nasty Plot",
+                "level": 40
+            },
+            {
+                "move_name": "Play Rough",
+                "level": 44
+            }
+        ],
+        "tm": [
+            "Take Down", "Charm", "Fake Tears", "Agility", "Protect", "Thief", "Trailblaze", "Chilling Water", "Facade", "Aerial Ace", "Snarl", "Metal Claw", "Swift", "Icy Wind", "Endure", "Sunny Day", "Rain Dance", "Dig", "False Swipe", "U-turn", "Shadow Claw", "Foul Play", "Body Slam", "Sleep Talk", "Seed Bomb", "Thunder Wave", "Rest", "Taunt", "Dark Pulse", "Power Gem", "Gunk Shot", "Substitute", "Shadow Ball", "Hyper Voice", "Thunderbolt", "Play Rough", "Amnesia", "Helping Hand", "Nasty Plot", "Giga Impact", "Hyper Beam", "Thunder", "Tera Blast", "Spite", "Knock Off", "Lash Out", "Pain Split", "Psych Up", "Double-Edge", "Endeavor", "Skitter Smack", "Throat Chop"
+        ],
+        "egg": [
+            "Covet", "Flail", "Hypnosis", "Last Resort", "Spite", "Tail Whip"
+        ]
+    },
+    {
+        "pokemon_id": 54,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Scratch",
+                "level": 1
+            },
+            {
+                "move_name": "Tail Whip",
+                "level": 1
+            },
+            {
+                "move_name": "Water Gun",
+                "level": 3
+            },
+            {
+                "move_name": "Confusion",
+                "level": 6
+            },
+            {
+                "move_name": "Fury Swipes",
+                "level": 9
+            },
+            {
+                "move_name": "Water Pulse",
+                "level": 12
+            },
+            {
+                "move_name": "Disable",
+                "level": 15
+            },
+            {
+                "move_name": "Zen Headbutt",
+                "level": 18
+            },
+            {
+                "move_name": "Screech",
+                "level": 21
+            },
+            {
+                "move_name": "Aqua Tail",
+                "level": 24
+            },
+            {
+                "move_name": "Soak",
+                "level": 27
+            },
+            {
+                "move_name": "Psych Up",
+                "level": 30
+            },
+            {
+                "move_name": "Amnesia",
+                "level": 34
+            },
+            {
+                "move_name": "Wonder Room",
+                "level": 39
+            }
+        ],
+        "tm": [
+            "Take Down", "Protect", "Water Pulse", "Low Kick", "Psybeam", "Confuse Ray", "Thief", "Trailblaze", "Chilling Water", "Facade", "Swift", "Icy Wind", "Mud Shot", "Low Sweep", "Fling", "Endure", "Rain Dance", "Psyshock", "Dig", "Brick Break", "Zen Headbutt", "Shadow Claw", "Body Slam", "Ice Punch", "Sleep Talk", "Light Screen", "Waterfall", "Metronome", "Rest", "Taunt", "Skill Swap", "Substitute", "Liquidation", "Psychic", "Encore", "Surf", "Amnesia", "Calm Mind", "Helping Hand", "Ice Beam", "Nasty Plot", "Hydro Pump", "Blizzard", "Tera Blast", "Haze", "Knock Off", "Vacuum Wave", "Focus Punch", "Flip Turn", "Psych Up", "Double-Edge", "Endeavor", "Whirlpool", "Muddy Water", "Psychic Noise"
+        ],
+        "egg": [
+            "Clear Smog", "Confuse Ray", "Cross Chop", "Hypnosis", "Psybeam", "Simple Beam", "Yawn"
+        ]
+    },
+    {
+        "pokemon_id": 55,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Aqua Jet",
+                "level": 1
+            },
+            {
+                "move_name": "Scratch",
+                "level": 1
+            },
+            {
+                "move_name": "Tail Whip",
+                "level": 1
+            },
+            {
+                "move_name": "Water Gun",
+                "level": 1
+            },
+            {
+                "move_name": "Confusion",
+                "level": 1
+            },
+            {
+                "move_name": "Fury Swipes",
+                "level": 9
+            },
+            {
+                "move_name": "Water Pulse",
+                "level": 12
+            },
+            {
+                "move_name": "Disable",
+                "level": 15
+            },
+            {
+                "move_name": "Zen Headbutt",
+                "level": 18
+            },
+            {
+                "move_name": "Screech",
+                "level": 21
+            },
+            {
+                "move_name": "Aqua Tail",
+                "level": 24
+            },
+            {
+                "move_name": "Soak",
+                "level": 27
+            },
+            {
+                "move_name": "Psych Up",
+                "level": 30
+            },
+            {
+                "move_name": "Amnesia",
+                "level": 36
+            },
+            {
+                "move_name": "Hydro Pump",
+                "level": 40
+            },
+            {
+                "move_name": "Wonder Room",
+                "level": 45
+            }
+        ],
+        "tm": [
+            "Take Down", "Protect", "Water Pulse", "Low Kick", "Psybeam", "Confuse Ray", "Thief", "Trailblaze", "Chilling Water", "Facade", "Swift", "Icy Wind", "Mud Shot", "Low Sweep", "Fling", "Endure", "Rain Dance", "Psyshock", "Dig", "Brick Break", "Zen Headbutt", "Shadow Claw", "Body Slam", "Ice Punch", "Sleep Talk", "Light Screen", "Waterfall", "Metronome", "Grass Knot", "Rest", "Taunt", "Skill Swap", "Power Gem", "Substitute", "Liquidation", "Psychic", "Encore", "Surf", "Amnesia", "Calm Mind", "Helping Hand", "Ice Beam", "Nasty Plot", "Hydro Pump", "Blizzard", "Giga Impact", "Focus Blast", "Hyper Beam", "Tera Blast", "Haze", "Knock Off", "Vacuum Wave", "Focus Punch", "Flip Turn", "Psych Up", "Double-Edge", "Endeavor", "Whirlpool", "Muddy Water", "Future Sight", "Psychic Noise"
+        ],
+        "egg": [
+            "Clear Smog", "Confuse Ray", "Cross Chop", "Hypnosis", "Psybeam", "Simple Beam", "Yawn"
+        ]
     }
 ]

@@ -24,11 +24,6 @@ class AbilityPageState extends State<AbilityPage> {
     _loadJsonData();
   }
 
-  void setLastItem() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setStringList('lastItem', ['Ability', widget.abilityData['name']]);
-  }
-
   Future<void> _loadJsonData() async {
     String data = await DefaultAssetBundle.of(context)
         .loadString('assets/pokemon/data/kanto_expanded.json');
@@ -124,7 +119,7 @@ class AbilityPageState extends State<AbilityPage> {
         foregroundColor: BaseThemeColors.detailAppBarText,
         backgroundColor: BaseThemeColors.detailAppBarBG,
         actions: [
-          IconButton(onPressed: saveBookmark, icon: const Icon(Icons.save)),
+          IconButton(onPressed: saveBookmark, icon: const Icon(Icons.bookmark)),
         ],
       ),
       backgroundColor: Colors.transparent,

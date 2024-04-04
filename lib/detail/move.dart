@@ -24,12 +24,6 @@ class MovePageState extends State<MovePage> {
   void initState() {
     super.initState();
     _loadJsonData();
-    setLastItem();
-  }
-
-  void setLastItem() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setStringList('lastItem', ['Move', widget.moveData['move']]);
   }
 
   Future<void> _loadJsonData() async {
@@ -170,7 +164,7 @@ class MovePageState extends State<MovePage> {
         foregroundColor: BaseThemeColors.detailAppBarText,
         backgroundColor: BaseThemeColors.detailAppBarBG,
         actions: [
-          IconButton(onPressed: saveBookmark, icon: const Icon(Icons.save)),
+          IconButton(onPressed: saveBookmark, icon: const Icon(Icons.bookmark)),
         ],
       ),
       backgroundColor: Colors.transparent,
