@@ -5955,5 +5955,1057 @@
         "egg": [
             "Acupressure", "Flail", "Sky Attack", "Whirlwind"
         ]
+    },
+    {
+        "pokemon_id": 86,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Headbutt",
+                "level": 1
+            },
+            {
+                "move_name": "Growl",
+                "level": 3
+            },
+            {
+                "move_name": "Charm",
+                "level": 7
+            },
+            {
+                "move_name": "Icy Wind",
+                "level": 11
+            },
+            {
+                "move_name": "Encore",
+                "level": 13
+            },
+            {
+                "move_name": "Ice Shard",
+                "level": 17
+            },
+            {
+                "move_name": "Rest",
+                "level": 21
+            },
+            {
+                "move_name": "Aqua Ring",
+                "level": 23
+            },
+            {
+                "move_name": "Aurora Beam",
+                "level": 27
+            },
+            {
+                "move_name": "Aqua Jet",
+                "level": 31
+            },
+            {
+                "move_name": "Brine",
+                "level": 33
+            },
+            {
+                "move_name": "Take Down",
+                "level": 37
+            },
+            {
+                "move_name": "Dive",
+                "level": 41
+            },
+            {
+                "move_name": "Aqua Tail",
+                "level": 43
+            },
+            {
+                "move_name": "Ice Beam",
+                "level": 47
+            },
+            {
+                "move_name": "Safeguard",
+                "level": 51
+            },
+            {
+                "move_name": "Snowscape",
+                "level": 53
+            }
+        ],
+        "tm": [
+            "Take Down", "Charm", "Protect", "Water Pulse", "Thief", "Chilling Water", "Facade", "Icy Wind", "Fling", "Avalanche", "Endure", "Rain Dance", "Snowscape", "Smart Strike", "Body Slam", "Sleep Talk", "Waterfall", "Rest", "Substitute", "Drill Run", "Encore", "Surf", "Ice Spinner", "Helping Hand", "Ice Beam", "Hydro Pump", "Blizzard", "Tera Blast", "Haze", "Icicle Spear", "Uproar", "Weather Ball", "Flip Turn", "Double-Edge", "Whirlpool", "Muddy Water", "Triple Axel", "Curse"
+        ],
+        "egg": [
+            "Belch", "Disable", "Entrainment", "Fake Out", "Horn Drill", "Lick", "Perish Song", "Spit Up", "Stockpile", "Swallow"
+        ]
+    },
+    {
+        "pokemon_id": 87,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Headbutt",
+                "level": 1
+            },
+            {
+                "move_name": "Growl",
+                "level": 1
+            },
+            {
+                "move_name": "Icy Wind",
+                "level": 1
+            },
+            {
+                "move_name": "Encore",
+                "level": 13
+            },
+            {
+                "move_name": "Ice Shard",
+                "level": 17
+            },
+            {
+                "move_name": "Rest",
+                "level": 21
+            },
+            {
+                "move_name": "Aqua Ring",
+                "level": 23
+            },
+            {
+                "move_name": "Aurora Beam",
+                "level": 27
+            },
+            {
+                "move_name": "Aqua Jet",
+                "level": 31
+            },
+            {
+                "move_name": "Brine",
+                "level": 33
+            },
+            {
+                "move_name": "Sheer Cold",
+                "level": "34 (Evo)"
+            },
+            {
+                "move_name": "Take Down",
+                "level": 39
+            },
+            {
+                "move_name": "Dive",
+                "level": 45
+            },
+            {
+                "move_name": "Aqua Tail",
+                "level": 49
+            },
+            {
+                "move_name": "Ice Beam",
+                "level": 55
+            },
+            {
+                "move_name": "Safeguard",
+                "level": 61
+            },
+            {
+                "move_name": "Snowscape",
+                "level": 65
+            }
+        ],
+        "tm": [
+            "Take Down", "Charm", "Protect", "Water Pulse", "Thief", "Chilling Water", "Facade", "Icy Wind", "Fling", "Avalanche", "Endure", "Rain Dance", "Snowscape", "Smart Strike", "Body Slam", "Sleep Talk", "Waterfall", "Rest", "Substitute", "Drill Run", "Liquidation", "Encore", "Surf", "Ice Spinner", "Play Rough", "Helping Hand", "Ice Beam", "Hydro Pump", "Blizzard", "Giga Impact", "Hyper Beam", "Tera Blast", "Haze", "Knock Off", "Icicle Spear", "Uproar", "Weather Ball", "Flip Turn", "Double-Edge", "Endeavor", "Whirlpool", "Muddy Water", "Triple Axel", "Curse", "Alluring Voice"
+        ],
+        "egg": [
+            "Belch", "Disable", "Entrainment", "Fake Out", "Horn Drill", "Lick", "Perish Song", "Spit Up", "Stockpile", "Swallow"
+        ]
+    },
+    {
+        "pokemon_id": 88,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Pound",
+                "level": 1
+            },
+            {
+                "move_name": "Poison Gas",
+                "level": 1
+            },
+            {
+                "move_name": "Harden",
+                "level": 4
+            },
+            {
+                "move_name": "Mud-Slap",
+                "level": 7
+            },
+            {
+                "move_name": "Disable",
+                "level": 12
+            },
+            {
+                "move_name": "Sludge",
+                "level": 15
+            },
+            {
+                "move_name": "Mud Shot",
+                "level": 18
+            },
+            {
+                "move_name": "Minimize",
+                "level": 21
+            },
+            {
+                "move_name": "Toxic",
+                "level": 26
+            },
+            {
+                "move_name": "Sludge Bomb",
+                "level": 29
+            },
+            {
+                "move_name": "Sludge Wave",
+                "level": 32
+            },
+            {
+                "move_name": "Screech",
+                "level": 37
+            },
+            {
+                "move_name": "Gunk Shot",
+                "level": 40
+            },
+            {
+                "move_name": "Acid Armor",
+                "level": 43
+            },
+            {
+                "move_name": "Belch",
+                "level": 46
+            },
+            {
+                "move_name": "Memento",
+                "level": 48
+            }
+        ],
+        "tm": [
+            "Take Down", "Mud-Slap", "Scary Face", "Protect", "Acid Spray", "Confuse Ray", "Thief", "Facade", "Hex", "Mud Shot", "Rock Tomb", "Fling", "Venoshock", "Endure", "Sunny Day", "Rain Dance", "Sandstorm", "Dig", "Zen Headbutt", "Body Slam", "Fire Punch", "Thunder Punch", "Ice Punch", "Sleep Talk", "Drain Punch", "Metronome", "Poison Jab", "Rest", "Rock Slide", "Taunt", "Imprison", "Gunk Shot", "Substitute", "Giga Drain", "Shadow Ball", "Flamethrower", "Thunderbolt", "Helping Hand", "Fire Blast", "Sludge Bomb", "Thunder", "Tera Blast", "Haze", "Toxic", "Pain Split", "Sludge Wave", "Curse"
+        ],
+        "egg": [
+            "Acid Spray", "Curse", "Haze", "Mean Look", "Shadow Punch", "Shadow Sneak", "Spit Up", "Stockpile", "Swallow"
+        ]
+    },
+    {
+        "pokemon_id": 89,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Pound",
+                "level": 1
+            },
+            {
+                "move_name": "Poison Gas",
+                "level": 1
+            },
+            {
+                "move_name": "Harden",
+                "level": 1
+            },
+            {
+                "move_name": "Mud-Slap",
+                "level": 1
+            },
+            {
+                "move_name": "Disable",
+                "level": 12
+            },
+            {
+                "move_name": "Sludge",
+                "level": 15
+            },
+            {
+                "move_name": "Mud Shot",
+                "level": 18
+            },
+            {
+                "move_name": "Minimize",
+                "level": 21
+            },
+            {
+                "move_name": "Toxic",
+                "level": 26
+            },
+            {
+                "move_name": "Sludge Bomb",
+                "level": 29
+            },
+            {
+                "move_name": "Sludge Wave",
+                "level": 32
+            },
+            {
+                "move_name": "Screech",
+                "level": 37
+            },
+            {
+                "move_name": "Gunk Shot",
+                "level": 40
+            },
+            {
+                "move_name": "Acid Armor",
+                "level": 46
+            },
+            {
+                "move_name": "Belch",
+                "level": 52
+            },
+            {
+                "move_name": "Memento",
+                "level": 57
+            }
+        ],
+        "tm": [
+            "Take Down", "Mud-Slap", "Scary Face", "Protect", "Acid Spray", "Confuse Ray", "Thief", "Facade", "Hex", "Swift", "Mud Shot", "Rock Tomb", "Fling", "Venoshock", "Endure", "Sunny Day", "Rain Dance", "Sandstorm", "Dig", "Brick Break", "Zen Headbutt", "Body Slam", "Fire Punch", "Thunder Punch", "Ice Punch", "Sleep Talk", "Drain Punch", "Metronome", "Poison Jab", "Rest", "Rock Slide", "Taunt", "Toxic Spikes", "Imprison", "Dark Pulse", "Gunk Shot", "Substitute", "Giga Drain", "Shadow Ball", "Flamethrower", "Thunderbolt", "Helping Hand", "Fire Blast", "Sludge Bomb", "Giga Impact", "Focus Blast", "Hyper Beam", "Thunder", "Tera Blast", "Haze", "Toxic", "Spite", "Knock Off", "Lunge", "Focus Punch", "Lash Out", "Pain Split", "Sludge Wave", "Curse"
+        ],
+        "egg": [
+            "Acid Spray", "Curse", "Haze", "Mean Look", "Shadow Punch", "Shadow Sneak", "Spit Up", "Stockpile", "Swallow"
+        ]
+    },
+    {
+        "pokemon_id": 90,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Tackle",
+                "level": 1
+            },
+            {
+                "move_name": "Water Gun",
+                "level": 1
+            },
+            {
+                "move_name": "Withdraw",
+                "level": 4
+            },
+            {
+                "move_name": "Ice Shard",
+                "level": 8
+            },
+            {
+                "move_name": "Leer",
+                "level": 12
+            },
+            {
+                "move_name": "Whirlpool",
+                "level": 16
+            },
+            {
+                "move_name": "Supersonic",
+                "level": 20
+            },
+            {
+                "move_name": "Aurora Beam",
+                "level": 24
+            },
+            {
+                "move_name": "Protect",
+                "level": 28
+            },
+            {
+                "move_name": "Razor Shell",
+                "level": 32
+            },
+            {
+                "move_name": "Iron Defense",
+                "level": 36
+            },
+            {
+                "move_name": "Ice Beam",
+                "level": 40
+            },
+            {
+                "move_name": "Shell Smash",
+                "level": 44
+            },
+            {
+                "move_name": "Hydro Pump",
+                "level": 48
+            }
+        ],
+        "tm": [
+            "Take Down", "Protect", "Water Pulse", "Chilling Water", "Facade", "Swift", "Icy Wind", "Mud Shot", "Avalanche", "Endure", "Rain Dance", "Snowscape", "Sleep Talk", "Rock Blast", "Waterfall", "Rest", "Spikes", "Toxic Spikes", "Substitute", "Iron Defense", "Liquidation", "Surf", "Ice Spinner", "Helping Hand", "Ice Beam", "Hydro Pump", "Blizzard", "Tera Blast", "Icicle Spear", "Whirlpool" 
+        ],
+        "egg": [
+            "Aqua Ring", "Bubble Beam", "Life Dew", "Water Pulse"
+        ]
+    },
+    {
+        "pokemon_id": 91,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Spikes",
+                "level": 1
+            },
+            {
+                "move_name": "Toxic Spikes",
+                "level": 1
+            },
+            {
+                "move_name": "Icicle Crash",
+                "level": 1
+            },
+            {
+                "move_name": "Tackle",
+                "level": 1
+            },
+            {
+                "move_name": "Water Gun",
+                "level": 1
+            },
+            {
+                "move_name": "Withdraw",
+                "level": 1
+            },
+            {
+                "move_name": "Ice Shard",
+                "level": 1
+            },
+            {
+                "move_name": "Leer",
+                "level": 1
+            },
+            {
+                "move_name": "Whirlpool",
+                "level": 1
+            },
+            {
+                "move_name": "Supersonic",
+                "level": 1
+            },
+            {
+                "move_name": "Aurora Beam",
+                "level": 1
+            },
+            {
+                "move_name": "Protect",
+                "level": 1
+            },   
+            {
+                "move_name": "Iron Defense",
+                "level": 1
+            },
+            {
+                "move_name": "Ice Beam",
+                "level": 1
+            },
+            {
+                "move_name": "Shell Smash",
+                "level": 1
+            },
+            {
+                "move_name": "Hydro Pump",
+                "level": 1
+            },
+            {
+                "move_name": "Icicle Spear",
+                "level": "Evo"
+            },
+            {
+                "move_name": "Razor Shell",
+                "level": 5
+            }
+        ],
+        "tm": [
+            "Take Down", "Scary Face", "Protect", "Water Pulse", "Chilling Water", "Facade", "Swift", "Icy Wind", "Mud Shot", "Avalanche", "Endure", "Rain Dance", "Snowscape", "Smart Strike", "Body Slam", "Sleep Talk", "Light Screen", "Rock Blast", "Waterfall", "Poison Jab", "Rest", "Spikes", "Toxic Spikes", "Substitute", "Iron Defense", "Drill Run", "Liquidation", "Surf", "Ice Spinner", "Helping Hand", "Ice Beam", "Hydro Pump", "Blizzard", "Giga Impact", "Hyper Beam", "Tera Blast", "Icicle Spear", "Weather Ball", "Whirlpool" 
+        ],
+        "egg": [
+            "Aqua Ring", "Bubble Beam", "Life Dew", "Water Pulse"
+        ]
+    },
+    {
+        "pokemon_id": 92,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Lick",
+                "level": 1
+            },
+            {
+                "move_name": "Confuse Ray",
+                "level": 1
+            },
+            {
+                "move_name": "Hypnosis",
+                "level": 4
+            },
+            {
+                "move_name": "Mean Look",
+                "level": 8
+            },
+            {
+                "move_name": "Payback",
+                "level": 12
+            },
+            {
+                "move_name": "Spite",
+                "level": 16
+            },
+            {
+                "move_name": "Curse",
+                "level": 20
+            },
+            {
+                "move_name": "Hex",
+                "level": 24
+            },
+            {
+                "move_name": "Night Shade",
+                "level": 28
+            },
+            {
+                "move_name": "Sucker Punch",
+                "level": 32
+            },
+            {
+                "move_name": "Dark Pulse",
+                "level": 36
+            },
+            {
+                "move_name": "Shadow Ball",
+                "level": 40
+            },
+            {
+                "move_name": "Destiny Bond",
+                "level": 44
+            },
+            {
+                "move_name": "Dream Eater",
+                "level": 48
+            }
+        ],
+        "tm": [
+            "Scary Face", "Protect", "Acid Spray", "Confuse Ray", "Thief", "Facade", "Hex", "Icy Wind", "Night Shade", "Venoshock", "Endure", "Sunny Day", "Rain Dance", "Foul Play", "Fire Punch", "Thunder Punch", "Ice Punch", "Sleep Talk", "Dazzling Gleam", "Poison Jab", "Rest", "Taunt", "Imprison", "Dark Pulse", "Skill Swap", "Gunk Shot", "Substitute", "Will-O-Wisp", "Trick", "Giga Drain", "Shadow Ball", "Energy Ball", "Psychic", "Thunderbolt", "Nasty Plot", "Sludge Bomb", "Trick Room", "Thunder", "Tera Blast", "Haze", "Toxic", "Spite", "Poltergeist", "Pain Split", "Psych Up", "Sludge Wave", "Skitter Smack", "Curse"
+        ],
+        "egg": [
+            "Astonish", "Clear Smog", "Disable", "Haze", "Perish Song", "Reflect Type", "Smog", "Toxic"
+        ]
+    },
+    {
+        "pokemon_id": 93,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Lick",
+                "level": 1
+            },
+            {
+                "move_name": "Confuse Ray",
+                "level": 1
+            },
+            {
+                "move_name": "Hypnosis",
+                "level": 1
+            },
+            {
+                "move_name": "Mean Look",
+                "level": 1
+            },
+            {
+                "move_name": "Payback",
+                "level": 12
+            },
+            {
+                "move_name": "Spite",
+                "level": 16
+            },
+            {
+                "move_name": "Curse",
+                "level": 20
+            },
+            {
+                "move_name": "Hex",
+                "level": 24
+            },
+            {
+                "move_name": "Shadow Punch",
+                "level": "25 (Evo)"
+            },
+            {
+                "move_name": "Night Shade",
+                "level": 30
+            },
+            {
+                "move_name": "Sucker Punch",
+                "level": 36
+            },
+            {
+                "move_name": "Dark Pulse",
+                "level": 42
+            },
+            {
+                "move_name": "Shadow Ball",
+                "level": 48
+            },
+            {
+                "move_name": "Destiny Bond",
+                "level": 54
+            },
+            {
+                "move_name": "Dream Eater",
+                "level": 60
+            }
+        ],
+        "tm": [
+            "Scary Face", "Protect", "Acid Spray", "Confuse Ray", "Thief", "Facade", "Hex", "Icy Wind", "Night Shade", "Fling", "Venoshock", "Endure", "Sunny Day", "Rain Dance", "Shadow Claw", "Foul Play", "Fire Punch", "Thunder Punch", "Ice Punch", "Sleep Talk", "Dazzling Gleam", "Metronome", "Poison Jab", "Rest", "Taunt", "Toxic Spikes", "Imprison", "Dark Pulse", "Skill Swap", "Gunk Shot", "Substitute", "Will-O-Wisp", "Trick", "Giga Drain", "Shadow Ball", "Energy Ball", "Psychic", "Encore", "Thunderbolt", "Nasty Plot", "Sludge Bomb", "Phantom Force", "Focus Blast", "Trick Room", "Thunder", "Tera Blast", "Haze", "Toxic", "Spite", "Poltergeist", "Pain Split", "Psych Up", "Sludge Wave", "Skitter Smack", "Curse"
+        ],
+        "egg": [
+            "Astonish", "Clear Smog", "Disable", "Haze", "Perish Song", "Reflect Type", "Smog", "Toxic"
+        ]
+    },
+    {
+        "pokemon_id": 94,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Shadow Punch",
+                "level": 1
+            },
+            {
+                "move_name": "Perish Song",
+                "level": 1
+            },
+            {
+                "move_name": "Reflect Type",
+                "level": 1
+            },
+            {
+                "move_name": "Lick",
+                "level": 1
+            },
+            {
+                "move_name": "Confuse Ray",
+                "level": 1
+            },
+            {
+                "move_name": "Hypnosis",
+                "level": 1
+            },
+            {
+                "move_name": "Mean Look",
+                "level": 1
+            },
+            {
+                "move_name": "Payback",
+                "level": 12
+            },
+            {
+                "move_name": "Spite",
+                "level": 16
+            },
+            {
+                "move_name": "Curse",
+                "level": 20
+            },
+            {
+                "move_name": "Hex",
+                "level": 24
+            },
+            {
+                "move_name": "Night Shade",
+                "level": 30
+            },
+            {
+                "move_name": "Sucker Punch",
+                "level": 36
+            },
+            {
+                "move_name": "Dark Pulse",
+                "level": 42
+            },
+            {
+                "move_name": "Shadow Ball",
+                "level": 48
+            },
+            {
+                "move_name": "Destiny Bond",
+                "level": 54
+            },
+            {
+                "move_name": "Dream Eater",
+                "level": 60
+            }
+        ],
+        "tm": [
+            "Scary Face", "Protect", "Acid Spray", "Confuse Ray", "Thief", "Facade", "Hex", "Icy Wind", "Night Shade", "Fling", "Venoshock", "Endure", "Sunny Day", "Rain Dance", "Brick Break", "Shadow Claw", "Foul Play", "Body Slam", "Fire Punch", "Thunder Punch", "Ice Punch", "Sleep Talk", "Drain Punch", "Dazzling Gleam", "Metronome", "Thunder Wave", "Poison Jab", "Rest", "Taunt", "Toxic Spikes", "Imprison", "Dark Pulse", "Skill Swap", "Gunk Shot", "Substitute", "Will-O-Wisp", "Trick", "Giga Drain", "Shadow Ball", "Energy Ball", "Psychic", "Encore", "Thunderbolt", "Nasty Plot", "Sludge Bomb", "Phantom Force", "Giga Impact", "Focus Blast", "Trick Room", "Hyper Beam", "Thunder", "Tera Blast", "Haze", "Toxic", "Spite", "Knock Off", "Focus Punch", "Poltergeist", "Pain Split", "Psych Up", "Sludge Wave", "Skitter Smack", "Curse", "Psychic Noise"
+        ],
+        "egg": [
+            "Astonish", "Clear Smog", "Disable", "Haze", "Perish Song", "Reflect Type", "Smog", "Toxic"
+        ]
+    },
+    {
+        "pokemon_id": 95,
+        "data": "SwSh",
+        "level_up": [
+            {
+                "move_name": "Tackle",
+                "level": 1
+            },
+            {
+                "move_name": "Harden",
+                "level": 1
+            },
+            {
+                "move_name": "Bind",
+                "level": 1
+            },
+            {
+                "move_name": "Rock Throw",
+                "level": 1
+            },
+            {
+                "move_name": "Smack Down",
+                "level": 4
+            },
+            {
+                "move_name": "Rock Polish",
+                "level": 8
+            },
+            {
+                "move_name": "Dragon Breath",
+                "level": 12
+            },
+            {
+                "move_name": "Curse",
+                "level": 16
+            },
+            {
+                "move_name": "Rock Slide",
+                "level": 20
+            },
+            {
+                "move_name": "Screech",
+                "level": 24
+            },
+            {
+                "move_name": "Sand Tomb",
+                "level": 28
+            },
+            {
+                "move_name": "Stealth Rock",
+                "level": 32
+            },
+            {
+                "move_name": "Slam",
+                "level": 36
+            },
+            {
+                "move_name": "Sandstorm",
+                "level": 40
+            },
+            {
+                "move_name": "Dig",
+                "level": 44
+            },
+            {
+                "move_name": "Iron Tail",
+                "level": 48
+            },
+            {
+                "move_name": "Stone Edge",
+                "level": 52
+            },
+            {
+                "move_name": "Double-Edge",
+                "level": 56
+            }
+        ],
+        "tm": [
+            "Dig", "Screech", "Self-Destruct", "Rest", "Rock Slide", "Snore", "Protect", "Scary Face", "Attract", "Sandstorm", "Sunny Day", "Facade", "Rock Tomb", "Sand Tomb", "Rock Blast", "Payback", "Round", "Bulldoze", "Brutal Swing", "Stomping Tantrum", "Breaking Swipe", "Body Slam", "Earthquake", "Substitute", "Endure", "Sleep Talk", "Iron Tail", "Taunt", "Dragon Dance", "Gyro Ball", "Dragon Pulse", "Earth Power", "Flash Cannon", "Iron Head", "Stone Edge", "Stealth Rock", "Heavy Slam", "Drill Run", "High Horsepower", "Body Press"
+        ],
+        "egg": [
+            "Block", "Defense Curl", "Dragon Tail", "Flail", "Head Smash", "Rollout"
+        ]
+    },
+    {
+        "pokemon_id": 96,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Pound",
+                "level": 1
+            },
+            {
+                "move_name": "Hypnosis",
+                "level": 1
+            },
+            {
+                "move_name": "Disable",
+                "level": 5
+            },
+            {
+                "move_name": "Confusion",
+                "level": 9
+            },
+            {
+                "move_name": "Headbutt",
+                "level": 13
+            },
+            {
+                "move_name": "Poison Gas",
+                "level": 17
+            },
+            {
+                "move_name": "Psybeam",
+                "level": 21
+            },
+            {
+                "move_name": "Psych Up",
+                "level": 25
+            },
+            {
+                "move_name": "Zen Headbutt",
+                "level": 29
+            },
+            {
+                "move_name": "Swagger",
+                "level": 33
+            },
+            {
+                "move_name": "Psychic",
+                "level": 37
+            },
+            {
+                "move_name": "Nasty Plot",
+                "level": 41
+            },
+            {
+                "move_name": "Psyshock",
+                "level": 45
+            },
+            {
+                "move_name": "Future Sight",
+                "level": 49
+            }
+        ],
+        "tm": [
+            "Take Down", "Protect", "Low Kick", "Psybeam", "Thief", "Trailblaze", "Facade", "Swift", "Draining Kiss", "Low Sweep", "Stored Power", "Night Shade", "Fling", "Endure", "Sunny Day", "Rain Dance", "Psyshock", "Brick Break", "Zen Headbutt", "Foul Play", "Body Slam", "Fire Punch", "Thunder Punch", "Ice Punch", "Sleep Talk", "Drain Punch", "Reflect", "Light Screen", "Dazzling Gleam", "Metronome", "Grass Knot", "Thunder Wave", "Rest", "Taunt", "Imprison", "Skill Swap", "Substitute", "Trick", "Shadow Ball", "Psychic", "Encore", "Calm Mind", "Helping Hand", "Psychic Terrain", "Nasty Plot", "Focus Blast", "Trick Room", "Tera Blast", "Haze", "Toxic", "Knock Off", "Focus Punch", "Psych Up", "Double-Edge", "Endeavor", "Future Sight", "Expanding Force", "Curse", "Psychic Noise"
+        ],
+        "egg": [
+            "Fire Punch", "Flatter", "Guard Swap", "Ice Punch", "Power Split", "Psycho Cut", "Role Play", "Thunder Punch"
+        ]
+    },
+    {
+        "pokemon_id": 97,
+        "data": "ScVi",
+        "level_up": [
+            {
+                "move_name": "Switcheroo",
+                "level": 1
+            },
+            {
+                "move_name": "Pound",
+                "level": 1
+            },
+            {
+                "move_name": "Hypnosis",
+                "level": 1
+            },
+            {
+                "move_name": "Disable",
+                "level": 1
+            },
+            {
+                "move_name": "Confusion",
+                "level": 1
+            },
+            {
+                "move_name": "Headbutt",
+                "level": 13
+            },
+            {
+                "move_name": "Poison Gas",
+                "level": 17
+            },
+            {
+                "move_name": "Psybeam",
+                "level": 21
+            },
+            {
+                "move_name": "Psych Up",
+                "level": 25
+            },
+            {
+                "move_name": "Zen Headbutt",
+                "level": 32
+            },
+            {
+                "move_name": "Swagger",
+                "level": 37
+            },
+            {
+                "move_name": "Psychic",
+                "level": 42
+            },
+            {
+                "move_name": "Nasty Plot",
+                "level": 47
+            },
+            {
+                "move_name": "Psyshock",
+                "level": 51
+            },
+            {
+                "move_name": "Future Sight",
+                "level": 56
+            }
+        ],
+        "tm": [
+            "Take Down", "Scary Face", "Protect", "Low Kick", "Psybeam", "Confuse Ray", "Thief", "Trailblaze", "Facade", "Hex", "Swift", "Draining Kiss", "Low Sweep", "Stored Power", "Night Shade", "Fling", "Endure", "Sunny Day", "Rain Dance", "Psyshock", "Brick Break", "Zen Headbutt", "Foul Play", "Body Slam", "Fire Punch", "Thunder Punch", "Ice Punch", "Sleep Talk", "Drain Punch", "Reflect", "Light Screen", "Dazzling Gleam", "Metronome", "Grass Knot", "Thunder Wave", "Rest", "Taunt", "Body Press", "Imprison", "Skill Swap", "Substitute", "Trick", "Shadow Ball", "Psychic", "Encore", "Calm Mind", "Helping Hand", "Baton Pass", "Psychic Terrain", "Nasty Plot", "Giga Impact", "Focus Blast", "Trick Room", "Hyper Beam", "Tera Blast", "Haze", "Toxic", "Knock Off", "Focus Punch", "Psych Up", "Double-Edge", "Endeavor", "Future Sight", "Expanding Force", "Curse", "Psychic Noise"
+        ],
+        "egg": [
+            "Fire Punch", "Flatter", "Guard Swap", "Ice Punch", "Power Split", "Psycho Cut", "Role Play", "Thunder Punch"
+        ]
+    },
+    {
+        "pokemon_id": 98,
+        "data": "SwSh",
+        "level_up": [
+            {
+                "move_name": "Water Gun",
+                "level": 1
+            },
+            {
+                "move_name": "Leer",
+                "level": 1
+            },
+            {
+                "move_name": "Harden",
+                "level": 4
+            },
+            {
+                "move_name": "Metal Claw",
+                "level": 8
+            },
+            {
+                "move_name": "Mud Shot",
+                "level": 12
+            },
+            {
+                "move_name": "Protect",
+                "level": 16
+            },
+            {
+                "move_name": "Bubble Beam",
+                "level": 20
+            },
+            {
+                "move_name": "Stomp",
+                "level": 24
+            },
+            {
+                "move_name": "Flail",
+                "level": 29
+            },
+            {
+                "move_name": "Razor Shell",
+                "level": 32
+            },
+            {
+                "move_name": "Slam",
+                "level": 36
+            },
+            {
+                "move_name": "Swords Dance",
+                "level": 40
+            },
+            {
+                "move_name": "Crabhammer",
+                "level": 44
+            },
+            {
+                "move_name": "Guillotine",
+                "level": 48
+            }
+        ],
+        "tm": [
+            "Dig", "Rest", "Rock Slide", "Thief", "Snore", "Protect", "Icy Wind", "Attract", "Rain Dance", "Hail", "Whirlpool", "Facade", "Brick Break", "Dive", "Rock Tomb", "Mud Shot", "Brine", "Fling", "Round", "Razor Shell", "False Swipe", "Swords Dance", "Body Slam", "Surf", "Ice Beam", "Blizzard", "Agility", "Amnesia", "Substitute", "Endure", "Sleep Talk", "Superpower", "Iron Defense", "X-Scissor", "Ally Switch", "Scald", "Liquidation"
+        ],
+        "egg": [
+            "Ancient Power", "Hammer Arm", "Knock Off", "Night Slash", "Slash"
+        ]
+    },
+    {
+        "pokemon_id": 99,
+        "data": "SwSh",
+        "level_up": [
+            {
+                "move_name": "Wide Guard",
+                "level": 1
+            },
+            {
+                "move_name": "Hammer Arm",
+                "level": 1
+            },
+            {
+                "move_name": "Water Gun",
+                "level": 1
+            },
+            {
+                "move_name": "Leer",
+                "level": 1
+            },
+            {
+                "move_name": "Harden",
+                "level": 1
+            },
+            {
+                "move_name": "Metal Claw",
+                "level": 1
+            },
+            {
+                "move_name": "Mud Shot",
+                "level": 12
+            },
+            {
+                "move_name": "Protect",
+                "level": 16
+            },
+            {
+                "move_name": "Bubble Beam",
+                "level": 20
+            },
+            {
+                "move_name": "Stomp",
+                "level": 24
+            },
+            {
+                "move_name": "Flail",
+                "level": 31
+            },
+            {
+                "move_name": "Razor Shell",
+                "level": 36
+            },
+            {
+                "move_name": "Slam",
+                "level": 42
+            },
+            {
+                "move_name": "Swords Dance",
+                "level": 48
+            },
+            {
+                "move_name": "Crabhammer",
+                "level": 54
+            },
+            {
+                "move_name": "Guillotine",
+                "level": 60
+            }
+        ],
+        "tm": [
+            "Hyper Beam", "Giga Impact", "Dig", "Rest", "Rock Slide", "Thief", "Snore", "Protect", "Icy Wind", "Attract", "Rain Dance", "Hail", "Whirlpool", "Facade", "Brick Break", "Dive", "Rock Tomb", "Mud Shot", "Brine", "Fling", "Round", "Razor Shell", "False Swipe", "Brutal Swing", "Stomping Tantrum", "Swords Dance", "Body Slam", "Hydro Pump", "Surf", "Ice Beam", "Blizzard", "Agility", "Amnesia", "Substitute", "Endure", "Sleep Talk", "Superpower", "Iron Defense", "X-Scissor", "Ally Switch", "Scald", "High Horsepower", "Liquidation"
+        ],
+        "egg": [
+            "Ancient Power", "Hammer Arm", "Knock Off", "Night Slash", "Slash"
+        ]
     }
 ]
