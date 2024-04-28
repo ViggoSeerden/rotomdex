@@ -33,6 +33,9 @@ class BaseThemeColors {
   static const detailButtonText = ColorRef(Colors.green, id: 'Detail9');
   static const detailNavBarBG = ColorRef(Colors.green, id: 'Detail10');
   static const detailNavBarText = ColorRef(Colors.green, id: 'Detail11');
+  static const detailItemBg = ColorRef(Colors.green, id: 'Detail12');
+  static const detailItemText = ColorRef(Colors.green, id: 'Detail13');
+  static const detailItemAccentText = ColorRef(Colors.green, id: 'Detail14');
 
   static Map<ThemeRef, Object> rotomTheme = {
     //Main
@@ -57,7 +60,7 @@ class BaseThemeColors {
     //Detail
     BaseThemeColors.detailBGGradientTop: const Color(0xFF64B6ED),
     BaseThemeColors.detailBGGradientBottom: const Color(0xFFB7FCFB),
-    BaseThemeColors.detailAppBarBG: const Color(0xFF878787),
+    BaseThemeColors.detailAppBarBG: const Color(0xFF585B66),
     BaseThemeColors.detailAppBarText: Colors.white,
     BaseThemeColors.detailContainerGradientTop: Colors.white,
     BaseThemeColors.detailContainerGradientBottom: const Color(0xFFC6C6C6),
@@ -66,6 +69,9 @@ class BaseThemeColors {
     BaseThemeColors.detailButtonText: Colors.white,
     BaseThemeColors.detailNavBarBG: Colors.white,
     BaseThemeColors.detailNavBarText: Colors.black,
+    BaseThemeColors.detailItemBg: Colors.teal,
+    BaseThemeColors.detailItemText: Colors.black,
+    BaseThemeColors.detailItemAccentText: const Color.fromARGB(170, 0, 0, 0),
   };
 
   static Map<ThemeRef, Object> lightTheme = {
@@ -76,8 +82,8 @@ class BaseThemeColors {
     BaseThemeColors.mainMenuListBG: Colors.white,
     BaseThemeColors.mainMenuListText: Colors.black,
     //Dex
-    BaseThemeColors.dexBGGradientTop: const Color.fromARGB(255, 235, 235, 235),
-    BaseThemeColors.dexBGGradientBottom: const Color.fromARGB(255, 235, 235, 235),
+    BaseThemeColors.dexBGGradientTop: const Color(0xffE2E2E2),
+    BaseThemeColors.dexBGGradientBottom: const Color(0xffE2E2E2),
     BaseThemeColors.dexItemBG: Colors.white,
     BaseThemeColors.dexItemText: Colors.black,
     BaseThemeColors.dexItemAccentText: const Color.fromARGB(170, 0, 0, 0),
@@ -89,8 +95,8 @@ class BaseThemeColors {
     BaseThemeColors.fabPopupButtonBG: const Color(0xFF878787),
     BaseThemeColors.fabPopupButtonText: Colors.black,
     //Detail
-    BaseThemeColors.detailBGGradientTop: const Color.fromARGB(255, 235, 235, 235),
-    BaseThemeColors.detailBGGradientBottom: const Color.fromARGB(255, 235, 235, 235),
+    BaseThemeColors.detailBGGradientTop: const Color(0xffE2E2E2),
+    BaseThemeColors.detailBGGradientBottom: const Color(0xffE2E2E2),
     BaseThemeColors.detailAppBarBG: Colors.white,
     BaseThemeColors.detailAppBarText: Colors.black,
     BaseThemeColors.detailContainerGradientTop: Colors.white,
@@ -100,19 +106,22 @@ class BaseThemeColors {
     BaseThemeColors.detailButtonText: Colors.white,
     BaseThemeColors.detailNavBarBG: Colors.white,
     BaseThemeColors.detailNavBarText: Colors.black,
+    BaseThemeColors.detailItemBg: const Color(0xffE2E2E2),
+    BaseThemeColors.detailItemText: Colors.black,
+    BaseThemeColors.detailItemAccentText: const Color.fromARGB(170, 0, 0, 0),
   };
 
   static Map<ThemeRef, Object> darkTheme = {
     //Main
-    BaseThemeColors.mainAppBarBG: const Color.fromARGB(255, 25, 25, 25),
+    BaseThemeColors.mainAppBarBG: const Color(0xff222222),
     BaseThemeColors.mainAppBarText: Colors.white,
     BaseThemeColors.mainMenuLogoBG: const Color(0xFFEF866B),
-    BaseThemeColors.mainMenuListBG: const Color.fromARGB(255, 25, 25, 25),
+    BaseThemeColors.mainMenuListBG: const Color(0xff222222),
     BaseThemeColors.mainMenuListText: Colors.white,
     //Dex
-    BaseThemeColors.dexBGGradientTop: Colors.black,
-    BaseThemeColors.dexBGGradientBottom: Colors.black,
-    BaseThemeColors.dexItemBG: const Color.fromARGB(255, 25, 25, 25),
+    BaseThemeColors.dexBGGradientTop: const Color(0xff181818),
+    BaseThemeColors.dexBGGradientBottom: const Color(0xff181818),
+    BaseThemeColors.dexItemBG: const Color(0xff222222),
     BaseThemeColors.dexItemText: Colors.white,
     BaseThemeColors.dexItemAccentText: const Color.fromARGB(170, 255, 255, 255),
     //FAB
@@ -123,16 +132,19 @@ class BaseThemeColors {
     BaseThemeColors.fabPopupButtonBG: const Color(0xFF878787),
     BaseThemeColors.fabPopupButtonText: Colors.white,
     //Detail
-    BaseThemeColors.detailBGGradientTop: Colors.black,
-    BaseThemeColors.detailBGGradientBottom: Colors.black,
-    BaseThemeColors.detailAppBarBG: const Color.fromARGB(255, 25, 25, 25),
+    BaseThemeColors.detailBGGradientTop: const Color(0xff181818),
+    BaseThemeColors.detailBGGradientBottom: const Color(0xff181818),
+    BaseThemeColors.detailAppBarBG: const Color(0xff222222),
     BaseThemeColors.detailAppBarText: Colors.white,
-    BaseThemeColors.detailContainerGradientTop: const Color.fromARGB(255, 25, 25, 25),
-    BaseThemeColors.detailContainerGradientBottom: const Color.fromARGB(255, 25, 25, 25),
+    BaseThemeColors.detailContainerGradientTop: const Color(0xff222222),
+    BaseThemeColors.detailContainerGradientBottom: const Color(0xff222222),
     BaseThemeColors.detailContainerText: Colors.white,
     BaseThemeColors.detailButtonBG: const Color(0xFFEF866B),
     BaseThemeColors.detailButtonText: Colors.white,
-    BaseThemeColors.detailNavBarBG: const Color.fromARGB(255, 25, 25, 25),
-    BaseThemeColors.detailNavBarText: Colors.white,
+    BaseThemeColors.detailNavBarBG: Colors.white,
+    BaseThemeColors.detailNavBarText: Colors.black,
+    BaseThemeColors.detailItemBg: const Color(0xff181818),
+    BaseThemeColors.detailItemText: Colors.white,
+    BaseThemeColors.detailItemAccentText: const Color.fromARGB(170, 255, 255, 255),
   };
 }

@@ -15,29 +15,30 @@
  */
 
 import 'dart:io';
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:image/image.dart' as img;
 import 'package:image_picker/image_picker.dart';
+import 'package:rotomdex/service/navigation_services.dart';
 import '../scanning/image_classification_helper.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:flutter/gestures.dart';
-import 'package:rotomdex/detail/pokemon.dart';
 
-class GalleryScreen extends StatefulWidget {
-  const GalleryScreen({super.key});
+class ScannerScreen extends StatefulWidget {
+  const ScannerScreen({super.key});
 
   @override
-  State<GalleryScreen> createState() => _GalleryScreenState();
+  State<ScannerScreen> createState() => ScannerScreenState();
 }
 
-class _GalleryScreenState extends State<GalleryScreen> {
+class ScannerScreenState extends State<ScannerScreen> {
   ImageClassificationHelper? imageClassificationHelper;
   final imagePicker = ImagePicker();
   String? imagePath;
   img.Image? image;
   Map<String, double>? classification;
   bool cameraIsAvailable = Platform.isAndroid || Platform.isIOS;
+
+  NavigationServices navigationServices = NavigationServices();
 
   @override
   void initState() {
@@ -65,32 +66,6 @@ class _GalleryScreenState extends State<GalleryScreen> {
       setState(() {});
       classification = await imageClassificationHelper?.inferenceImage(image!);
       setState(() {});
-    }
-  }
-
-  Future<void> navigateToPokemon(
-      BuildContext context, String pokemonName) async {
-    String data = await DefaultAssetBundle.of(context)
-        .loadString('assets/pokemon/data/kanto_expanded.json');
-
-    List<dynamic> pokemonList = jsonDecode(data);
-
-    Map<String, dynamic>? specificPokemon = pokemonList.firstWhere(
-      (pokemon) => pokemon['name'].toString().toLowerCase() == pokemonName,
-      orElse: () => null,
-    );
-
-    if (specificPokemon != null) {
-      // ignore: use_build_context_synchronously
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) =>
-              PokemonDetailScreen(pokemonData: specificPokemon),
-        ),
-      );
-    } else {
-      print('Pokemon not found!');
     }
   }
 
@@ -280,8 +255,8 @@ class _GalleryScreenState extends State<GalleryScreen> {
                                                           .skip(1)
                                                           .join(' '))
                                                       .toLowerCase();
-                                                  navigateToPokemon(
-                                                      context, pokemonName);
+                                                  navigationServices.navigateToPokemon(
+                                                      context, pokemonName, 'egg');
                                                 },
                                             ),
                                             const TextSpan(

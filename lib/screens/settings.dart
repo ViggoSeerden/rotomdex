@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_cache_manager/flutter_cache_manager.dart';
-import 'package:rotomdex/themes/themes.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-import 'package:themed/themed.dart';
+import 'package:rotomdex/service/message_services.dart';
+import 'package:rotomdex/service/preference_services.dart';
+import 'package:rotomdex/service/theme_services.dart';
+import 'package:rotomdex/utils/themes.dart';
+import 'package:rotomdex/utils/constants.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -12,77 +14,10 @@ class SettingsPage extends StatefulWidget {
 }
 
 class SettingsPageState extends State<SettingsPage> {
-  List<String> themes = ['Rotom', 'Light', 'Dark'];
-  List<String> heightunits = ['Meters', 'Feet/Inches'];
-  List<String> weightunits = ['Kilograms', 'Pounds'];
-
-  void setTheme(String theme) {
-    switch (theme) {
-      case 'rotom':
-        Themed.currentTheme = BaseThemeColors.rotomTheme;
-        break;
-      case 'light':
-        Themed.currentTheme = BaseThemeColors.lightTheme;
-        break;
-      case 'dark':
-        Themed.currentTheme = BaseThemeColors.darkTheme;
-        break;
-      default:
-        Themed.currentTheme = BaseThemeColors.rotomTheme;
-        break;
-    }
-
-    savePreference('theme', theme);
-  }
-
-  void savePreference(String key, String value) async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.setString(key, value);
-  }
-
-  void clearBookmarks() async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.remove('pokemon_bookmarks');
-    await prefs.remove('move_bookmarks');
-    await prefs.remove('ability_bookmarks');
-    showMessage('Bookmarks cleared successfully.');
-  }
-
-  void clearPreferences() async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    await prefs.remove('theme');
-    await prefs.remove('heightunit');
-    await prefs.remove('weightunit');
-    showMessage('Preferences cleared successfully.');
-  }
-
-  void showMessage(String message) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text(
-            message,
-            textAlign: TextAlign.center,
-          ),
-          actions: <Widget>[
-            Center(
-              child: TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                child: const Text(
-                  'Close',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-            )
-          ],
-        );
-      },
-    );
-  }
-
+  PreferenceServices preferenceServices = PreferenceServices();
+  ThemeServices themeServices = ThemeServices();
+  MessageServices messageServices = MessageServices();
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,7 +33,7 @@ class SettingsPageState extends State<SettingsPage> {
                 child: Container(
                   width: double.infinity,
                   decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(50)),
+                    borderRadius: BorderRadius.all(Radius.circular(20)),
                     gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
@@ -147,7 +82,7 @@ class SettingsPageState extends State<SettingsPage> {
                                 );
                               }).toList(),
                               onChanged: (String? value) =>
-                                  {setTheme(value.toString().toLowerCase())},
+                                  {themeServices.setTheme(value.toString().toLowerCase())},
                             ),
                           ],
                         ),
@@ -177,7 +112,7 @@ class SettingsPageState extends State<SettingsPage> {
                                 );
                               }).toList(),
                               onChanged: (String? value) => {
-                                savePreference('heightunit', value.toString())
+                                preferenceServices.savePreference('heightunit', value.toString())
                               },
                             ),
                           ],
@@ -208,7 +143,7 @@ class SettingsPageState extends State<SettingsPage> {
                                 );
                               }).toList(),
                               onChanged: (String? value) => {
-                                savePreference('weightunit', value.toString())
+                                preferenceServices.savePreference('weightunit', value.toString())
                               },
                             ),
                           ],
@@ -244,7 +179,7 @@ class SettingsPageState extends State<SettingsPage> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             TextButton(
-                                onPressed: clearBookmarks,
+                                onPressed: preferenceServices.clearBookmarks,
                                 style: ButtonStyle(
                                     backgroundColor: MaterialStateProperty.all(
                                         const Color(0xffEF866B))),
@@ -261,7 +196,7 @@ class SettingsPageState extends State<SettingsPage> {
                             TextButton(
                                 onPressed: () => {
                                       DefaultCacheManager().emptyCache(),
-                                      showMessage('Cache cleared successfully.')
+                                      messageServices.showMessage('Cache cleared successfully.', context)
                                     },
                                 style: ButtonStyle(
                                     backgroundColor: MaterialStateProperty.all(

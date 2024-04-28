@@ -1,10 +1,9 @@
-import 'dart:convert';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:floating_action_bubble/floating_action_bubble.dart';
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
-import 'package:rotomdex/themes/themes.dart';
-import '../detail/pokemon.dart';
+import 'package:rotomdex/service/json_services.dart';
+import 'package:rotomdex/service/search_services.dart';
+import 'package:rotomdex/utils/themes.dart';
+import 'package:rotomdex/widgets/floating_action_bubble.dart';
+import 'package:rotomdex/widgets/list_items/pokemon_list_item.dart';
 
 class PokedexPage extends StatefulWidget {
   const PokedexPage({super.key});
@@ -23,64 +22,15 @@ class PokedexPageState extends State<PokedexPage>
   int prefetchThreshold = 6;
   bool isLoading = false;
 
-  List<String> types = [
-    'Normal',
-    'Fighting',
-    'Flying',
-    'Poison',
-    'Ground',
-    'Rock',
-    'Bug',
-    'Ghost',
-    'Steel',
-    'Fire',
-    'Water',
-    'Grass',
-    'Electric',
-    'Psychic',
-    'Ice',
-    'Dragon',
-    'Dark',
-    'Fairy'
-  ];
-
-  List<String> egggroups = [
-    'Monster',
-    'Human-Like',
-    'Field',
-    'Water 1',
-    'Water 2',
-    'Water 3',
-    'Bug',
-    'Flying',
-    'Mineral',
-    'Fairy',
-    'Grass',
-    'Dragon',
-    'Amorphous',
-    'Undiscovered',
-    'Ditto'
-  ];
-
-  late AnimationController animationController;
-  late Animation<double> animation;
-
   ScrollController scrollController = ScrollController();
+
+  JsonServices jsonServices = JsonServices();
+  SearchServices searchServices = SearchServices();
 
   @override
   void initState() {
-    animationController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 260),
-    );
-
-    final curvedAnimation =
-        CurvedAnimation(curve: Curves.easeInOut, parent: animationController);
-
-    animation = Tween<double>(begin: 0, end: 1).animate(curvedAnimation);
-
     super.initState();
-    _loadJsonData();
+    _loadData();
     scrollController.addListener(scrollListener);
   }
 
@@ -93,11 +43,11 @@ class PokedexPageState extends State<PokedexPage>
     }
   }
 
-  Future<void> _loadJsonData() async {
-    String data = await DefaultAssetBundle.of(context)
-        .loadString('assets/pokemon/data/kanto_expanded.json');
+  Future<void> _loadData() async {
+    var data = await jsonServices.loadJsonData(
+        'assets/pokemon/data/kanto_expanded.json', context);
     setState(() {
-      _data = List<Map<String, dynamic>>.from(json.decode(data));
+      _data = List<Map<String, dynamic>>.from(data);
       _loadMoreData();
     });
   }
@@ -127,73 +77,27 @@ class PokedexPageState extends State<PokedexPage>
       }
     }
 
-    currentPage++;
-    isLoading = false;
-
-    setState(() {});
+    setState(() {
+      currentPage++;
+      isLoading = false;
+    });
   }
 
   void searchPokemon(String input) {
-    List<Map<String, dynamic>> filteredPokemon = _data
-        .where((pokemon) => pokemon['name']
-            .toString()
-            .toLowerCase()
-            .contains(input.toLowerCase()))
-        .toList();
-
     setState(() {
-      _displayedData = filteredPokemon;
+      _displayedData = searchServices.searchItem(_data, input);
     });
   }
 
   void filterPokemon(String argument, String input) {
-    if (argument == 'type') {
-      List<Map<String, dynamic>> filteredPokemon = _data
-          .where(
-            (pokemon) =>
-                pokemon['type1'].toLowerCase() == input.toLowerCase() ||
-                pokemon['type2'].toLowerCase() == input.toLowerCase(),
-          )
-          .toList();
-      setState(() {
-        _displayedData = filteredPokemon;
-      });
-    } else if (argument == 'egg_group') {
-      List<Map<String, dynamic>> filteredPokemon = _data
-          .where(
-            (pokemon) =>
-                pokemon['egg_group1'].toLowerCase() == input.toLowerCase() ||
-                pokemon['egg_group2'].toLowerCase() == input.toLowerCase(),
-          )
-          .toList();
-      setState(() {
-        _displayedData = filteredPokemon;
-      });
-    } else {
-      List<Map<String, dynamic>> filteredPokemon = _data
-          .where(
-            (pokemon) =>
-                pokemon[argument].toString().toLowerCase() ==
-                input.toLowerCase(),
-          )
-          .toList();
-      setState(() {
-        _displayedData = filteredPokemon;
-      });
-    }
+    setState(() {
+      _displayedData = searchServices.filterPokemon(_data, argument, input);
+    });
   }
 
   void sortPokemon(String argument, String argumentType) {
-    _data.sort((a, b) {
-      if (argumentType == 'int') {
-        return a[argument].compareTo(b[argument]);
-      } else {
-        return a[argument].toString().compareTo(b[argument].toString());
-      }
-    });
-
     setState(() {
-      _displayedData = _data.toList();
+      _displayedData = searchServices.sortItem(_data, argumentType, argument);
     });
   }
 
@@ -203,346 +107,41 @@ class PokedexPageState extends State<PokedexPage>
     });
   }
 
+  void resetPokemon() {
+    setState(() {
+      _displayedData = _data;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: GridView.builder(
-        itemCount: _displayedData.length,
-        controller: scrollController,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3,
-          crossAxisSpacing: 12,
-          mainAxisSpacing: 20,
+        backgroundColor: Colors.transparent,
+        body: GridView.builder(
+          padding: const EdgeInsets.all(8.0),
+          itemCount: _displayedData.length,
+          controller: scrollController,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            crossAxisSpacing: 0,
+            mainAxisSpacing: 0,
+          ),
+          itemBuilder: (context, index) {
+            final item = _displayedData[index];
+            return PokemonListItem(
+              item: item,
+              text: BaseThemeColors.dexItemText,
+              bg: BaseThemeColors.detailItemBg,
+            );
+          },
         ),
-        itemBuilder: (context, index) {
-          final item = _displayedData[index];
-          return GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => PokemonDetailScreen(pokemonData: item),
-                ),
-              );
-            },
-            child: Tooltip(
-              richMessage: TextSpan(text: item['height']['meters'], children: [
-                TextSpan(text: '\n${item['weight']['kilograms']}'),
-                const TextSpan(text: '\nAbilities:'),
-                TextSpan(text: '\n  ${item['ability1']}'),
-                if (item['ability2'].isNotEmpty) ...[
-                  TextSpan(text: '\n  ${item['ability2']}'),
-                ],
-                if (item['hidden_ability'].isNotEmpty) ...[
-                  TextSpan(text: '\n  ${item['hidden_ability']}'),
-                ],
-                TextSpan(
-                    text:
-                        '\nBST: ${(item['base_stats']['HP'] + item['base_stats']['Attack'] + item['base_stats']['Defense'] + item['base_stats']['Speed'] + item['base_stats']['SpAttack'] + item['base_stats']['SpDefense']).toString()}'),
-              ]),
-              child: Column(
-                children: [
-                  Expanded(
-                    child: Align(
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(360),
-                          color: BaseThemeColors.dexItemBG,
-                        ),
-                        width: 75,
-                        height: 75,
-                        child: OverflowBox(
-                          maxWidth: 90,
-                          maxHeight: 90,
-                          child: CachedNetworkImage(
-                            imageUrl:
-                                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item['id']}.png",
-                            placeholder: (context, url) =>
-                                const CircularProgressIndicator(),
-                            errorWidget: (context, url, error) =>
-                                const Icon(Icons.error),
-                            fit: BoxFit.cover,
-                            fadeInDuration: Durations.short1,
-                            cacheKey: "pokemon_${item['id']}",
-                            cacheManager: CacheManager(
-                              Config(
-                                "pokemon_images_cache",
-                                maxNrOfCacheObjects: 500,
-                                stalePeriod: const Duration(days: 7),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Text('#${item['id']} ${item['name']}',
-                      style: const TextStyle(
-                          color: BaseThemeColors.dexItemText, fontWeight: FontWeight.bold)),
-                  Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                    Image.asset(
-                        'assets/images/icons/types/${item['type1']}.png',
-                        width: 25,
-                        height: 25),
-                    if (item['type2'] != null && item['type2'].isNotEmpty) ...[
-                      const SizedBox(width: 5),
-                      Image.asset(
-                          'assets/images/icons/types/${item['type2']}.png',
-                          width: 25,
-                          height: 25),
-                    ],
-                  ]),
-                ],
-              ),
-            ),
-          );
-        },
-      ),
-      floatingActionButton: FloatingActionBubble(
-        onPress: () => {
-          animationController.isCompleted
-              ? animationController.reverse()
-              : animationController.forward(),
-        },
-        backGroundColor: const Color(0xffEF866B),
-        animation: animation,
-        iconColor: Colors.white,
-        iconData: Icons.settings,
-        items: <Bubble>[
-          Bubble(
-            title: "Search",
-            iconColor: Colors.white,
-            bubbleColor: const Color(0xffEF866B),
-            icon: Icons.search,
-            titleStyle: const TextStyle(fontSize: 16, color: Colors.white),
-            onPress: () {
-              showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return AlertDialog(
-                    title: const Text(
-                      'Enter Name:',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: BaseThemeColors.fabPopupText),
-                    ),
-                    content: SearchBar(
-                      onChanged: (value) => searchPokemon(value),
-                    ),
-                    backgroundColor: BaseThemeColors.fabPopupBG,
-                    actions: <Widget>[
-                      Center(
-                        child: TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                          child: const Text(
-                            'Close',
-                            style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
-                          ),
-                        ),
-                      )
-                    ],
-                  );
-                },
-              );
-              animationController.reverse();
-            },
-          ),
-          Bubble(
-            title: "Filter",
-            iconColor: Colors.white,
-            bubbleColor: const Color(0xffEF866B),
-            icon: Icons.filter_alt,
-            titleStyle: const TextStyle(fontSize: 16, color: Colors.white),
-            onPress: () {
-              showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return AlertDialog(
-                    backgroundColor: BaseThemeColors.fabPopupBG,
-                    title: const Text(
-                      'Filter By:',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: BaseThemeColors.fabPopupText),
-                    ),
-                    content: SizedBox(
-                      height: 100,
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              const Text(
-                                'Type',
-                                style: TextStyle(
-                                    fontSize: 20, color: BaseThemeColors.fabPopupText),
-                              ),
-                              const SizedBox(width: 10),
-                              DropdownButton<String>(
-                                dropdownColor: Colors.grey,
-                                focusColor: Colors.grey,
-                                value: types.first,
-                                items: types.map<DropdownMenuItem<String>>(
-                                    (String value) {
-                                  return DropdownMenuItem<String>(
-                                    value: value,
-                                    child: Text(value, style: const TextStyle(color: BaseThemeColors.detailContainerText)),
-                                  );
-                                }).toList(),
-                                onChanged: (String? value) => {
-                                  filterPokemon('type', value!),
-                                  Navigator.of(context).pop()
-                                },
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              const Text(
-                                'Egg Group',
-                                style: TextStyle(
-                                    fontSize: 20, color: BaseThemeColors.fabPopupText),
-                              ),
-                              const SizedBox(width: 10),
-                              DropdownButton<String>(
-                                dropdownColor: Colors.grey,
-                                focusColor: Colors.grey,
-                                value: egggroups.first,
-                                items: egggroups.map<DropdownMenuItem<String>>(
-                                    (String value) {
-                                  return DropdownMenuItem<String>(
-                                    value: value,
-                                    child: Text(value, style: const TextStyle(color: BaseThemeColors.detailContainerText)),
-                                  );
-                                }).toList(),
-                                onChanged: (String? value) => {
-                                  filterPokemon('egg_group', value!),
-                                  Navigator.of(context).pop()
-                                },
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                    actions: <Widget>[
-                      Center(
-                        child: TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                          child: const Text(
-                            'Cancel',
-                            style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
-                          ),
-                        ),
-                      )
-                    ],
-                  );
-                },
-              );
-              animationController.reverse();
-            },
-          ),
-          Bubble(
-            title: "Sort",
-            iconColor: Colors.white,
-            bubbleColor: const Color(0xffEF866B),
-            icon: Icons.sort,
-            titleStyle: const TextStyle(fontSize: 16, color: Colors.white),
-            onPress: () {
-              showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return AlertDialog(
-                    backgroundColor: BaseThemeColors.fabPopupBG,
-                    title: const Text(
-                      'Sort By:',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: BaseThemeColors.fabPopupText),
-                    ),
-                    content: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        TextButton(
-                          onPressed: () {
-                            sortPokemon('id', 'int');
-                            Navigator.of(context).pop();
-                          },
-                          child: const Text(
-                            'Number',
-                            style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
-                          ),
-                        ),
-                        TextButton(
-                          onPressed: () {
-                            sortPokemon('name', 'string');
-                            Navigator.of(context).pop();
-                          },
-                          child: const Text(
-                            'Name',
-                            style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
-                          ),
-                        ),
-                      ],
-                    ),
-                    actions: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          TextButton(
-                            onPressed: () {
-                              reversePokemon();
-                              Navigator.of(context).pop();
-                            },
-                            child: const Text(
-                              'Reverse',
-                              style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
-                            ),
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                            },
-                            child: const Text(
-                              'Cancel',
-                              style: TextStyle(fontSize: 20, color: BaseThemeColors.fabPopupButtonText),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  );
-                },
-              );
-              animationController.reverse();
-            },
-          ),
-          // Bubble(
-          //   title: "Layout",
-          //   iconColor: Colors.white,
-          //   bubbleColor: const Color(0xffEF866B),
-          //   icon: Icons.grid_3x3,
-          //   titleStyle: const TextStyle(fontSize: 16, color: Colors.white),
-          //   onPress: () {
-          //     animationController.reverse();
-          //   },
-          // ),
-          Bubble(
-            title: "Reset",
-            iconColor: Colors.white,
-            bubbleColor: const Color(0xffEF866B),
-            icon: Icons.backspace,
-            titleStyle: const TextStyle(fontSize: 16, color: Colors.white),
-            onPress: () {
-              setState(() {
-                _displayedData = _data;
-              });
-              animationController.reverse();
-            },
-          ),
-        ],
-      ),
-    );
+        floatingActionButton: FABubble(
+            searchFunction: searchPokemon,
+            reverseFunction: reversePokemon,
+            resetFunction: resetPokemon,
+            filterFunction: filterPokemon,
+            sortingFunction: sortPokemon,
+            filterOptions: const ['Type', "Egg Group"],
+            sortingOptions: const ["ID", "Name"]));
   }
 }

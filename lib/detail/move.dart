@@ -1,10 +1,9 @@
-import 'dart:convert';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
-import 'package:rotomdex/detail/pokemon.dart';
-import 'package:rotomdex/themes/themes.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:rotomdex/service/bookmark_services.dart';
+import 'package:rotomdex/service/detail_services.dart';
+import 'package:rotomdex/service/navigation_services.dart';
+import 'package:rotomdex/utils/themes.dart';
+import 'package:rotomdex/widgets/list_items/pokemon_list_item.dart';
 
 class MovePage extends StatefulWidget {
   final Map moveData;
@@ -20,6 +19,10 @@ class MovePageState extends State<MovePage> {
   List tmPokemon = [];
   List eggPokemon = [];
 
+  BookmarkServices bookmarkServices = BookmarkServices();
+  DetailServices detailServices = DetailServices();
+  NavigationServices navigationServices = NavigationServices();
+
   @override
   void initState() {
     super.initState();
@@ -27,128 +30,18 @@ class MovePageState extends State<MovePage> {
   }
 
   Future<void> _loadJsonData() async {
-    List movesets = json.decode(await DefaultAssetBundle.of(context)
-        .loadString('assets/pokemon/data/kanto_moves.json'));
-
-    // ignore: use_build_context_synchronously
-    List pokemon = json.decode(await DefaultAssetBundle.of(context)
-        .loadString('assets/pokemon/data/kanto_expanded.json'));
-
-    List levelUp = [];
-    List tm = [];
-    List egg = [];
-
-    String moveId = widget.moveData['move'];
-
-    for (var moveset in movesets) {
-      var pokemonId = moveset['pokemon_id'];
-
-      // Check level up moves
-      for (var move in moveset['level_up']) {
-        if (move['move_name'] == moveId) {
-          var pokemonData = pokemon.firstWhere((p) => p['id'] == pokemonId,
-              orElse: () => null);
-          if (pokemonData != null) {
-            levelUp.add(pokemonData);
-            break; // no need to keep checking level up moves for this Pokemon
-          }
-        }
-      }
-
-      // Check TM moves
-      if (moveset['tm'].contains(moveId)) {
-        var pokemonData =
-            pokemon.firstWhere((p) => p['id'] == pokemonId, orElse: () => null);
-        if (pokemonData != null) {
-          tm.add(pokemonData);
-        }
-      }
-
-      // Check Egg moves
-      if (moveset['egg'].contains(moveId)) {
-        var pokemonData =
-            pokemon.firstWhere((p) => p['id'] == pokemonId, orElse: () => null);
-        if (pokemonData != null) {
-          egg.add(pokemonData);
-        }
-      }
-    }
+    List levelUp = await detailServices.getPokemonWithMove(
+        widget.moveData['name'], context, 'level_up');
+    List tm = await detailServices.getPokemonWithMove(
+        widget.moveData['name'], context, 'tm');
+    List egg = await detailServices.getPokemonWithMove(
+        widget.moveData['name'], context, 'egg');
 
     setState(() {
       levelUpPokemon = levelUp;
       tmPokemon = tm;
       eggPokemon = egg;
     });
-
-    setState(() {
-      levelUpPokemon = levelUp;
-      tmPokemon = tm;
-      eggPokemon = egg;
-    });
-  }
-
-  Future<void> saveBookmark() async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    List<String>? bookmarks = prefs.getStringList('move_bookmarks') ?? [];
-    if (bookmarks.length >= 15) {
-      showMessage('You have reached the maximum amount of move bookmarks.');
-    } else if (!bookmarks.contains(widget.moveData['move'])) {
-      bookmarks.add('${widget.moveData['move']}');
-      await prefs.setStringList('move_bookmarks', bookmarks);
-      showMessage('${widget.moveData['move']} was added to your bookmarks.');
-    } else {
-      showMessage('${widget.moveData['move']} is already bookmarked.');
-    }
-  }
-
-  void navigateToPokemonViaID(BuildContext context, int pokemonId) async {
-    String data = await DefaultAssetBundle.of(context)
-        .loadString('assets/pokemon/data/kanto_expanded.json');
-
-    List<dynamic> pokemonList = jsonDecode(data);
-
-    Map<String, dynamic>? specificPokemon = pokemonList.firstWhere(
-      (pokemon) => pokemon['id'] == pokemonId,
-      orElse: () => null,
-    );
-
-    if (specificPokemon != null) {
-      // ignore: use_build_context_synchronously
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) =>
-              PokemonDetailScreen(pokemonData: specificPokemon),
-        ),
-      );
-    }
-  }
-
-  void showMessage(String message) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text(
-            message,
-            textAlign: TextAlign.center,
-          ),
-          actions: <Widget>[
-            Center(
-              child: TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                child: const Text(
-                  'Close',
-                  style: TextStyle(fontSize: 20),
-                ),
-              ),
-            )
-          ],
-        );
-      },
-    );
   }
 
   @override
@@ -156,7 +49,7 @@ class MovePageState extends State<MovePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          widget.moveData['move'],
+          widget.moveData['name'],
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         iconTheme: const IconThemeData(color: BaseThemeColors.detailAppBarText),
@@ -164,12 +57,23 @@ class MovePageState extends State<MovePage> {
         foregroundColor: BaseThemeColors.detailAppBarText,
         backgroundColor: BaseThemeColors.detailAppBarBG,
         actions: [
-          IconButton(onPressed: saveBookmark, icon: const Icon(Icons.bookmark)),
+          IconButton(
+              onPressed: () => bookmarkServices.saveBookmark(
+                  'move', widget.moveData['name'], context),
+              icon: const Icon(Icons.bookmark)),
         ],
       ),
       backgroundColor: Colors.transparent,
       body: Container(
         decoration: const BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Color.fromARGB(125, 0, 0, 0),
+              spreadRadius: 0,
+              blurRadius: 5,
+              offset: Offset(0, 3), // changes position of shadow
+            ),
+          ],
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -180,500 +84,249 @@ class MovePageState extends State<MovePage> {
           ),
         ),
         padding: EdgeInsets.zero,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 30),
-            Padding(
-              padding: const EdgeInsets.all(15),
-              child: Container(
-                width: double.infinity,
-                height: 710,
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(50)),
-                  gradient: LinearGradient(
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                    colors: [
-                      BaseThemeColors.detailContainerGradientTop,
-                      BaseThemeColors.detailContainerGradientBottom,
-                    ],
-                  ),
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(25),
+            child: Container(
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    BaseThemeColors.detailContainerGradientTop,
+                    BaseThemeColors.detailContainerGradientBottom,
+                  ],
                 ),
-                child: SingleChildScrollView(
-                  child: Padding(
-                    padding: const EdgeInsets.all(15),
-                    child: Column(
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(15),
+                child: Column(
+                  children: [
+                    Text(
+                      widget.moveData['description'],
+                      style: const TextStyle(
+                          fontSize: 20,
+                          color: BaseThemeColors.detailContainerText),
+                      textAlign: TextAlign.center,
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            widget.moveData['description'],
-                            style: const TextStyle(
-                                fontSize: 24,
-                                color: BaseThemeColors.detailContainerText),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                        Column(
                           children: [
-                            Column(
-                              children: [
-                                const Text(
-                                  'Type',
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      color:
-                                          BaseThemeColors.detailContainerText),
-                                  textAlign: TextAlign.center,
-                                ),
-                                Image.asset(
-                                    'assets/images/icons/types/${widget.moveData['type']}.png')
-                              ],
+                            const Text(
+                              'Type',
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: BaseThemeColors.detailContainerText),
+                              textAlign: TextAlign.center,
                             ),
-                            const SizedBox(
-                              width: 50,
-                            ),
-                            Column(
-                              children: [
-                                const Text(
-                                  'Category',
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      color:
-                                          BaseThemeColors.detailContainerText),
-                                  textAlign: TextAlign.center,
-                                ),
-                                if (widget.moveData['category'].toString() !=
-                                    '--') ...[
-                                  Image.asset(
-                                      'assets/images/icons/moves/${widget.moveData['category'].toString().toLowerCase()}_color.png')
-                                ] else ...[
-                                  const Text(
-                                    'Varies',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        color: BaseThemeColors
-                                            .detailContainerText),
-                                    textAlign: TextAlign.center,
-                                  ),
-                                ],
-                              ],
-                            ),
+                            Image.asset(
+                                'assets/images/icons/types/${widget.moveData['type']}.png',
+                                width: 50,
+                                height: 50)
                           ],
                         ),
                         const SizedBox(
-                          height: 20,
+                          width: 50,
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                        Column(
                           children: [
-                            Column(
-                              children: [
-                                const Text(
-                                  'Power',
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      color:
-                                          BaseThemeColors.detailContainerText),
-                                  textAlign: TextAlign.center,
-                                ),
-                                Text(
-                                  widget.moveData['power'],
-                                  style: const TextStyle(
-                                      fontSize: 20,
-                                      color:
-                                          BaseThemeColors.detailContainerText),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ],
+                            const Text(
+                              'Category',
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: BaseThemeColors.detailContainerText),
+                              textAlign: TextAlign.center,
                             ),
-                            const SizedBox(
-                              width: 50,
-                            ),
-                            Column(
-                              children: [
-                                const Text(
-                                  'Accuracy',
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      color:
-                                          BaseThemeColors.detailContainerText),
-                                  textAlign: TextAlign.center,
-                                ),
-                                Text(
-                                  widget.moveData['accuracy'],
-                                  style: const TextStyle(
-                                      fontSize: 20,
-                                      color:
-                                          BaseThemeColors.detailContainerText),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ],
-                            ),
-                            const SizedBox(
-                              width: 50,
-                            ),
-                            Column(
-                              children: [
-                                const Text(
-                                  'PP',
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      color:
-                                          BaseThemeColors.detailContainerText),
-                                  textAlign: TextAlign.center,
-                                ),
-                                Text(
-                                  widget.moveData['pp'].toString(),
-                                  style: const TextStyle(
-                                      fontSize: 20,
-                                      color:
-                                          BaseThemeColors.detailContainerText),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ],
-                            )
-                          ],
-                        ),
-                        SizedBox(
-                          height: 350,
-                          child: DefaultTabController(
-                            length: 3,
-                            child: Padding(
-                              padding: const EdgeInsets.all(15),
-                              child: Scaffold(
-                                backgroundColor: Colors.transparent,
-                                appBar: AppBar(
-                                  automaticallyImplyLeading: false,
-                                  centerTitle: true,
-                                  title: const Text(
-                                    'Pokémon that can learn this move:',
-                                    style: TextStyle(
-                                        fontSize: 20,
-                                        color: BaseThemeColors
-                                            .detailContainerText),
-                                  ),
-                                  backgroundColor: Colors.transparent,
-                                  bottom: const TabBar(
-                                      labelColor:
-                                          BaseThemeColors.detailContainerText,
-                                      indicatorColor: Color(0xffEF866B),
-                                      dividerColor: Color(0xffEF866B),
-                                      tabs: [
-                                        Tab(text: 'Level Up'),
-                                        Tab(text: 'TM Moves'),
-                                        Tab(text: 'Egg Moves'),
-                                      ]),
-                                ),
-                                body: TabBarView(children: [
-                                  Padding(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(0, 10, 0, 0),
-                                    child: GridView.builder(
-                                      shrinkWrap: true,
-                                      itemCount: levelUpPokemon.length,
-                                      gridDelegate:
-                                          const SliverGridDelegateWithFixedCrossAxisCount(
-                                        crossAxisCount: 3,
-                                        crossAxisSpacing: 12,
-                                        mainAxisSpacing: 20,
-                                      ),
-                                      itemBuilder: (context, index) {
-                                        final item = levelUpPokemon[index];
-                                        return GestureDetector(
-                                          onTap: () => navigateToPokemonViaID(
-                                              context, item['id']),
-                                          child: Column(
-                                            children: [
-                                              Expanded(
-                                                child: Align(
-                                                  child: Container(
-                                                    decoration: BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              360),
-                                                      color: Colors.white,
-                                                    ),
-                                                    width: 75,
-                                                    height: 75,
-                                                    child: OverflowBox(
-                                                      maxWidth: 85,
-                                                      maxHeight: 85,
-                                                      child: CachedNetworkImage(
-                                                        imageUrl:
-                                                            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item['id']}.png",
-                                                        placeholder: (context,
-                                                                url) =>
-                                                            const CircularProgressIndicator(),
-                                                        errorWidget: (context,
-                                                                url, error) =>
-                                                            const Icon(
-                                                                Icons.error),
-                                                        fit: BoxFit.cover,
-                                                        fadeInDuration:
-                                                            Durations.short1,
-                                                        cacheKey:
-                                                            "pokemon_${item['id']}",
-                                                        cacheManager:
-                                                            CacheManager(
-                                                          Config(
-                                                            "pokemon_images_cache",
-                                                            maxNrOfCacheObjects:
-                                                                500,
-                                                            stalePeriod:
-                                                                const Duration(
-                                                                    days: 7),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                              Text(
-                                                  '#${item['id']} ${item['name']}',
-                                                  style: const TextStyle(
-                                                      color: BaseThemeColors
-                                                          .detailContainerText,
-                                                      fontWeight:
-                                                          FontWeight.bold)),
-                                              Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Image.asset(
-                                                      'assets/images/icons/types/${item['type1']}.png',
-                                                      width: 25,
-                                                      height: 25),
-                                                  if (item['type2'] != null &&
-                                                      item['type2']
-                                                          .isNotEmpty) ...[
-                                                    const SizedBox(width: 5),
-                                                    Image.asset(
-                                                        'assets/images/icons/types/${item['type2']}.png',
-                                                        width: 25,
-                                                        height: 25),
-                                                  ],
-                                                ],
-                                              ),
-                                            ],
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(0, 10, 0, 0),
-                                    child: GridView.builder(
-                                      shrinkWrap: true,
-                                      itemCount: tmPokemon.length,
-                                      gridDelegate:
-                                          const SliverGridDelegateWithFixedCrossAxisCount(
-                                        crossAxisCount: 3,
-                                        crossAxisSpacing: 12,
-                                        mainAxisSpacing: 20,
-                                      ),
-                                      itemBuilder: (context, index) {
-                                        final item = tmPokemon[index];
-                                        return GestureDetector(
-                                          onTap: () => navigateToPokemonViaID(
-                                              context, item['id']),
-                                          child: Column(
-                                            children: [
-                                              Expanded(
-                                                child: Align(
-                                                  child: Container(
-                                                    decoration: BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              360),
-                                                      color: Colors.white,
-                                                    ),
-                                                    width: 75,
-                                                    height: 75,
-                                                    child: OverflowBox(
-                                                      maxWidth: 85,
-                                                      maxHeight: 85,
-                                                      child: CachedNetworkImage(
-                                                        imageUrl:
-                                                            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item['id']}.png",
-                                                        placeholder: (context,
-                                                                url) =>
-                                                            const CircularProgressIndicator(),
-                                                        errorWidget: (context,
-                                                                url, error) =>
-                                                            const Icon(
-                                                                Icons.error),
-                                                        fit: BoxFit.cover,
-                                                        fadeInDuration:
-                                                            Durations.short1,
-                                                        cacheKey:
-                                                            "pokemon_${item['id']}",
-                                                        cacheManager:
-                                                            CacheManager(
-                                                          Config(
-                                                            "pokemon_images_cache",
-                                                            maxNrOfCacheObjects:
-                                                                500,
-                                                            stalePeriod:
-                                                                const Duration(
-                                                                    days: 7),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                              Text(
-                                                  '#${item['id']} ${item['name']}',
-                                                  style: const TextStyle(
-                                                      color: BaseThemeColors
-                                                          .detailContainerText,
-                                                      fontWeight:
-                                                          FontWeight.bold)),
-                                              Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Image.asset(
-                                                      'assets/images/icons/types/${item['type1']}.png',
-                                                      width: 25,
-                                                      height: 25),
-                                                  if (item['type2'] != null &&
-                                                      item['type2']
-                                                          .isNotEmpty) ...[
-                                                    const SizedBox(width: 5),
-                                                    Image.asset(
-                                                        'assets/images/icons/types/${item['type2']}.png',
-                                                        width: 25,
-                                                        height: 25),
-                                                  ],
-                                                ],
-                                              ),
-                                            ],
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding:
-                                        const EdgeInsets.fromLTRB(0, 10, 0, 0),
-                                    child: GridView.builder(
-                                      shrinkWrap: true,
-                                      itemCount: eggPokemon.length,
-                                      gridDelegate:
-                                          const SliverGridDelegateWithFixedCrossAxisCount(
-                                        crossAxisCount: 3,
-                                        crossAxisSpacing: 12,
-                                        mainAxisSpacing: 20,
-                                      ),
-                                      itemBuilder: (context, index) {
-                                        final item = eggPokemon[index];
-                                        return GestureDetector(
-                                          onTap: () => navigateToPokemonViaID(
-                                              context, item['id']),
-                                          child: Column(
-                                            children: [
-                                              Expanded(
-                                                child: Align(
-                                                  child: Container(
-                                                    decoration: BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              360),
-                                                      color: Colors.white,
-                                                    ),
-                                                    width: 75,
-                                                    height: 75,
-                                                    child: OverflowBox(
-                                                      maxWidth: 85,
-                                                      maxHeight: 85,
-                                                      child: CachedNetworkImage(
-                                                        imageUrl:
-                                                            "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item['id']}.png",
-                                                        placeholder: (context,
-                                                                url) =>
-                                                            const CircularProgressIndicator(),
-                                                        errorWidget: (context,
-                                                                url, error) =>
-                                                            const Icon(
-                                                                Icons.error),
-                                                        fit: BoxFit.cover,
-                                                        fadeInDuration:
-                                                            Durations.short1,
-                                                        cacheKey:
-                                                            "pokemon_${item['id']}",
-                                                        cacheManager:
-                                                            CacheManager(
-                                                          Config(
-                                                            "pokemon_images_cache",
-                                                            maxNrOfCacheObjects:
-                                                                500,
-                                                            stalePeriod:
-                                                                const Duration(
-                                                                    days: 7),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                              Text(
-                                                  '#${item['id']} ${item['name']}',
-                                                  style: const TextStyle(
-                                                      color: BaseThemeColors
-                                                          .detailContainerText,
-                                                      fontWeight:
-                                                          FontWeight.bold)),
-                                              Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment.center,
-                                                children: [
-                                                  Image.asset(
-                                                      'assets/images/icons/types/${item['type1']}.png',
-                                                      width: 25,
-                                                      height: 25),
-                                                  if (item['type2'] != null &&
-                                                      item['type2']
-                                                          .isNotEmpty) ...[
-                                                    const SizedBox(width: 5),
-                                                    Image.asset(
-                                                        'assets/images/icons/types/${item['type2']}.png',
-                                                        width: 25,
-                                                        height: 25),
-                                                  ],
-                                                ],
-                                              ),
-                                            ],
-                                          ),
-                                        );
-                                      },
-                                    ),
-                                  ),
-                                ]),
+                            if (widget.moveData['category'].toString() !=
+                                '--') ...[
+                              Image.asset(
+                                  'assets/images/icons/moves/${widget.moveData['category'].toString().toLowerCase()}_color.png',
+                                  width: 50,
+                                  height: 50)
+                            ] else ...[
+                              const Text(
+                                'Varies',
+                                style: TextStyle(
+                                    fontSize: 20,
+                                    color: BaseThemeColors.detailContainerText),
+                                textAlign: TextAlign.center,
                               ),
-                            ),
-                          ),
+                            ],
+                          ],
                         ),
                       ],
                     ),
-                  ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          children: [
+                            const Text(
+                              'Power',
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: BaseThemeColors.detailContainerText),
+                              textAlign: TextAlign.center,
+                            ),
+                            Text(
+                              widget.moveData['power'],
+                              style: const TextStyle(
+                                  fontSize: 20,
+                                  color: BaseThemeColors.detailContainerText),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          width: 50,
+                        ),
+                        Column(
+                          children: [
+                            const Text(
+                              'Accuracy',
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: BaseThemeColors.detailContainerText),
+                              textAlign: TextAlign.center,
+                            ),
+                            Text(
+                              widget.moveData['accuracy'],
+                              style: const TextStyle(
+                                  fontSize: 20,
+                                  color: BaseThemeColors.detailContainerText),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          width: 50,
+                        ),
+                        Column(
+                          children: [
+                            const Text(
+                              'PP',
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: BaseThemeColors.detailContainerText),
+                              textAlign: TextAlign.center,
+                            ),
+                            Text(
+                              widget.moveData['pp'].toString(),
+                              style: const TextStyle(
+                                  fontSize: 20,
+                                  color: BaseThemeColors.detailContainerText),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
+                    Expanded(
+                      child: DefaultTabController(
+                        length: 3,
+                        child: Scaffold(
+                          backgroundColor: Colors.transparent,
+                          appBar: AppBar(
+                            shadowColor: Colors.transparent,
+                            elevation: 0,
+                            scrolledUnderElevation: 0,
+                            automaticallyImplyLeading: false,
+                            centerTitle: true,
+                            title: const Text(
+                              'Pokémon that can learn this move:',
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: BaseThemeColors.detailContainerText),
+                            ),
+                            backgroundColor: Colors.transparent,
+                            bottom: const TabBar(
+                                labelColor: BaseThemeColors.detailContainerText,
+                                indicatorColor: Color(0xffEF866B),
+                                dividerColor: Color(0xffEF866B),
+                                tabs: [
+                                  Tab(text: 'Level Up'),
+                                  Tab(text: 'TM Moves'),
+                                  Tab(text: 'Egg Moves'),
+                                ]),
+                          ),
+                          body: TabBarView(children: [
+                            GridView.builder(
+                              padding: const EdgeInsets.all(8.0),
+                              shrinkWrap: true,
+                              itemCount: levelUpPokemon.length,
+                              gridDelegate:
+                                  const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 3,
+                                crossAxisSpacing: 0,
+                                mainAxisSpacing: 0,
+                              ),
+                              itemBuilder: (context, index) {
+                                final item = levelUpPokemon[index];
+                                return PokemonListItem(
+                                  item: item,
+                                  text: BaseThemeColors.detailContainerText,
+                                  bg: BaseThemeColors.detailItemBg,
+                                );
+                              },
+                            ),
+                            GridView.builder(
+                              padding: const EdgeInsets.all(8.0),
+                              shrinkWrap: true,
+                              itemCount: tmPokemon.length,
+                              gridDelegate:
+                                  const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 3,
+                                crossAxisSpacing: 0,
+                                mainAxisSpacing: 0,
+                              ),
+                              itemBuilder: (context, index) {
+                                final item = tmPokemon[index];
+                                return PokemonListItem(
+                                  item: item,
+                                  text: BaseThemeColors.detailContainerText,
+                                  bg: BaseThemeColors.detailItemBg,
+                                );
+                              },
+                            ),
+                            GridView.builder(
+                              padding: const EdgeInsets.all(8.0),
+                              shrinkWrap: true,
+                              itemCount: eggPokemon.length,
+                              gridDelegate:
+                                  const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 3,
+                                crossAxisSpacing: 0,
+                                mainAxisSpacing: 0,
+                              ),
+                              itemBuilder: (context, index) {
+                                final item = eggPokemon[index];
+                                return PokemonListItem(
+                                  item: item,
+                                  text: BaseThemeColors.detailContainerText,
+                                  bg: BaseThemeColors.detailItemBg,
+                                );
+                              },
+                            ),
+                          ]),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
-            const SizedBox(height: 30)
-          ],
+          ),
         ),
       ),
     );

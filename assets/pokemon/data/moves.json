@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "move": "Pound",
+        "name": "Pound",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -11,7 +11,7 @@
     },
     {
         "id": 2,
-        "move": "Karate Chop",
+        "name": "Karate Chop",
         "category": "Physical",
         "power": "50",
         "accuracy": "100",
@@ -21,7 +21,7 @@
     },
     {
         "id": 3,
-        "move": "Double Slap",
+        "name": "Double Slap",
         "category": "Physical",
         "power": "15",
         "accuracy": "85",
@@ -31,7 +31,7 @@
     },
     {
         "id": 4,
-        "move": "Comet Punch",
+        "name": "Comet Punch",
         "category": "Physical",
         "power": "18",
         "accuracy": "85",
@@ -41,7 +41,7 @@
     },
     {
         "id": 5,
-        "move": "Mega Punch",
+        "name": "Mega Punch",
         "category": "Physical",
         "power": "80",
         "accuracy": "85",
@@ -51,7 +51,7 @@
     },
     {
         "id": 6,
-        "move": "Pay Day",
+        "name": "Pay Day",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -61,7 +61,7 @@
     },
     {
         "id": 7,
-        "move": "Fire Punch",
+        "name": "Fire Punch",
         "category": "Physical",
         "power": "75",
         "accuracy": "100",
@@ -71,7 +71,7 @@
     },
     {
         "id": 8,
-        "move": "Ice Punch",
+        "name": "Ice Punch",
         "category": "Physical",
         "power": "75",
         "accuracy": "100",
@@ -81,7 +81,7 @@
     },
     {
         "id": 9,
-        "move": "Thunder Punch",
+        "name": "Thunder Punch",
         "category": "Physical",
         "power": "75",
         "accuracy": "100",
@@ -91,7 +91,7 @@
     },
     {
         "id": 10,
-        "move": "Scratch",
+        "name": "Scratch",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -101,7 +101,7 @@
     },
     {
         "id": 11,
-        "move": "Vice Grip",
+        "name": "Vice Grip",
         "category": "Physical",
         "power": "55",
         "accuracy": "100",
@@ -111,7 +111,7 @@
     },
     {
         "id": 12,
-        "move": "Guillotine",
+        "name": "Guillotine",
         "category": "Physical",
         "power": "--",
         "accuracy": "30",
@@ -121,7 +121,7 @@
     },
     {
         "id": 13,
-        "move": "Razor Wind",
+        "name": "Razor Wind",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -131,7 +131,7 @@
     },
     {
         "id": 14,
-        "move": "Swords Dance",
+        "name": "Swords Dance",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -141,7 +141,7 @@
     },
     {
         "id": 15,
-        "move": "Cut",
+        "name": "Cut",
         "category": "Physical",
         "power": "50",
         "accuracy": "95",
@@ -151,7 +151,7 @@
     },
     {
         "id": 16,
-        "move": "Gust",
+        "name": "Gust",
         "category": "Special",
         "power": "40",
         "accuracy": "100",
@@ -161,7 +161,7 @@
     },
     {
         "id": 17,
-        "move": "Wing Attack",
+        "name": "Wing Attack",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -171,7 +171,7 @@
     },
     {
         "id": 18,
-        "move": "Whirlwind",
+        "name": "Whirlwind",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -181,7 +181,7 @@
     },
     {
         "id": 19,
-        "move": "Fly",
+        "name": "Fly",
         "category": "Physical",
         "power": "90",
         "accuracy": "95",
@@ -191,7 +191,7 @@
     },
     {
         "id": 20,
-        "move": "Bind",
+        "name": "Bind",
         "category": "Physical",
         "power": "15",
         "accuracy": "85",
@@ -201,7 +201,7 @@
     },
     {
         "id": 21,
-        "move": "Slam",
+        "name": "Slam",
         "category": "Physical",
         "power": "80",
         "accuracy": "75",
@@ -211,7 +211,7 @@
     },
     {
         "id": 22,
-        "move": "Vine Whip",
+        "name": "Vine Whip",
         "category": "Physical",
         "power": "45",
         "accuracy": "100",
@@ -221,7 +221,7 @@
     },
     {
         "id": 23,
-        "move": "Stomp",
+        "name": "Stomp",
         "category": "Physical",
         "power": "65",
         "accuracy": "100",
@@ -231,7 +231,7 @@
     },
     {
         "id": 24,
-        "move": "Double Kick",
+        "name": "Double Kick",
         "category": "Physical",
         "power": "30",
         "accuracy": "100",
@@ -241,7 +241,7 @@
     },
     {
         "id": 25,
-        "move": "Mega Kick",
+        "name": "Mega Kick",
         "category": "Physical",
         "power": "120",
         "accuracy": "75",
@@ -251,7 +251,7 @@
     },
     {
         "id": 26,
-        "move": "Jump Kick",
+        "name": "Jump Kick",
         "category": "Physical",
         "power": "100",
         "accuracy": "95",
@@ -261,7 +261,7 @@
     },
     {
         "id": 27,
-        "move": "Rolling Kick",
+        "name": "Rolling Kick",
         "category": "Physical",
         "power": "60",
         "accuracy": "85",
@@ -271,7 +271,7 @@
     },
     {
         "id": 28,
-        "move": "Sand Attack",
+        "name": "Sand Attack",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -281,7 +281,7 @@
     },
     {
         "id": 29,
-        "move": "Headbutt",
+        "name": "Headbutt",
         "category": "Physical",
         "power": "70",
         "accuracy": "100",
@@ -291,7 +291,7 @@
     },
     {
         "id": 30,
-        "move": "Horn Attack",
+        "name": "Horn Attack",
         "category": "Physical",
         "power": "65",
         "accuracy": "100",
@@ -301,7 +301,7 @@
     },
     {
         "id": 31,
-        "move": "Fury Attack",
+        "name": "Fury Attack",
         "category": "Physical",
         "power": "15",
         "accuracy": "85",
@@ -311,7 +311,7 @@
     },
     {
         "id": 32,
-        "move": "Horn Drill",
+        "name": "Horn Drill",
         "category": "Physical",
         "power": "--",
         "accuracy": "30",
@@ -321,7 +321,7 @@
     },
     {
         "id": 33,
-        "move": "Tackle",
+        "name": "Tackle",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -331,7 +331,7 @@
     },
     {
         "id": 34,
-        "move": "Body Slam",
+        "name": "Body Slam",
         "category": "Physical",
         "power": "85",
         "accuracy": "100",
@@ -341,7 +341,7 @@
     },
     {
         "id": 35,
-        "move": "Wrap",
+        "name": "Wrap",
         "category": "Physical",
         "power": "15",
         "accuracy": "90",
@@ -351,7 +351,7 @@
     },
     {
         "id": 36,
-        "move": "Take Down",
+        "name": "Take Down",
         "category": "Physical",
         "power": "90",
         "accuracy": "85",
@@ -361,7 +361,7 @@
     },
     {
         "id": 37,
-        "move": "Thrash",
+        "name": "Thrash",
         "category": "Physical",
         "power": "120",
         "accuracy": "100",
@@ -371,7 +371,7 @@
     },
     {
         "id": 38,
-        "move": "Double-Edge",
+        "name": "Double-Edge",
         "category": "Physical",
         "power": "120",
         "accuracy": "100",
@@ -381,7 +381,7 @@
     },
     {
         "id": 39,
-        "move": "Tail Whip",
+        "name": "Tail Whip",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -391,7 +391,7 @@
     },
     {
         "id": 40,
-        "move": "Poison Sting",
+        "name": "Poison Sting",
         "category": "Physical",
         "power": "15",
         "accuracy": "100",
@@ -401,7 +401,7 @@
     },
     {
         "id": 41,
-        "move": "Twineedle",
+        "name": "Twineedle",
         "category": "Physical",
         "power": "25",
         "accuracy": "100",
@@ -411,7 +411,7 @@
     },
     {
         "id": 42,
-        "move": "Pin Missile",
+        "name": "Pin Missile",
         "category": "Physical",
         "power": "25",
         "accuracy": "95",
@@ -421,7 +421,7 @@
     },
     {
         "id": 43,
-        "move": "Leer",
+        "name": "Leer",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -431,7 +431,7 @@
     },
     {
         "id": 44,
-        "move": "Bite",
+        "name": "Bite",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -441,7 +441,7 @@
     },
     {
         "id": 45,
-        "move": "Growl",
+        "name": "Growl",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -451,7 +451,7 @@
     },
     {
         "id": 46,
-        "move": "Roar",
+        "name": "Roar",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -461,7 +461,7 @@
     },
     {
         "id": 47,
-        "move": "Sing",
+        "name": "Sing",
         "category": "Status",
         "power": "--",
         "accuracy": "55",
@@ -471,7 +471,7 @@
     },
     {
         "id": 48,
-        "move": "Supersonic",
+        "name": "Supersonic",
         "category": "Status",
         "power": "--",
         "accuracy": "55",
@@ -481,7 +481,7 @@
     },
     {
         "id": 49,
-        "move": "Sonic Boom",
+        "name": "Sonic Boom",
         "category": "Special",
         "power": "--",
         "accuracy": "90",
@@ -491,7 +491,7 @@
     },
     {
         "id": 50,
-        "move": "Disable",
+        "name": "Disable",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -501,7 +501,7 @@
     },
     {
         "id": 51,
-        "move": "Acid",
+        "name": "Acid",
         "category": "Special",
         "power": "40",
         "accuracy": "100",
@@ -511,7 +511,7 @@
     },
     {
         "id": 52,
-        "move": "Ember",
+        "name": "Ember",
         "category": "Special",
         "power": "40",
         "accuracy": "100",
@@ -521,7 +521,7 @@
     },
     {
         "id": 53,
-        "move": "Flamethrower",
+        "name": "Flamethrower",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -531,7 +531,7 @@
     },
     {
         "id": 54,
-        "move": "Mist",
+        "name": "Mist",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -541,7 +541,7 @@
     },
     {
         "id": 55,
-        "move": "Water Gun",
+        "name": "Water Gun",
         "category": "Special",
         "power": "40",
         "accuracy": "100",
@@ -551,7 +551,7 @@
     },
     {
         "id": 56,
-        "move": "Hydro Pump",
+        "name": "Hydro Pump",
         "category": "Special",
         "power": "110",
         "accuracy": "80",
@@ -561,7 +561,7 @@
     },
     {
         "id": 57,
-        "move": "Surf",
+        "name": "Surf",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -571,7 +571,7 @@
     },
     {
         "id": 58,
-        "move": "Ice Beam",
+        "name": "Ice Beam",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -581,7 +581,7 @@
     },
     {
         "id": 59,
-        "move": "Blizzard",
+        "name": "Blizzard",
         "category": "Special",
         "power": "110",
         "accuracy": "70",
@@ -591,7 +591,7 @@
     },
     {
         "id": 60,
-        "move": "Psybeam",
+        "name": "Psybeam",
         "category": "Special",
         "power": "65",
         "accuracy": "100",
@@ -601,7 +601,7 @@
     },
     {
         "id": 61,
-        "move": "Bubble Beam",
+        "name": "Bubble Beam",
         "category": "Special",
         "power": "65",
         "accuracy": "100",
@@ -611,7 +611,7 @@
     },
     {
         "id": 62,
-        "move": "Aurora Beam",
+        "name": "Aurora Beam",
         "category": "Special",
         "power": "65",
         "accuracy": "100",
@@ -621,7 +621,7 @@
     },
     {
         "id": 63,
-        "move": "Hyper Beam",
+        "name": "Hyper Beam",
         "category": "Special",
         "power": "150",
         "accuracy": "90",
@@ -631,7 +631,7 @@
     },
     {
         "id": 64,
-        "move": "Peck",
+        "name": "Peck",
         "category": "Physical",
         "power": "35",
         "accuracy": "100",
@@ -641,7 +641,7 @@
     },
     {
         "id": 65,
-        "move": "Drill Peck",
+        "name": "Drill Peck",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -651,7 +651,7 @@
     },
     {
         "id": 66,
-        "move": "Submission",
+        "name": "Submission",
         "category": "Physical",
         "power": "80",
         "accuracy": "80",
@@ -661,7 +661,7 @@
     },
     {
         "id": 67,
-        "move": "Low Kick",
+        "name": "Low Kick",
         "category": "Physical",
         "power": "--",
         "accuracy": "100",
@@ -671,7 +671,7 @@
     },
     {
         "id": 68,
-        "move": "Counter",
+        "name": "Counter",
         "category": "Physical",
         "power": "--",
         "accuracy": "100",
@@ -681,7 +681,7 @@
     },
     {
         "id": 69,
-        "move": "Seismic Toss",
+        "name": "Seismic Toss",
         "category": "Physical",
         "power": "--",
         "accuracy": "100",
@@ -691,7 +691,7 @@
     },
     {
         "id": 70,
-        "move": "Strength",
+        "name": "Strength",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -701,7 +701,7 @@
     },
     {
         "id": 71,
-        "move": "Absorb",
+        "name": "Absorb",
         "category": "Special",
         "power": "20",
         "accuracy": "100",
@@ -711,7 +711,7 @@
     },
     {
         "id": 72,
-        "move": "Mega Drain",
+        "name": "Mega Drain",
         "category": "Special",
         "power": "40",
         "accuracy": "100",
@@ -721,7 +721,7 @@
     },
     {
         "id": 73,
-        "move": "Leech Seed",
+        "name": "Leech Seed",
         "category": "Status",
         "power": "--",
         "accuracy": "90",
@@ -731,7 +731,7 @@
     },
     {
         "id": 74,
-        "move": "Growth",
+        "name": "Growth",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -741,7 +741,7 @@
     },
     {
         "id": 75,
-        "move": "Razor Leaf",
+        "name": "Razor Leaf",
         "category": "Physical",
         "power": "55",
         "accuracy": "95",
@@ -751,7 +751,7 @@
     },
     {
         "id": 76,
-        "move": "Solar Beam",
+        "name": "Solar Beam",
         "category": "Special",
         "power": "120",
         "accuracy": "100",
@@ -761,7 +761,7 @@
     },
     {
         "id": 77,
-        "move": "Poison Powder",
+        "name": "Poison Powder",
         "category": "Status",
         "power": "--",
         "accuracy": "75",
@@ -771,7 +771,7 @@
     },
     {
         "id": 78,
-        "move": "Stun Spore",
+        "name": "Stun Spore",
         "category": "Status",
         "power": "--",
         "accuracy": "75",
@@ -781,7 +781,7 @@
     },
     {
         "id": 79,
-        "move": "Sleep Powder",
+        "name": "Sleep Powder",
         "category": "Status",
         "power": "--",
         "accuracy": "75",
@@ -791,7 +791,7 @@
     },
     {
         "id": 80,
-        "move": "Petal Dance",
+        "name": "Petal Dance",
         "category": "Special",
         "power": "120",
         "accuracy": "100",
@@ -801,7 +801,7 @@
     },
     {
         "id": 81,
-        "move": "String Shot",
+        "name": "String Shot",
         "category": "Status",
         "power": "--",
         "accuracy": "95",
@@ -811,7 +811,7 @@
     },
     {
         "id": 82,
-        "move": "Dragon Rage",
+        "name": "Dragon Rage",
         "category": "Special",
         "power": "--",
         "accuracy": "100",
@@ -821,7 +821,7 @@
     },
     {
         "id": 83,
-        "move": "Fire Spin",
+        "name": "Fire Spin",
         "category": "Special",
         "power": "35",
         "accuracy": "85",
@@ -831,7 +831,7 @@
     },
     {
         "id": 84,
-        "move": "Thunder Shock",
+        "name": "Thunder Shock",
         "category": "Special",
         "power": "40",
         "accuracy": "100",
@@ -841,7 +841,7 @@
     },
     {
         "id": 85,
-        "move": "Thunderbolt",
+        "name": "Thunderbolt",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -851,7 +851,7 @@
     },
     {
         "id": 86,
-        "move": "Thunder Wave",
+        "name": "Thunder Wave",
         "category": "Status",
         "power": "--",
         "accuracy": "90",
@@ -861,7 +861,7 @@
     },
     {
         "id": 87,
-        "move": "Thunder",
+        "name": "Thunder",
         "category": "Special",
         "power": "110",
         "accuracy": "70",
@@ -871,7 +871,7 @@
     },
     {
         "id": 88,
-        "move": "Rock Throw",
+        "name": "Rock Throw",
         "category": "Physical",
         "power": "50",
         "accuracy": "90",
@@ -881,7 +881,7 @@
     },
     {
         "id": 89,
-        "move": "Earthquake",
+        "name": "Earthquake",
         "category": "Physical",
         "power": "100",
         "accuracy": "100",
@@ -891,7 +891,7 @@
     },
     {
         "id": 90,
-        "move": "Fissure",
+        "name": "Fissure",
         "category": "Physical",
         "power": "--",
         "accuracy": "30",
@@ -901,7 +901,7 @@
     },
     {
         "id": 91,
-        "move": "Dig",
+        "name": "Dig",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -911,7 +911,7 @@
     },
     {
         "id": 92,
-        "move": "Toxic",
+        "name": "Toxic",
         "category": "Status",
         "power": "--",
         "accuracy": "90",
@@ -921,7 +921,7 @@
     },
     {
         "id": 93,
-        "move": "Confusion",
+        "name": "Confusion",
         "category": "Special",
         "power": "50",
         "accuracy": "100",
@@ -931,7 +931,7 @@
     },
     {
         "id": 94,
-        "move": "Psychic",
+        "name": "Psychic",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -941,7 +941,7 @@
     },
     {
         "id": 95,
-        "move": "Hypnosis",
+        "name": "Hypnosis",
         "category": "Status",
         "power": "--",
         "accuracy": "60",
@@ -951,7 +951,7 @@
     },
     {
         "id": 96,
-        "move": "Meditate",
+        "name": "Meditate",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -961,7 +961,7 @@
     },
     {
         "id": 97,
-        "move": "Agility",
+        "name": "Agility",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -971,7 +971,7 @@
     },
     {
         "id": 98,
-        "move": "Quick Attack",
+        "name": "Quick Attack",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -981,7 +981,7 @@
     },
     {
         "id": 99,
-        "move": "Rage",
+        "name": "Rage",
         "category": "Physical",
         "power": "20",
         "accuracy": "100",
@@ -991,7 +991,7 @@
     },
     {
         "id": 100,
-        "move": "Teleport",
+        "name": "Teleport",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1001,7 +1001,7 @@
     },
     {
         "id": 101,
-        "move": "Night Shade",
+        "name": "Night Shade",
         "category": "Special",
         "power": "--",
         "accuracy": "100",
@@ -1011,7 +1011,7 @@
     },
     {
         "id": 102,
-        "move": "Mimic",
+        "name": "Mimic",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1021,7 +1021,7 @@
     },
     {
         "id": 103,
-        "move": "Screech",
+        "name": "Screech",
         "category": "Status",
         "power": "--",
         "accuracy": "85",
@@ -1031,7 +1031,7 @@
     },
     {
         "id": 104,
-        "move": "Double Team",
+        "name": "Double Team",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1041,7 +1041,7 @@
     },
     {
         "id": 105,
-        "move": "Recover",
+        "name": "Recover",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1051,7 +1051,7 @@
     },
     {
         "id": 106,
-        "move": "Harden",
+        "name": "Harden",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1061,7 +1061,7 @@
     },
     {
         "id": 107,
-        "move": "Minimize",
+        "name": "Minimize",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1071,7 +1071,7 @@
     },
     {
         "id": 108,
-        "move": "Smokescreen",
+        "name": "Smokescreen",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -1081,7 +1081,7 @@
     },
     {
         "id": 109,
-        "move": "Confuse Ray",
+        "name": "Confuse Ray",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -1091,7 +1091,7 @@
     },
     {
         "id": 110,
-        "move": "Withdraw",
+        "name": "Withdraw",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1101,7 +1101,7 @@
     },
     {
         "id": 111,
-        "move": "Defense Curl",
+        "name": "Defense Curl",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1111,7 +1111,7 @@
     },
     {
         "id": 112,
-        "move": "Barrier",
+        "name": "Barrier",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1121,7 +1121,7 @@
     },
     {
         "id": 113,
-        "move": "Light Screen",
+        "name": "Light Screen",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1131,7 +1131,7 @@
     },
     {
         "id": 114,
-        "move": "Haze",
+        "name": "Haze",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1141,7 +1141,7 @@
     },
     {
         "id": 115,
-        "move": "Reflect",
+        "name": "Reflect",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1151,7 +1151,7 @@
     },
     {
         "id": 116,
-        "move": "Focus Energy",
+        "name": "Focus Energy",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1161,7 +1161,7 @@
     },
     {
         "id": 117,
-        "move": "Bide",
+        "name": "Bide",
         "category": "Physical",
         "power": "--",
         "accuracy": "--",
@@ -1171,7 +1171,7 @@
     },
     {
         "id": 118,
-        "move": "Metronome",
+        "name": "Metronome",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1181,7 +1181,7 @@
     },
     {
         "id": 119,
-        "move": "Mirror Move",
+        "name": "Mirror Move",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1191,7 +1191,7 @@
     },
     {
         "id": 120,
-        "move": "Self-Destruct",
+        "name": "Self-Destruct",
         "category": "Physical",
         "power": "200",
         "accuracy": "100",
@@ -1201,7 +1201,7 @@
     },
     {
         "id": 121,
-        "move": "Egg Bomb",
+        "name": "Egg Bomb",
         "category": "Physical",
         "power": "100",
         "accuracy": "75",
@@ -1211,7 +1211,7 @@
     },
     {
         "id": 122,
-        "move": "Lick",
+        "name": "Lick",
         "category": "Physical",
         "power": "30",
         "accuracy": "100",
@@ -1221,7 +1221,7 @@
     },
     {
         "id": 123,
-        "move": "Smog",
+        "name": "Smog",
         "category": "Special",
         "power": "30",
         "accuracy": "70",
@@ -1231,7 +1231,7 @@
     },
     {
         "id": 124,
-        "move": "Sludge",
+        "name": "Sludge",
         "category": "Special",
         "power": "65",
         "accuracy": "100",
@@ -1241,7 +1241,7 @@
     },
     {
         "id": 125,
-        "move": "Bone Club",
+        "name": "Bone Club",
         "category": "Physical",
         "power": "65",
         "accuracy": "85",
@@ -1251,7 +1251,7 @@
     },
     {
         "id": 126,
-        "move": "Fire Blast",
+        "name": "Fire Blast",
         "category": "Special",
         "power": "110",
         "accuracy": "85",
@@ -1261,7 +1261,7 @@
     },
     {
         "id": 127,
-        "move": "Waterfall",
+        "name": "Waterfall",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -1271,7 +1271,7 @@
     },
     {
         "id": 128,
-        "move": "Clamp",
+        "name": "Clamp",
         "category": "Physical",
         "power": "35",
         "accuracy": "85",
@@ -1281,7 +1281,7 @@
     },
     {
         "id": 129,
-        "move": "Swift",
+        "name": "Swift",
         "category": "Special",
         "power": "60",
         "accuracy": "--",
@@ -1291,7 +1291,7 @@
     },
     {
         "id": 130,
-        "move": "Skull Bash",
+        "name": "Skull Bash",
         "category": "Physical",
         "power": "130",
         "accuracy": "100",
@@ -1301,7 +1301,7 @@
     },
     {
         "id": 131,
-        "move": "Spike Cannon",
+        "name": "Spike Cannon",
         "category": "Physical",
         "power": "20",
         "accuracy": "100",
@@ -1311,7 +1311,7 @@
     },
     {
         "id": 132,
-        "move": "Constrict",
+        "name": "Constrict",
         "category": "Physical",
         "power": "10",
         "accuracy": "100",
@@ -1321,7 +1321,7 @@
     },
     {
         "id": 133,
-        "move": "Amnesia",
+        "name": "Amnesia",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1331,7 +1331,7 @@
     },
     {
         "id": 134,
-        "move": "Kinesis",
+        "name": "Kinesis",
         "category": "Status",
         "power": "--",
         "accuracy": "80",
@@ -1341,7 +1341,7 @@
     },
     {
         "id": 135,
-        "move": "Soft-Boiled",
+        "name": "Soft-Boiled",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1351,7 +1351,7 @@
     },
     {
         "id": 136,
-        "move": "High Jump Kick",
+        "name": "High Jump Kick",
         "category": "Physical",
         "power": "130",
         "accuracy": "90",
@@ -1361,7 +1361,7 @@
     },
     {
         "id": 137,
-        "move": "Glare",
+        "name": "Glare",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -1371,7 +1371,7 @@
     },
     {
         "id": 138,
-        "move": "Dream Eater",
+        "name": "Dream Eater",
         "category": "Special",
         "power": "100",
         "accuracy": "100",
@@ -1381,7 +1381,7 @@
     },
     {
         "id": 139,
-        "move": "Poison Gas",
+        "name": "Poison Gas",
         "category": "Status",
         "power": "--",
         "accuracy": "90",
@@ -1391,7 +1391,7 @@
     },
     {
         "id": 140,
-        "move": "Barrage",
+        "name": "Barrage",
         "category": "Physical",
         "power": "15",
         "accuracy": "85",
@@ -1401,7 +1401,7 @@
     },
     {
         "id": 141,
-        "move": "Leech Life",
+        "name": "Leech Life",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -1411,7 +1411,7 @@
     },
     {
         "id": 142,
-        "move": "Lovely Kiss",
+        "name": "Lovely Kiss",
         "category": "Status",
         "power": "--",
         "accuracy": "75",
@@ -1421,7 +1421,7 @@
     },
     {
         "id": 143,
-        "move": "Sky Attack",
+        "name": "Sky Attack",
         "category": "Physical",
         "power": "140",
         "accuracy": "90",
@@ -1431,7 +1431,7 @@
     },
     {
         "id": 144,
-        "move": "Transform",
+        "name": "Transform",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1441,7 +1441,7 @@
     },
     {
         "id": 145,
-        "move": "Bubble",
+        "name": "Bubble",
         "category": "Special",
         "power": "40",
         "accuracy": "100",
@@ -1451,7 +1451,7 @@
     },
     {
         "id": 146,
-        "move": "Dizzy Punch",
+        "name": "Dizzy Punch",
         "category": "Physical",
         "power": "70",
         "accuracy": "100",
@@ -1461,7 +1461,7 @@
     },
     {
         "id": 147,
-        "move": "Spore",
+        "name": "Spore",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -1471,7 +1471,7 @@
     },
     {
         "id": 148,
-        "move": "Flash",
+        "name": "Flash",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -1481,7 +1481,7 @@
     },
     {
         "id": 149,
-        "move": "Psywave",
+        "name": "Psywave",
         "category": "Special",
         "power": "--",
         "accuracy": "100",
@@ -1491,7 +1491,7 @@
     },
     {
         "id": 150,
-        "move": "Splash",
+        "name": "Splash",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1501,7 +1501,7 @@
     },
     {
         "id": 151,
-        "move": "Acid Armor",
+        "name": "Acid Armor",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1511,7 +1511,7 @@
     },
     {
         "id": 152,
-        "move": "Crabhammer",
+        "name": "Crabhammer",
         "category": "Physical",
         "power": "100",
         "accuracy": "90",
@@ -1521,7 +1521,7 @@
     },
     {
         "id": 153,
-        "move": "Explosion",
+        "name": "Explosion",
         "category": "Physical",
         "power": "250",
         "accuracy": "100",
@@ -1531,7 +1531,7 @@
     },
     {
         "id": 154,
-        "move": "Fury Swipes",
+        "name": "Fury Swipes",
         "category": "Physical",
         "power": "18",
         "accuracy": "80",
@@ -1541,7 +1541,7 @@
     },
     {
         "id": 155,
-        "move": "Bonemerang",
+        "name": "Bonemerang",
         "category": "Physical",
         "power": "50",
         "accuracy": "90",
@@ -1551,7 +1551,7 @@
     },
     {
         "id": 156,
-        "move": "Rest",
+        "name": "Rest",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1561,7 +1561,7 @@
     },
     {
         "id": 157,
-        "move": "Rock Slide",
+        "name": "Rock Slide",
         "category": "Physical",
         "power": "75",
         "accuracy": "90",
@@ -1571,7 +1571,7 @@
     },
     {
         "id": 158,
-        "move": "Hyper Fang",
+        "name": "Hyper Fang",
         "category": "Physical",
         "power": "80",
         "accuracy": "90",
@@ -1581,7 +1581,7 @@
     },
     {
         "id": 159,
-        "move": "Sharpen",
+        "name": "Sharpen",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1591,7 +1591,7 @@
     },
     {
         "id": 160,
-        "move": "Conversion",
+        "name": "Conversion",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1601,7 +1601,7 @@
     },
     {
         "id": 161,
-        "move": "Tri Attack",
+        "name": "Tri Attack",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -1611,7 +1611,7 @@
     },
     {
         "id": 162,
-        "move": "Super Fang",
+        "name": "Super Fang",
         "category": "Physical",
         "power": "--",
         "accuracy": "90",
@@ -1621,7 +1621,7 @@
     },
     {
         "id": 163,
-        "move": "Slash",
+        "name": "Slash",
         "category": "Physical",
         "power": "70",
         "accuracy": "100",
@@ -1631,7 +1631,7 @@
     },
     {
         "id": 164,
-        "move": "Substitute",
+        "name": "Substitute",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1641,7 +1641,7 @@
     },
     {
         "id": 165,
-        "move": "Struggle",
+        "name": "Struggle",
         "category": "Physical",
         "power": "50",
         "accuracy": "--",
@@ -1651,7 +1651,7 @@
     },
     {
         "id": 166,
-        "move": "Sketch",
+        "name": "Sketch",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1661,7 +1661,7 @@
     },
     {
         "id": 167,
-        "move": "Triple Kick",
+        "name": "Triple Kick",
         "category": "Physical",
         "power": "10",
         "accuracy": "90",
@@ -1671,7 +1671,7 @@
     },
     {
         "id": 168,
-        "move": "Thief",
+        "name": "Thief",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -1681,7 +1681,7 @@
     },
     {
         "id": 169,
-        "move": "Spider Web",
+        "name": "Spider Web",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1691,7 +1691,7 @@
     },
     {
         "id": 170,
-        "move": "Mind Reader",
+        "name": "Mind Reader",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1701,7 +1701,7 @@
     },
     {
         "id": 171,
-        "move": "Nightmare",
+        "name": "Nightmare",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -1711,7 +1711,7 @@
     },
     {
         "id": 172,
-        "move": "Flame Wheel",
+        "name": "Flame Wheel",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -1721,7 +1721,7 @@
     },
     {
         "id": 173,
-        "move": "Snore",
+        "name": "Snore",
         "category": "Special",
         "power": "50",
         "accuracy": "100",
@@ -1731,7 +1731,7 @@
     },
     {
         "id": 174,
-        "move": "Curse",
+        "name": "Curse",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1741,7 +1741,7 @@
     },
     {
         "id": 175,
-        "move": "Flail",
+        "name": "Flail",
         "category": "Physical",
         "power": "--",
         "accuracy": "100",
@@ -1751,7 +1751,7 @@
     },
     {
         "id": 176,
-        "move": "Conversion 2",
+        "name": "Conversion 2",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1761,7 +1761,7 @@
     },
     {
         "id": 177,
-        "move": "Aeroblast",
+        "name": "Aeroblast",
         "category": "Special",
         "power": "100",
         "accuracy": "95",
@@ -1771,7 +1771,7 @@
     },
     {
         "id": 178,
-        "move": "Cotton Spore",
+        "name": "Cotton Spore",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -1781,7 +1781,7 @@
     },
     {
         "id": 179,
-        "move": "Reversal",
+        "name": "Reversal",
         "category": "Physical",
         "power": "--",
         "accuracy": "100",
@@ -1791,7 +1791,7 @@
     },
     {
         "id": 180,
-        "move": "Spite",
+        "name": "Spite",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -1801,7 +1801,7 @@
     },
     {
         "id": 181,
-        "move": "Powder Snow",
+        "name": "Powder Snow",
         "category": "Special",
         "power": "40",
         "accuracy": "100",
@@ -1811,7 +1811,7 @@
     },
     {
         "id": 182,
-        "move": "Protect",
+        "name": "Protect",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1821,7 +1821,7 @@
     },
     {
         "id": 183,
-        "move": "Mach Punch",
+        "name": "Mach Punch",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -1831,7 +1831,7 @@
     },
     {
         "id": 184,
-        "move": "Scary Face",
+        "name": "Scary Face",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -1841,7 +1841,7 @@
     },
     {
         "id": 185,
-        "move": "Feint Attack",
+        "name": "Feint Attack",
         "category": "Physical",
         "power": "60",
         "accuracy": "--",
@@ -1851,7 +1851,7 @@
     },
     {
         "id": 186,
-        "move": "Sweet Kiss",
+        "name": "Sweet Kiss",
         "category": "Status",
         "power": "--",
         "accuracy": "75",
@@ -1861,7 +1861,7 @@
     },
     {
         "id": 187,
-        "move": "Belly Drum",
+        "name": "Belly Drum",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1871,7 +1871,7 @@
     },
     {
         "id": 188,
-        "move": "Sludge Bomb",
+        "name": "Sludge Bomb",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -1881,7 +1881,7 @@
     },
     {
         "id": 189,
-        "move": "Mud-Slap",
+        "name": "Mud-Slap",
         "category": "Special",
         "power": "20",
         "accuracy": "100",
@@ -1891,7 +1891,7 @@
     },
     {
         "id": 190,
-        "move": "Octazooka",
+        "name": "Octazooka",
         "category": "Special",
         "power": "65",
         "accuracy": "85",
@@ -1901,7 +1901,7 @@
     },
     {
         "id": 191,
-        "move": "Spikes",
+        "name": "Spikes",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1911,7 +1911,7 @@
     },
     {
         "id": 192,
-        "move": "Zap Cannon",
+        "name": "Zap Cannon",
         "category": "Special",
         "power": "120",
         "accuracy": "50",
@@ -1921,7 +1921,7 @@
     },
     {
         "id": 193,
-        "move": "Foresight",
+        "name": "Foresight",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1931,7 +1931,7 @@
     },
     {
         "id": 194,
-        "move": "Destiny Bond",
+        "name": "Destiny Bond",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1941,7 +1941,7 @@
     },
     {
         "id": 195,
-        "move": "Perish Song",
+        "name": "Perish Song",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1951,7 +1951,7 @@
     },
     {
         "id": 196,
-        "move": "Icy Wind",
+        "name": "Icy Wind",
         "category": "Special",
         "power": "55",
         "accuracy": "95",
@@ -1961,7 +1961,7 @@
     },
     {
         "id": 197,
-        "move": "Detect",
+        "name": "Detect",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1971,7 +1971,7 @@
     },
     {
         "id": 198,
-        "move": "Bone Rush",
+        "name": "Bone Rush",
         "category": "Physical",
         "power": "25",
         "accuracy": "90",
@@ -1981,7 +1981,7 @@
     },
     {
         "id": 199,
-        "move": "Lock-On",
+        "name": "Lock-On",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -1991,7 +1991,7 @@
     },
     {
         "id": 200,
-        "move": "Outrage",
+        "name": "Outrage",
         "category": "Physical",
         "power": "120",
         "accuracy": "100",
@@ -2001,7 +2001,7 @@
     },
     {
         "id": 201,
-        "move": "Sandstorm",
+        "name": "Sandstorm",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2011,7 +2011,7 @@
     },
     {
         "id": 202,
-        "move": "Giga Drain",
+        "name": "Giga Drain",
         "category": "Special",
         "power": "75",
         "accuracy": "100",
@@ -2021,7 +2021,7 @@
     },
     {
         "id": 203,
-        "move": "Endure",
+        "name": "Endure",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2031,7 +2031,7 @@
     },
     {
         "id": 204,
-        "move": "Charm",
+        "name": "Charm",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -2041,7 +2041,7 @@
     },
     {
         "id": 205,
-        "move": "Rollout",
+        "name": "Rollout",
         "category": "Physical",
         "power": "30",
         "accuracy": "90",
@@ -2051,7 +2051,7 @@
     },
     {
         "id": 206,
-        "move": "False Swipe",
+        "name": "False Swipe",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -2061,7 +2061,7 @@
     },
     {
         "id": 207,
-        "move": "Swagger",
+        "name": "Swagger",
         "category": "Status",
         "power": "--",
         "accuracy": "85",
@@ -2071,7 +2071,7 @@
     },
     {
         "id": 208,
-        "move": "Milk Drink",
+        "name": "Milk Drink",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2081,7 +2081,7 @@
     },
     {
         "id": 209,
-        "move": "Spark",
+        "name": "Spark",
         "category": "Physical",
         "power": "65",
         "accuracy": "100",
@@ -2091,7 +2091,7 @@
     },
     {
         "id": 210,
-        "move": "Fury Cutter",
+        "name": "Fury Cutter",
         "category": "Physical",
         "power": "40",
         "accuracy": "95",
@@ -2101,7 +2101,7 @@
     },
     {
         "id": 211,
-        "move": "Steel Wing",
+        "name": "Steel Wing",
         "category": "Physical",
         "power": "70",
         "accuracy": "90",
@@ -2111,7 +2111,7 @@
     },
     {
         "id": 212,
-        "move": "Mean Look",
+        "name": "Mean Look",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2121,7 +2121,7 @@
     },
     {
         "id": 213,
-        "move": "Attract",
+        "name": "Attract",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -2131,7 +2131,7 @@
     },
     {
         "id": 214,
-        "move": "Sleep Talk",
+        "name": "Sleep Talk",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2141,7 +2141,7 @@
     },
     {
         "id": 215,
-        "move": "Heal Bell",
+        "name": "Heal Bell",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2151,7 +2151,7 @@
     },
     {
         "id": 216,
-        "move": "Return",
+        "name": "Return",
         "category": "Physical",
         "power": "--",
         "accuracy": "100",
@@ -2161,7 +2161,7 @@
     },
     {
         "id": 217,
-        "move": "Present",
+        "name": "Present",
         "category": "Physical",
         "power": "--",
         "accuracy": "90",
@@ -2171,7 +2171,7 @@
     },
     {
         "id": 218,
-        "move": "Frustration",
+        "name": "Frustration",
         "category": "Physical",
         "power": "--",
         "accuracy": "100",
@@ -2181,7 +2181,7 @@
     },
     {
         "id": 219,
-        "move": "Safeguard",
+        "name": "Safeguard",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2191,7 +2191,7 @@
     },
     {
         "id": 220,
-        "move": "Pain Split",
+        "name": "Pain Split",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -2201,7 +2201,7 @@
     },
     {
         "id": 221,
-        "move": "Sacred Fire",
+        "name": "Sacred Fire",
         "category": "Physical",
         "power": "100",
         "accuracy": "95",
@@ -2211,7 +2211,7 @@
     },
     {
         "id": 222,
-        "move": "Magnitude",
+        "name": "Magnitude",
         "category": "Physical",
         "power": "--",
         "accuracy": "100",
@@ -2221,7 +2221,7 @@
     },
     {
         "id": 223,
-        "move": "Dynamic Punch",
+        "name": "Dynamic Punch",
         "category": "Physical",
         "power": "100",
         "accuracy": "50",
@@ -2231,7 +2231,7 @@
     },
     {
         "id": 224,
-        "move": "Megahorn",
+        "name": "Megahorn",
         "category": "Physical",
         "power": "120",
         "accuracy": "85",
@@ -2241,7 +2241,7 @@
     },
     {
         "id": 225,
-        "move": "Dragon Breath",
+        "name": "Dragon Breath",
         "category": "Special",
         "power": "60",
         "accuracy": "100",
@@ -2251,7 +2251,7 @@
     },
     {
         "id": 226,
-        "move": "Baton Pass",
+        "name": "Baton Pass",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2261,7 +2261,7 @@
     },
     {
         "id": 227,
-        "move": "Encore",
+        "name": "Encore",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -2271,7 +2271,7 @@
     },
     {
         "id": 228,
-        "move": "Pursuit",
+        "name": "Pursuit",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -2281,7 +2281,7 @@
     },
     {
         "id": 229,
-        "move": "Rapid Spin",
+        "name": "Rapid Spin",
         "category": "Physical",
         "power": "50",
         "accuracy": "100",
@@ -2291,7 +2291,7 @@
     },
     {
         "id": 230,
-        "move": "Sweet Scent",
+        "name": "Sweet Scent",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -2301,7 +2301,7 @@
     },
     {
         "id": 231,
-        "move": "Iron Tail",
+        "name": "Iron Tail",
         "category": "Physical",
         "power": "100",
         "accuracy": "75",
@@ -2311,7 +2311,7 @@
     },
     {
         "id": 232,
-        "move": "Metal Claw",
+        "name": "Metal Claw",
         "category": "Physical",
         "power": "50",
         "accuracy": "95",
@@ -2321,7 +2321,7 @@
     },
     {
         "id": 233,
-        "move": "Vital Throw",
+        "name": "Vital Throw",
         "category": "Physical",
         "power": "70",
         "accuracy": "--",
@@ -2331,7 +2331,7 @@
     },
     {
         "id": 234,
-        "move": "Morning Sun",
+        "name": "Morning Sun",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2341,7 +2341,7 @@
     },
     {
         "id": 235,
-        "move": "Synthesis",
+        "name": "Synthesis",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2351,7 +2351,7 @@
     },
     {
         "id": 236,
-        "move": "Moonlight",
+        "name": "Moonlight",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2361,7 +2361,7 @@
     },
     {
         "id": 237,
-        "move": "Hidden Power",
+        "name": "Hidden Power",
         "category": "Special",
         "power": "60",
         "accuracy": "100",
@@ -2371,7 +2371,7 @@
     },
     {
         "id": 238,
-        "move": "Cross Chop",
+        "name": "Cross Chop",
         "category": "Physical",
         "power": "100",
         "accuracy": "80",
@@ -2381,7 +2381,7 @@
     },
     {
         "id": 239,
-        "move": "Twister",
+        "name": "Twister",
         "category": "Special",
         "power": "40",
         "accuracy": "100",
@@ -2391,7 +2391,7 @@
     },
     {
         "id": 240,
-        "move": "Rain Dance",
+        "name": "Rain Dance",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2401,7 +2401,7 @@
     },
     {
         "id": 241,
-        "move": "Sunny Day",
+        "name": "Sunny Day",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2411,7 +2411,7 @@
     },
     {
         "id": 242,
-        "move": "Crunch",
+        "name": "Crunch",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -2421,7 +2421,7 @@
     },
     {
         "id": 243,
-        "move": "Mirror Coat",
+        "name": "Mirror Coat",
         "category": "Special",
         "power": "--",
         "accuracy": "100",
@@ -2431,7 +2431,7 @@
     },
     {
         "id": 244,
-        "move": "Psych Up",
+        "name": "Psych Up",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2441,7 +2441,7 @@
     },
     {
         "id": 245,
-        "move": "Extreme Speed",
+        "name": "Extreme Speed",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -2451,7 +2451,7 @@
     },
     {
         "id": 246,
-        "move": "Ancient Power",
+        "name": "Ancient Power",
         "category": "Special",
         "power": "60",
         "accuracy": "100",
@@ -2461,7 +2461,7 @@
     },
     {
         "id": 247,
-        "move": "Shadow Ball",
+        "name": "Shadow Ball",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -2471,7 +2471,7 @@
     },
     {
         "id": 248,
-        "move": "Future Sight",
+        "name": "Future Sight",
         "category": "Special",
         "power": "120",
         "accuracy": "100",
@@ -2481,7 +2481,7 @@
     },
     {
         "id": 249,
-        "move": "Rock Smash",
+        "name": "Rock Smash",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -2491,7 +2491,7 @@
     },
     {
         "id": 250,
-        "move": "Whirlpool",
+        "name": "Whirlpool",
         "category": "Special",
         "power": "35",
         "accuracy": "85",
@@ -2501,7 +2501,7 @@
     },
     {
         "id": 251,
-        "move": "Beat Up",
+        "name": "Beat Up",
         "category": "Physical",
         "power": "10",
         "accuracy": "100",
@@ -2511,7 +2511,7 @@
     },
     {
         "id": 252,
-        "move": "Fake Out",
+        "name": "Fake Out",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -2521,7 +2521,7 @@
     },
     {
         "id": 253,
-        "move": "Uproar",
+        "name": "Uproar",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -2531,7 +2531,7 @@
     },
     {
         "id": 254,
-        "move": "Stockpile",
+        "name": "Stockpile",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2541,7 +2541,7 @@
     },
     {
         "id": 255,
-        "move": "Spit Up",
+        "name": "Spit Up",
         "category": "Special",
         "power": "--",
         "accuracy": "100",
@@ -2551,7 +2551,7 @@
     },
     {
         "id": 256,
-        "move": "Swallow",
+        "name": "Swallow",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2561,7 +2561,7 @@
     },
     {
         "id": 257,
-        "move": "Heat Wave",
+        "name": "Heat Wave",
         "category": "Special",
         "power": "95",
         "accuracy": "90",
@@ -2571,7 +2571,7 @@
     },
     {
         "id": 258,
-        "move": "Hail",
+        "name": "Hail",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2581,7 +2581,7 @@
     },
     {
         "id": 259,
-        "move": "Torment",
+        "name": "Torment",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -2591,7 +2591,7 @@
     },
     {
         "id": 260,
-        "move": "Flatter",
+        "name": "Flatter",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -2601,7 +2601,7 @@
     },
     {
         "id": 261,
-        "move": "Will-O-Wisp",
+        "name": "Will-O-Wisp",
         "category": "Status",
         "power": "--",
         "accuracy": "85",
@@ -2611,7 +2611,7 @@
     },
     {
         "id": 262,
-        "move": "Memento",
+        "name": "Memento",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -2621,7 +2621,7 @@
     },
     {
         "id": 263,
-        "move": "Facade",
+        "name": "Facade",
         "category": "Physical",
         "power": "70",
         "accuracy": "100",
@@ -2631,7 +2631,7 @@
     },
     {
         "id": 264,
-        "move": "Focus Punch",
+        "name": "Focus Punch",
         "category": "Physical",
         "power": "150",
         "accuracy": "100",
@@ -2641,7 +2641,7 @@
     },
     {
         "id": 265,
-        "move": "Smelling Salts",
+        "name": "Smelling Salts",
         "category": "Physical",
         "power": "70",
         "accuracy": "100",
@@ -2651,7 +2651,7 @@
     },
     {
         "id": 266,
-        "move": "Follow Me",
+        "name": "Follow Me",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2661,7 +2661,7 @@
     },
     {
         "id": 267,
-        "move": "Nature Power",
+        "name": "Nature Power",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2671,7 +2671,7 @@
     },
     {
         "id": 268,
-        "move": "Charge",
+        "name": "Charge",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2681,7 +2681,7 @@
     },
     {
         "id": 269,
-        "move": "Taunt",
+        "name": "Taunt",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -2691,7 +2691,7 @@
     },
     {
         "id": 270,
-        "move": "Helping Hand",
+        "name": "Helping Hand",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2701,7 +2701,7 @@
     },
     {
         "id": 271,
-        "move": "Trick",
+        "name": "Trick",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -2711,7 +2711,7 @@
     },
     {
         "id": 272,
-        "move": "Role Play",
+        "name": "Role Play",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2721,7 +2721,7 @@
     },
     {
         "id": 273,
-        "move": "Wish",
+        "name": "Wish",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2731,7 +2731,7 @@
     },
     {
         "id": 274,
-        "move": "Assist",
+        "name": "Assist",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2741,7 +2741,7 @@
     },
     {
         "id": 275,
-        "move": "Ingrain",
+        "name": "Ingrain",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2751,7 +2751,7 @@
     },
     {
         "id": 276,
-        "move": "Superpower",
+        "name": "Superpower",
         "category": "Physical",
         "power": "120",
         "accuracy": "100",
@@ -2761,7 +2761,7 @@
     },
     {
         "id": 277,
-        "move": "Magic Coat",
+        "name": "Magic Coat",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2771,7 +2771,7 @@
     },
     {
         "id": 278,
-        "move": "Recycle",
+        "name": "Recycle",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2781,7 +2781,7 @@
     },
     {
         "id": 279,
-        "move": "Revenge",
+        "name": "Revenge",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -2791,7 +2791,7 @@
     },
     {
         "id": 280,
-        "move": "Brick Break",
+        "name": "Brick Break",
         "category": "Physical",
         "power": "75",
         "accuracy": "100",
@@ -2801,7 +2801,7 @@
     },
     {
         "id": 281,
-        "move": "Yawn",
+        "name": "Yawn",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -2811,7 +2811,7 @@
     },
     {
         "id": 282,
-        "move": "Knock Off",
+        "name": "Knock Off",
         "category": "Physical",
         "power": "65",
         "accuracy": "100",
@@ -2821,7 +2821,7 @@
     },
     {
         "id": 283,
-        "move": "Endeavor",
+        "name": "Endeavor",
         "category": "Physical",
         "power": "--",
         "accuracy": "100",
@@ -2831,7 +2831,7 @@
     },
     {
         "id": 284,
-        "move": "Eruption",
+        "name": "Eruption",
         "category": "Special",
         "power": "150",
         "accuracy": "100",
@@ -2841,7 +2841,7 @@
     },
     {
         "id": 285,
-        "move": "Skill Swap",
+        "name": "Skill Swap",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2851,7 +2851,7 @@
     },
     {
         "id": 286,
-        "move": "Imprison",
+        "name": "Imprison",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2861,7 +2861,7 @@
     },
     {
         "id": 287,
-        "move": "Refresh",
+        "name": "Refresh",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2871,7 +2871,7 @@
     },
     {
         "id": 288,
-        "move": "Grudge",
+        "name": "Grudge",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2881,7 +2881,7 @@
     },
     {
         "id": 289,
-        "move": "Snatch",
+        "name": "Snatch",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2891,7 +2891,7 @@
     },
     {
         "id": 290,
-        "move": "Secret Power",
+        "name": "Secret Power",
         "category": "Physical",
         "power": "70",
         "accuracy": "100",
@@ -2901,7 +2901,7 @@
     },
     {
         "id": 291,
-        "move": "Dive",
+        "name": "Dive",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -2911,7 +2911,7 @@
     },
     {
         "id": 292,
-        "move": "Arm Thrust",
+        "name": "Arm Thrust",
         "category": "Physical",
         "power": "15",
         "accuracy": "100",
@@ -2921,7 +2921,7 @@
     },
     {
         "id": 293,
-        "move": "Camouflage",
+        "name": "Camouflage",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2931,7 +2931,7 @@
     },
     {
         "id": 294,
-        "move": "Tail Glow",
+        "name": "Tail Glow",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -2941,7 +2941,7 @@
     },
     {
         "id": 295,
-        "move": "Luster Purge",
+        "name": "Luster Purge",
         "category": "Special",
         "power": "70",
         "accuracy": "100",
@@ -2951,7 +2951,7 @@
     },
     {
         "id": 296,
-        "move": "Mist Ball",
+        "name": "Mist Ball",
         "category": "Special",
         "power": "70",
         "accuracy": "100",
@@ -2961,7 +2961,7 @@
     },
     {
         "id": 297,
-        "move": "Feather Dance",
+        "name": "Feather Dance",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -2971,7 +2971,7 @@
     },
     {
         "id": 298,
-        "move": "Teeter Dance",
+        "name": "Teeter Dance",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -2981,7 +2981,7 @@
     },
     {
         "id": 299,
-        "move": "Blaze Kick",
+        "name": "Blaze Kick",
         "category": "Physical",
         "power": "85",
         "accuracy": "90",
@@ -2991,7 +2991,7 @@
     },
     {
         "id": 300,
-        "move": "Mud Sport",
+        "name": "Mud Sport",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3001,7 +3001,7 @@
     },
     {
         "id": 301,
-        "move": "Ice Ball",
+        "name": "Ice Ball",
         "category": "Physical",
         "power": "30",
         "accuracy": "90",
@@ -3011,7 +3011,7 @@
     },
     {
         "id": 302,
-        "move": "Needle Arm",
+        "name": "Needle Arm",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -3021,7 +3021,7 @@
     },
     {
         "id": 303,
-        "move": "Slack Off",
+        "name": "Slack Off",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3031,7 +3031,7 @@
     },
     {
         "id": 304,
-        "move": "Hyper Voice",
+        "name": "Hyper Voice",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -3041,7 +3041,7 @@
     },
     {
         "id": 305,
-        "move": "Poison Fang",
+        "name": "Poison Fang",
         "category": "Physical",
         "power": "50",
         "accuracy": "100",
@@ -3051,7 +3051,7 @@
     },
     {
         "id": 306,
-        "move": "Crush Claw",
+        "name": "Crush Claw",
         "category": "Physical",
         "power": "75",
         "accuracy": "95",
@@ -3061,7 +3061,7 @@
     },
     {
         "id": 307,
-        "move": "Blast Burn",
+        "name": "Blast Burn",
         "category": "Special",
         "power": "150",
         "accuracy": "90",
@@ -3071,7 +3071,7 @@
     },
     {
         "id": 308,
-        "move": "Hydro Cannon",
+        "name": "Hydro Cannon",
         "category": "Special",
         "power": "150",
         "accuracy": "90",
@@ -3081,7 +3081,7 @@
     },
     {
         "id": 309,
-        "move": "Meteor Mash",
+        "name": "Meteor Mash",
         "category": "Physical",
         "power": "90",
         "accuracy": "90",
@@ -3091,7 +3091,7 @@
     },
     {
         "id": 310,
-        "move": "Astonish",
+        "name": "Astonish",
         "category": "Physical",
         "power": "30",
         "accuracy": "100",
@@ -3101,7 +3101,7 @@
     },
     {
         "id": 311,
-        "move": "Weather Ball",
+        "name": "Weather Ball",
         "category": "Special",
         "power": "50",
         "accuracy": "100",
@@ -3111,7 +3111,7 @@
     },
     {
         "id": 312,
-        "move": "Aromatherapy",
+        "name": "Aromatherapy",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3121,7 +3121,7 @@
     },
     {
         "id": 313,
-        "move": "Fake Tears",
+        "name": "Fake Tears",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -3131,7 +3131,7 @@
     },
     {
         "id": 314,
-        "move": "Air Cutter",
+        "name": "Air Cutter",
         "category": "Special",
         "power": "60",
         "accuracy": "95",
@@ -3141,7 +3141,7 @@
     },
     {
         "id": 315,
-        "move": "Overheat",
+        "name": "Overheat",
         "category": "Special",
         "power": "130",
         "accuracy": "90",
@@ -3151,7 +3151,7 @@
     },
     {
         "id": 316,
-        "move": "Odor Sleuth",
+        "name": "Odor Sleuth",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3161,7 +3161,7 @@
     },
     {
         "id": 317,
-        "move": "Rock Tomb",
+        "name": "Rock Tomb",
         "category": "Physical",
         "power": "60",
         "accuracy": "95",
@@ -3171,7 +3171,7 @@
     },
     {
         "id": 318,
-        "move": "Silver Wind",
+        "name": "Silver Wind",
         "category": "Special",
         "power": "60",
         "accuracy": "100",
@@ -3181,7 +3181,7 @@
     },
     {
         "id": 319,
-        "move": "Metal Sound",
+        "name": "Metal Sound",
         "category": "Status",
         "power": "--",
         "accuracy": "85",
@@ -3191,7 +3191,7 @@
     },
     {
         "id": 320,
-        "move": "Grass Whistle",
+        "name": "Grass Whistle",
         "category": "Status",
         "power": "--",
         "accuracy": "55",
@@ -3201,7 +3201,7 @@
     },
     {
         "id": 321,
-        "move": "Tickle",
+        "name": "Tickle",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -3211,7 +3211,7 @@
     },
     {
         "id": 322,
-        "move": "Cosmic Power",
+        "name": "Cosmic Power",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3221,7 +3221,7 @@
     },
     {
         "id": 323,
-        "move": "Water Spout",
+        "name": "Water Spout",
         "category": "Special",
         "power": "150",
         "accuracy": "100",
@@ -3231,7 +3231,7 @@
     },
     {
         "id": 324,
-        "move": "Signal Beam",
+        "name": "Signal Beam",
         "category": "Special",
         "power": "75",
         "accuracy": "100",
@@ -3241,7 +3241,7 @@
     },
     {
         "id": 325,
-        "move": "Shadow Punch",
+        "name": "Shadow Punch",
         "category": "Physical",
         "power": "60",
         "accuracy": "--",
@@ -3251,7 +3251,7 @@
     },
     {
         "id": 326,
-        "move": "Extrasensory",
+        "name": "Extrasensory",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -3261,7 +3261,7 @@
     },
     {
         "id": 327,
-        "move": "Sky Uppercut",
+        "name": "Sky Uppercut",
         "category": "Physical",
         "power": "85",
         "accuracy": "90",
@@ -3271,7 +3271,7 @@
     },
     {
         "id": 328,
-        "move": "Sand Tomb",
+        "name": "Sand Tomb",
         "category": "Physical",
         "power": "35",
         "accuracy": "85",
@@ -3281,7 +3281,7 @@
     },
     {
         "id": 329,
-        "move": "Sheer Cold",
+        "name": "Sheer Cold",
         "category": "Special",
         "power": "--",
         "accuracy": "30",
@@ -3291,7 +3291,7 @@
     },
     {
         "id": 330,
-        "move": "Muddy Water",
+        "name": "Muddy Water",
         "category": "Special",
         "power": "90",
         "accuracy": "85",
@@ -3301,7 +3301,7 @@
     },
     {
         "id": 331,
-        "move": "Bullet Seed",
+        "name": "Bullet Seed",
         "category": "Physical",
         "power": "25",
         "accuracy": "100",
@@ -3311,7 +3311,7 @@
     },
     {
         "id": 332,
-        "move": "Aerial Ace",
+        "name": "Aerial Ace",
         "category": "Physical",
         "power": "60",
         "accuracy": "--",
@@ -3321,7 +3321,7 @@
     },
     {
         "id": 333,
-        "move": "Icicle Spear",
+        "name": "Icicle Spear",
         "category": "Physical",
         "power": "25",
         "accuracy": "100",
@@ -3331,7 +3331,7 @@
     },
     {
         "id": 334,
-        "move": "Iron Defense",
+        "name": "Iron Defense",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3341,7 +3341,7 @@
     },
     {
         "id": 335,
-        "move": "Block",
+        "name": "Block",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3351,7 +3351,7 @@
     },
     {
         "id": 336,
-        "move": "Howl",
+        "name": "Howl",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3361,7 +3361,7 @@
     },
     {
         "id": 337,
-        "move": "Dragon Claw",
+        "name": "Dragon Claw",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -3371,7 +3371,7 @@
     },
     {
         "id": 338,
-        "move": "Frenzy Plant",
+        "name": "Frenzy Plant",
         "category": "Special",
         "power": "150",
         "accuracy": "90",
@@ -3381,7 +3381,7 @@
     },
     {
         "id": 339,
-        "move": "Bulk Up",
+        "name": "Bulk Up",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3391,7 +3391,7 @@
     },
     {
         "id": 340,
-        "move": "Bounce",
+        "name": "Bounce",
         "category": "Physical",
         "power": "85",
         "accuracy": "85",
@@ -3401,7 +3401,7 @@
     },
     {
         "id": 341,
-        "move": "Mud Shot",
+        "name": "Mud Shot",
         "category": "Special",
         "power": "55",
         "accuracy": "95",
@@ -3411,7 +3411,7 @@
     },
     {
         "id": 342,
-        "move": "Poison Tail",
+        "name": "Poison Tail",
         "category": "Physical",
         "power": "50",
         "accuracy": "100",
@@ -3421,7 +3421,7 @@
     },
     {
         "id": 343,
-        "move": "Covet",
+        "name": "Covet",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -3431,7 +3431,7 @@
     },
     {
         "id": 344,
-        "move": "Volt Tackle",
+        "name": "Volt Tackle",
         "category": "Physical",
         "power": "120",
         "accuracy": "100",
@@ -3441,7 +3441,7 @@
     },
     {
         "id": 345,
-        "move": "Magical Leaf",
+        "name": "Magical Leaf",
         "category": "Special",
         "power": "60",
         "accuracy": "--",
@@ -3451,7 +3451,7 @@
     },
     {
         "id": 346,
-        "move": "Water Sport",
+        "name": "Water Sport",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3461,7 +3461,7 @@
     },
     {
         "id": 347,
-        "move": "Calm Mind",
+        "name": "Calm Mind",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3471,7 +3471,7 @@
     },
     {
         "id": 348,
-        "move": "Leaf Blade",
+        "name": "Leaf Blade",
         "category": "Physical",
         "power": "90",
         "accuracy": "100",
@@ -3481,7 +3481,7 @@
     },
     {
         "id": 349,
-        "move": "Dragon Dance",
+        "name": "Dragon Dance",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3491,7 +3491,7 @@
     },
     {
         "id": 350,
-        "move": "Rock Blast",
+        "name": "Rock Blast",
         "category": "Physical",
         "power": "25",
         "accuracy": "90",
@@ -3501,7 +3501,7 @@
     },
     {
         "id": 351,
-        "move": "Shock Wave",
+        "name": "Shock Wave",
         "category": "Special",
         "power": "60",
         "accuracy": "--",
@@ -3511,7 +3511,7 @@
     },
     {
         "id": 352,
-        "move": "Water Pulse",
+        "name": "Water Pulse",
         "category": "Special",
         "power": "60",
         "accuracy": "100",
@@ -3521,7 +3521,7 @@
     },
     {
         "id": 353,
-        "move": "Doom Desire",
+        "name": "Doom Desire",
         "category": "Special",
         "power": "140",
         "accuracy": "100",
@@ -3531,7 +3531,7 @@
     },
     {
         "id": 354,
-        "move": "Psycho Boost",
+        "name": "Psycho Boost",
         "category": "Special",
         "power": "140",
         "accuracy": "90",
@@ -3541,7 +3541,7 @@
     },
     {
         "id": 355,
-        "move": "Roost",
+        "name": "Roost",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3551,7 +3551,7 @@
     },
     {
         "id": 356,
-        "move": "Gravity",
+        "name": "Gravity",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3561,7 +3561,7 @@
     },
     {
         "id": 357,
-        "move": "Miracle Eye",
+        "name": "Miracle Eye",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3571,7 +3571,7 @@
     },
     {
         "id": 358,
-        "move": "Wake-Up Slap",
+        "name": "Wake-Up Slap",
         "category": "Physical",
         "power": "70",
         "accuracy": "100",
@@ -3581,7 +3581,7 @@
     },
     {
         "id": 359,
-        "move": "Hammer Arm",
+        "name": "Hammer Arm",
         "category": "Physical",
         "power": "100",
         "accuracy": "90",
@@ -3591,7 +3591,7 @@
     },
     {
         "id": 360,
-        "move": "Gyro Ball",
+        "name": "Gyro Ball",
         "category": "Physical",
         "power": "--",
         "accuracy": "100",
@@ -3601,7 +3601,7 @@
     },
     {
         "id": 361,
-        "move": "Healing Wish",
+        "name": "Healing Wish",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3611,7 +3611,7 @@
     },
     {
         "id": 362,
-        "move": "Brine",
+        "name": "Brine",
         "category": "Special",
         "power": "65",
         "accuracy": "100",
@@ -3621,7 +3621,7 @@
     },
     {
         "id": 363,
-        "move": "Natural Gift",
+        "name": "Natural Gift",
         "category": "Physical",
         "power": "--",
         "accuracy": "100",
@@ -3631,7 +3631,7 @@
     },
     {
         "id": 364,
-        "move": "Feint",
+        "name": "Feint",
         "category": "Physical",
         "power": "30",
         "accuracy": "100",
@@ -3641,7 +3641,7 @@
     },
     {
         "id": 365,
-        "move": "Pluck",
+        "name": "Pluck",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -3651,7 +3651,7 @@
     },
     {
         "id": 366,
-        "move": "Tailwind",
+        "name": "Tailwind",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3661,7 +3661,7 @@
     },
     {
         "id": 367,
-        "move": "Acupressure",
+        "name": "Acupressure",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3671,7 +3671,7 @@
     },
     {
         "id": 368,
-        "move": "Metal Burst",
+        "name": "Metal Burst",
         "category": "Physical",
         "power": "--",
         "accuracy": "100",
@@ -3681,7 +3681,7 @@
     },
     {
         "id": 369,
-        "move": "U-turn",
+        "name": "U-turn",
         "category": "Physical",
         "power": "70",
         "accuracy": "100",
@@ -3691,7 +3691,7 @@
     },
     {
         "id": 370,
-        "move": "Close Combat",
+        "name": "Close Combat",
         "category": "Physical",
         "power": "120",
         "accuracy": "100",
@@ -3701,7 +3701,7 @@
     },
     {
         "id": 371,
-        "move": "Payback",
+        "name": "Payback",
         "category": "Physical",
         "power": "50",
         "accuracy": "100",
@@ -3711,7 +3711,7 @@
     },
     {
         "id": 372,
-        "move": "Assurance",
+        "name": "Assurance",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -3721,7 +3721,7 @@
     },
     {
         "id": 373,
-        "move": "Embargo",
+        "name": "Embargo",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -3731,7 +3731,7 @@
     },
     {
         "id": 374,
-        "move": "Fling",
+        "name": "Fling",
         "category": "Physical",
         "power": "--",
         "accuracy": "100",
@@ -3741,7 +3741,7 @@
     },
     {
         "id": 375,
-        "move": "Psycho Shift",
+        "name": "Psycho Shift",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -3751,7 +3751,7 @@
     },
     {
         "id": 376,
-        "move": "Trump Card",
+        "name": "Trump Card",
         "category": "Special",
         "power": "--",
         "accuracy": "100",
@@ -3761,7 +3761,7 @@
     },
     {
         "id": 377,
-        "move": "Heal Block",
+        "name": "Heal Block",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -3771,7 +3771,7 @@
     },
     {
         "id": 378,
-        "move": "Wring Out",
+        "name": "Wring Out",
         "category": "Special",
         "power": "--",
         "accuracy": "100",
@@ -3781,7 +3781,7 @@
     },
     {
         "id": 379,
-        "move": "Power Trick",
+        "name": "Power Trick",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3791,7 +3791,7 @@
     },
     {
         "id": 380,
-        "move": "Gastro Acid",
+        "name": "Gastro Acid",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -3801,7 +3801,7 @@
     },
     {
         "id": 381,
-        "move": "Lucky Chant",
+        "name": "Lucky Chant",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3811,7 +3811,7 @@
     },
     {
         "id": 382,
-        "move": "Me First",
+        "name": "Me First",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3821,7 +3821,7 @@
     },
     {
         "id": 383,
-        "move": "Copycat",
+        "name": "Copycat",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3831,7 +3831,7 @@
     },
     {
         "id": 384,
-        "move": "Power Swap",
+        "name": "Power Swap",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3841,7 +3841,7 @@
     },
     {
         "id": 385,
-        "move": "Guard Swap",
+        "name": "Guard Swap",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3851,7 +3851,7 @@
     },
     {
         "id": 386,
-        "move": "Punishment",
+        "name": "Punishment",
         "category": "Physical",
         "power": "--",
         "accuracy": "100",
@@ -3861,7 +3861,7 @@
     },
     {
         "id": 387,
-        "move": "Last Resort",
+        "name": "Last Resort",
         "category": "Physical",
         "power": "140",
         "accuracy": "100",
@@ -3871,7 +3871,7 @@
     },
     {
         "id": 388,
-        "move": "Worry Seed",
+        "name": "Worry Seed",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -3881,7 +3881,7 @@
     },
     {
         "id": 389,
-        "move": "Sucker Punch",
+        "name": "Sucker Punch",
         "category": "Physical",
         "power": "70",
         "accuracy": "100",
@@ -3891,7 +3891,7 @@
     },
     {
         "id": 390,
-        "move": "Toxic Spikes",
+        "name": "Toxic Spikes",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3901,7 +3901,7 @@
     },
     {
         "id": 391,
-        "move": "Heart Swap",
+        "name": "Heart Swap",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3911,7 +3911,7 @@
     },
     {
         "id": 392,
-        "move": "Aqua Ring",
+        "name": "Aqua Ring",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3921,7 +3921,7 @@
     },
     {
         "id": 393,
-        "move": "Magnet Rise",
+        "name": "Magnet Rise",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3931,7 +3931,7 @@
     },
     {
         "id": 394,
-        "move": "Flare Blitz",
+        "name": "Flare Blitz",
         "category": "Physical",
         "power": "120",
         "accuracy": "100",
@@ -3941,7 +3941,7 @@
     },
     {
         "id": 395,
-        "move": "Force Palm",
+        "name": "Force Palm",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -3951,7 +3951,7 @@
     },
     {
         "id": 396,
-        "move": "Aura Sphere",
+        "name": "Aura Sphere",
         "category": "Special",
         "power": "80",
         "accuracy": "--",
@@ -3961,7 +3961,7 @@
     },
     {
         "id": 397,
-        "move": "Rock Polish",
+        "name": "Rock Polish",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -3971,7 +3971,7 @@
     },
     {
         "id": 398,
-        "move": "Poison Jab",
+        "name": "Poison Jab",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -3981,7 +3981,7 @@
     },
     {
         "id": 399,
-        "move": "Dark Pulse",
+        "name": "Dark Pulse",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -3991,7 +3991,7 @@
     },
     {
         "id": 400,
-        "move": "Night Slash",
+        "name": "Night Slash",
         "category": "Physical",
         "power": "70",
         "accuracy": "100",
@@ -4001,7 +4001,7 @@
     },
     {
         "id": 401,
-        "move": "Aqua Tail",
+        "name": "Aqua Tail",
         "category": "Physical",
         "power": "90",
         "accuracy": "90",
@@ -4011,7 +4011,7 @@
     },
     {
         "id": 402,
-        "move": "Seed Bomb",
+        "name": "Seed Bomb",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -4021,7 +4021,7 @@
     },
     {
         "id": 403,
-        "move": "Air Slash",
+        "name": "Air Slash",
         "category": "Special",
         "power": "75",
         "accuracy": "95",
@@ -4031,7 +4031,7 @@
     },
     {
         "id": 404,
-        "move": "X-Scissor",
+        "name": "X-Scissor",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -4041,7 +4041,7 @@
     },
     {
         "id": 405,
-        "move": "Bug Buzz",
+        "name": "Bug Buzz",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -4051,7 +4051,7 @@
     },
     {
         "id": 406,
-        "move": "Dragon Pulse",
+        "name": "Dragon Pulse",
         "category": "Special",
         "power": "85",
         "accuracy": "100",
@@ -4061,7 +4061,7 @@
     },
     {
         "id": 407,
-        "move": "Dragon Rush",
+        "name": "Dragon Rush",
         "category": "Physical",
         "power": "100",
         "accuracy": "75",
@@ -4071,7 +4071,7 @@
     },
     {
         "id": 408,
-        "move": "Power Gem",
+        "name": "Power Gem",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -4081,7 +4081,7 @@
     },
     {
         "id": 409,
-        "move": "Drain Punch",
+        "name": "Drain Punch",
         "category": "Physical",
         "power": "75",
         "accuracy": "100",
@@ -4091,7 +4091,7 @@
     },
     {
         "id": 410,
-        "move": "Vacuum Wave",
+        "name": "Vacuum Wave",
         "category": "Special",
         "power": "40",
         "accuracy": "100",
@@ -4101,7 +4101,7 @@
     },
     {
         "id": 411,
-        "move": "Focus Blast",
+        "name": "Focus Blast",
         "category": "Special",
         "power": "120",
         "accuracy": "70",
@@ -4111,7 +4111,7 @@
     },
     {
         "id": 412,
-        "move": "Energy Ball",
+        "name": "Energy Ball",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -4121,7 +4121,7 @@
     },
     {
         "id": 413,
-        "move": "Brave Bird",
+        "name": "Brave Bird",
         "category": "Physical",
         "power": "120",
         "accuracy": "100",
@@ -4131,7 +4131,7 @@
     },
     {
         "id": 414,
-        "move": "Earth Power",
+        "name": "Earth Power",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -4141,7 +4141,7 @@
     },
     {
         "id": 415,
-        "move": "Switcheroo",
+        "name": "Switcheroo",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -4151,7 +4151,7 @@
     },
     {
         "id": 416,
-        "move": "Giga Impact",
+        "name": "Giga Impact",
         "category": "Physical",
         "power": "150",
         "accuracy": "90",
@@ -4161,7 +4161,7 @@
     },
     {
         "id": 417,
-        "move": "Nasty Plot",
+        "name": "Nasty Plot",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4171,7 +4171,7 @@
     },
     {
         "id": 418,
-        "move": "Bullet Punch",
+        "name": "Bullet Punch",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -4181,7 +4181,7 @@
     },
     {
         "id": 419,
-        "move": "Avalanche",
+        "name": "Avalanche",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -4191,7 +4191,7 @@
     },
     {
         "id": 420,
-        "move": "Ice Shard",
+        "name": "Ice Shard",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -4201,7 +4201,7 @@
     },
     {
         "id": 421,
-        "move": "Shadow Claw",
+        "name": "Shadow Claw",
         "category": "Physical",
         "power": "70",
         "accuracy": "100",
@@ -4211,7 +4211,7 @@
     },
     {
         "id": 422,
-        "move": "Thunder Fang",
+        "name": "Thunder Fang",
         "category": "Physical",
         "power": "65",
         "accuracy": "95",
@@ -4221,7 +4221,7 @@
     },
     {
         "id": 423,
-        "move": "Ice Fang",
+        "name": "Ice Fang",
         "category": "Physical",
         "power": "65",
         "accuracy": "95",
@@ -4231,7 +4231,7 @@
     },
     {
         "id": 424,
-        "move": "Fire Fang",
+        "name": "Fire Fang",
         "category": "Physical",
         "power": "65",
         "accuracy": "95",
@@ -4241,7 +4241,7 @@
     },
     {
         "id": 425,
-        "move": "Shadow Sneak",
+        "name": "Shadow Sneak",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -4251,7 +4251,7 @@
     },
     {
         "id": 426,
-        "move": "Mud Bomb",
+        "name": "Mud Bomb",
         "category": "Special",
         "power": "65",
         "accuracy": "85",
@@ -4261,7 +4261,7 @@
     },
     {
         "id": 427,
-        "move": "Psycho Cut",
+        "name": "Psycho Cut",
         "category": "Physical",
         "power": "70",
         "accuracy": "100",
@@ -4271,7 +4271,7 @@
     },
     {
         "id": 428,
-        "move": "Zen Headbutt",
+        "name": "Zen Headbutt",
         "category": "Physical",
         "power": "80",
         "accuracy": "90",
@@ -4281,7 +4281,7 @@
     },
     {
         "id": 429,
-        "move": "Mirror Shot",
+        "name": "Mirror Shot",
         "category": "Special",
         "power": "65",
         "accuracy": "85",
@@ -4291,7 +4291,7 @@
     },
     {
         "id": 430,
-        "move": "Flash Cannon",
+        "name": "Flash Cannon",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -4301,7 +4301,7 @@
     },
     {
         "id": 431,
-        "move": "Rock Climb",
+        "name": "Rock Climb",
         "category": "Physical",
         "power": "90",
         "accuracy": "85",
@@ -4311,7 +4311,7 @@
     },
     {
         "id": 432,
-        "move": "Defog",
+        "name": "Defog",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4321,7 +4321,7 @@
     },
     {
         "id": 433,
-        "move": "Trick Room",
+        "name": "Trick Room",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4331,7 +4331,7 @@
     },
     {
         "id": 434,
-        "move": "Draco Meteor",
+        "name": "Draco Meteor",
         "category": "Special",
         "power": "130",
         "accuracy": "90",
@@ -4341,7 +4341,7 @@
     },
     {
         "id": 435,
-        "move": "Discharge",
+        "name": "Discharge",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -4351,7 +4351,7 @@
     },
     {
         "id": 436,
-        "move": "Lava Plume",
+        "name": "Lava Plume",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -4361,7 +4361,7 @@
     },
     {
         "id": 437,
-        "move": "Leaf Storm",
+        "name": "Leaf Storm",
         "category": "Special",
         "power": "130",
         "accuracy": "90",
@@ -4371,7 +4371,7 @@
     },
     {
         "id": 438,
-        "move": "Power Whip",
+        "name": "Power Whip",
         "category": "Physical",
         "power": "120",
         "accuracy": "85",
@@ -4381,7 +4381,7 @@
     },
     {
         "id": 439,
-        "move": "Rock Wrecker",
+        "name": "Rock Wrecker",
         "category": "Physical",
         "power": "150",
         "accuracy": "90",
@@ -4391,7 +4391,7 @@
     },
     {
         "id": 440,
-        "move": "Cross Poison",
+        "name": "Cross Poison",
         "category": "Physical",
         "power": "70",
         "accuracy": "100",
@@ -4401,7 +4401,7 @@
     },
     {
         "id": 441,
-        "move": "Gunk Shot",
+        "name": "Gunk Shot",
         "category": "Physical",
         "power": "120",
         "accuracy": "80",
@@ -4411,7 +4411,7 @@
     },
     {
         "id": 442,
-        "move": "Iron Head",
+        "name": "Iron Head",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -4421,7 +4421,7 @@
     },
     {
         "id": 443,
-        "move": "Magnet Bomb",
+        "name": "Magnet Bomb",
         "category": "Physical",
         "power": "60",
         "accuracy": "--",
@@ -4431,7 +4431,7 @@
     },
     {
         "id": 444,
-        "move": "Stone Edge",
+        "name": "Stone Edge",
         "category": "Physical",
         "power": "100",
         "accuracy": "80",
@@ -4441,7 +4441,7 @@
     },
     {
         "id": 445,
-        "move": "Captivate",
+        "name": "Captivate",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -4451,7 +4451,7 @@
     },
     {
         "id": 446,
-        "move": "Stealth Rock",
+        "name": "Stealth Rock",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4461,7 +4461,7 @@
     },
     {
         "id": 447,
-        "move": "Grass Knot",
+        "name": "Grass Knot",
         "category": "Special",
         "power": "--",
         "accuracy": "100",
@@ -4471,7 +4471,7 @@
     },
     {
         "id": 448,
-        "move": "Chatter",
+        "name": "Chatter",
         "category": "Special",
         "power": "65",
         "accuracy": "100",
@@ -4481,7 +4481,7 @@
     },
     {
         "id": 449,
-        "move": "Judgment",
+        "name": "Judgment",
         "category": "Special",
         "power": "100",
         "accuracy": "100",
@@ -4491,7 +4491,7 @@
     },
     {
         "id": 450,
-        "move": "Bug Bite",
+        "name": "Bug Bite",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -4501,7 +4501,7 @@
     },
     {
         "id": 451,
-        "move": "Charge Beam",
+        "name": "Charge Beam",
         "category": "Special",
         "power": "50",
         "accuracy": "90",
@@ -4511,7 +4511,7 @@
     },
     {
         "id": 452,
-        "move": "Wood Hammer",
+        "name": "Wood Hammer",
         "category": "Physical",
         "power": "120",
         "accuracy": "100",
@@ -4521,7 +4521,7 @@
     },
     {
         "id": 453,
-        "move": "Aqua Jet",
+        "name": "Aqua Jet",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -4531,7 +4531,7 @@
     },
     {
         "id": 454,
-        "move": "Attack Order",
+        "name": "Attack Order",
         "category": "Physical",
         "power": "90",
         "accuracy": "100",
@@ -4541,7 +4541,7 @@
     },
     {
         "id": 455,
-        "move": "Defend Order",
+        "name": "Defend Order",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4551,7 +4551,7 @@
     },
     {
         "id": 456,
-        "move": "Heal Order",
+        "name": "Heal Order",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4561,7 +4561,7 @@
     },
     {
         "id": 457,
-        "move": "Head Smash",
+        "name": "Head Smash",
         "category": "Physical",
         "power": "150",
         "accuracy": "80",
@@ -4571,7 +4571,7 @@
     },
     {
         "id": 458,
-        "move": "Double Hit",
+        "name": "Double Hit",
         "category": "Physical",
         "power": "35",
         "accuracy": "90",
@@ -4581,7 +4581,7 @@
     },
     {
         "id": 459,
-        "move": "Roar of Time",
+        "name": "Roar of Time",
         "category": "Special",
         "power": "150",
         "accuracy": "90",
@@ -4591,7 +4591,7 @@
     },
     {
         "id": 460,
-        "move": "Spacial Rend",
+        "name": "Spacial Rend",
         "category": "Special",
         "power": "100",
         "accuracy": "95",
@@ -4601,7 +4601,7 @@
     },
     {
         "id": 461,
-        "move": "Lunar Dance",
+        "name": "Lunar Dance",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4611,7 +4611,7 @@
     },
     {
         "id": 462,
-        "move": "Crush Grip",
+        "name": "Crush Grip",
         "category": "Physical",
         "power": "1-121",
         "accuracy": "100",
@@ -4621,7 +4621,7 @@
     },
     {
         "id": 463,
-        "move": "Magma Storm",
+        "name": "Magma Storm",
         "category": "Special",
         "power": "100",
         "accuracy": "75",
@@ -4631,7 +4631,7 @@
     },
     {
         "id": 464,
-        "move": "Dark Void",
+        "name": "Dark Void",
         "category": "Status",
         "power": "--",
         "accuracy": "50",
@@ -4641,7 +4641,7 @@
     },
     {
         "id": 465,
-        "move": "Seed Flare",
+        "name": "Seed Flare",
         "category": "Special",
         "power": "120",
         "accuracy": "85",
@@ -4651,7 +4651,7 @@
     },
     {
         "id": 466,
-        "move": "Ominous Wind",
+        "name": "Ominous Wind",
         "category": "Special",
         "power": "60",
         "accuracy": "100",
@@ -4661,7 +4661,7 @@
     },
     {
         "id": 467,
-        "move": "Shadow Force",
+        "name": "Shadow Force",
         "category": "Physical",
         "power": "120",
         "accuracy": "100",
@@ -4671,7 +4671,7 @@
     },
     {
         "id": 468,
-        "move": "Hone Claws",
+        "name": "Hone Claws",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4681,7 +4681,7 @@
     },
     {
         "id": 469,
-        "move": "Wide Guard",
+        "name": "Wide Guard",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4691,7 +4691,7 @@
     },
     {
         "id": 470,
-        "move": "Guard Split",
+        "name": "Guard Split",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4701,7 +4701,7 @@
     },
     {
         "id": 471,
-        "move": "Power Split",
+        "name": "Power Split",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4711,7 +4711,7 @@
     },
     {
         "id": 472,
-        "move": "Wonder Room",
+        "name": "Wonder Room",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4721,7 +4721,7 @@
     },
     {
         "id": 473,
-        "move": "Psyshock",
+        "name": "Psyshock",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -4731,7 +4731,7 @@
     },
     {
         "id": 474,
-        "move": "Venoshock",
+        "name": "Venoshock",
         "category": "Special",
         "power": "65",
         "accuracy": "100",
@@ -4741,7 +4741,7 @@
     },
     {
         "id": 475,
-        "move": "Autotomize",
+        "name": "Autotomize",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4751,7 +4751,7 @@
     },
     {
         "id": 476,
-        "move": "Rage Powder",
+        "name": "Rage Powder",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4761,7 +4761,7 @@
     },
     {
         "id": 477,
-        "move": "Telekinesis",
+        "name": "Telekinesis",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4771,7 +4771,7 @@
     },
     {
         "id": 478,
-        "move": "Magic Room",
+        "name": "Magic Room",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4781,7 +4781,7 @@
     },
     {
         "id": 479,
-        "move": "Smack Down",
+        "name": "Smack Down",
         "category": "Physical",
         "power": "50",
         "accuracy": "100",
@@ -4791,7 +4791,7 @@
     },
     {
         "id": 480,
-        "move": "Storm Throw",
+        "name": "Storm Throw",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -4801,7 +4801,7 @@
     },
     {
         "id": 481,
-        "move": "Flame Burst",
+        "name": "Flame Burst",
         "category": "Special",
         "power": "70",
         "accuracy": "100",
@@ -4811,7 +4811,7 @@
     },
     {
         "id": 482,
-        "move": "Sludge Wave",
+        "name": "Sludge Wave",
         "category": "Special",
         "power": "95",
         "accuracy": "100",
@@ -4821,7 +4821,7 @@
     },
     {
         "id": 483,
-        "move": "Quiver Dance",
+        "name": "Quiver Dance",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4831,7 +4831,7 @@
     },
     {
         "id": 484,
-        "move": "Heavy Slam",
+        "name": "Heavy Slam",
         "category": "Physical",
         "power": "--",
         "accuracy": "100",
@@ -4841,7 +4841,7 @@
     },
     {
         "id": 485,
-        "move": "Synchronoise",
+        "name": "Synchronoise",
         "category": "Special",
         "power": "120",
         "accuracy": "100",
@@ -4851,7 +4851,7 @@
     },
     {
         "id": 486,
-        "move": "Electro Ball",
+        "name": "Electro Ball",
         "category": "Special",
         "power": "--",
         "accuracy": "100",
@@ -4861,7 +4861,7 @@
     },
     {
         "id": 487,
-        "move": "Soak",
+        "name": "Soak",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -4871,7 +4871,7 @@
     },
     {
         "id": 488,
-        "move": "Flame Charge",
+        "name": "Flame Charge",
         "category": "Physical",
         "power": "50",
         "accuracy": "100",
@@ -4881,7 +4881,7 @@
     },
     {
         "id": 489,
-        "move": "Coil",
+        "name": "Coil",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4891,7 +4891,7 @@
     },
     {
         "id": 490,
-        "move": "Low Sweep",
+        "name": "Low Sweep",
         "category": "Physical",
         "power": "65",
         "accuracy": "100",
@@ -4901,7 +4901,7 @@
     },
     {
         "id": 491,
-        "move": "Acid Spray",
+        "name": "Acid Spray",
         "category": "Special",
         "power": "40",
         "accuracy": "100",
@@ -4911,7 +4911,7 @@
     },
     {
         "id": 492,
-        "move": "Foul Play",
+        "name": "Foul Play",
         "category": "Physical",
         "power": "95",
         "accuracy": "100",
@@ -4921,7 +4921,7 @@
     },
     {
         "id": 493,
-        "move": "Simple Beam",
+        "name": "Simple Beam",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -4931,7 +4931,7 @@
     },
     {
         "id": 494,
-        "move": "Entrainment",
+        "name": "Entrainment",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -4941,7 +4941,7 @@
     },
     {
         "id": 495,
-        "move": "After You",
+        "name": "After You",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -4951,7 +4951,7 @@
     },
     {
         "id": 496,
-        "move": "Round",
+        "name": "Round",
         "category": "Special",
         "power": "60",
         "accuracy": "100",
@@ -4961,7 +4961,7 @@
     },
     {
         "id": 497,
-        "move": "Echoed Voice",
+        "name": "Echoed Voice",
         "category": "Special",
         "power": "40",
         "accuracy": "100",
@@ -4971,7 +4971,7 @@
     },
     {
         "id": 498,
-        "move": "Chip Away",
+        "name": "Chip Away",
         "category": "Physical",
         "power": "70",
         "accuracy": "100",
@@ -4981,7 +4981,7 @@
     },
     {
         "id": 499,
-        "move": "Clear Smog",
+        "name": "Clear Smog",
         "category": "Special",
         "power": "50",
         "accuracy": "--",
@@ -4991,7 +4991,7 @@
     },
     {
         "id": 500,
-        "move": "Stored Power",
+        "name": "Stored Power",
         "category": "Special",
         "power": "20",
         "accuracy": "100",
@@ -5001,7 +5001,7 @@
     },
     {
         "id": 501,
-        "move": "Quick Guard",
+        "name": "Quick Guard",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5011,7 +5011,7 @@
     },
     {
         "id": 502,
-        "move": "Ally Switch",
+        "name": "Ally Switch",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5021,7 +5021,7 @@
     },
     {
         "id": 503,
-        "move": "Scald",
+        "name": "Scald",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -5031,7 +5031,7 @@
     },
     {
         "id": 504,
-        "move": "Shell Smash",
+        "name": "Shell Smash",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5041,7 +5041,7 @@
     },
     {
         "id": 505,
-        "move": "Heal Pulse",
+        "name": "Heal Pulse",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5051,7 +5051,7 @@
     },
     {
         "id": 506,
-        "move": "Hex",
+        "name": "Hex",
         "category": "Special",
         "power": "65",
         "accuracy": "100",
@@ -5061,7 +5061,7 @@
     },
     {
         "id": 507,
-        "move": "Sky Drop",
+        "name": "Sky Drop",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -5071,7 +5071,7 @@
     },
     {
         "id": 508,
-        "move": "Shift Gear",
+        "name": "Shift Gear",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5081,7 +5081,7 @@
     },
     {
         "id": 509,
-        "move": "Circle Throw",
+        "name": "Circle Throw",
         "category": "Physical",
         "power": "60",
         "accuracy": "90",
@@ -5091,7 +5091,7 @@
     },
     {
         "id": 510,
-        "move": "Incinerate",
+        "name": "Incinerate",
         "category": "Special",
         "power": "60",
         "accuracy": "100",
@@ -5101,7 +5101,7 @@
     },
     {
         "id": 511,
-        "move": "Quash",
+        "name": "Quash",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -5111,7 +5111,7 @@
     },
     {
         "id": 512,
-        "move": "Acrobatics",
+        "name": "Acrobatics",
         "category": "Physical",
         "power": "55",
         "accuracy": "100",
@@ -5121,7 +5121,7 @@
     },
     {
         "id": 513,
-        "move": "Reflect Type",
+        "name": "Reflect Type",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5131,7 +5131,7 @@
     },
     {
         "id": 514,
-        "move": "Retaliate",
+        "name": "Retaliate",
         "category": "Physical",
         "power": "70",
         "accuracy": "100",
@@ -5141,7 +5141,7 @@
     },
     {
         "id": 515,
-        "move": "Final Gambit",
+        "name": "Final Gambit",
         "category": "Special",
         "power": "--",
         "accuracy": "100",
@@ -5151,7 +5151,7 @@
     },
     {
         "id": 516,
-        "move": "Bestow",
+        "name": "Bestow",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5161,7 +5161,7 @@
     },
     {
         "id": 517,
-        "move": "Inferno",
+        "name": "Inferno",
         "category": "Special",
         "power": "100",
         "accuracy": "50",
@@ -5171,7 +5171,7 @@
     },
     {
         "id": 518,
-        "move": "Water Pledge",
+        "name": "Water Pledge",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -5181,7 +5181,7 @@
     },
     {
         "id": 519,
-        "move": "Fire Pledge",
+        "name": "Fire Pledge",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -5191,7 +5191,7 @@
     },
     {
         "id": 520,
-        "move": "Grass Pledge",
+        "name": "Grass Pledge",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -5201,7 +5201,7 @@
     },
     {
         "id": 521,
-        "move": "Volt Switch",
+        "name": "Volt Switch",
         "category": "Special",
         "power": "70",
         "accuracy": "100",
@@ -5211,7 +5211,7 @@
     },
     {
         "id": 522,
-        "move": "Struggle Bug",
+        "name": "Struggle Bug",
         "category": "Special",
         "power": "50",
         "accuracy": "100",
@@ -5221,7 +5221,7 @@
     },
     {
         "id": 523,
-        "move": "Bulldoze",
+        "name": "Bulldoze",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -5231,7 +5231,7 @@
     },
     {
         "id": 524,
-        "move": "Frost Breath",
+        "name": "Frost Breath",
         "category": "Special",
         "power": "60",
         "accuracy": "90",
@@ -5241,7 +5241,7 @@
     },
     {
         "id": 525,
-        "move": "Dragon Tail",
+        "name": "Dragon Tail",
         "category": "Physical",
         "power": "60",
         "accuracy": "90",
@@ -5251,7 +5251,7 @@
     },
     {
         "id": 526,
-        "move": "Work Up",
+        "name": "Work Up",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5261,7 +5261,7 @@
     },
     {
         "id": 527,
-        "move": "Electroweb",
+        "name": "Electroweb",
         "category": "Special",
         "power": "55",
         "accuracy": "95",
@@ -5271,7 +5271,7 @@
     },
     {
         "id": 528,
-        "move": "Wild Charge",
+        "name": "Wild Charge",
         "category": "Physical",
         "power": "90",
         "accuracy": "100",
@@ -5281,7 +5281,7 @@
     },
     {
         "id": 529,
-        "move": "Drill Run",
+        "name": "Drill Run",
         "category": "Physical",
         "power": "80",
         "accuracy": "95",
@@ -5291,7 +5291,7 @@
     },
     {
         "id": 530,
-        "move": "Dual Chop",
+        "name": "Dual Chop",
         "category": "Physical",
         "power": "40",
         "accuracy": "90",
@@ -5301,7 +5301,7 @@
     },
     {
         "id": 531,
-        "move": "Heart Stamp",
+        "name": "Heart Stamp",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -5311,7 +5311,7 @@
     },
     {
         "id": 532,
-        "move": "Horn Leech",
+        "name": "Horn Leech",
         "category": "Physical",
         "power": "75",
         "accuracy": "100",
@@ -5321,7 +5321,7 @@
     },
     {
         "id": 533,
-        "move": "Sacred Sword",
+        "name": "Sacred Sword",
         "category": "Physical",
         "power": "90",
         "accuracy": "100",
@@ -5331,7 +5331,7 @@
     },
     {
         "id": 534,
-        "move": "Razor Shell",
+        "name": "Razor Shell",
         "category": "Physical",
         "power": "75",
         "accuracy": "95",
@@ -5341,7 +5341,7 @@
     },
     {
         "id": 535,
-        "move": "Heat Crash",
+        "name": "Heat Crash",
         "category": "Physical",
         "power": "--",
         "accuracy": "100",
@@ -5351,7 +5351,7 @@
     },
     {
         "id": 536,
-        "move": "Leaf Tornado",
+        "name": "Leaf Tornado",
         "category": "Special",
         "power": "65",
         "accuracy": "90",
@@ -5361,7 +5361,7 @@
     },
     {
         "id": 537,
-        "move": "Steamroller",
+        "name": "Steamroller",
         "category": "Physical",
         "power": "65",
         "accuracy": "100",
@@ -5371,7 +5371,7 @@
     },
     {
         "id": 538,
-        "move": "Cotton Guard",
+        "name": "Cotton Guard",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5381,7 +5381,7 @@
     },
     {
         "id": 539,
-        "move": "Night Daze",
+        "name": "Night Daze",
         "category": "Special",
         "power": "85",
         "accuracy": "95",
@@ -5391,7 +5391,7 @@
     },
     {
         "id": 540,
-        "move": "Psystrike",
+        "name": "Psystrike",
         "category": "Special",
         "power": "100",
         "accuracy": "100",
@@ -5401,7 +5401,7 @@
     },
     {
         "id": 541,
-        "move": "Tail Slap",
+        "name": "Tail Slap",
         "category": "Physical",
         "power": "25",
         "accuracy": "85",
@@ -5411,7 +5411,7 @@
     },
     {
         "id": 542,
-        "move": "Hurricane",
+        "name": "Hurricane",
         "category": "Special",
         "power": "110",
         "accuracy": "70",
@@ -5421,7 +5421,7 @@
     },
     {
         "id": 543,
-        "move": "Head Charge",
+        "name": "Head Charge",
         "category": "Physical",
         "power": "120",
         "accuracy": "100",
@@ -5431,7 +5431,7 @@
     },
     {
         "id": 544,
-        "move": "Gear Grind",
+        "name": "Gear Grind",
         "category": "Physical",
         "power": "50",
         "accuracy": "85",
@@ -5441,7 +5441,7 @@
     },
     {
         "id": 545,
-        "move": "Searing Shot",
+        "name": "Searing Shot",
         "category": "Special",
         "power": "100",
         "accuracy": "100",
@@ -5451,7 +5451,7 @@
     },
     {
         "id": 546,
-        "move": "Techno Blast",
+        "name": "Techno Blast",
         "category": "Special",
         "power": "120",
         "accuracy": "100",
@@ -5461,7 +5461,7 @@
     },
     {
         "id": 547,
-        "move": "Relic Song",
+        "name": "Relic Song",
         "category": "Special",
         "power": "75",
         "accuracy": "100",
@@ -5471,7 +5471,7 @@
     },
     {
         "id": 548,
-        "move": "Secret Sword",
+        "name": "Secret Sword",
         "category": "Special",
         "power": "85",
         "accuracy": "100",
@@ -5481,7 +5481,7 @@
     },
     {
         "id": 549,
-        "move": "Glaciate",
+        "name": "Glaciate",
         "category": "Special",
         "power": "65",
         "accuracy": "95",
@@ -5491,7 +5491,7 @@
     },
     {
         "id": 550,
-        "move": "Bolt Strike",
+        "name": "Bolt Strike",
         "category": "Physical",
         "power": "130",
         "accuracy": "85",
@@ -5501,7 +5501,7 @@
     },
     {
         "id": 551,
-        "move": "Blue Flare",
+        "name": "Blue Flare",
         "category": "Special",
         "power": "130",
         "accuracy": "85",
@@ -5511,7 +5511,7 @@
     },
     {
         "id": 552,
-        "move": "Fiery Dance",
+        "name": "Fiery Dance",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -5521,7 +5521,7 @@
     },
     {
         "id": 553,
-        "move": "Freeze Shock",
+        "name": "Freeze Shock",
         "category": "Physical",
         "power": "140",
         "accuracy": "90",
@@ -5531,7 +5531,7 @@
     },
     {
         "id": 554,
-        "move": "Ice Burn",
+        "name": "Ice Burn",
         "category": "Special",
         "power": "140",
         "accuracy": "90",
@@ -5541,7 +5541,7 @@
     },
     {
         "id": 555,
-        "move": "Snarl",
+        "name": "Snarl",
         "category": "Special",
         "power": "55",
         "accuracy": "95",
@@ -5551,7 +5551,7 @@
     },
     {
         "id": 556,
-        "move": "Icicle Crash",
+        "name": "Icicle Crash",
         "category": "Physical",
         "power": "85",
         "accuracy": "90",
@@ -5561,7 +5561,7 @@
     },
     {
         "id": 557,
-        "move": "V-create",
+        "name": "V-create",
         "category": "Physical",
         "power": "180",
         "accuracy": "95",
@@ -5571,7 +5571,7 @@
     },
     {
         "id": 558,
-        "move": "Fusion Flare",
+        "name": "Fusion Flare",
         "category": "Special",
         "power": "100",
         "accuracy": "100",
@@ -5581,7 +5581,7 @@
     },
     {
         "id": 559,
-        "move": "Fusion Bolt",
+        "name": "Fusion Bolt",
         "category": "Physical",
         "power": "100",
         "accuracy": "100",
@@ -5591,7 +5591,7 @@
     },
     {
         "id": 560,
-        "move": "Flying Press",
+        "name": "Flying Press",
         "category": "Physical",
         "power": "100",
         "accuracy": "95",
@@ -5601,7 +5601,7 @@
     },
     {
         "id": 561,
-        "move": "Mat Block",
+        "name": "Mat Block",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5611,7 +5611,7 @@
     },
     {
         "id": 562,
-        "move": "Belch",
+        "name": "Belch",
         "category": "Special",
         "power": "120",
         "accuracy": "90",
@@ -5621,7 +5621,7 @@
     },
     {
         "id": 563,
-        "move": "Rototiller",
+        "name": "Rototiller",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5631,7 +5631,7 @@
     },
     {
         "id": 564,
-        "move": "Sticky Web",
+        "name": "Sticky Web",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5641,7 +5641,7 @@
     },
     {
         "id": 565,
-        "move": "Fell Stinger",
+        "name": "Fell Stinger",
         "category": "Physical",
         "power": "50",
         "accuracy": "100",
@@ -5651,7 +5651,7 @@
     },
     {
         "id": 566,
-        "move": "Phantom Force",
+        "name": "Phantom Force",
         "category": "Physical",
         "power": "90",
         "accuracy": "100",
@@ -5661,7 +5661,7 @@
     },
     {
         "id": 567,
-        "move": "Trick-or-Treat",
+        "name": "Trick-or-Treat",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -5671,7 +5671,7 @@
     },
     {
         "id": 568,
-        "move": "Noble Roar",
+        "name": "Noble Roar",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -5681,7 +5681,7 @@
     },
     {
         "id": 569,
-        "move": "Ion Deluge",
+        "name": "Ion Deluge",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5691,7 +5691,7 @@
     },
     {
         "id": 570,
-        "move": "Parabolic Charge",
+        "name": "Parabolic Charge",
         "category": "Special",
         "power": "65",
         "accuracy": "100",
@@ -5701,7 +5701,7 @@
     },
     {
         "id": 571,
-        "move": "Forest's Curse",
+        "name": "Forest's Curse",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -5711,7 +5711,7 @@
     },
     {
         "id": 572,
-        "move": "Petal Blizzard",
+        "name": "Petal Blizzard",
         "category": "Physical",
         "power": "90",
         "accuracy": "100",
@@ -5721,7 +5721,7 @@
     },
     {
         "id": 573,
-        "move": "Freeze-Dry",
+        "name": "Freeze-Dry",
         "category": "Special",
         "power": "70",
         "accuracy": "100",
@@ -5731,7 +5731,7 @@
     },
     {
         "id": 574,
-        "move": "Disarming Voice",
+        "name": "Disarming Voice",
         "category": "Special",
         "power": "40",
         "accuracy": "--",
@@ -5741,7 +5741,7 @@
     },
     {
         "id": 575,
-        "move": "Parting Shot",
+        "name": "Parting Shot",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -5751,7 +5751,7 @@
     },
     {
         "id": 576,
-        "move": "Topsy-Turvy",
+        "name": "Topsy-Turvy",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -5761,7 +5761,7 @@
     },
     {
         "id": 577,
-        "move": "Draining Kiss",
+        "name": "Draining Kiss",
         "category": "Special",
         "power": "50",
         "accuracy": "100",
@@ -5771,7 +5771,7 @@
     },
     {
         "id": 578,
-        "move": "Crafty Shield",
+        "name": "Crafty Shield",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5781,7 +5781,7 @@
     },
     {
         "id": 579,
-        "move": "Flower Shield",
+        "name": "Flower Shield",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5791,7 +5791,7 @@
     },
     {
         "id": 580,
-        "move": "Grassy Terrain",
+        "name": "Grassy Terrain",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5801,7 +5801,7 @@
     },
     {
         "id": 581,
-        "move": "Misty Terrain",
+        "name": "Misty Terrain",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5811,7 +5811,7 @@
     },
     {
         "id": 582,
-        "move": "Electrify",
+        "name": "Electrify",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5821,7 +5821,7 @@
     },
     {
         "id": 583,
-        "move": "Play Rough",
+        "name": "Play Rough",
         "category": "Physical",
         "power": "90",
         "accuracy": "90",
@@ -5831,7 +5831,7 @@
     },
     {
         "id": 584,
-        "move": "Fairy Wind",
+        "name": "Fairy Wind",
         "category": "Special",
         "power": "40",
         "accuracy": "100",
@@ -5841,7 +5841,7 @@
     },
     {
         "id": 585,
-        "move": "Moonblast",
+        "name": "Moonblast",
         "category": "Special",
         "power": "95",
         "accuracy": "100",
@@ -5851,7 +5851,7 @@
     },
     {
         "id": 586,
-        "move": "Boomburst",
+        "name": "Boomburst",
         "category": "Special",
         "power": "140",
         "accuracy": "100",
@@ -5861,7 +5861,7 @@
     },
     {
         "id": 587,
-        "move": "Fairy Lock",
+        "name": "Fairy Lock",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5871,7 +5871,7 @@
     },
     {
         "id": 588,
-        "move": "King's Shield",
+        "name": "King's Shield",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5881,7 +5881,7 @@
     },
     {
         "id": 589,
-        "move": "Play Nice",
+        "name": "Play Nice",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -5891,7 +5891,7 @@
     },
     {
         "id": 590,
-        "move": "Confide",
+        "name": "Confide",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5901,7 +5901,7 @@
     },
     {
         "id": 591,
-        "move": "Diamond Storm",
+        "name": "Diamond Storm",
         "category": "Physical",
         "power": "100",
         "accuracy": "95",
@@ -5911,7 +5911,7 @@
     },
     {
         "id": 592,
-        "move": "Steam Eruption",
+        "name": "Steam Eruption",
         "category": "Special",
         "power": "110",
         "accuracy": "95",
@@ -5921,7 +5921,7 @@
     },
     {
         "id": 593,
-        "move": "Hyperspace Hole",
+        "name": "Hyperspace Hole",
         "category": "Special",
         "power": "80",
         "accuracy": "--",
@@ -5931,7 +5931,7 @@
     },
     {
         "id": 594,
-        "move": "Water Shuriken",
+        "name": "Water Shuriken",
         "category": "Special",
         "power": "15",
         "accuracy": "100",
@@ -5941,7 +5941,7 @@
     },
     {
         "id": 595,
-        "move": "Mystical Fire",
+        "name": "Mystical Fire",
         "category": "Special",
         "power": "75",
         "accuracy": "100",
@@ -5951,7 +5951,7 @@
     },
     {
         "id": 596,
-        "move": "Spiky Shield",
+        "name": "Spiky Shield",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5961,7 +5961,7 @@
     },
     {
         "id": 597,
-        "move": "Aromatic Mist",
+        "name": "Aromatic Mist",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -5971,7 +5971,7 @@
     },
     {
         "id": 598,
-        "move": "Eerie Impulse",
+        "name": "Eerie Impulse",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -5981,7 +5981,7 @@
     },
     {
         "id": 599,
-        "move": "Venom Drench",
+        "name": "Venom Drench",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -5991,7 +5991,7 @@
     },
     {
         "id": 600,
-        "move": "Powder",
+        "name": "Powder",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -6001,7 +6001,7 @@
     },
     {
         "id": 601,
-        "move": "Geomancy",
+        "name": "Geomancy",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -6011,7 +6011,7 @@
     },
     {
         "id": 602,
-        "move": "Magnetic Flux",
+        "name": "Magnetic Flux",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -6021,7 +6021,7 @@
     },
     {
         "id": 603,
-        "move": "Happy Hour",
+        "name": "Happy Hour",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -6031,7 +6031,7 @@
     },
     {
         "id": 604,
-        "move": "Electric Terrain",
+        "name": "Electric Terrain",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -6041,7 +6041,7 @@
     },
     {
         "id": 605,
-        "move": "Dazzling Gleam",
+        "name": "Dazzling Gleam",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -6051,7 +6051,7 @@
     },
     {
         "id": 606,
-        "move": "Celebrate",
+        "name": "Celebrate",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -6061,7 +6061,7 @@
     },
     {
         "id": 607,
-        "move": "Hold Hands",
+        "name": "Hold Hands",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -6071,7 +6071,7 @@
     },
     {
         "id": 608,
-        "move": "Baby-Doll Eyes",
+        "name": "Baby-Doll Eyes",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -6081,7 +6081,7 @@
     },
     {
         "id": 609,
-        "move": "Nuzzle",
+        "name": "Nuzzle",
         "category": "Physical",
         "power": "20",
         "accuracy": "100",
@@ -6091,7 +6091,7 @@
     },
     {
         "id": 610,
-        "move": "Hold Back",
+        "name": "Hold Back",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -6101,7 +6101,7 @@
     },
     {
         "id": 611,
-        "move": "Infestation",
+        "name": "Infestation",
         "category": "Special",
         "power": "20",
         "accuracy": "100",
@@ -6111,7 +6111,7 @@
     },
     {
         "id": 612,
-        "move": "Power-Up Punch",
+        "name": "Power-Up Punch",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -6121,7 +6121,7 @@
     },
     {
         "id": 613,
-        "move": "Oblivion Wing",
+        "name": "Oblivion Wing",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -6131,7 +6131,7 @@
     },
     {
         "id": 614,
-        "move": "Thousand Arrows",
+        "name": "Thousand Arrows",
         "category": "Physical",
         "power": "90",
         "accuracy": "100",
@@ -6141,7 +6141,7 @@
     },
     {
         "id": 615,
-        "move": "Thousand Waves",
+        "name": "Thousand Waves",
         "category": "Physical",
         "power": "90",
         "accuracy": "100",
@@ -6151,7 +6151,7 @@
     },
     {
         "id": 616,
-        "move": "Land's Wrath",
+        "name": "Land's Wrath",
         "category": "Physical",
         "power": "90",
         "accuracy": "100",
@@ -6161,7 +6161,7 @@
     },
     {
         "id": 617,
-        "move": "Light of Ruin",
+        "name": "Light of Ruin",
         "category": "Special",
         "power": "140",
         "accuracy": "90",
@@ -6171,7 +6171,7 @@
     },
     {
         "id": 618,
-        "move": "Origin Pulse",
+        "name": "Origin Pulse",
         "category": "Special",
         "power": "110",
         "accuracy": "85",
@@ -6181,7 +6181,7 @@
     },
     {
         "id": 619,
-        "move": "Precipice Blades",
+        "name": "Precipice Blades",
         "category": "Physical",
         "power": "120",
         "accuracy": "85",
@@ -6191,7 +6191,7 @@
     },
     {
         "id": 620,
-        "move": "Dragon Ascent",
+        "name": "Dragon Ascent",
         "category": "Physical",
         "power": "120",
         "accuracy": "100",
@@ -6201,7 +6201,7 @@
     },
     {
         "id": 621,
-        "move": "Hyperspace Fury",
+        "name": "Hyperspace Fury",
         "category": "Physical",
         "power": "100",
         "accuracy": "--",
@@ -6211,7 +6211,7 @@
     },
     {
         "id": 622,
-        "move": "Breakneck Blitz",
+        "name": "Breakneck Blitz",
         "category": "Physical",
         "power": "200",
         "accuracy": "--",
@@ -6221,7 +6221,7 @@
     },
     {
         "id": 623,
-        "move": "Breakneck Blitz",
+        "name": "Breakneck Blitz",
         "category": "Special",
         "power": "200",
         "accuracy": "--",
@@ -6231,7 +6231,7 @@
     },
     {
         "id": 624,
-        "move": "All-Out Pummeling",
+        "name": "All-Out Pummeling",
         "category": "Physical",
         "power": "190",
         "accuracy": "--",
@@ -6241,7 +6241,7 @@
     },
     {
         "id": 625,
-        "move": "All-Out Pummeling",
+        "name": "All-Out Pummeling",
         "category": "Special",
         "power": "190",
         "accuracy": "--",
@@ -6251,7 +6251,7 @@
     },
     {
         "id": 626,
-        "move": "Supersonic Skystrike",
+        "name": "Supersonic Skystrike",
         "category": "Physical",
         "power": "200",
         "accuracy": "--",
@@ -6261,7 +6261,7 @@
     },
     {
         "id": 627,
-        "move": "Supersonic Skystrike",
+        "name": "Supersonic Skystrike",
         "category": "Special",
         "power": "200",
         "accuracy": "--",
@@ -6271,7 +6271,7 @@
     },
     {
         "id": 628,
-        "move": "Acid Downpour",
+        "name": "Acid Downpour",
         "category": "Physical",
         "power": "190",
         "accuracy": "--",
@@ -6281,7 +6281,7 @@
     },
     {
         "id": 629,
-        "move": "Acid Downpour",
+        "name": "Acid Downpour",
         "category": "Special",
         "power": "190",
         "accuracy": "--",
@@ -6291,7 +6291,7 @@
     },
     {
         "id": 630,
-        "move": "Tectonic Rage",
+        "name": "Tectonic Rage",
         "category": "Physical",
         "power": "180",
         "accuracy": "--",
@@ -6301,7 +6301,7 @@
     },
     {
         "id": 631,
-        "move": "Tectonic Rage",
+        "name": "Tectonic Rage",
         "category": "Special",
         "power": "180",
         "accuracy": "--",
@@ -6311,7 +6311,7 @@
     },
     {
         "id": 632,
-        "move": "Continental Crush",
+        "name": "Continental Crush",
         "category": "Physical",
         "power": "180",
         "accuracy": "--",
@@ -6321,7 +6321,7 @@
     },
     {
         "id": 633,
-        "move": "Continental Crush",
+        "name": "Continental Crush",
         "category": "Special",
         "power": "180",
         "accuracy": "--",
@@ -6331,7 +6331,7 @@
     },
     {
         "id": 634,
-        "move": "Savage Spin-Out",
+        "name": "Savage Spin-Out",
         "category": "Physical",
         "power": "140",
         "accuracy": "--",
@@ -6341,7 +6341,7 @@
     },
     {
         "id": 635,
-        "move": "Savage Spin-Out",
+        "name": "Savage Spin-Out",
         "category": "Special",
         "power": "140",
         "accuracy": "--",
@@ -6351,7 +6351,7 @@
     },
     {
         "id": 636,
-        "move": "Never-Ending Nightmare",
+        "name": "Never-Ending Nightmare",
         "category": "Physical",
         "power": "160",
         "accuracy": "--",
@@ -6361,7 +6361,7 @@
     },
     {
         "id": 637,
-        "move": "Never-Ending Nightmare",
+        "name": "Never-Ending Nightmare",
         "category": "Special",
         "power": "160",
         "accuracy": "--",
@@ -6371,7 +6371,7 @@
     },
     {
         "id": 638,
-        "move": "Corkscrew Crash",
+        "name": "Corkscrew Crash",
         "category": "Physical",
         "power": "180",
         "accuracy": "--",
@@ -6381,7 +6381,7 @@
     },
     {
         "id": 639,
-        "move": "Corkscrew Crash",
+        "name": "Corkscrew Crash",
         "category": "Special",
         "power": "180",
         "accuracy": "--",
@@ -6391,7 +6391,7 @@
     },
     {
         "id": 640,
-        "move": "Inferno Overdrive",
+        "name": "Inferno Overdrive",
         "category": "Physical",
         "power": "185",
         "accuracy": "--",
@@ -6401,7 +6401,7 @@
     },
     {
         "id": 641,
-        "move": "Inferno Overdrive",
+        "name": "Inferno Overdrive",
         "category": "Special",
         "power": "185",
         "accuracy": "--",
@@ -6411,7 +6411,7 @@
     },
     {
         "id": 642,
-        "move": "Hydro Vortex",
+        "name": "Hydro Vortex",
         "category": "Physical",
         "power": "195",
         "accuracy": "--",
@@ -6421,7 +6421,7 @@
     },
     {
         "id": 643,
-        "move": "Hydro Vortex",
+        "name": "Hydro Vortex",
         "category": "Special",
         "power": "195",
         "accuracy": "--",
@@ -6431,7 +6431,7 @@
     },
     {
         "id": 644,
-        "move": "Bloom Doom",
+        "name": "Bloom Doom",
         "category": "Physical",
         "power": "190",
         "accuracy": "--",
@@ -6441,7 +6441,7 @@
     },
     {
         "id": 645,
-        "move": "Bloom Doom",
+        "name": "Bloom Doom",
         "category": "Special",
         "power": "190",
         "accuracy": "--",
@@ -6451,7 +6451,7 @@
     },
     {
         "id": 646,
-        "move": "Gigavolt Havoc",
+        "name": "Gigavolt Havoc",
         "category": "Physical",
         "power": "185",
         "accuracy": "--",
@@ -6461,7 +6461,7 @@
     },
     {
         "id": 647,
-        "move": "Gigavolt Havoc",
+        "name": "Gigavolt Havoc",
         "category": "Special",
         "power": "185",
         "accuracy": "--",
@@ -6471,7 +6471,7 @@
     },
     {
         "id": 648,
-        "move": "Shattered Psyche",
+        "name": "Shattered Psyche",
         "category": "Physical",
         "power": "175",
         "accuracy": "--",
@@ -6481,7 +6481,7 @@
     },
     {
         "id": 649,
-        "move": "Shattered Psyche",
+        "name": "Shattered Psyche",
         "category": "Special",
         "power": "175",
         "accuracy": "--",
@@ -6491,7 +6491,7 @@
     },
     {
         "id": 650,
-        "move": "Subzero Slammer",
+        "name": "Subzero Slammer",
         "category": "Physical",
         "power": "185",
         "accuracy": "--",
@@ -6501,7 +6501,7 @@
     },
     {
         "id": 651,
-        "move": "Subzero Slammer",
+        "name": "Subzero Slammer",
         "category": "Special",
         "power": "185",
         "accuracy": "--",
@@ -6511,7 +6511,7 @@
     },
     {
         "id": 652,
-        "move": "Devastating Drake",
+        "name": "Devastating Drake",
         "category": "Physical",
         "power": "195",
         "accuracy": "--",
@@ -6521,7 +6521,7 @@
     },
     {
         "id": 653,
-        "move": "Devastating Drake",
+        "name": "Devastating Drake",
         "category": "Special",
         "power": "195",
         "accuracy": "--",
@@ -6531,7 +6531,7 @@
     },
     {
         "id": 654,
-        "move": "Black Hole Eclipse",
+        "name": "Black Hole Eclipse",
         "category": "Physical",
         "power": "160",
         "accuracy": "--",
@@ -6541,7 +6541,7 @@
     },
     {
         "id": 655,
-        "move": "Black Hole Eclipse",
+        "name": "Black Hole Eclipse",
         "category": "Special",
         "power": "160",
         "accuracy": "--",
@@ -6551,7 +6551,7 @@
     },
     {
         "id": 656,
-        "move": "Twinkle Tackle",
+        "name": "Twinkle Tackle",
         "category": "Physical",
         "power": "175",
         "accuracy": "--",
@@ -6561,7 +6561,7 @@
     },
     {
         "id": 657,
-        "move": "Twinkle Tackle",
+        "name": "Twinkle Tackle",
         "category": "Special",
         "power": "175",
         "accuracy": "--",
@@ -6571,7 +6571,7 @@
     },
     {
         "id": 658,
-        "move": "Catastropika",
+        "name": "Catastropika",
         "category": "Physical",
         "power": "210",
         "accuracy": "--",
@@ -6581,7 +6581,7 @@
     },
     {
         "id": 659,
-        "move": "Shore Up",
+        "name": "Shore Up",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -6591,7 +6591,7 @@
     },
     {
         "id": 660,
-        "move": "First Impression",
+        "name": "First Impression",
         "category": "Physical",
         "power": "90",
         "accuracy": "100",
@@ -6601,7 +6601,7 @@
     },
     {
         "id": 661,
-        "move": "Baneful Bunker",
+        "name": "Baneful Bunker",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -6611,7 +6611,7 @@
     },
     {
         "id": 662,
-        "move": "Spirit Shackle",
+        "name": "Spirit Shackle",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -6621,7 +6621,7 @@
     },
     {
         "id": 663,
-        "move": "Darkest Lariat",
+        "name": "Darkest Lariat",
         "category": "Physical",
         "power": "85",
         "accuracy": "100",
@@ -6631,7 +6631,7 @@
     },
     {
         "id": 664,
-        "move": "Sparkling Aria",
+        "name": "Sparkling Aria",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -6641,7 +6641,7 @@
     },
     {
         "id": 665,
-        "move": "Ice Hammer",
+        "name": "Ice Hammer",
         "category": "Physical",
         "power": "100",
         "accuracy": "90",
@@ -6651,7 +6651,7 @@
     },
     {
         "id": 666,
-        "move": "Floral Healing",
+        "name": "Floral Healing",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -6661,7 +6661,7 @@
     },
     {
         "id": 667,
-        "move": "High Horsepower",
+        "name": "High Horsepower",
         "category": "Physical",
         "power": "95",
         "accuracy": "95",
@@ -6671,7 +6671,7 @@
     },
     {
         "id": 668,
-        "move": "Strength Sap",
+        "name": "Strength Sap",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -6681,7 +6681,7 @@
     },
     {
         "id": 669,
-        "move": "Solar Blade",
+        "name": "Solar Blade",
         "category": "Physical",
         "power": "125",
         "accuracy": "100",
@@ -6691,7 +6691,7 @@
     },
     {
         "id": 670,
-        "move": "Leafage",
+        "name": "Leafage",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -6701,7 +6701,7 @@
     },
     {
         "id": 671,
-        "move": "Spotlight",
+        "name": "Spotlight",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -6711,7 +6711,7 @@
     },
     {
         "id": 672,
-        "move": "Toxic Thread",
+        "name": "Toxic Thread",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -6721,7 +6721,7 @@
     },
     {
         "id": 673,
-        "move": "Laser Focus",
+        "name": "Laser Focus",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -6731,7 +6731,7 @@
     },
     {
         "id": 674,
-        "move": "Gear Up",
+        "name": "Gear Up",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -6741,7 +6741,7 @@
     },
     {
         "id": 675,
-        "move": "Throat Chop",
+        "name": "Throat Chop",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -6751,7 +6751,7 @@
     },
     {
         "id": 676,
-        "move": "Pollen Puff",
+        "name": "Pollen Puff",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -6761,7 +6761,7 @@
     },
     {
         "id": 677,
-        "move": "Anchor Shot",
+        "name": "Anchor Shot",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -6771,7 +6771,7 @@
     },
     {
         "id": 678,
-        "move": "Psychic Terrain",
+        "name": "Psychic Terrain",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -6781,7 +6781,7 @@
     },
     {
         "id": 679,
-        "move": "Lunge",
+        "name": "Lunge",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -6791,7 +6791,7 @@
     },
     {
         "id": 680,
-        "move": "Fire Lash",
+        "name": "Fire Lash",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -6801,7 +6801,7 @@
     },
     {
         "id": 681,
-        "move": "Power Trip",
+        "name": "Power Trip",
         "category": "Physical",
         "power": "--",
         "accuracy": "100",
@@ -6811,7 +6811,7 @@
     },
     {
         "id": 682,
-        "move": "Burn Up",
+        "name": "Burn Up",
         "category": "Special",
         "power": "130",
         "accuracy": "100",
@@ -6821,7 +6821,7 @@
     },
     {
         "id": 683,
-        "move": "Speed Swap",
+        "name": "Speed Swap",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -6831,7 +6831,7 @@
     },
     {
         "id": 684,
-        "move": "Smart Strike",
+        "name": "Smart Strike",
         "category": "Physical",
         "power": "70",
         "accuracy": "--",
@@ -6841,7 +6841,7 @@
     },
     {
         "id": 685,
-        "move": "Purify",
+        "name": "Purify",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -6851,7 +6851,7 @@
     },
     {
         "id": 686,
-        "move": "Revelation Dance",
+        "name": "Revelation Dance",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -6861,7 +6861,7 @@
     },
     {
         "id": 687,
-        "move": "Core Enforcer",
+        "name": "Core Enforcer",
         "category": "Special",
         "power": "100",
         "accuracy": "100",
@@ -6871,7 +6871,7 @@
     },
     {
         "id": 688,
-        "move": "Trop Kick",
+        "name": "Trop Kick",
         "category": "Physical",
         "power": "70",
         "accuracy": "100",
@@ -6881,7 +6881,7 @@
     },
     {
         "id": 689,
-        "move": "Instruct",
+        "name": "Instruct",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -6891,7 +6891,7 @@
     },
     {
         "id": 690,
-        "move": "Beak Blast",
+        "name": "Beak Blast",
         "category": "Physical",
         "power": "100",
         "accuracy": "100",
@@ -6901,7 +6901,7 @@
     },
     {
         "id": 691,
-        "move": "Clanging Scales",
+        "name": "Clanging Scales",
         "category": "Special",
         "power": "110",
         "accuracy": "100",
@@ -6911,7 +6911,7 @@
     },
     {
         "id": 692,
-        "move": "Dragon Hammer",
+        "name": "Dragon Hammer",
         "category": "Physical",
         "power": "90",
         "accuracy": "100",
@@ -6921,7 +6921,7 @@
     },
     {
         "id": 693,
-        "move": "Brutal Swing",
+        "name": "Brutal Swing",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -6931,7 +6931,7 @@
     },
     {
         "id": 694,
-        "move": "Aurora Veil",
+        "name": "Aurora Veil",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -6941,7 +6941,7 @@
     },
     {
         "id": 695,
-        "move": "Sinister Arrow Raid",
+        "name": "Sinister Arrow Raid",
         "category": "Physical",
         "power": "180",
         "accuracy": "--",
@@ -6951,7 +6951,7 @@
     },
     {
         "id": 696,
-        "move": "Malicious Moonsault",
+        "name": "Malicious Moonsault",
         "category": "Physical",
         "power": "180",
         "accuracy": "--",
@@ -6961,7 +6961,7 @@
     },
     {
         "id": 697,
-        "move": "Oceanic Operetta",
+        "name": "Oceanic Operetta",
         "category": "Special",
         "power": "195",
         "accuracy": "--",
@@ -6971,7 +6971,7 @@
     },
     {
         "id": 698,
-        "move": "Guardian of Alola",
+        "name": "Guardian of Alola",
         "category": "Special",
         "power": "--",
         "accuracy": "--",
@@ -6981,7 +6981,7 @@
     },
     {
         "id": 699,
-        "move": "Soul-Stealing 7-Star Strike",
+        "name": "Soul-Stealing 7-Star Strike",
         "category": "Physical",
         "power": "195",
         "accuracy": "--",
@@ -6991,7 +6991,7 @@
     },
     {
         "id": 700,
-        "move": "Stoked Sparksurfer",
+        "name": "Stoked Sparksurfer",
         "category": "Special",
         "power": "175",
         "accuracy": "--",
@@ -7001,7 +7001,7 @@
     },
     {
         "id": 701,
-        "move": "Pulverizing Pancake",
+        "name": "Pulverizing Pancake",
         "category": "Physical",
         "power": "210",
         "accuracy": "--",
@@ -7011,7 +7011,7 @@
     },
     {
         "id": 702,
-        "move": "Extreme Evoboost",
+        "name": "Extreme Evoboost",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -7021,7 +7021,7 @@
     },
     {
         "id": 703,
-        "move": "Genesis Supernova",
+        "name": "Genesis Supernova",
         "category": "Special",
         "power": "185",
         "accuracy": "--",
@@ -7031,7 +7031,7 @@
     },
     {
         "id": 704,
-        "move": "Shell Trap",
+        "name": "Shell Trap",
         "category": "Special",
         "power": "150",
         "accuracy": "100",
@@ -7041,7 +7041,7 @@
     },
     {
         "id": 705,
-        "move": "Fleur Cannon",
+        "name": "Fleur Cannon",
         "category": "Special",
         "power": "130",
         "accuracy": "90",
@@ -7051,7 +7051,7 @@
     },
     {
         "id": 706,
-        "move": "Psychic Fangs",
+        "name": "Psychic Fangs",
         "category": "Physical",
         "power": "85",
         "accuracy": "100",
@@ -7061,7 +7061,7 @@
     },
     {
         "id": 707,
-        "move": "Stomping Tantrum",
+        "name": "Stomping Tantrum",
         "category": "Physical",
         "power": "75",
         "accuracy": "100",
@@ -7071,7 +7071,7 @@
     },
     {
         "id": 708,
-        "move": "Shadow Bone",
+        "name": "Shadow Bone",
         "category": "Physical",
         "power": "85",
         "accuracy": "100",
@@ -7081,7 +7081,7 @@
     },
     {
         "id": 709,
-        "move": "Accelerock",
+        "name": "Accelerock",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -7091,7 +7091,7 @@
     },
     {
         "id": 710,
-        "move": "Liquidation",
+        "name": "Liquidation",
         "category": "Physical",
         "power": "85",
         "accuracy": "100",
@@ -7101,7 +7101,7 @@
     },
     {
         "id": 711,
-        "move": "Prismatic Laser",
+        "name": "Prismatic Laser",
         "category": "Special",
         "power": "160",
         "accuracy": "100",
@@ -7111,7 +7111,7 @@
     },
     {
         "id": 712,
-        "move": "Spectral Thief",
+        "name": "Spectral Thief",
         "category": "Physical",
         "power": "90",
         "accuracy": "100",
@@ -7121,7 +7121,7 @@
     },
     {
         "id": 713,
-        "move": "Sunsteel Strike",
+        "name": "Sunsteel Strike",
         "category": "Physical",
         "power": "100",
         "accuracy": "100",
@@ -7131,7 +7131,7 @@
     },
     {
         "id": 714,
-        "move": "Moongeist Beam",
+        "name": "Moongeist Beam",
         "category": "Special",
         "power": "100",
         "accuracy": "100",
@@ -7141,7 +7141,7 @@
     },
     {
         "id": 715,
-        "move": "Tearful Look",
+        "name": "Tearful Look",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -7151,7 +7151,7 @@
     },
     {
         "id": 716,
-        "move": "Zing Zap",
+        "name": "Zing Zap",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -7161,7 +7161,7 @@
     },
     {
         "id": 717,
-        "move": "Nature's Madness",
+        "name": "Nature's Madness",
         "category": "Special",
         "power": "--",
         "accuracy": "90",
@@ -7171,7 +7171,7 @@
     },
     {
         "id": 718,
-        "move": "Multi-Attack",
+        "name": "Multi-Attack",
         "category": "Physical",
         "power": "120",
         "accuracy": "100",
@@ -7181,7 +7181,7 @@
     },
     {
         "id": 719,
-        "move": "10,000,000 Volt Thunderbolt",
+        "name": "10,000,000 Volt Thunderbolt",
         "category": "Special",
         "power": "195",
         "accuracy": "--",
@@ -7191,7 +7191,7 @@
     },
     {
         "id": 720,
-        "move": "Mind Blown",
+        "name": "Mind Blown",
         "category": "Special",
         "power": "150",
         "accuracy": "100",
@@ -7201,7 +7201,7 @@
     },
     {
         "id": 721,
-        "move": "Plasma Fists",
+        "name": "Plasma Fists",
         "category": "Physical",
         "power": "100",
         "accuracy": "100",
@@ -7211,7 +7211,7 @@
     },
     {
         "id": 722,
-        "move": "Photon Geyser",
+        "name": "Photon Geyser",
         "category": "Special",
         "power": "100",
         "accuracy": "100",
@@ -7221,7 +7221,7 @@
     },
     {
         "id": 723,
-        "move": "Light That Burns the Sky",
+        "name": "Light That Burns the Sky",
         "category": "Special",
         "power": "200",
         "accuracy": "100",
@@ -7231,7 +7231,7 @@
     },
     {
         "id": 724,
-        "move": "Searing Sunraze Smash",
+        "name": "Searing Sunraze Smash",
         "category": "Special",
         "power": "200",
         "accuracy": "--",
@@ -7241,7 +7241,7 @@
     },
     {
         "id": 725,
-        "move": "Menacing Moonraze Maelstrom",
+        "name": "Menacing Moonraze Maelstrom",
         "category": "Special",
         "power": "200",
         "accuracy": "--",
@@ -7251,7 +7251,7 @@
     },
     {
         "id": 726,
-        "move": "Let's Snuggle Forever",
+        "name": "Let's Snuggle Forever",
         "category": "Physical",
         "power": "190",
         "accuracy": "--",
@@ -7261,7 +7261,7 @@
     },
     {
         "id": 727,
-        "move": "Splintered Stormshards",
+        "name": "Splintered Stormshards",
         "category": "Physical",
         "power": "190",
         "accuracy": "--",
@@ -7271,7 +7271,7 @@
     },
     {
         "id": 728,
-        "move": "Clangorous Soulblaze",
+        "name": "Clangorous Soulblaze",
         "category": "Special",
         "power": "185",
         "accuracy": "--",
@@ -7281,7 +7281,7 @@
     },
     {
         "id": 729,
-        "move": "Zippy Zap",
+        "name": "Zippy Zap",
         "category": "Physical",
         "power": "50",
         "accuracy": "--",
@@ -7291,7 +7291,7 @@
     },
     {
         "id": 730,
-        "move": "Splishy Splash",
+        "name": "Splishy Splash",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -7301,7 +7301,7 @@
     },
     {
         "id": 731,
-        "move": "Floaty Fall",
+        "name": "Floaty Fall",
         "category": "Physical",
         "power": "90",
         "accuracy": "95",
@@ -7311,7 +7311,7 @@
     },
     {
         "id": 732,
-        "move": "Pika Papow",
+        "name": "Pika Papow",
         "category": "Physical",
         "power": "--",
         "accuracy": "--",
@@ -7321,7 +7321,7 @@
     },
     {
         "id": 733,
-        "move": "Bouncy Bubble",
+        "name": "Bouncy Bubble",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -7331,7 +7331,7 @@
     },
     {
         "id": 734,
-        "move": "Buzzy Buzz",
+        "name": "Buzzy Buzz",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -7341,7 +7341,7 @@
     },
     {
         "id": 735,
-        "move": "Sizzly Slide",
+        "name": "Sizzly Slide",
         "category": "Physical",
         "power": "90",
         "accuracy": "100",
@@ -7351,7 +7351,7 @@
     },
     {
         "id": 736,
-        "move": "Glitzy Glow",
+        "name": "Glitzy Glow",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -7361,7 +7361,7 @@
     },
     {
         "id": 737,
-        "move": "Baddy Bad",
+        "name": "Baddy Bad",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -7371,7 +7371,7 @@
     },
     {
         "id": 738,
-        "move": "Sappy Seed",
+        "name": "Sappy Seed",
         "category": "Physical",
         "power": "90",
         "accuracy": "100",
@@ -7381,7 +7381,7 @@
     },
     {
         "id": 739,
-        "move": "Freezy Frost",
+        "name": "Freezy Frost",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -7391,7 +7391,7 @@
     },
     {
         "id": 740,
-        "move": "Sparkly Swirl",
+        "name": "Sparkly Swirl",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -7401,7 +7401,7 @@
     },
     {
         "id": 741,
-        "move": "Veevee Volley",
+        "name": "Veevee Volley",
         "category": "Special",
         "power": "--",
         "accuracy": "--",
@@ -7411,7 +7411,7 @@
     },
     {
         "id": 742,
-        "move": "Double Iron Bash",
+        "name": "Double Iron Bash",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -7421,7 +7421,7 @@
     },
     {
         "id": 743,
-        "move": "Max Guard",
+        "name": "Max Guard",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -7431,7 +7431,7 @@
     },
     {
         "id": 744,
-        "move": "Dynamax Cannon",
+        "name": "Dynamax Cannon",
         "category": "Special",
         "power": "100",
         "accuracy": "100",
@@ -7441,7 +7441,7 @@
     },
     {
         "id": 745,
-        "move": "Snipe Shot",
+        "name": "Snipe Shot",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -7451,7 +7451,7 @@
     },
     {
         "id": 746,
-        "move": "Jaw Lock",
+        "name": "Jaw Lock",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -7461,7 +7461,7 @@
     },
     {
         "id": 747,
-        "move": "Stuff Cheeks",
+        "name": "Stuff Cheeks",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -7471,7 +7471,7 @@
     },
     {
         "id": 748,
-        "move": "No Retreat",
+        "name": "No Retreat",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -7481,7 +7481,7 @@
     },
     {
         "id": 749,
-        "move": "Tar Shot",
+        "name": "Tar Shot",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -7491,7 +7491,7 @@
     },
     {
         "id": 750,
-        "move": "Magic Powder",
+        "name": "Magic Powder",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -7501,7 +7501,7 @@
     },
     {
         "id": 751,
-        "move": "Dragon Darts",
+        "name": "Dragon Darts",
         "category": "Physical",
         "power": "50",
         "accuracy": "100",
@@ -7511,7 +7511,7 @@
     },
     {
         "id": 752,
-        "move": "Teatime",
+        "name": "Teatime",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -7521,7 +7521,7 @@
     },
     {
         "id": 753,
-        "move": "Octolock",
+        "name": "Octolock",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -7531,7 +7531,7 @@
     },
     {
         "id": 754,
-        "move": "Bolt Beak",
+        "name": "Bolt Beak",
         "category": "Physical",
         "power": "85",
         "accuracy": "100",
@@ -7541,7 +7541,7 @@
     },
     {
         "id": 755,
-        "move": "Fishious Rend",
+        "name": "Fishious Rend",
         "category": "Physical",
         "power": "85",
         "accuracy": "100",
@@ -7551,7 +7551,7 @@
     },
     {
         "id": 756,
-        "move": "Court Change",
+        "name": "Court Change",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -7561,7 +7561,7 @@
     },
     {
         "id": 757,
-        "move": "Max Flare",
+        "name": "Max Flare",
         "category": "Special",
         "power": "140",
         "accuracy": "90",
@@ -7571,7 +7571,7 @@
     },
     {
         "id": 758,
-        "move": "Max Flutterby",
+        "name": "Max Flutterby",
         "category": "Special",
         "power": "140",
         "accuracy": "90",
@@ -7581,7 +7581,7 @@
     },
     {
         "id": 759,
-        "move": "Max Lightning",
+        "name": "Max Lightning",
         "category": "Special",
         "power": "140",
         "accuracy": "90",
@@ -7591,7 +7591,7 @@
     },
     {
         "id": 760,
-        "move": "Max Strike",
+        "name": "Max Strike",
         "category": "Physical",
         "power": "140",
         "accuracy": "90",
@@ -7601,7 +7601,7 @@
     },
     {
         "id": 761,
-        "move": "Max Knuckle",
+        "name": "Max Knuckle",
         "category": "Physical",
         "power": "140",
         "accuracy": "90",
@@ -7611,7 +7611,7 @@
     },
     {
         "id": 762,
-        "move": "Max Phantasm",
+        "name": "Max Phantasm",
         "category": "Physical",
         "power": "130",
         "accuracy": "100",
@@ -7621,7 +7621,7 @@
     },
     {
         "id": 763,
-        "move": "Max Hailstorm",
+        "name": "Max Hailstorm",
         "category": "Special",
         "power": "130",
         "accuracy": "90",
@@ -7631,7 +7631,7 @@
     },
     {
         "id": 764,
-        "move": "Max Ooze",
+        "name": "Max Ooze",
         "category": "Special",
         "power": "130",
         "accuracy": "90",
@@ -7641,7 +7641,7 @@
     },
     {
         "id": 765,
-        "move": "Max Geyser",
+        "name": "Max Geyser",
         "category": "Special",
         "power": "130",
         "accuracy": "90",
@@ -7651,7 +7651,7 @@
     },
     {
         "id": 766,
-        "move": "Max Airstream",
+        "name": "Max Airstream",
         "category": "Special",
         "power": "130",
         "accuracy": "90",
@@ -7661,7 +7661,7 @@
     },
     {
         "id": 767,
-        "move": "Max Starfall",
+        "name": "Max Starfall",
         "category": "Special",
         "power": "130",
         "accuracy": "90",
@@ -7671,7 +7671,7 @@
     },
     {
         "id": 768,
-        "move": "Max Wyrmwind",
+        "name": "Max Wyrmwind",
         "category": "Physical",
         "power": "130",
         "accuracy": "90",
@@ -7681,7 +7681,7 @@
     },
     {
         "id": 769,
-        "move": "Max Mindstorm",
+        "name": "Max Mindstorm",
         "category": "Special",
         "power": "130",
         "accuracy": "90",
@@ -7691,7 +7691,7 @@
     },
     {
         "id": 770,
-        "move": "Max Rockfall",
+        "name": "Max Rockfall",
         "category": "Physical",
         "power": "130",
         "accuracy": "90",
@@ -7701,7 +7701,7 @@
     },
     {
         "id": 771,
-        "move": "Max Quake",
+        "name": "Max Quake",
         "category": "Special",
         "power": "130",
         "accuracy": "90",
@@ -7711,7 +7711,7 @@
     },
     {
         "id": 772,
-        "move": "Max Phantasm",
+        "name": "Max Phantasm",
         "category": "Physical",
         "power": "130",
         "accuracy": "100",
@@ -7721,7 +7721,7 @@
     },
     {
         "id": 773,
-        "move": "Max Overgrowth",
+        "name": "Max Overgrowth",
         "category": "Special",
         "power": "130",
         "accuracy": "90",
@@ -7731,7 +7731,7 @@
     },
     {
         "id": 774,
-        "move": "Max Steelspike",
+        "name": "Max Steelspike",
         "category": "Physical",
         "power": "130",
         "accuracy": "90",
@@ -7741,7 +7741,7 @@
     },
     {
         "id": 775,
-        "move": "Clangorous Soul",
+        "name": "Clangorous Soul",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -7751,7 +7751,7 @@
     },
     {
         "id": 776,
-        "move": "Body Press",
+        "name": "Body Press",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -7761,7 +7761,7 @@
     },
     {
         "id": 777,
-        "move": "Decorate",
+        "name": "Decorate",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -7771,7 +7771,7 @@
     },
     {
         "id": 778,
-        "move": "Drum Beating",
+        "name": "Drum Beating",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -7781,7 +7781,7 @@
     },
     {
         "id": 779,
-        "move": "Snap Trap",
+        "name": "Snap Trap",
         "category": "Physical",
         "power": "35",
         "accuracy": "95",
@@ -7791,7 +7791,7 @@
     },
     {
         "id": 780,
-        "move": "Pyro Ball",
+        "name": "Pyro Ball",
         "category": "Physical",
         "power": "120",
         "accuracy": "90",
@@ -7801,7 +7801,7 @@
     },
     {
         "id": 781,
-        "move": "Behemoth Blade",
+        "name": "Behemoth Blade",
         "category": "Physical",
         "power": "100",
         "accuracy": "100",
@@ -7811,7 +7811,7 @@
     },
     {
         "id": 782,
-        "move": "Behemoth Bash",
+        "name": "Behemoth Bash",
         "category": "Physical",
         "power": "100",
         "accuracy": "100",
@@ -7821,7 +7821,7 @@
     },
     {
         "id": 783,
-        "move": "Aura Wheel",
+        "name": "Aura Wheel",
         "category": "Physical",
         "power": "110",
         "accuracy": "100",
@@ -7831,7 +7831,7 @@
     },
     {
         "id": 784,
-        "move": "Breaking Swipe",
+        "name": "Breaking Swipe",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -7841,7 +7841,7 @@
     },
     {
         "id": 785,
-        "move": "Branch Poke",
+        "name": "Branch Poke",
         "category": "Physical",
         "power": "40",
         "accuracy": "100",
@@ -7851,7 +7851,7 @@
     },
     {
         "id": 786,
-        "move": "Overdrive",
+        "name": "Overdrive",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -7861,7 +7861,7 @@
     },
     {
         "id": 787,
-        "move": "Apple Acid",
+        "name": "Apple Acid",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -7871,7 +7871,7 @@
     },
     {
         "id": 788,
-        "move": "Grav Apple",
+        "name": "Grav Apple",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -7881,7 +7881,7 @@
     },
     {
         "id": 789,
-        "move": "Spirit Break",
+        "name": "Spirit Break",
         "category": "Special",
         "power": "75",
         "accuracy": "100",
@@ -7891,7 +7891,7 @@
     },
     {
         "id": 790,
-        "move": "Strange Steam",
+        "name": "Strange Steam",
         "category": "Special",
         "power": "90",
         "accuracy": "95",
@@ -7901,7 +7901,7 @@
     },
     {
         "id": 791,
-        "move": "Life Dew",
+        "name": "Life Dew",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -7911,7 +7911,7 @@
     },
     {
         "id": 792,
-        "move": "Obstruct",
+        "name": "Obstruct",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -7921,7 +7921,7 @@
     },
     {
         "id": 793,
-        "move": "False Surrender",
+        "name": "False Surrender",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -7931,7 +7931,7 @@
     },
     {
         "id": 794,
-        "move": "Meteor Assault",
+        "name": "Meteor Assault",
         "category": "Physical",
         "power": "150",
         "accuracy": "100",
@@ -7941,7 +7941,7 @@
     },
     {
         "id": 795,
-        "move": "Eternabeam",
+        "name": "Eternabeam",
         "category": "Special",
         "power": "160",
         "accuracy": "90",
@@ -7951,7 +7951,7 @@
     },
     {
         "id": 796,
-        "move": "Steel Beam",
+        "name": "Steel Beam",
         "category": "Special",
         "power": "140",
         "accuracy": "95",
@@ -7961,7 +7961,7 @@
     },
     {
         "id": 797,
-        "move": "Expanding Force",
+        "name": "Expanding Force",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -7971,7 +7971,7 @@
     },
     {
         "id": 798,
-        "move": "Steel Roller",
+        "name": "Steel Roller",
         "category": "Physical",
         "power": "130",
         "accuracy": "100",
@@ -7981,7 +7981,7 @@
     },
     {
         "id": 799,
-        "move": "Scale Shot",
+        "name": "Scale Shot",
         "category": "Physical",
         "power": "25",
         "accuracy": "90",
@@ -7991,7 +7991,7 @@
     },
     {
         "id": 800,
-        "move": "Meteor Beam",
+        "name": "Meteor Beam",
         "category": "Special",
         "power": "120",
         "accuracy": "90",
@@ -8001,7 +8001,7 @@
     },
     {
         "id": 801,
-        "move": "Shell Side Arm",
+        "name": "Shell Side Arm",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -8011,7 +8011,7 @@
     },
     {
         "id": 802,
-        "move": "Misty Explosion",
+        "name": "Misty Explosion",
         "category": "Special",
         "power": "100",
         "accuracy": "100",
@@ -8021,7 +8021,7 @@
     },
     {
         "id": 803,
-        "move": "Grassy Glide",
+        "name": "Grassy Glide",
         "category": "Physical",
         "power": "70",
         "accuracy": "100",
@@ -8031,7 +8031,7 @@
     },
     {
         "id": 804,
-        "move": "Rising Voltage",
+        "name": "Rising Voltage",
         "category": "Special",
         "power": "70",
         "accuracy": "100",
@@ -8041,7 +8041,7 @@
     },
     {
         "id": 805,
-        "move": "Terrain Pulse",
+        "name": "Terrain Pulse",
         "category": "Special",
         "power": "50",
         "accuracy": "100",
@@ -8051,7 +8051,7 @@
     },
     {
         "id": 806,
-        "move": "Skitter Smack",
+        "name": "Skitter Smack",
         "category": "Physical",
         "power": "70",
         "accuracy": "90",
@@ -8061,7 +8061,7 @@
     },
     {
         "id": 807,
-        "move": "Burning Jealousy",
+        "name": "Burning Jealousy",
         "category": "Special",
         "power": "70",
         "accuracy": "100",
@@ -8071,7 +8071,7 @@
     },
     {
         "id": 808,
-        "move": "Lash Out",
+        "name": "Lash Out",
         "category": "Physical",
         "power": "75",
         "accuracy": "100",
@@ -8081,7 +8081,7 @@
     },
     {
         "id": 809,
-        "move": "Poltergeist",
+        "name": "Poltergeist",
         "category": "Physical",
         "power": "110",
         "accuracy": "90",
@@ -8091,7 +8091,7 @@
     },
     {
         "id": 810,
-        "move": "Corrosive Gas",
+        "name": "Corrosive Gas",
         "category": "Status",
         "power": "--",
         "accuracy": "100",
@@ -8101,7 +8101,7 @@
     },
     {
         "id": 811,
-        "move": "Coaching",
+        "name": "Coaching",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -8111,7 +8111,7 @@
     },
     {
         "id": 812,
-        "move": "Flip Turn",
+        "name": "Flip Turn",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -8121,7 +8121,7 @@
     },
     {
         "id": 813,
-        "move": "Triple Axel",
+        "name": "Triple Axel",
         "category": "Physical",
         "power": "20",
         "accuracy": "90",
@@ -8131,7 +8131,7 @@
     },
     {
         "id": 814,
-        "move": "Dual Wingbeat",
+        "name": "Dual Wingbeat",
         "category": "Physical",
         "power": "40",
         "accuracy": "90",
@@ -8141,7 +8141,7 @@
     },
     {
         "id": 815,
-        "move": "Scorching Sands",
+        "name": "Scorching Sands",
         "category": "Special",
         "power": "70",
         "accuracy": "100",
@@ -8151,7 +8151,7 @@
     },
     {
         "id": 816,
-        "move": "Jungle Healing",
+        "name": "Jungle Healing",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -8161,7 +8161,7 @@
     },
     {
         "id": 817,
-        "move": "Wicked Blow",
+        "name": "Wicked Blow",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -8171,7 +8171,7 @@
     },
     {
         "id": 818,
-        "move": "Surging Strikes",
+        "name": "Surging Strikes",
         "category": "Physical",
         "power": "25",
         "accuracy": "100",
@@ -8181,7 +8181,7 @@
     },
     {
         "id": 819,
-        "move": "Thunder Cage",
+        "name": "Thunder Cage",
         "category": "Special",
         "power": "80",
         "accuracy": "90",
@@ -8191,7 +8191,7 @@
     },
     {
         "id": 820,
-        "move": "Dragon Energy",
+        "name": "Dragon Energy",
         "category": "Special",
         "power": "--",
         "accuracy": "100",
@@ -8201,7 +8201,7 @@
     },
     {
         "id": 821,
-        "move": "Freezing Glare",
+        "name": "Freezing Glare",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -8211,7 +8211,7 @@
     },
     {
         "id": 822,
-        "move": "Fiery Wrath",
+        "name": "Fiery Wrath",
         "category": "Special",
         "power": "90",
         "accuracy": "100",
@@ -8221,7 +8221,7 @@
     },
     {
         "id": 823,
-        "move": "Thunderous Kick",
+        "name": "Thunderous Kick",
         "category": "Physical",
         "power": "90",
         "accuracy": "100",
@@ -8231,7 +8231,7 @@
     },
     {
         "id": 824,
-        "move": "Glacial Lance",
+        "name": "Glacial Lance",
         "category": "Physical",
         "power": "130",
         "accuracy": "100",
@@ -8241,7 +8241,7 @@
     },
     {
         "id": 825,
-        "move": "Astral Barrage",
+        "name": "Astral Barrage",
         "category": "Special",
         "power": "120",
         "accuracy": "100",
@@ -8251,7 +8251,7 @@
     },
     {
         "id": 826,
-        "move": "Eerie Spell",
+        "name": "Eerie Spell",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -8261,7 +8261,7 @@
     },
     {
         "id": 827,
-        "move": "Dire Claw",
+        "name": "Dire Claw",
         "category": "Physical",
         "power": "80",
         "accuracy": "100",
@@ -8271,7 +8271,7 @@
     },
     {
         "id": 828,
-        "move": "Psychield Bash",
+        "name": "Psychield Bash",
         "category": "Physical",
         "power": "70",
         "accuracy": "90",
@@ -8281,7 +8281,7 @@
     },
     {
         "id": 829,
-        "move": "Power Shift",
+        "name": "Power Shift",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -8291,7 +8291,7 @@
     },
     {
         "id": 830,
-        "move": "Stone Axe",
+        "name": "Stone Axe",
         "category": "Physical",
         "power": "70",
         "accuracy": "90",
@@ -8301,7 +8301,7 @@
     },
     {
         "id": 831,
-        "move": "Springtide Storm",
+        "name": "Springtide Storm",
         "category": "Special",
         "power": "100",
         "accuracy": "80",
@@ -8311,7 +8311,7 @@
     },
     {
         "id": 832,
-        "move": "Mystical Power",
+        "name": "Mystical Power",
         "category": "Special",
         "power": "70",
         "accuracy": "90",
@@ -8321,7 +8321,7 @@
     },
     {
         "id": 833,
-        "move": "Raging Fury",
+        "name": "Raging Fury",
         "category": "Physical",
         "power": "120",
         "accuracy": "100",
@@ -8331,7 +8331,7 @@
     },
     {
         "id": 834,
-        "move": "Wave Crash",
+        "name": "Wave Crash",
         "category": "Physical",
         "power": "120",
         "accuracy": "100",
@@ -8341,7 +8341,7 @@
     },
     {
         "id": 835,
-        "move": "Chloroblast",
+        "name": "Chloroblast",
         "category": "Special",
         "power": "150",
         "accuracy": "95",
@@ -8351,7 +8351,7 @@
     },
     {
         "id": 836,
-        "move": "Mountain Gale",
+        "name": "Mountain Gale",
         "category": "Physical",
         "power": "100",
         "accuracy": "85",
@@ -8361,7 +8361,7 @@
     },
     {
         "id": 837,
-        "move": "Victory Dance",
+        "name": "Victory Dance",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -8371,7 +8371,7 @@
     },
     {
         "id": 838,
-        "move": "Headlong Rush",
+        "name": "Headlong Rush",
         "category": "Physical",
         "power": "120",
         "accuracy": "100",
@@ -8381,7 +8381,7 @@
     },
     {
         "id": 839,
-        "move": "Barb Barrage",
+        "name": "Barb Barrage",
         "category": "Physical",
         "power": "60",
         "accuracy": "100",
@@ -8391,7 +8391,7 @@
     },
     {
         "id": 840,
-        "move": "Esper Wing",
+        "name": "Esper Wing",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -8401,7 +8401,7 @@
     },
     {
         "id": 841,
-        "move": "Bitter Malice",
+        "name": "Bitter Malice",
         "category": "Special",
         "power": "75",
         "accuracy": "100",
@@ -8411,7 +8411,7 @@
     },
     {
         "id": 842,
-        "move": "Shelter",
+        "name": "Shelter",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -8421,7 +8421,7 @@
     },
     {
         "id": 843,
-        "move": "Triple Arrows",
+        "name": "Triple Arrows",
         "category": "Physical",
         "power": "90",
         "accuracy": "100",
@@ -8431,7 +8431,7 @@
     },
     {
         "id": 844,
-        "move": "Infernal Parade",
+        "name": "Infernal Parade",
         "category": "Special",
         "power": "60",
         "accuracy": "100",
@@ -8441,7 +8441,7 @@
     },
     {
         "id": 845,
-        "move": "Ceaseless Edge",
+        "name": "Ceaseless Edge",
         "category": "Physical",
         "power": "65",
         "accuracy": "90",
@@ -8451,7 +8451,7 @@
     },
     {
         "id": 846,
-        "move": "Bleakwind Storm",
+        "name": "Bleakwind Storm",
         "category": "Special",
         "power": "100",
         "accuracy": "80",
@@ -8461,7 +8461,7 @@
     },
     {
         "id": 847,
-        "move": "Wildbolt Storm",
+        "name": "Wildbolt Storm",
         "category": "Special",
         "power": "100",
         "accuracy": "80",
@@ -8471,7 +8471,7 @@
     },
     {
         "id": 848,
-        "move": "Sandsear Storm",
+        "name": "Sandsear Storm",
         "category": "Special",
         "power": "100",
         "accuracy": "80",
@@ -8481,7 +8481,7 @@
     },
     {
         "id": 849,
-        "move": "Lunar Blessing",
+        "name": "Lunar Blessing",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -8491,7 +8491,7 @@
     },
     {
         "id": 850,
-        "move": "Take Heart",
+        "name": "Take Heart",
         "category": "Status",
         "power": "--",
         "accuracy": "--",
@@ -8501,7 +8501,7 @@
     },
     {
         "id": 851,
-        "move": "Tera Blast",
+        "name": "Tera Blast",
         "category": "Special",
         "power": "80",
         "accuracy": "100",
@@ -8523,7 +8523,7 @@
 
     {
         "id": 10001,
-        "move": "G-Max Wildfire",
+        "name": "G-Max Wildfire",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8533,7 +8533,7 @@
     },
     {
         "id": 10002,
-        "move": "G-Max Befuddle",
+        "name": "G-Max Befuddle",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8543,7 +8543,7 @@
     },
     {
         "id": 10003,
-        "move": "G-Max Chi Strike",
+        "name": "G-Max Chi Strike",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8553,7 +8553,7 @@
     },
     {
         "id": 10004,
-        "move": "G-Max Cuddle",
+        "name": "G-Max Cuddle",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8563,7 +8563,7 @@
     },
     {
         "id": 10005,
-        "move": "G-Max Depletion",
+        "name": "G-Max Depletion",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8573,7 +8573,7 @@
     },
     {
         "id": 10006,
-        "move": "G-Max Drum Solo",
+        "name": "G-Max Drum Solo",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8583,7 +8583,7 @@
     },
     {
         "id": 10007,
-        "move": "G-Max Finale",
+        "name": "G-Max Finale",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8593,7 +8593,7 @@
     },
     {
         "id": 10008,
-        "move": "G-Max Fireball",
+        "name": "G-Max Fireball",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8603,7 +8603,7 @@
     },
     {
         "id": 10009,
-        "move": "G-Max Foam Burst",
+        "name": "G-Max Foam Burst",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8613,7 +8613,7 @@
     },
     {
         "id": 10010,
-        "move": "G-Max Gold Rush",
+        "name": "G-Max Gold Rush",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8623,7 +8623,7 @@
     },
     {
         "id": 10011,
-        "move": "G-Max Gravitas",
+        "name": "G-Max Gravitas",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8633,7 +8633,7 @@
     },
     {
         "id": 10012,
-        "move": "G-Max Hydrosnipe",
+        "name": "G-Max Hydrosnipe",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8643,7 +8643,7 @@
     },
     {
         "id": 10013,
-        "move": "G-Max Malodor",
+        "name": "G-Max Malodor",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8653,7 +8653,7 @@
     },
     {
         "id": 10014,
-        "move": "G-Max Meltdown",
+        "name": "G-Max Meltdown",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8663,7 +8663,7 @@
     },
     {
         "id": 10015,
-        "move": "G-Max One Blow",
+        "name": "G-Max One Blow",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8673,7 +8673,7 @@
     },
     {
         "id": 10016,
-        "move": "G-Max Rapid Flow",
+        "name": "G-Max Rapid Flow",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8683,7 +8683,7 @@
     },
     {
         "id": 10017,
-        "move": "G-Max Replenish",
+        "name": "G-Max Replenish",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8693,7 +8693,7 @@
     },
     {
         "id": 10018,
-        "move": "G-Max Resonance",
+        "name": "G-Max Resonance",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8703,7 +8703,7 @@
     },
     {
         "id": 10019,
-        "move": "G-Max Sandblast",
+        "name": "G-Max Sandblast",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8713,7 +8713,7 @@
     },
     {
         "id": 10020,
-        "move": "G-Max Smite",
+        "name": "G-Max Smite",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8723,7 +8723,7 @@
     },
     {
         "id": 10021,
-        "move": "G-Max Snooze",
+        "name": "G-Max Snooze",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8733,7 +8733,7 @@
     },
     {
         "id": 10022,
-        "move": "G-Max Steelsurge",
+        "name": "G-Max Steelsurge",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8743,7 +8743,7 @@
     },
     {
         "id": 10023,
-        "move": "G-Max Stonesurge",
+        "name": "G-Max Stonesurge",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8753,7 +8753,7 @@
     },
     {
         "id": 10024,
-        "move": "G-Max Stun Shock",
+        "name": "G-Max Stun Shock",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8763,7 +8763,7 @@
     },
     {
         "id": 10025,
-        "move": "G-Max Sweetness",
+        "name": "G-Max Sweetness",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8773,7 +8773,7 @@
     },
     {
         "id": 10026,
-        "move": "G-Max Tartness",
+        "name": "G-Max Tartness",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8783,7 +8783,7 @@
     },
     {
         "id": 10027,
-        "move": "G-Max Terror",
+        "name": "G-Max Terror",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8793,7 +8793,7 @@
     },
     {
         "id": 10028,
-        "move": "G-Max Volt Crash",
+        "name": "G-Max Volt Crash",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8803,7 +8803,7 @@
     },
     {
         "id": 10029,
-        "move": "G-Max Volcalith",
+        "name": "G-Max Volcalith",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8813,7 +8813,7 @@
     },
     {
         "id": 10030,
-        "move": "G-Max Wind Rage",
+        "name": "G-Max Wind Rage",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8823,7 +8823,7 @@
     },
     {
         "id": 10031,
-        "move": "G-Max Vine Lash",
+        "name": "G-Max Vine Lash",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8833,7 +8833,7 @@
     },
     {
         "id": 10031,
-        "move": "G-Max Cannonade",
+        "name": "G-Max Cannonade",
         "category": "--",
         "power": "--",
         "accuracy": "--",
@@ -8843,7 +8843,7 @@
     },
     {
         "id": 10031,
-        "move": "G-Max Centiferno",
+        "name": "G-Max Centiferno",
         "category": "--",
         "power": "--",
         "accuracy": "--",
