@@ -1,16 +1,14 @@
-# rotomdex
+# RotomDex
 
-A new Flutter project.
+A WIP Pokédex application in development for iOS and Android made with Flutter, currently as a school project. 
 
-## Getting Started
+Currently contains the most up-to-date (generation 9) info on the original 151 Pokémon, plus moves and abilities up to generation 8. Some inaccuracies are present.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Summarized vision for final product:
+- Accurate and up-to-date info on every Pokémon, move and ability, including alternate forms. (Possibly items, too).
+- Scanning function: Being able to scan a Pokémon using your camera to get it's info.
+- AR: Being able to see a life-sized 3D Pokémon model using your camera.
+- Team Builder: Build teams and see their statistics, with the option to import/export from/to Pokémon Showdown.
+- Who's That Pokémon: 5 rounds per day with leaderboards and point rewards with multipliers for consistent participation.
+- Themes: A variety of themes, including ones inspired by official Pokémon media, being unlockable through the aforementioned points.
+- Zero monitization or ads.
