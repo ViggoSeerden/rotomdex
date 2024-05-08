@@ -1,0 +1,45 @@
+[
+    {
+        "name": "type",
+        "values": [
+            "Normal",
+            "Fighting",
+            "Flying",
+            "Poison",
+            "Ground",
+            "Rock",
+            "Bug",
+            "Ghost",
+            "Steel",
+            "Fire",
+            "Water",
+            "Grass",
+            "Electric",
+            "Psychic",
+            "Ice",
+            "Dragon",
+            "Dark",
+            "Fairy"
+          ]
+    }, 
+    {
+        "name": "egg group",
+        "values": [
+            "Monster",
+            "Human-Like",
+            "Field",
+            "Water 1",
+            "Water 2",
+            "Water 3",
+            "Bug",
+            "Flying",
+            "Mineral",
+            "Fairy",
+            "Grass",
+            "Dragon",
+            "Amorphous",
+            "Undiscovered",
+            "Ditto"
+        ]
+    }
+]

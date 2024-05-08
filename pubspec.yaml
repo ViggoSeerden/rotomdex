@@ -41,6 +41,12 @@ dependencies:
   flutter_native_splash: ^2.3.10
   audioplayers: ^5.2.1
   floating_action_bubble: ^1.1.4
+  cached_network_image: ^3.3.1
+  flutter_cache_manager: ^3.3.1
+  flutter_radar_chart: ^0.2.1
+  shared_preferences: ^2.2.2
+  provider: ^6.1.2
+  themed: ^5.0.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -76,6 +82,43 @@ flutter:
     - assets/images/icons/moves/
     - assets/tensorflow/
 
+  fonts:
+    - family: Roboto
+      fonts: 
+        - asset: fonts/Roboto.ttf
+        - asset: fonts/Roboto-Bold.ttf
+          weight: 100
+    - family: Overload  
+      fonts: 
+        - asset: fonts/Overload.otf
+    - family: Overload Hollow  
+      fonts: 
+        - asset: fonts/Overload_Burn.otf
+    - family: Sui Generis  
+      fonts: 
+        - asset: fonts/Sui_Generis.otf
+    - family: Zekton  
+      fonts: 
+        - asset: fonts/Zekton.otf
+    - family: Michroma  
+      fonts: 
+        - asset: fonts/Michroma.ttf
+    - family: Forgotten Futurist  
+      fonts: 
+        - asset: fonts/Forgotten_Futurist.otf
+    - family: Dual  
+      fonts: 
+        - asset: fonts/Dual.ttf
+    - family: SulphurPoint  
+      fonts: 
+        - asset: fonts/SulphurPoint.ttf
+    - family: ZTGatha  
+      fonts: 
+        - asset: fonts/ZTGatha.ttf
+    - family: Raleway  
+      fonts: 
+        - asset: fonts/Raleway.ttf
+      
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
