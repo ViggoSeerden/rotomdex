@@ -19,13 +19,16 @@ class BookmarkServices {
     List<String>? bookmarks = prefs.getStringList('${type}_bookmarks') ?? [];
     if (bookmarks.length >= 15) {
       messageServices.showMessage(
+          // ignore: use_build_context_synchronously
           'You have reached the maximum amount of $type bookmarks.', context);
     } else if (!bookmarks.contains(item)) {
       bookmarks.add(item);
       await prefs.setStringList('${type}_bookmarks', bookmarks);
       messageServices.showMessage(
+          // ignore: use_build_context_synchronously
           '$item was added to your bookmarks.', context);
     } else {
+      // ignore: use_build_context_synchronously
       messageServices.showMessage('$item is already bookmarked.', context);
     }
   }
@@ -62,17 +65,18 @@ class BookmarkServices {
     List<String>? moves = prefs.getStringList('move_bookmarks') ?? [];
     List<String>? abilities = prefs.getStringList('ability_bookmarks') ?? [];
 
-    print(pokemon);
-
     List pokemonData = [];
     List moveData = [];
     List abilityData = [];
 
     List pdata = await jsonServices.loadJsonData(
+        // ignore: use_build_context_synchronously
         'assets/pokemon/data/kanto_expanded.json', context);
     List mdata = await jsonServices.loadJsonData(
+        // ignore: use_build_context_synchronously
         'assets/pokemon/data/moves.json', context);
     List adata = await jsonServices.loadJsonData(
+        // ignore: use_build_context_synchronously
         'assets/pokemon/data/abilities.json', context);
 
     for (var pokemon in pokemon) {

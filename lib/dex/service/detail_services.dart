@@ -41,6 +41,7 @@ class DetailServices {
         'assets/pokemon/data/kanto_expanded.json', context);
 
     var movesets = await jsonServices.loadJsonData(
+        // ignore: use_build_context_synchronously
         'assets/pokemon/data/kanto_moves.json', context);
 
     List pokemonWithMove = [];
@@ -80,8 +81,8 @@ class DetailServices {
     var moveset = data.firstWhere((set) => set['pokemon_id'] == pokemonId);
     String source = moveset['data'];
 
-    // ignore: use_build_context_synchronously
     List<dynamic> moveData = await jsonServices.loadJsonData(
+        // ignore: use_build_context_synchronously
         'assets/pokemon/data/moves.json', context);
 
     List<dynamic> levelUp = [];

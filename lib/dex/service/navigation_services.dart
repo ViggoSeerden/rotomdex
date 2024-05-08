@@ -55,8 +55,8 @@ class NavigationServices {
         );
       }
     } else {
-      // ignore: use_build_context_synchronously
       messageServices.showMessage(
+          // ignore: use_build_context_synchronously
           'There is no data on $pokemonName in this app.', context);
     }
   }
@@ -73,8 +73,8 @@ class NavigationServices {
     );
 
     if (ability != null) {
-      // ignore: use_build_context_synchronously
       Navigator.push(
+        // ignore: use_build_context_synchronously
         context,
         MaterialPageRoute(
           builder: (context) => AbilityPage(abilityData: ability),
@@ -93,8 +93,8 @@ class NavigationServices {
     );
 
     if (move != null) {
-      // ignore: use_build_context_synchronously
       Navigator.push(
+        // ignore: use_build_context_synchronously
         context,
         MaterialPageRoute(
           builder: (context) => MovePage(moveData: move),

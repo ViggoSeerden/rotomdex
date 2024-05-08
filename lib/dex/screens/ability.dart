@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:rotomdex/dex/service/bookmark_services.dart';
 import 'package:rotomdex/dex/service/detail_services.dart';
 import 'package:rotomdex/dex/service/navigation_services.dart';
@@ -32,6 +31,8 @@ class AbilityPageState extends State<AbilityPage> {
   Future<void> _loadJsonData() async {
     List normal = await detailServices.getPokemonWithAbility(
         widget.abilityData['name'].toLowerCase(), context, 'normal');
+
+    if (!mounted) return; 
 
     List hidden = await detailServices.getPokemonWithAbility(
         widget.abilityData['name'].toLowerCase(), context, 'hidden');
