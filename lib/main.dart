@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rotomdex/screens/main_scaffold.dart';
-import 'package:rotomdex/service/theme_services.dart';
+import 'package:rotomdex/shared/screens/main_scaffold.dart';
+import 'package:rotomdex/shared/services/theme_services.dart';
 import 'package:themed/themed.dart';
 
 void main() => runApp(const MyApp());
