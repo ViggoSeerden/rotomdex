@@ -32,8 +32,10 @@ class MovePageState extends State<MovePage> {
   Future<void> _loadJsonData() async {
     List levelUp = await detailServices.getPokemonWithMove(
         widget.moveData['name'], context, 'level_up');
+    if (!mounted) return;
     List tm = await detailServices.getPokemonWithMove(
         widget.moveData['name'], context, 'tm');
+    if (!mounted) return;
     List egg = await detailServices.getPokemonWithMove(
         widget.moveData['name'], context, 'egg');
 

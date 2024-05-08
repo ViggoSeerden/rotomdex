@@ -99,6 +99,7 @@ class _PokemonInfoTabState extends State<PokemonInfoTab> {
               IconButton(
                   onPressed: () async =>
                       navigationServices.navigateToPokemonViaID(
+                          // ignore: use_build_context_synchronously
                           context,
                           widget.pokemonData["id"] - 1,
                           await jsonServices.loadJsonData(
@@ -137,6 +138,7 @@ class _PokemonInfoTabState extends State<PokemonInfoTab> {
               IconButton(
                   onPressed: () async =>
                       navigationServices.navigateToPokemonViaID(
+                          // ignore: use_build_context_synchronously
                           context,
                           widget.pokemonData["id"] + 1,
                           await jsonServices.loadJsonData(
