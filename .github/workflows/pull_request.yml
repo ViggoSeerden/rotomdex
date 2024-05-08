@@ -1,0 +1,17 @@
+name: Create Draft Pull Request
+
+on:
+  push:
+    branches:
+      - "!main"  # Matches all branches except "main"
+
+jobs:
+  create-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Create Draft Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          title: "Changes from ${{ github.ref }}"
