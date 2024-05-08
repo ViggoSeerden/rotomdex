@@ -1,9 +1,9 @@
-name: Create Draft Pull Request
+name: Create Pull Request
 
 on:
   push:
-    branches:
-      - "!main"  # Matches all branches except "main"
+    branches-ignore:
+      - main 
 
 jobs:
   create-pull-request:
@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Create Draft Pull Request
+      - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
           title: "Changes from ${{ github.ref }}"
