@@ -17,7 +17,7 @@ class SettingsPageState extends State<SettingsPage> {
   PreferenceServices preferenceServices = PreferenceServices();
   ThemeServices themeServices = ThemeServices();
   MessageServices messageServices = MessageServices();
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,6 +33,14 @@ class SettingsPageState extends State<SettingsPage> {
                 child: Container(
                   width: double.infinity,
                   decoration: const BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Color.fromARGB(125, 0, 0, 0),
+                        spreadRadius: 0,
+                        blurRadius: 5,
+                        offset: Offset(0, 3), // changes position of shadow
+                      ),
+                    ],
                     borderRadius: BorderRadius.all(Radius.circular(20)),
                     gradient: LinearGradient(
                       begin: Alignment.topCenter,
@@ -81,8 +89,10 @@ class SettingsPageState extends State<SettingsPage> {
                                   ),
                                 );
                               }).toList(),
-                              onChanged: (String? value) =>
-                                  {themeServices.setTheme(value.toString().toLowerCase())},
+                              onChanged: (String? value) => {
+                                themeServices
+                                    .setTheme(value.toString().toLowerCase())
+                              },
                             ),
                           ],
                         ),
@@ -112,7 +122,8 @@ class SettingsPageState extends State<SettingsPage> {
                                 );
                               }).toList(),
                               onChanged: (String? value) => {
-                                preferenceServices.savePreference('heightunit', value.toString())
+                                preferenceServices.savePreference(
+                                    'heightunit', value.toString())
                               },
                             ),
                           ],
@@ -143,7 +154,8 @@ class SettingsPageState extends State<SettingsPage> {
                                 );
                               }).toList(),
                               onChanged: (String? value) => {
-                                preferenceServices.savePreference('weightunit', value.toString())
+                                preferenceServices.savePreference(
+                                    'weightunit', value.toString())
                               },
                             ),
                           ],
@@ -163,11 +175,11 @@ class SettingsPageState extends State<SettingsPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            TextButton(
+                            ElevatedButton(
                                 onPressed: () {},
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStateProperty.all(
-                                        const Color(0xffEF866B))),
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor: const Color(0xffEF866B),
+                                    elevation: 5.0),
                                 child: const Text(
                                   'Clear Preferences',
                                   style: TextStyle(
@@ -178,11 +190,11 @@ class SettingsPageState extends State<SettingsPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            TextButton(
+                            ElevatedButton(
                                 onPressed: preferenceServices.clearBookmarks,
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStateProperty.all(
-                                        const Color(0xffEF866B))),
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor: const Color(0xffEF866B),
+                                    elevation: 5.0),
                                 child: const Text(
                                   'Clear Bookmarks',
                                   style: TextStyle(
@@ -193,14 +205,16 @@ class SettingsPageState extends State<SettingsPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
-                            TextButton(
+                            ElevatedButton(
                                 onPressed: () => {
                                       DefaultCacheManager().emptyCache(),
-                                      messageServices.showMessage('Cache cleared successfully.', context)
+                                      messageServices.showMessage(
+                                          'Cache cleared successfully.',
+                                          context)
                                     },
-                                style: ButtonStyle(
-                                    backgroundColor: MaterialStateProperty.all(
-                                        const Color(0xffEF866B))),
+                                style: ElevatedButton.styleFrom(
+                                    backgroundColor: const Color(0xffEF866B),
+                                    elevation: 5.0),
                                 child: const Text(
                                   'Clear Cache',
                                   style: TextStyle(

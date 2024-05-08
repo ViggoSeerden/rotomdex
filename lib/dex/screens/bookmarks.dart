@@ -56,6 +56,14 @@ class _BookmarksPageStateState extends State<BookmarksPage> {
                 child: Container(
                     width: double.infinity,
                     decoration: const BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color: Color.fromARGB(125, 0, 0, 0),
+                          spreadRadius: 0,
+                          blurRadius: 5,
+                          offset: Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       gradient: LinearGradient(
                         begin: Alignment.topCenter,

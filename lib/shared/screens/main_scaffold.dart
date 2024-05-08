@@ -4,8 +4,11 @@ import 'package:rotomdex/dex/screens/abilities.dart';
 import 'package:rotomdex/dex/screens/bookmarks.dart';
 import 'package:rotomdex/dex/screens/moves.dart';
 import 'package:rotomdex/dex/screens/pokedex.dart';
+import 'package:rotomdex/shared/screens/about.dart';
 import 'package:rotomdex/shared/screens/settings.dart';
 import 'package:rotomdex/shared/data/themes.dart';
+import 'package:rotomdex/team_builder/screens/teams.dart';
+import 'package:rotomdex/whos_that_pokemon/screens/title.dart';
 
 class NavScaffold extends StatefulWidget {
   const NavScaffold({super.key});
@@ -23,6 +26,9 @@ class _NavScaffoldState extends State<NavScaffold> {
     AbilityDexPage(),
     BookmarksPage(),
     ScannerScreen(),
+    TeamBuilderScreen(),
+    GameTitleScreen(),
+    AboutScreen(),
     SettingsPage()
   ];
 
@@ -131,6 +137,7 @@ class _NavScaffoldState extends State<NavScaffold> {
                       Navigator.pop(context);
                     },
                   ),
+                  const Divider(color: BaseThemeColors.mainMenuListText,),
                   ListTile(
                     title: const Text(
                       'Scanner',
@@ -146,20 +153,54 @@ class _NavScaffoldState extends State<NavScaffold> {
                   ),
                   ListTile(
                     title: const Text(
-                      'Settings',
+                      'Team Builder',
                       style: TextStyle(
                           color: BaseThemeColors.mainMenuListText,
                           fontSize: 20),
                     ),
                     selected: _selectedIndex == 5,
                     onTap: () {
-                      _onItemTapped(5, 'Settings');
+                      _onItemTapped(5, 'Team Builder');
+                      Navigator.pop(context);
+                    },
+                  ),
+                  ListTile(
+                    title: const Text(
+                      "Who's That Pokémon?",
+                      style: TextStyle(
+                          color: BaseThemeColors.mainMenuListText,
+                          fontSize: 20),
+                    ),
+                    selected: _selectedIndex == 5,
+                    onTap: () {
+                      _onItemTapped(6, "Who's That Pokémon?");
                       Navigator.pop(context);
                     },
                   ),
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  IconButton(
+                    onPressed: () {
+                        _onItemTapped(7, 'About');
+                        Navigator.pop(context);
+                      },
+                    icon: const Icon(Icons.info, size: 36, color: BaseThemeColors.mainMenuListText,)
+                  ),
+                  IconButton(
+                    onPressed: () {
+                        _onItemTapped(8, 'Settings');
+                        Navigator.pop(context);
+                      },
+                    icon: const Icon(Icons.settings, size: 36, color: BaseThemeColors.mainMenuListText,)
+                  )
+                ],
+              ),
+            )
           ],
         ),
       ),
