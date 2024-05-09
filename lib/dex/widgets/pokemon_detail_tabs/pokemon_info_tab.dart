@@ -1,9 +1,8 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:flutter_radar_chart/flutter_radar_chart.dart';
 import 'package:rotomdex/dex/service/json_services.dart';
 import 'package:rotomdex/dex/service/navigation_services.dart';
+import 'package:rotomdex/dex/widgets/list_items/pokemon_list_item_simple.dart';
 import 'package:rotomdex/shared/services/preference_services.dart';
 import 'package:rotomdex/shared/data/themes.dart';
 import 'package:themed/themed.dart';
@@ -327,57 +326,13 @@ class _PokemonInfoTabState extends State<PokemonInfoTab> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              GestureDetector(
-                                onTap: () =>
-                                    navigationServices.navigateToPokemon(
-                                        context,
-                                        evo['from_name'],
-                                        widget.pokemonData['name']),
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(360),
-                                        color: Colors.white,
-                                      ),
-                                      width: 75,
-                                      height: 75,
-                                      child: OverflowBox(
-                                        maxWidth: 85,
-                                        maxHeight: 85,
-                                        child: CachedNetworkImage(
-                                          imageUrl:
-                                              "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evo['from_id']}.png",
-                                          width: 100,
-                                          height: 100,
-                                          placeholder: (context, url) =>
-                                              const CircularProgressIndicator(),
-                                          errorWidget: (context, url, error) =>
-                                              const Icon(Icons.error),
-                                          fit: BoxFit.cover,
-                                          fadeInDuration: Durations.short1,
-                                          cacheKey: "pokemon_${evo['from_id']}",
-                                          cacheManager: CacheManager(
-                                            Config(
-                                              "pokemon_images_cache",
-                                              maxNrOfCacheObjects: 500,
-                                              stalePeriod:
-                                                  const Duration(days: 7),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Text(
-                                      '#${evo['from_id']} ${evo['from_name']}',
-                                      style: const TextStyle(
-                                          color: BaseThemeColors
-                                              .detailContainerText),
-                                    )
-                                  ],
-                                ),
-                              ),
+                              PokemonListItemSimple(
+                                  item: {
+                                    "id": evo['from_id'],
+                                    "name": evo["from_name"]
+                                  },
+                                  text: BaseThemeColors.detailContainerText,
+                                  bg: BaseThemeColors.detailItemBg),
                               const SizedBox(width: 20),
                               Column(
                                 children: [
@@ -400,55 +355,13 @@ class _PokemonInfoTabState extends State<PokemonInfoTab> {
                                 ],
                               ),
                               const SizedBox(width: 20),
-                              GestureDetector(
-                                onTap: () =>
-                                    navigationServices.navigateToPokemon(
-                                        context,
-                                        evo['to_name'],
-                                        widget.pokemonData['name']),
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(360),
-                                        color: Colors.white,
-                                      ),
-                                      width: 75,
-                                      height: 75,
-                                      child: OverflowBox(
-                                        maxWidth: 85,
-                                        maxHeight: 85,
-                                        child: CachedNetworkImage(
-                                          imageUrl:
-                                              "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${evo['to_id']}.png",
-                                          width: 100,
-                                          height: 100,
-                                          placeholder: (context, url) =>
-                                              const CircularProgressIndicator(),
-                                          errorWidget: (context, url, error) =>
-                                              const Icon(Icons.error),
-                                          fit: BoxFit.cover,
-                                          fadeInDuration: Durations.short1,
-                                          cacheKey: "pokemon_${evo['to_id']}",
-                                          cacheManager: CacheManager(
-                                            Config(
-                                              "pokemon_images_cache",
-                                              maxNrOfCacheObjects: 500,
-                                              stalePeriod:
-                                                  const Duration(days: 7),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                    Text('#${evo['to_id']} ${evo['to_name']}',
-                                        style: const TextStyle(
-                                            color: BaseThemeColors
-                                                .detailContainerText))
-                                  ],
-                                ),
-                              ),
+                              PokemonListItemSimple(
+                                  item: {
+                                    "id": evo['to_id'],
+                                    "name": evo["to_name"]
+                                  },
+                                  text: BaseThemeColors.detailContainerText,
+                                  bg: BaseThemeColors.detailItemBg),
                             ],
                           ),
                           const SizedBox(height: 30),

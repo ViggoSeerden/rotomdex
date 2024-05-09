@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rotomdex/shared/data/themes.dart';
 import 'package:rotomdex/shared/screens/main_scaffold.dart';
 import 'package:rotomdex/shared/services/theme_services.dart';
 import 'package:themed/themed.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatefulWidget {
 }
 
 class MyAppState extends State<MyApp> {
-  late Map<ThemeRef, Object> _savedTheme;
+  Map<ThemeRef, Object> _savedTheme = BaseThemeColors.rotomTheme;
   final ThemeServices themeServices = ThemeServices();
 
   @override

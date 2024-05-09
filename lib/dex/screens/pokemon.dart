@@ -27,7 +27,7 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
   void initState() {
     super.initState();
     modelPath =
-        'assets/pokemon/models/${widget.pokemonData['id'].toString()}.glb';
+        'https://raw.githubusercontent.com/ViggoSeerden/rotomdex-models/main/models/${widget.pokemonData['id'].toString()}.glb';
   }
 
   void _onItemTapped(int index) {

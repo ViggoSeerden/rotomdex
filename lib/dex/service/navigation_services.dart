@@ -9,7 +9,9 @@ class NavigationServices {
   final JsonServices jsonServices;
   final MessageServices messageServices;
 
-  NavigationServices(): jsonServices = JsonServices(), messageServices = MessageServices();
+  NavigationServices()
+      : jsonServices = JsonServices(),
+        messageServices = MessageServices();
 
   void navigateToPokemonViaID(
       BuildContext context, int pokemonId, List pokemon) async {
@@ -38,27 +40,27 @@ class NavigationServices {
         'assets/pokemon/data/kanto_expanded.json', context);
 
     Map<String, dynamic>? specificPokemon = pokemonList.firstWhere(
-      (pokemon) =>
-          pokemon['name'].toString().toLowerCase() == pokemonName.toLowerCase(),
+      (pokemon) => pokemon['name'].toLowerCase() == pokemonName.toLowerCase(),
       orElse: () => null,
     );
 
-    if (specificPokemon != null) {
-      if (specificPokemon['name'] != currentPokemon) {
-        Navigator.push(
-          // ignore: use_build_context_synchronously
-          context,
-          MaterialPageRoute(
-            builder: (context) =>
-                PokemonDetailScreen(pokemonData: specificPokemon),
-          ),
-        );
-      }
-    } else {
+    if (specificPokemon == null) {
       messageServices.showMessage(
+          'There is no data on $pokemonName in this app.',
           // ignore: use_build_context_synchronously
-          'There is no data on $pokemonName in this app.', context);
+          context);
+      return;
     }
+
+    if (specificPokemon['name'] == currentPokemon) return;
+
+    Navigator.push(
+      // ignore: use_build_context_synchronously
+      context,
+      MaterialPageRoute(
+        builder: (context) => PokemonDetailScreen(pokemonData: specificPokemon),
+      ),
+    );
   }
 
   void navigateToAbility(BuildContext context, String name) async {
