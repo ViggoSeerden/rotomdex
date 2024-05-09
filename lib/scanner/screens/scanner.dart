@@ -194,16 +194,16 @@ class ScannerScreenState extends State<ScannerScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (image != null) ...[
-                    if (imageClassificationHelper?.inputTensor != null)
-                      Text(
-                        'Input: (shape: ${imageClassificationHelper?.inputTensor.shape} type: '
-                        '${imageClassificationHelper?.inputTensor.type})',
-                      ),
-                    if (imageClassificationHelper?.outputTensor != null)
-                      Text(
-                        'Output: (shape: ${imageClassificationHelper?.outputTensor.shape} '
-                        'type: ${imageClassificationHelper?.outputTensor.type})',
-                      ),
+                    // if (imageClassificationHelper?.inputTensor != null)
+                    //   Text(
+                    //     'Input: (shape: ${imageClassificationHelper?.inputTensor.shape} type: '
+                    //     '${imageClassificationHelper?.inputTensor.type})',
+                    //   ),
+                    // if (imageClassificationHelper?.outputTensor != null)
+                    //   Text(
+                    //     'Output: (shape: ${imageClassificationHelper?.outputTensor.shape} '
+                    //     'type: ${imageClassificationHelper?.outputTensor.type})',
+                    //   ),
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -254,7 +254,8 @@ class ScannerScreenState extends State<ScannerScreen> {
                                                           .split(' ')
                                                           .skip(1)
                                                           .join(' '))
-                                                      .toLowerCase();
+                                                      .toLowerCase()
+                                                      .trim();
                                                   navigationServices.navigateToPokemon(
                                                       context, pokemonName, 'egg');
                                                 },

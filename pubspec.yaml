@@ -75,7 +75,6 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/pokemon/models/
     - assets/pokemon/data/
     - assets/images/
     - assets/images/icons/types/
@@ -83,38 +82,9 @@ flutter:
     - assets/tensorflow/
 
   fonts:
-    - family: Roboto
-      fonts: 
-        - asset: fonts/Roboto.ttf
-        - asset: fonts/Roboto-Bold.ttf
-          weight: 100
-    - family: Overload  
-      fonts: 
-        - asset: fonts/Overload.otf
-    - family: Overload Hollow  
-      fonts: 
-        - asset: fonts/Overload_Burn.otf
-    - family: Sui Generis  
-      fonts: 
-        - asset: fonts/Sui_Generis.otf
     - family: Zekton  
       fonts: 
         - asset: fonts/Zekton.otf
-    - family: Michroma  
-      fonts: 
-        - asset: fonts/Michroma.ttf
-    - family: Forgotten Futurist  
-      fonts: 
-        - asset: fonts/Forgotten_Futurist.otf
-    - family: Dual  
-      fonts: 
-        - asset: fonts/Dual.ttf
-    - family: SulphurPoint  
-      fonts: 
-        - asset: fonts/SulphurPoint.ttf
-    - family: ZTGatha  
-      fonts: 
-        - asset: fonts/ZTGatha.ttf
     - family: Raleway  
       fonts: 
         - asset: fonts/Raleway.ttf
