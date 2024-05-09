@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rotomdex/dex/service/bookmark_services.dart';
 import 'package:rotomdex/dex/service/detail_services.dart';
-import 'package:rotomdex/dex/service/navigation_services.dart';
+import 'package:rotomdex/shared/services/navigation_services.dart';
 import 'package:rotomdex/shared/data/themes.dart';
 import 'package:rotomdex/dex/widgets/list_items/pokemon_list_item.dart';
 

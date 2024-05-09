@@ -18,7 +18,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image/image.dart' as img;
 import 'package:image_picker/image_picker.dart';
-import 'package:rotomdex/dex/service/navigation_services.dart';
+import 'package:rotomdex/shared/services/navigation_services.dart';
 import '../service/image_classification_helper.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:flutter/gestures.dart';
@@ -194,16 +194,16 @@ class ScannerScreenState extends State<ScannerScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (image != null) ...[
-                    // if (imageClassificationHelper?.inputTensor != null)
-                    //   Text(
-                    //     'Input: (shape: ${imageClassificationHelper?.inputTensor.shape} type: '
-                    //     '${imageClassificationHelper?.inputTensor.type})',
-                    //   ),
-                    // if (imageClassificationHelper?.outputTensor != null)
-                    //   Text(
-                    //     'Output: (shape: ${imageClassificationHelper?.outputTensor.shape} '
-                    //     'type: ${imageClassificationHelper?.outputTensor.type})',
-                    //   ),
+                    if (imageClassificationHelper?.inputTensor != null)
+                      Text(
+                        'Input: (shape: ${imageClassificationHelper?.inputTensor.shape} type: '
+                        '${imageClassificationHelper?.inputTensor.type})',
+                      ),
+                    if (imageClassificationHelper?.outputTensor != null)
+                      Text(
+                        'Output: (shape: ${imageClassificationHelper?.outputTensor.shape} '
+                        'type: ${imageClassificationHelper?.outputTensor.type})',
+                      ),
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -254,8 +254,7 @@ class ScannerScreenState extends State<ScannerScreen> {
                                                           .split(' ')
                                                           .skip(1)
                                                           .join(' '))
-                                                      .toLowerCase()
-                                                      .trim();
+                                                      .toLowerCase();
                                                   navigationServices.navigateToPokemon(
                                                       context, pokemonName, 'egg');
                                                 },
