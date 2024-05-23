@@ -52,10 +52,9 @@ class MovePageState extends State<MovePage> {
       appBar: AppBar(
         title: Text(
           widget.moveData['name'],
-          style: const TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
         ),
         iconTheme: const IconThemeData(color: BaseThemeColors.detailAppBarText),
-        centerTitle: true,
         foregroundColor: BaseThemeColors.detailAppBarText,
         backgroundColor: BaseThemeColors.detailAppBarBG,
         actions: [
@@ -68,14 +67,6 @@ class MovePageState extends State<MovePage> {
       backgroundColor: Colors.transparent,
       body: Container(
         decoration: const BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Color.fromARGB(125, 0, 0, 0),
-              spreadRadius: 0,
-              blurRadius: 5,
-              offset: Offset(0, 3), // changes position of shadow
-            ),
-          ],
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -88,7 +79,7 @@ class MovePageState extends State<MovePage> {
         padding: EdgeInsets.zero,
         child: Center(
           child: Padding(
-            padding: const EdgeInsets.all(25),
+            padding: const EdgeInsets.all(20),
             child: Container(
               width: double.infinity,
               decoration: const BoxDecoration(
@@ -101,9 +92,17 @@ class MovePageState extends State<MovePage> {
                     BaseThemeColors.detailContainerGradientBottom,
                   ],
                 ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Color.fromARGB(125, 0, 0, 0),
+                    spreadRadius: 0,
+                    blurRadius: 5,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
               ),
               child: Padding(
-                padding: const EdgeInsets.all(15),
+                padding: const EdgeInsets.all(12),
                 child: Column(
                   children: [
                     Text(
@@ -122,9 +121,9 @@ class MovePageState extends State<MovePage> {
                       children: [
                         Column(
                           children: [
-                            const Text(
-                              'Type',
-                              style: TextStyle(
+                            Text(
+                              widget.moveData['type'],
+                              style: const TextStyle(
                                   fontSize: 20,
                                   color: BaseThemeColors.detailContainerText),
                               textAlign: TextAlign.center,
@@ -140,9 +139,9 @@ class MovePageState extends State<MovePage> {
                         ),
                         Column(
                           children: [
-                            const Text(
-                              'Category',
-                              style: TextStyle(
+                            Text(
+                              widget.moveData['category'],
+                              style: const TextStyle(
                                   fontSize: 20,
                                   color: BaseThemeColors.detailContainerText),
                               textAlign: TextAlign.center,
@@ -270,14 +269,15 @@ class MovePageState extends State<MovePage> {
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 3,
-                                crossAxisSpacing: 0,
-                                mainAxisSpacing: 0,
+                                crossAxisSpacing: 12,
+                                mainAxisExtent: 130,
+                                mainAxisSpacing: 20,
                               ),
                               itemBuilder: (context, index) {
                                 final item = levelUpPokemon[index];
                                 return PokemonListItem(
                                   item: item,
-                                  text: BaseThemeColors.detailContainerText,
+                                  text: BaseThemeColors.detailItemText,
                                   bg: BaseThemeColors.detailItemBg,
                                 );
                               },
@@ -289,14 +289,15 @@ class MovePageState extends State<MovePage> {
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 3,
-                                crossAxisSpacing: 0,
-                                mainAxisSpacing: 0,
+                                crossAxisSpacing: 12,
+                                mainAxisExtent: 130,
+                                mainAxisSpacing: 20,
                               ),
                               itemBuilder: (context, index) {
                                 final item = tmPokemon[index];
                                 return PokemonListItem(
                                   item: item,
-                                  text: BaseThemeColors.detailContainerText,
+                                  text: BaseThemeColors.detailItemText,
                                   bg: BaseThemeColors.detailItemBg,
                                 );
                               },
@@ -308,14 +309,15 @@ class MovePageState extends State<MovePage> {
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 3,
-                                crossAxisSpacing: 0,
-                                mainAxisSpacing: 0,
+                                crossAxisSpacing: 12,
+                                mainAxisExtent: 130,
+                                mainAxisSpacing: 20,
                               ),
                               itemBuilder: (context, index) {
                                 final item = eggPokemon[index];
                                 return PokemonListItem(
                                   item: item,
-                                  text: BaseThemeColors.detailContainerText,
+                                  text: BaseThemeColors.detailItemText,
                                   bg: BaseThemeColors.detailItemBg,
                                 );
                               },

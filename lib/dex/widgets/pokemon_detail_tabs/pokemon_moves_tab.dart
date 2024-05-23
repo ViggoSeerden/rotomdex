@@ -83,11 +83,23 @@ class _PokemonMovesTabState extends State<PokemonMovesTab> {
                           scrolledUnderElevation: 0,
                           automaticallyImplyLeading: false,
                           centerTitle: true,
-                          title: Text(
-                            'Learnable Moves ($source)',
-                            style: const TextStyle(
-                                fontSize: 24,
-                                color: BaseThemeColors.detailContainerText),
+                          title: Column(
+                            children: [
+                              const Text(
+                                'Learnable Moves',
+                                style: TextStyle(
+                                    fontSize: 24,
+                                    color: BaseThemeColors.detailContainerText),
+                              ),
+                              const SizedBox(height: 10,),
+                              Text(
+                                'From Pokémon $source',
+                                style: const TextStyle(
+                                    fontSize: 16,
+                                    color: BaseThemeColors.detailContainerText),
+                              ),
+                              const SizedBox(height: 10,),
+                            ],
                           ),
                           backgroundColor: Colors.transparent,
                           bottom: const TabBar(
@@ -118,7 +130,8 @@ class _PokemonMovesTabState extends State<PokemonMovesTab> {
                                 shadowColor: const Color.fromARGB(125, 0, 0, 0),
                                 bg: BaseThemeColors.detailItemBg,
                                 text: BaseThemeColors.detailItemText,
-                                accentText: BaseThemeColors.detailItemAccentText,
+                                accentText:
+                                    BaseThemeColors.detailItemAccentText,
                               );
                             },
                           ),
@@ -136,7 +149,8 @@ class _PokemonMovesTabState extends State<PokemonMovesTab> {
                                 shadowColor: const Color.fromARGB(125, 0, 0, 0),
                                 bg: BaseThemeColors.detailItemBg,
                                 text: BaseThemeColors.detailItemText,
-                                accentText: BaseThemeColors.detailItemAccentText,
+                                accentText:
+                                    BaseThemeColors.detailItemAccentText,
                               );
                             },
                           ),
@@ -154,7 +168,8 @@ class _PokemonMovesTabState extends State<PokemonMovesTab> {
                                 shadowColor: const Color.fromARGB(125, 0, 0, 0),
                                 bg: BaseThemeColors.detailItemBg,
                                 text: BaseThemeColors.detailItemText,
-                                accentText: BaseThemeColors.detailItemAccentText,
+                                accentText:
+                                    BaseThemeColors.detailItemAccentText,
                               );
                             },
                           ),

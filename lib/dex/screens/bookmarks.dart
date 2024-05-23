@@ -119,7 +119,7 @@ class _BookmarksPageStateState extends State<BookmarksPage> {
                                     final item = pokemonBookmarks[index];
                                     return PokemonListItem(
                                       item: item,
-                                      text: BaseThemeColors.detailContainerText,
+                                      text: BaseThemeColors.detailItemText,
                                       removeFromBookmarks: removeFromBookmarks,
                                       bg: BaseThemeColors.detailItemBg,
                                     );

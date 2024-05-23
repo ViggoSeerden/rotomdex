@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rotomdex/dex/screens/collection.dart';
 import 'package:rotomdex/scanner/screens/scanner.dart';
 import 'package:rotomdex/dex/screens/abilities.dart';
 import 'package:rotomdex/dex/screens/bookmarks.dart';
@@ -7,6 +8,7 @@ import 'package:rotomdex/dex/screens/pokedex.dart';
 import 'package:rotomdex/shared/screens/about.dart';
 import 'package:rotomdex/shared/screens/settings.dart';
 import 'package:rotomdex/shared/data/themes.dart';
+import 'package:rotomdex/shared/screens/theme_shop.dart';
 import 'package:rotomdex/team_builder/screens/teams.dart';
 import 'package:rotomdex/whos_that_pokemon/screens/title.dart';
 
@@ -25,9 +27,11 @@ class _NavScaffoldState extends State<NavScaffold> {
     MoveDexPage(),
     AbilityDexPage(),
     BookmarksPage(),
+    CollectionScreen(),
     ScannerScreen(),
     TeamBuilderScreen(),
     GameTitleScreen(),
+    ThemeShopScreen(),
     AboutScreen(),
     SettingsPage()
   ];
@@ -137,7 +141,23 @@ class _NavScaffoldState extends State<NavScaffold> {
                       Navigator.pop(context);
                     },
                   ),
-                  const Divider(color: BaseThemeColors.mainMenuListText,),
+                  ListTile(
+                    title: const Text(
+                      'Collection',
+                      style: TextStyle(
+                          color: BaseThemeColors.mainMenuListText,
+                          fontSize: 20),
+                    ),
+                    selected: _selectedIndex == 4,
+                    onTap: () {
+                      _onItemTapped(4, 'Collection');
+                      Navigator.pop(context);
+                    },
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Divider(color: BaseThemeColors.mainMenuListText,),
+                  ),
                   ListTile(
                     title: const Text(
                       'Scanner',
@@ -145,9 +165,9 @@ class _NavScaffoldState extends State<NavScaffold> {
                           color: BaseThemeColors.mainMenuListText,
                           fontSize: 20),
                     ),
-                    selected: _selectedIndex == 4,
+                    selected: _selectedIndex == 5,
                     onTap: () {
-                      _onItemTapped(4, 'Scanner');
+                      _onItemTapped(5, 'Scanner');
                       Navigator.pop(context);
                     },
                   ),
@@ -158,9 +178,9 @@ class _NavScaffoldState extends State<NavScaffold> {
                           color: BaseThemeColors.mainMenuListText,
                           fontSize: 20),
                     ),
-                    selected: _selectedIndex == 5,
+                    selected: _selectedIndex == 6,
                     onTap: () {
-                      _onItemTapped(5, 'Team Builder');
+                      _onItemTapped(6, 'Team Builder');
                       Navigator.pop(context);
                     },
                   ),
@@ -171,33 +191,55 @@ class _NavScaffoldState extends State<NavScaffold> {
                           color: BaseThemeColors.mainMenuListText,
                           fontSize: 20),
                     ),
-                    selected: _selectedIndex == 5,
+                    selected: _selectedIndex == 7,
                     onTap: () {
-                      _onItemTapped(6, "Who's That Pokémon?");
+                      _onItemTapped(7, "Who's That Pokémon?");
                       Navigator.pop(context);
                     },
                   ),
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  IconButton(
-                    onPressed: () {
-                        _onItemTapped(7, 'About');
-                        Navigator.pop(context);
-                      },
-                    icon: const Icon(Icons.info, size: 36, color: BaseThemeColors.mainMenuListText,)
+                  ListTile(
+                    title: const Text(
+                      "Theme Shop",
+                      style: TextStyle(
+                          color: BaseThemeColors.mainMenuListText,
+                          fontSize: 20),
+                    ),
+                    selected: _selectedIndex == 8,
+                    onTap: () {
+                      _onItemTapped(8, "Theme Shop");
+                      Navigator.pop(context);
+                    },
                   ),
-                  IconButton(
-                    onPressed: () {
-                        _onItemTapped(8, 'Settings');
-                        Navigator.pop(context);
-                      },
-                    icon: const Icon(Icons.settings, size: 36, color: BaseThemeColors.mainMenuListText,)
-                  )
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Divider(),
+                  ),
+                  ListTile(
+                    title: const Text(
+                      "About",
+                      style: TextStyle(
+                          color: BaseThemeColors.mainMenuListText,
+                          fontSize: 20),
+                    ),
+                    selected: _selectedIndex == 9,
+                    onTap: () {
+                      _onItemTapped(9, "About");
+                      Navigator.pop(context);
+                    },
+                  ),
+                  ListTile(
+                    title: const Text(
+                      "Settings",
+                      style: TextStyle(
+                          color: BaseThemeColors.mainMenuListText,
+                          fontSize: 20),
+                    ),
+                    selected: _selectedIndex == 10,
+                    onTap: () {
+                      _onItemTapped(10, "Settings");
+                      Navigator.pop(context);
+                    },
+                  ),
                 ],
               ),
             )

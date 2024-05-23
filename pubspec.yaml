@@ -116,9 +116,9 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
 flutter_native_splash:
-  color: "#EF866B"
+  color: "#EC6D4F"
   image: assets/images/rotomHQNoBGSmaller.png
 
   android_12:
     image: assets/images/rotomHQNoBGSmaller.png
-    color: "#EF866B"
+    color: "#EC6D4F"

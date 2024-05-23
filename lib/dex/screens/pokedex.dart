@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:rotomdex/dex/service/json_services.dart';
 import 'package:rotomdex/dex/service/search_services.dart';
 import 'package:rotomdex/dex/widgets/search_bar.dart';
@@ -116,41 +118,29 @@ class PokedexPageState extends State<PokedexPage>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.transparent,
-      body: Column(
-        children: [
-          SearchBarWidget(searchFunction: searchPokemon),
-          Expanded(
-            child: GridView.builder(
-              padding: const EdgeInsets.all(8),
-              itemCount: _displayedData.length,
-              controller: scrollController,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                crossAxisSpacing: 0,
-                mainAxisSpacing: 8,
-              ),
-              itemBuilder: (context, index) {
-                final item = _displayedData[index];
-                return PokemonListItem(
-                  item: item,
-                  text: BaseThemeColors.dexItemText,
-                  bg: BaseThemeColors.detailItemBg,
-                );
-              },
-            ),
+    return Stack(
+      children: [
+        GridView.builder(
+          padding: const EdgeInsets.fromLTRB(8, 76, 8, 16),
+          itemCount: _displayedData.length,
+          controller: scrollController,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            crossAxisSpacing: 12,
+            mainAxisExtent: 130,
+            mainAxisSpacing: 20,
           ),
-        ],
-      ),
-      // floatingActionButton: FABubble(
-      //     searchFunction: searchPokemon,
-      //     reverseFunction: reversePokemon,
-      //     resetFunction: resetPokemon,
-      //     filterFunction: filterPokemon,
-      //     sortingFunction: sortPokemon,
-      //     filterOptions: const ['Type', "Egg Group"],
-      //     sortingOptions: const ["ID", "Name"])
+          itemBuilder: (context, index) {
+            final item = _displayedData[index];
+            return PokemonListItem(
+              item: item,
+              text: BaseThemeColors.dexItemText,
+              bg: BaseThemeColors.detailItemBg,
+            );
+          },
+        ),
+        SearchBarWidget(searchFunction: searchPokemon),
+      ],
     );
   }
 }

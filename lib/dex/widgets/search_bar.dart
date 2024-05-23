@@ -14,7 +14,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8),
         child: SearchBar(
           onChanged: (value) => widget.searchFunction(value),
           padding: const MaterialStatePropertyAll<EdgeInsets>(
@@ -32,6 +32,10 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
           ),
           textStyle: const MaterialStatePropertyAll<TextStyle>(
             TextStyle(color: Colors.white)
+          ),
+          hintText: 'Search',
+          hintStyle: const MaterialStatePropertyAll<TextStyle>(
+            TextStyle(color: Colors.grey)
           ),
           leading: const Icon(Icons.search, color: Colors.white,),
           trailing: <Widget>[

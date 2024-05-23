@@ -15,7 +15,7 @@
     },
     {
         "pokemon_id": 1,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Tackle",
@@ -87,7 +87,7 @@
     },
     {
         "pokemon_id": 2,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Tackle",
@@ -159,7 +159,7 @@
     },
     {
         "pokemon_id": 3,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Petal Dance",
@@ -239,7 +239,7 @@
     },
     {
         "pokemon_id": 4,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Scratch",
@@ -299,7 +299,7 @@
     },
     {
         "pokemon_id": 5,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Scratch",
@@ -355,7 +355,7 @@
     },
     {
         "pokemon_id": 6,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Dragon Claw",
@@ -427,7 +427,7 @@
     },
     {
         "pokemon_id": 7,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Tackle",
@@ -495,7 +495,7 @@
     },
     {
         "pokemon_id": 8,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Tackle",
@@ -563,7 +563,7 @@
     },
     {
         "pokemon_id": 9,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Tackle",
@@ -635,7 +635,7 @@
     },
     {
         "pokemon_id": 10,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Tackle",
@@ -657,7 +657,7 @@
     },
     {
         "pokemon_id": 11,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Harden",
@@ -675,7 +675,7 @@
     },
     {
         "pokemon_id": 12,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Gust",
@@ -761,7 +761,7 @@
     },
     {
         "pokemon_id": 13,
-        "data": "BDSP",
+        "data": "Brilliant Diamond & Shining Pearl",
         "level_up": [
             {
                 "move_name": "Poison Sting",
@@ -783,7 +783,7 @@
     },
     {
         "pokemon_id": 14,
-        "data": "BDSP",
+        "data": "Brilliant Diamond & Shining Pearl",
         "level_up": [
             {
                 "move_name": "Harden",
@@ -801,7 +801,7 @@
     },
     {
         "pokemon_id": 15,
-        "data": "BDSP",
+        "data": "Brilliant Diamond & Shining Pearl",
         "level_up": [
             {
                 "move_name": "Fury Attack",
@@ -883,7 +883,7 @@
     },
     {
         "pokemon_id": 16,
-        "data": "BDSP",
+        "data": "Brilliant Diamond & Shining Pearl",
         "level_up": [
             {
                 "move_name": "Tackle",
@@ -951,7 +951,7 @@
     },
     {
         "pokemon_id": 17,
-        "data": "BDSP",
+        "data": "Brilliant Diamond & Shining Pearl",
         "level_up": [
             {
                 "move_name": "Tackle",
@@ -1110,7 +1110,7 @@
     },
     {
         "pokemon_id": 19,
-        "data": "BDSP",
+        "data": "Brilliant Diamond & Shining Pearl",
         "level_up": [
             {
                 "move_name": "Tackle",
@@ -1174,7 +1174,7 @@
     },
     {
         "pokemon_id": 20,
-        "data": "BDSP",
+        "data": "Brilliant Diamond & Shining Pearl",
         "level_up": [
             {
                 "move_name": "Scary Face",
@@ -1258,7 +1258,7 @@
     },
     {
         "pokemon_id": 21,
-        "data": "BDSP",
+        "data": "Brilliant Diamond & Shining Pearl",
         "level_up": [
             {
                 "move_name": "Peck",
@@ -1318,7 +1318,7 @@
     },
     {
         "pokemon_id": 22,
-        "data": "BDSP",
+        "data": "Brilliant Diamond & Shining Pearl",
         "level_up": [
             {
                 "move_name": "Drill Run",
@@ -1394,7 +1394,7 @@
     },
     {
         "pokemon_id": 23,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Wrap",
@@ -1474,7 +1474,7 @@
     },
     {
         "pokemon_id": 24,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Wrap",
@@ -1570,7 +1570,7 @@
     },
     {
         "pokemon_id": 25,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Play Nice",
@@ -1662,7 +1662,7 @@
     },
     {
         "pokemon_id": 26,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Play Nice",
@@ -1758,7 +1758,7 @@
     },
     {
         "pokemon_id": 27,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Scratch",
@@ -1838,7 +1838,7 @@
     },
     {
         "pokemon_id": 28,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Crush Claw",
@@ -1922,7 +1922,7 @@
     },
     {
         "pokemon_id": 29,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Growl",
@@ -1986,7 +1986,7 @@
     },
     {
         "pokemon_id": 30,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Growl",
@@ -2050,7 +2050,7 @@
     },
     {
         "pokemon_id": 31,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Superpower",
@@ -2126,7 +2126,7 @@
     },
     {
         "pokemon_id": 32,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Leer",
@@ -2190,7 +2190,7 @@
     },
     {
         "pokemon_id": 33,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Leer",
@@ -2254,7 +2254,7 @@
     },
     {
         "pokemon_id": 34,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Megahorn",
@@ -2330,7 +2330,7 @@
     },
     {
         "pokemon_id": 35,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Sing",
@@ -2426,7 +2426,7 @@
     },
     {
         "pokemon_id": 36,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Sing",
@@ -2522,7 +2522,7 @@
     },
     {
         "pokemon_id": 37,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Ember",
@@ -2594,7 +2594,7 @@
     },
     {
         "pokemon_id": 38,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Ember",
@@ -2670,7 +2670,7 @@
     },
     {
         "pokemon_id": 39,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Sweet Kiss",
@@ -2762,7 +2762,7 @@
     },
     {
         "pokemon_id": 40,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Sweet Kiss",
@@ -2858,7 +2858,7 @@
     },
     {
         "pokemon_id": 41,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Absorb",
@@ -2922,7 +2922,7 @@
     },
     {
         "pokemon_id": 42,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Screech",
@@ -2990,7 +2990,7 @@
     },
     {
         "pokemon_id": 43,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Absorb",
@@ -3058,7 +3058,7 @@
     },
     {
         "pokemon_id": 44,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Absorb",
@@ -3126,7 +3126,7 @@
     },
     {
         "pokemon_id": 45,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Absorb",
@@ -3198,7 +3198,7 @@
     },
     {
         "pokemon_id": 46,
-        "data": "BDSP",
+        "data": "Brilliant Diamond & Shining Pearl",
         "level_up": [
             {
                 "move_name": "Scratch",
@@ -3258,7 +3258,7 @@
     },
     {
         "pokemon_id": 47,
-        "data": "BDSP",
+        "data": "Brilliant Diamond & Shining Pearl",
         "level_up": [
             {
                 "move_name": "Cross Poison",
@@ -3334,7 +3334,7 @@
     },
     {
         "pokemon_id": 48,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Tackle",
@@ -3398,7 +3398,7 @@
     },
     {
         "pokemon_id": 49,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Quiver Dance",
@@ -3470,7 +3470,7 @@
     },
     {
         "pokemon_id": 50,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Sand Attack",
@@ -3534,7 +3534,7 @@
     },
     {
         "pokemon_id": 51,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Night Slash",
@@ -3610,7 +3610,7 @@
     },
     {
         "pokemon_id": 52,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Fake Out",
@@ -3674,7 +3674,7 @@
     },
     {
         "pokemon_id": 53,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Switcheroo",
@@ -3746,7 +3746,7 @@
     },
     {
         "pokemon_id": 54,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Scratch",
@@ -3814,7 +3814,7 @@
     },
     {
         "pokemon_id": 55,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Aqua Jet",
@@ -3890,7 +3890,7 @@
     },
     {
         "pokemon_id": 56,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Covet",
@@ -3966,7 +3966,7 @@
     },
     {
         "pokemon_id": 57,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Covet",
@@ -4046,7 +4046,7 @@
     },
     {
         "pokemon_id": 58,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Ember",
@@ -4122,7 +4122,7 @@
     },
     {
         "pokemon_id": 59,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Ember",
@@ -4202,7 +4202,7 @@
     },
     {
         "pokemon_id": 60,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Water Gun",
@@ -4258,7 +4258,7 @@
     },
     {
         "pokemon_id": 61,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Water Gun",
@@ -4314,7 +4314,7 @@
     },
     {
         "pokemon_id": 62,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Water Gun",
@@ -4378,7 +4378,7 @@
     },
     {
         "pokemon_id": 63,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Teleport",
@@ -4394,7 +4394,7 @@
     },
     {
         "pokemon_id": 64,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Teleport",
@@ -4466,7 +4466,7 @@
     },
     {
         "pokemon_id": 65,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Teleport",
@@ -4534,7 +4534,7 @@
     },
     {
         "pokemon_id": 66,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Low Kick",
@@ -4606,7 +4606,7 @@
     },
     {
         "pokemon_id": 67,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Low Kick",
@@ -4678,7 +4678,7 @@
     },
     {
         "pokemon_id": 68,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Wide Guard",
@@ -4754,7 +4754,7 @@
     },
     {
         "pokemon_id": 69,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Vine Whip",
@@ -4822,7 +4822,7 @@
     },
     {
         "pokemon_id": 70,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Vine Whip",
@@ -4890,7 +4890,7 @@
     },
     {
         "pokemon_id": 71,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Vine Whip",
@@ -4946,7 +4946,7 @@
     },
     {
         "pokemon_id": 72,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Poison Sting",
@@ -5014,7 +5014,7 @@
     },
     {
         "pokemon_id": 73,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Reflect Type",
@@ -5086,7 +5086,7 @@
     },
     {
         "pokemon_id": 74,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Tackle",
@@ -5154,7 +5154,7 @@
     },
     {
         "pokemon_id": 75,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Tackle",
@@ -5222,7 +5222,7 @@
     },
     {
         "pokemon_id": 76,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Tackle",
@@ -5290,7 +5290,7 @@
     },
     {
         "pokemon_id": 77,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Tackle",
@@ -5354,7 +5354,7 @@
     },
     {
         "pokemon_id": 78,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Smart Strike",
@@ -5434,7 +5434,7 @@
     },
     {
         "pokemon_id": 79,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Tackle",
@@ -5514,7 +5514,7 @@
     },
     {
         "pokemon_id": 80,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Withdraw",
@@ -5602,7 +5602,7 @@
     },
     {
         "pokemon_id": 81,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Thunder Shock",
@@ -5674,7 +5674,7 @@
     },
     {
         "pokemon_id": 82,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Electric Terrain",
@@ -5754,7 +5754,7 @@
     },
     {
         "pokemon_id": 83,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Peck",
@@ -5826,7 +5826,7 @@
     },
     {
         "pokemon_id": 84,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Peck",
@@ -5890,7 +5890,7 @@
     },
     {
         "pokemon_id": 85,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Peck",
@@ -5958,7 +5958,7 @@
     },
     {
         "pokemon_id": 86,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Headbutt",
@@ -6038,7 +6038,7 @@
     },
     {
         "pokemon_id": 87,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Headbutt",
@@ -6118,7 +6118,7 @@
     },
     {
         "pokemon_id": 88,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Pound",
@@ -6194,7 +6194,7 @@
     },
     {
         "pokemon_id": 89,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Pound",
@@ -6270,7 +6270,7 @@
     },
     {
         "pokemon_id": 90,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Tackle",
@@ -6338,7 +6338,7 @@
     },
     {
         "pokemon_id": 91,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Spikes",
@@ -6422,7 +6422,7 @@
     },
     {
         "pokemon_id": 92,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Lick",
@@ -6490,7 +6490,7 @@
     },
     {
         "pokemon_id": 93,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Lick",
@@ -6562,7 +6562,7 @@
     },
     {
         "pokemon_id": 94,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Shadow Punch",
@@ -6642,7 +6642,7 @@
     },
     {
         "pokemon_id": 95,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Tackle",
@@ -6726,7 +6726,7 @@
     },
     {
         "pokemon_id": 96,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Pound",
@@ -6794,7 +6794,7 @@
     },
     {
         "pokemon_id": 97,
-        "data": "ScVi",
+        "data": "Scarlet & Violet",
         "level_up": [
             {
                 "move_name": "Switcheroo",
@@ -6866,7 +6866,7 @@
     },
     {
         "pokemon_id": 98,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Water Gun",
@@ -6934,7 +6934,7 @@
     },
     {
         "pokemon_id": 99,
-        "data": "SwSh",
+        "data": "Sword & Shield",
         "level_up": [
             {
                 "move_name": "Wide Guard",

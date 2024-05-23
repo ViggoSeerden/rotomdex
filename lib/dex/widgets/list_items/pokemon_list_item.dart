@@ -92,13 +92,13 @@ class PokemonListItem extends StatelessWidget {
                         Text('${item['name']}',
                         textAlign: TextAlign.start,
                             style: TextStyle(
-                                color: text, fontWeight: FontWeight.bold)),
+                                color: text, fontWeight: FontWeight.bold, fontSize: 16)),
                         Row(
             
                             children: [
                               Expanded(
                                 child: Text("#${item['id']}", style: TextStyle(
-                                  color: text, fontWeight: FontWeight.bold)),
+                                  color: text, fontSize: 16)),
                               ),
                               Image.asset(
                                   'assets/images/icons/types/${item['type1']}.png',

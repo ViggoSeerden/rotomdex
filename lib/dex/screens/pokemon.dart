@@ -48,10 +48,9 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
       appBar: AppBar(
         title: Text(
           '#${widget.pokemonData['id'].toString()} ${widget.pokemonData['name']}',
-          style: const TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
         ),
         iconTheme: const IconThemeData(color: BaseThemeColors.detailAppBarText),
-        centerTitle: true,
         foregroundColor: BaseThemeColors.detailAppBarText,
         backgroundColor: BaseThemeColors.detailAppBarBG,
         actions: [
@@ -75,30 +74,44 @@ class PokemonDetailScreenState extends State<PokemonDetailScreen> {
         padding: EdgeInsets.zero,
         child: _buildBody(),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: const Color(0xffACACAC),
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.info),
-            label: 'Info',
+      bottomNavigationBar: NavigationBarTheme(
+        data: NavigationBarThemeData(
+          labelTextStyle: MaterialStateProperty.resolveWith<TextStyle>(
+            (Set<MaterialState> states) =>
+                states.contains(MaterialState.selected)
+                    ? const TextStyle(color: BaseThemeColors.detailNavBarTextActive)
+                    : const TextStyle(color: BaseThemeColors.detailNavBarText),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.waving_hand_outlined),
-            label: 'Moves',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.details),
-            label: 'Details',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.threed_rotation),
-            label: 'Model',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: Colors.blue,
-        unselectedItemColor: Colors.black,
-        onTap: _onItemTapped,
+        ),
+        child: NavigationBar(
+          backgroundColor: BaseThemeColors.detailNavBarBG,
+          indicatorColor: BaseThemeColors.detailNavBarTextActive,
+          shadowColor: Colors.black,
+          labelBehavior: NavigationDestinationLabelBehavior.alwaysShow,
+          destinations: const <Widget>[
+            NavigationDestination(
+              icon: Icon(
+                Icons.info,
+                color: Colors.white,
+              ),
+              label: 'General',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.waving_hand_outlined, color: Colors.white),
+              label: 'Moves',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.more_horiz, color: Colors.white),
+              label: 'Details',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.threed_rotation, color: Colors.white),
+              label: 'Model',
+            ),
+          ],
+          selectedIndex: _selectedIndex,
+          onDestinationSelected: _onItemTapped,
+        ),
       ),
     );
   }

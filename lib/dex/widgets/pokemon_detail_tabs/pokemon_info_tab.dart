@@ -90,7 +90,7 @@ class _PokemonInfoTabState extends State<PokemonInfoTab> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 50),
+        const SizedBox(height: 30),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -125,14 +125,14 @@ class _PokemonInfoTabState extends State<PokemonInfoTab> {
               onTap: toggleShiny,
               child: Image.network(
                 imageUrl,
-                height: 200,
-                width: 200,
+                height: 170,
+                width: 170,
                 fit: BoxFit.cover,
               ),
             ),
             if (widget.pokemonData['id'] < 151) ...[
               const SizedBox(
-                width: 50,
+                width: 30,
               ),
               IconButton(
                   onPressed: () async =>
@@ -159,7 +159,7 @@ class _PokemonInfoTabState extends State<PokemonInfoTab> {
             ],
           ],
         ),
-        const SizedBox(height: 50),
+        const SizedBox(height: 30),
         Expanded(
           child: Container(
             decoration: const BoxDecoration(
@@ -199,13 +199,29 @@ class _PokemonInfoTabState extends State<PokemonInfoTab> {
                   ),
                   const SizedBox(height: 18),
                   Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                    Image.asset(
-                        'assets/images/icons/types/${widget.pokemonData['type1']}.png'),
+                    Column(
+                      children: [
+                        Text(widget.pokemonData['type1'],
+                            style: const TextStyle(
+                                fontSize: 20,
+                                color: BaseThemeColors.detailContainerText)),
+                        Image.asset(
+                            'assets/images/icons/types/${widget.pokemonData['type1']}.png'),
+                      ],
+                    ),
                     if (widget.pokemonData['type2'] != null &&
                         widget.pokemonData['type2'].isNotEmpty) ...[
                       const SizedBox(width: 20),
-                      Image.asset(
-                          'assets/images/icons/types/${widget.pokemonData['type2']}.png'),
+                      Column(
+                        children: [
+                          Text(widget.pokemonData['type2'],
+                              style: const TextStyle(
+                                  fontSize: 20,
+                                  color: BaseThemeColors.detailContainerText)),
+                          Image.asset(
+                              'assets/images/icons/types/${widget.pokemonData['type2']}.png'),
+                        ],
+                      ),
                     ],
                   ]),
                   const SizedBox(height: 20),
@@ -331,7 +347,7 @@ class _PokemonInfoTabState extends State<PokemonInfoTab> {
                                     "id": evo['from_id'],
                                     "name": evo["from_name"]
                                   },
-                                  text: BaseThemeColors.detailContainerText,
+                                  text: BaseThemeColors.detailItemText,
                                   bg: BaseThemeColors.detailItemBg),
                               const SizedBox(width: 20),
                               Column(
@@ -360,7 +376,7 @@ class _PokemonInfoTabState extends State<PokemonInfoTab> {
                                     "id": evo['to_id'],
                                     "name": evo["to_name"]
                                   },
-                                  text: BaseThemeColors.detailContainerText,
+                                  text: BaseThemeColors.detailItemText,
                                   bg: BaseThemeColors.detailItemBg),
                             ],
                           ),

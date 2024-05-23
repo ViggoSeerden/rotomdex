@@ -49,10 +49,9 @@ class AbilityPageState extends State<AbilityPage> {
       appBar: AppBar(
         title: Text(
           widget.abilityData['name'],
-          style: const TextStyle(fontWeight: FontWeight.bold),
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 28),
         ),
         iconTheme: const IconThemeData(color: BaseThemeColors.detailAppBarText),
-        centerTitle: true,
         foregroundColor: BaseThemeColors.detailAppBarText,
         backgroundColor: BaseThemeColors.detailAppBarBG,
         actions: [
@@ -65,14 +64,6 @@ class AbilityPageState extends State<AbilityPage> {
       backgroundColor: Colors.transparent,
       body: Container(
         decoration: const BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              color: Color.fromARGB(125, 0, 0, 0),
-              spreadRadius: 0,
-              blurRadius: 5,
-              offset: Offset(0, 3), // changes position of shadow
-            ),
-          ],
           gradient: LinearGradient(
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -98,6 +89,14 @@ class AbilityPageState extends State<AbilityPage> {
                     BaseThemeColors.detailContainerGradientBottom,
                   ],
                 ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Color.fromARGB(125, 0, 0, 0),
+                    spreadRadius: 0,
+                    blurRadius: 5,
+                    offset: Offset(0, 3), // changes position of shadow
+                  ),
+                ],
               ),
               child: Padding(
                 padding: const EdgeInsets.all(15),
@@ -148,14 +147,15 @@ class AbilityPageState extends State<AbilityPage> {
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 3,
-                                crossAxisSpacing: 0,
-                                mainAxisSpacing: 0,
+                                crossAxisSpacing: 12,
+                                mainAxisExtent: 130,
+                                mainAxisSpacing: 20,
                               ),
                               itemBuilder: (context, index) {
                                 final item = normalPokemon[index];
                                 return PokemonListItem(
                                   item: item,
-                                  text: BaseThemeColors.detailContainerText,
+                                  text: BaseThemeColors.detailItemText,
                                   bg: BaseThemeColors.detailItemBg,
                                 );
                               },
@@ -167,14 +167,15 @@ class AbilityPageState extends State<AbilityPage> {
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 3,
-                                crossAxisSpacing: 0,
-                                mainAxisSpacing: 0,
+                                crossAxisSpacing: 12,
+                                mainAxisExtent: 130,
+                                mainAxisSpacing: 20,
                               ),
                               itemBuilder: (context, index) {
                                 final item = hiddenPokemon[index];
                                 return PokemonListItem(
                                   item: item,
-                                  text: BaseThemeColors.detailContainerText,
+                                  text: BaseThemeColors.detailItemText,
                                   bg: BaseThemeColors.detailItemBg,
                                 );
                               },
