@@ -26,8 +26,8 @@ import 'package:tflite_flutter/tflite_flutter.dart';
 import 'isolate_inference.dart';
 
 class ImageClassificationHelper {
-  static const modelPath = 'assets/tensorflow/pokedexAlt.tflite';
-  static const labelsPath = 'assets/tensorflow/labelsAlt.txt';
+  static const modelPath = 'assets/pokedex.tflite';
+  static const labelsPath = 'assets/labels.txt';
 
   late final Interpreter interpreter;
   late final List<String> labels;
@@ -46,9 +46,9 @@ class ImageClassificationHelper {
 
     // Use GPU Delegate
     // doesn't work on emulator
-    // if (Platform.isAndroid) {
-    //   options.addDelegate(GpuDelegateV2());
-    // }
+    if (Platform.isAndroid) {
+      options.addDelegate(GpuDelegateV2());
+    }
 
     // Use Metal Delegate
     if (Platform.isIOS) {

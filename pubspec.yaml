@@ -80,6 +80,7 @@ flutter:
     - assets/images/icons/types/
     - assets/images/icons/moves/
     - assets/tensorflow/
+    - assets/
 
   fonts:
     - family: Zekton  
