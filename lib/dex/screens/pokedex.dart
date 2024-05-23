@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:rotomdex/dex/service/json_services.dart';
 import 'package:rotomdex/dex/service/search_services.dart';
+import 'package:rotomdex/dex/widgets/search_bar.dart';
 import 'package:rotomdex/shared/data/themes.dart';
-import 'package:rotomdex/dex/widgets/floating_action_bubble.dart';
+// import 'package:rotomdex/dex/widgets/floating_action_bubble.dart';
 import 'package:rotomdex/dex/widgets/list_items/pokemon_list_item.dart';
 
 class PokedexPage extends StatefulWidget {
@@ -116,32 +117,40 @@ class PokedexPageState extends State<PokedexPage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.transparent,
-        body: GridView.builder(
-          padding: const EdgeInsets.all(8.0),
-          itemCount: _displayedData.length,
-          controller: scrollController,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            crossAxisSpacing: 0,
-            mainAxisSpacing: 0,
+      backgroundColor: Colors.transparent,
+      body: Column(
+        children: [
+          SearchBarWidget(searchFunction: searchPokemon),
+          Expanded(
+            child: GridView.builder(
+              padding: const EdgeInsets.all(8),
+              itemCount: _displayedData.length,
+              controller: scrollController,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 3,
+                crossAxisSpacing: 0,
+                mainAxisSpacing: 8,
+              ),
+              itemBuilder: (context, index) {
+                final item = _displayedData[index];
+                return PokemonListItem(
+                  item: item,
+                  text: BaseThemeColors.dexItemText,
+                  bg: BaseThemeColors.detailItemBg,
+                );
+              },
+            ),
           ),
-          itemBuilder: (context, index) {
-            final item = _displayedData[index];
-            return PokemonListItem(
-              item: item,
-              text: BaseThemeColors.dexItemText,
-              bg: BaseThemeColors.detailItemBg,
-            );
-          },
-        ),
-        floatingActionButton: FABubble(
-            searchFunction: searchPokemon,
-            reverseFunction: reversePokemon,
-            resetFunction: resetPokemon,
-            filterFunction: filterPokemon,
-            sortingFunction: sortPokemon,
-            filterOptions: const ['Type', "Egg Group"],
-            sortingOptions: const ["ID", "Name"]));
+        ],
+      ),
+      // floatingActionButton: FABubble(
+      //     searchFunction: searchPokemon,
+      //     reverseFunction: reversePokemon,
+      //     resetFunction: resetPokemon,
+      //     filterFunction: filterPokemon,
+      //     sortingFunction: sortPokemon,
+      //     filterOptions: const ['Type', "Egg Group"],
+      //     sortingOptions: const ["ID", "Name"])
+    );
   }
 }

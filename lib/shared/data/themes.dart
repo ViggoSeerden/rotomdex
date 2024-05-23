@@ -39,21 +39,21 @@ class BaseThemeColors {
 
   static Map<ThemeRef, Object> rotomTheme = {
     //Main
-    BaseThemeColors.mainAppBarBG: const Color(0xFF6ae2f2),
+    BaseThemeColors.mainAppBarBG: const Color(0xFF6AF2DA),
     BaseThemeColors.mainAppBarText: Colors.black,
-    BaseThemeColors.mainMenuLogoBG: const Color(0xFFEF866B),
-    BaseThemeColors.mainMenuListBG: const Color(0xFF6ae2f2),
-    BaseThemeColors.mainMenuListText: Colors.black,
+    BaseThemeColors.mainMenuLogoBG: const Color(0xFFEC6D4F),
+    BaseThemeColors.mainMenuListBG: const Color(0xFF00383C),
+    BaseThemeColors.mainMenuListText: Colors.white,
     //Dex
-    BaseThemeColors.dexBGGradientTop: const Color(0xFF32A6B0),
+    BaseThemeColors.dexBGGradientTop: const Color(0xFF38BBC7),
     BaseThemeColors.dexBGGradientBottom: const Color(0xFF3DC8B6),
-    BaseThemeColors.dexItemBG: Colors.teal,
+    BaseThemeColors.dexItemBG: const Color(0xFF016365),
     BaseThemeColors.dexItemText: Colors.white,
     BaseThemeColors.dexItemAccentText: const Color.fromARGB(170, 255, 255, 255),
     //FAB
-    BaseThemeColors.fabBG: const Color(0xFFEF866B),
+    BaseThemeColors.fabBG: const Color(0xFFEC6D4F),
     BaseThemeColors.fabText: Colors.white,
-    BaseThemeColors.fabPopupBG: const Color(0xFFEF866B),
+    BaseThemeColors.fabPopupBG: const Color(0xFFEC6D4F),
     BaseThemeColors.fabPopupText: Colors.white,
     BaseThemeColors.fabPopupButtonBG: const Color(0xFF878787),
     BaseThemeColors.fabPopupButtonText: Colors.white,
@@ -65,7 +65,7 @@ class BaseThemeColors {
     BaseThemeColors.detailContainerGradientTop: Colors.white,
     BaseThemeColors.detailContainerGradientBottom: const Color(0xFFC6C6C6),
     BaseThemeColors.detailContainerText: Colors.black,
-    BaseThemeColors.detailButtonBG: const Color(0xFFEF866B),
+    BaseThemeColors.detailButtonBG: const Color(0xFFEC6D4F),
     BaseThemeColors.detailButtonText: Colors.white,
     BaseThemeColors.detailNavBarBG: Colors.white,
     BaseThemeColors.detailNavBarText: Colors.black,

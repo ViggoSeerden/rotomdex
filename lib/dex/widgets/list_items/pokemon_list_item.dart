@@ -47,47 +47,78 @@ class PokemonListItem extends StatelessWidget {
         child: Column(
           children: [
             Stack(
-              alignment: Alignment.center,
               children: [
                 Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(360),
+                  decoration: const BoxDecoration(
                     color: BaseThemeColors.dexItemBG,
+                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                    boxShadow: [
+                        BoxShadow(
+                          color: Color.fromARGB(125, 0, 0, 0),
+                          spreadRadius: 0,
+                          blurRadius: 5,
+                          offset: Offset(0, 3), // changes position of shadow
+                        ),
+                      ],
                   ),
-                  width: 65,
-                  height: 65,
-                ),
-                CachedNetworkImage(
-                  imageUrl:
-                      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item['id']}.png",
-                  placeholder: (context, url) =>
-                      const CircularProgressIndicator(),
-                  errorWidget: (context, url, error) => const Icon(Icons.error),
-                  width: 70,
-                  height: 70,
-                  fadeInDuration: Durations.short1,
-                  cacheKey: "pokemon_${item['id']}",
-                  cacheManager: CacheManager(
-                    Config(
-                      "pokemon_images_cache",
-                      maxNrOfCacheObjects: 500,
-                      stalePeriod: const Duration(days: 7),
+                  width: 100,
+                  height: 130,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Center(
+                          child: CachedNetworkImage(
+                            imageUrl:
+                                "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${item['id']}.png",
+                            placeholder: (context, url) =>
+                                const CircularProgressIndicator(),
+                            errorWidget: (context, url, error) =>
+                                const Icon(Icons.error),
+                            width: 70,
+                            height: 70,
+                            fadeInDuration: Durations.short1,
+                            cacheKey: "pokemon_${item['id']}",
+                            cacheManager: CacheManager(
+                              Config(
+                                "pokemon_images_cache",
+                                maxNrOfCacheObjects: 500,
+                                stalePeriod: const Duration(days: 7),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Text('${item['name']}',
+                        textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: text, fontWeight: FontWeight.bold)),
+                        Row(
+            
+                            children: [
+                              Expanded(
+                                child: Text("#${item['id']}", style: TextStyle(
+                                  color: text, fontWeight: FontWeight.bold)),
+                              ),
+                              Image.asset(
+                                  'assets/images/icons/types/${item['type1']}.png',
+                                  width: 20,
+                                  height: 20),
+                              if (item['type2'] != null &&
+                                  item['type2'].isNotEmpty) ...[
+                                const SizedBox(width: 5),
+                                Image.asset(
+                                    'assets/images/icons/types/${item['type2']}.png',
+                                    width: 20,
+                                    height: 20),
+                              ],
+                            ]),
+                      ],
                     ),
                   ),
                 ),
               ],
             ),
-            Text('#${item['id']} ${item['name']}',
-                style: TextStyle(color: text, fontWeight: FontWeight.bold)),
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              Image.asset('assets/images/icons/types/${item['type1']}.png',
-                  width: 20, height: 20),
-              if (item['type2'] != null && item['type2'].isNotEmpty) ...[
-                const SizedBox(width: 5),
-                Image.asset('assets/images/icons/types/${item['type2']}.png',
-                    width: 20, height: 20),
-              ],
-            ]),
           ],
         ),
       ),

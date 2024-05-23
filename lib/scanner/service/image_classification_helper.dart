@@ -26,8 +26,8 @@ import 'package:tflite_flutter/tflite_flutter.dart';
 import 'isolate_inference.dart';
 
 class ImageClassificationHelper {
-  static const modelPath = 'assets/pokedex.tflite';
-  static const labelsPath = 'assets/labels.txt';
+  static const modelPath = 'assets/tensorflow/pokedexAlt.tflite';
+  static const labelsPath = 'assets/tensorflow/labelsAlt.txt';
 
   late final Interpreter interpreter;
   late final List<String> labels;

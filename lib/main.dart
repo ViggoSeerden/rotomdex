@@ -41,12 +41,14 @@ class MyAppState extends State<MyApp> {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           appBarTheme: const AppBarTheme(
-            scrolledUnderElevation: 5,
-            shadowColor: Colors.black,
-            elevation: 5
+              scrolledUnderElevation: 5,
+              shadowColor: Colors.black,
+              elevation: 5),
+          textSelectionTheme: const TextSelectionThemeData(
+            cursorColor: Colors.white, // Change to your desired color
           ),
           // fontFamily: 'Raleway'
-          ),
+        ),
         home: const Main(),
       ),
     );
